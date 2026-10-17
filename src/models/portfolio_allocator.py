@@ -59,8 +59,9 @@ def optimize_portfolio(
         # Fallback equal weight
         eq_weight = 1.0 / len(valid_tickers) if valid_tickers else 0
         return {
-            "allocations": [{"ticker": t, "weight_pct": round(eq_weight * 100, 1), "capital_inr": round(total_capital * eq_weight, 2)} for t in valid_tickers],
-            "expected_portfolio_return_pct": 12.0,
+            "allocations": [{"ticker": t, "name": PILOT_UNIVERSE.get(t, {}).get("name", t), "sector": PILOT_UNIVERSE.get(t, {}).get("sector", "Diversified").split("/")[0].strip(), "weight_pct": round(eq_weight * 100, 1), "capital_inr": round(total_capital * eq_weight, 2), "expected_3m_return": 3.0} for t in valid_tickers],
+            "total_capital": total_capital,
+            "expected_3m_portfolio_return_pct": 3.0,
             "portfolio_volatility_pct": 14.0,
             "portfolio_sharpe": 0.85
         }
