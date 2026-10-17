@@ -399,11 +399,10 @@ def main():
     </div>
     """, unsafe_allow_html=True)
 
-    # Master Tabs
-    tab_terminal, tab_screener, tab_portfolio = st.tabs([
-        "⚡ Terminal & Fan Chart",
-        "🚀 Market Opportunity Screener",
-        "💼 Modern Portfolio Allocator"
+    # Master Navigation
+    tab_terminal, tab_screener = st.tabs([
+        "📈 Stock Forecast & Fan Chart",
+        "🚀 Market Opportunity Screener"
     ])
 
     # =========================================================================
@@ -665,75 +664,7 @@ def main():
             )
             st.plotly_chart(fig_bar, use_container_width=True)
 
-    # =========================================================================
-    # TAB 3: MODERN PORTFOLIO ALLOCATOR
-    # =========================================================================
-    with tab_portfolio:
-        st.markdown("### 💼 Modern Portfolio Theory (MPT) Capital Allocator")
-        st.caption("Solves for the Maximum Sharpe Ratio Portfolio using model expected returns and 252-day empirical covariance.")
 
-        p1, p2 = st.columns([1, 2])
-        with p1:
-            total_invest = st.number_input("Total Investment Capital (₹ INR)", min_value=10000.0, max_value=50000000.0, value=100000.0, step=10000.0)
-            max_weight = st.slider("Maximum Cap per Asset (%)", min_value=10, max_value=40, value=25) / 100.0
-            recalc = st.button("⚡ Recalculate Markowitz Allocation", use_container_width=True)
-
-        with p2:
-            st.markdown("""
-            <div class="fintech-card">
-                <div style="font-weight:700; color:#00F2FE; margin-bottom:4px;">Markowitz Formulation</div>
-                <div style="font-size:0.85rem; color:#94A3B8; line-height:1.5;">
-                    • Maximizes risk-adjusted excess return: <span style="font-family:'JetBrains Mono'; color:#FFFFFF;">max (w<sup>T</sup>r - r<sub>f</sub>) / √(w<sup>T</sup>Σw)</span><br>
-                    • Allocates across non-correlated sectors to minimize portfolio drawdown.<br>
-                    • Enforces single-asset ceiling to avoid idiosyncratic shock exposure.
-                </div>
-            </div>
-            """, unsafe_allow_html=True)
-
-        if not screener_df.empty:
-            port_result = optimize_portfolio(screener_df, total_capital=total_invest, max_stock_weight=max_weight)
-
-            if port_result and "allocations" in port_result:
-                st.markdown("<div style='height:12px'></div>", unsafe_allow_html=True)
-                
-                m1, m2, m3, m4 = st.columns(4)
-                with m1:
-                    st.markdown(f"<div class='horizon-pill'><div><div class='horizon-pill-lbl'>Capital</div><div class='horizon-pill-val'>₹{port_result['total_capital']:,.0f}</div></div></div>", unsafe_allow_html=True)
-                with m2:
-                    st.markdown(f"<div class='horizon-pill'><div><div class='horizon-pill-lbl'>Expected 3M Return</div><div class='horizon-pill-val' style='color:#10B981;'>{port_result['expected_3m_portfolio_return_pct']:+.1f}%</div></div></div>", unsafe_allow_html=True)
-                with m3:
-                    st.markdown(f"<div class='horizon-pill'><div><div class='horizon-pill-lbl'>Volatility</div><div class='horizon-pill-val' style='color:#F59E0B;'>{port_result['portfolio_volatility_pct']:.1f}%</div></div></div>", unsafe_allow_html=True)
-                with m4:
-                    st.markdown(f"<div class='horizon-pill'><div><div class='horizon-pill-lbl'>Sharpe Ratio</div><div class='horizon-pill-val' style='color:#00F2FE;'>{port_result['portfolio_sharpe']:.2f}</div></div></div>", unsafe_allow_html=True)
-
-                st.markdown("<div style='height:16px'></div>", unsafe_allow_html=True)
-
-                c_alloc1, c_alloc2 = st.columns([1.2, 0.8])
-                alloc_df = pd.DataFrame(port_result["allocations"])
-                
-                with c_alloc1:
-                    st.markdown("#### 🎯 Optimal Asset Deployment Plan")
-                    disp_alloc = alloc_df[["ticker", "name", "sector", "weight_pct", "capital_inr", "expected_3m_return"]].copy()
-                    disp_alloc.columns = ["Ticker", "Company", "Sector", "Weight %", "Capital (₹)", "Expected 3M Return %"]
-                    st.dataframe(disp_alloc, hide_index=True, use_container_width=True)
-
-                with c_alloc2:
-                    st.markdown("#### 🍩 Capital Allocation Breakdown")
-                    fig_donut = px.pie(
-                        alloc_df,
-                        values="weight_pct",
-                        names="name",
-                        hole=0.55,
-                        template="plotly_dark",
-                        color_discrete_sequence=["#00F2FE", "#38BDF8", "#10B981", "#818CF8", "#F59E0B"]
-                    )
-                    fig_donut.update_layout(
-                        paper_bgcolor="#0A0D15",
-                        plot_bgcolor="#0A0D15",
-                        margin=dict(l=20, r=20, t=20, b=20),
-                        font=dict(family="Plus Jakarta Sans", color="#94A3B8")
-                    )
-                    st.plotly_chart(fig_donut, use_container_width=True)
 
 
 if __name__ == "__main__":
