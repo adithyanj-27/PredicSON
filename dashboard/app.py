@@ -414,10 +414,7 @@ def main():
     <div class="meme-navbar">
         <div class="brand-group">
             {avatar_html}
-            <div>
-                <div class="brand-title">Predic<span>SON</span> <span style="font-size:1.25rem;">😭</span></div>
-                <div class="brand-tagline">"son 😭😭😭😭" — <b>Universal AI Stock Forecaster (NSE & BSE)</b></div>
-            </div>
+            <div class="brand-title">Predic<span>SON</span> <span style="font-size:1.25rem;">😭</span></div>
         </div>
         <div style="display:flex; align-items:center; gap:12px;">
             <div class="market-badge"><span class="pulse-dot"></span> LIVE ON-DEMAND ENGINE • 2,590+ STOCKS</div>
