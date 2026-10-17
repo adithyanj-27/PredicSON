@@ -297,7 +297,9 @@ def generate_stock_forecast(ticker: str) -> Dict[str, Any]:
     # Generate Institutional Investment Thesis
     from src.models.narrative_engine import generate_investment_thesis
     from config.settings import PILOT_UNIVERSE
-    stock_name = PILOT_UNIVERSE.get(ticker, {}).get("name", ticker)
+    from src.data_ingestion.stock_directory import STOCK_DIRECTORY
+    stock_meta = next((s for s in STOCK_DIRECTORY if s["symbol"].upper() == ticker.upper()), None)
+    stock_name = stock_meta["name"] if stock_meta else PILOT_UNIVERSE.get(ticker, {}).get("name", ticker)
     thesis = generate_investment_thesis(
         ticker=ticker,
         stock_name=stock_name,

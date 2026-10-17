@@ -1,12 +1,13 @@
 """
-PredicSON — Institutional AI Stock Quant Engine (NSE/BSE)
-"Are ya winning, son?" Universal Search & Predict Architecture
+PredicSON 😭 — Institutional AI Stock Quant Engine (NSE/BSE)
+"son 😭😭😭😭" Universal Search & Predict Architecture
 """
 
 import sys
 from pathlib import Path
 from datetime import datetime
 import json
+import base64
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -22,13 +23,13 @@ from src.utils.data_loader import load_daily_news, load_expert_consensus
 
 # Page Config
 st.set_page_config(
-    page_title="PredicSON — Are ya winning, son?",
-    page_icon="🕶️",
+    page_title="PredicSON 😭 — Institutional Stock Forecaster",
+    page_icon="😭",
     layout="wide",
     initial_sidebar_state="collapsed"
 )
 
-# Custom Styling: Iconic "Are ya winning, son?" Dark Neon Fintech Design
+# Custom Styling: Iconic "Son 😭" Dark Neon Fintech Design
 st.markdown("""
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
@@ -70,15 +71,24 @@ st.markdown("""
         align-items: center;
         gap: 14px;
     }
-    .dad-avatar {
-        background: rgba(0, 242, 254, 0.08);
-        border: 1px solid rgba(0, 242, 254, 0.3);
-        border-radius: 12px;
-        padding: 6px;
+    .son-avatar {
+        width: 52px;
+        height: 52px;
+        border-radius: 50%;
+        border: 2px solid #00F2FE;
+        box-shadow: 0 0 16px rgba(0, 242, 254, 0.4);
+        overflow: hidden;
         display: flex;
         align-items: center;
         justify-content: center;
-        box-shadow: 0 0 15px rgba(0, 242, 254, 0.2);
+        background: #0A0D15;
+        flex-shrink: 0;
+    }
+    .son-avatar img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
     }
     .brand-title {
         font-size: 1.55rem;
@@ -380,39 +390,37 @@ def build_tradingview_fan_chart(ticker: str, history_df: pd.DataFrame, forecast_
     return fig
 
 
+def get_son_avatar_b64() -> str:
+    avatar_path = Path(__file__).resolve().parent.parent / "assets" / "son_avatar_128.png"
+    if avatar_path.exists():
+        return base64.b64encode(avatar_path.read_bytes()).decode()
+    return ""
+
+
 def main():
     # Session state initialization
     if "active_ticker" not in st.session_state:
         st.session_state.active_ticker = "RELIANCE.NS"
 
-    # SVG of the Iconic "Are ya winning, son?" Dad
-    dad_svg = """
-    <svg width="42" height="42" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M15 42 C 25 38, 75 38, 85 42 C 90 43, 92 46, 82 46 C 70 46, 30 46, 18 46 C 8 46, 10 43, 15 42 Z" fill="#00F2FE" />
-        <path d="M28 42 C 30 20, 70 20, 72 42 Z" fill="#00F2FE" opacity="0.85" />
-        <path d="M28 38 C 35 36, 65 36, 72 38 L72 42 C 65 40, 35 40, 28 42 Z" fill="#F43F5E" />
-        <circle cx="50" cy="62" r="22" stroke="#FFFFFF" stroke-width="3" fill="#0E121C" />
-        <circle cx="41" cy="60" r="7" stroke="#00F2FE" stroke-width="2.5" />
-        <circle cx="59" cy="60" r="7" stroke="#00F2FE" stroke-width="2.5" />
-        <line x1="48" y1="60" x2="52" y2="60" stroke="#00F2FE" stroke-width="2.5" />
-        <path d="M42 72 Q 50 78, 58 72" stroke="#FFFFFF" stroke-width="2.5" fill="none" stroke-linecap="round" />
-        <line x1="56" y1="74" x2="68" y2="76" stroke="#FFFFFF" stroke-width="2.5" />
-        <circle cx="70" cy="76" r="1.5" fill="#F43F5E" />
-    </svg>
-    """
+    # Load Anthony Mackie Son Meme Avatar
+    avatar_b64 = get_son_avatar_b64()
+    if avatar_b64:
+        avatar_html = f'<div class="son-avatar"><img src="data:image/png;base64,{avatar_b64}" alt="Son meme" /></div>'
+    else:
+        avatar_html = '<div class="son-avatar" style="font-size:32px;">😭</div>'
 
     # Top Meme Header
     st.markdown(f"""
     <div class="meme-navbar">
         <div class="brand-group">
-            <div class="dad-avatar">{dad_svg}</div>
+            {avatar_html}
             <div>
-                <div class="brand-title">Predic<span>SON</span></div>
-                <div class="brand-tagline">"Are ya winning, son?" — <b>Universal AI Stock Forecaster (NSE/BSE)</b></div>
+                <div class="brand-title">Predic<span>SON</span> <span style="font-size:1.25rem;">😭</span></div>
+                <div class="brand-tagline">"son 😭😭😭😭" — <b>Universal AI Stock Forecaster (NSE & BSE)</b></div>
             </div>
         </div>
         <div style="display:flex; align-items:center; gap:12px;">
-            <div class="market-badge"><span class="pulse-dot"></span> LIVE ON-DEMAND ENGINE</div>
+            <div class="market-badge"><span class="pulse-dot"></span> LIVE ON-DEMAND ENGINE • 2,590+ STOCKS</div>
         </div>
     </div>
     """, unsafe_allow_html=True)
@@ -420,19 +428,20 @@ def main():
     # Universal Search Bar Container
     st.markdown("""
     <div class="search-container">
-        <div class="search-title">🔍 Search Any Stock on NSE & BSE</div>
+        <div class="search-title">🔍 Search Any Stock on NSE & BSE (All 2,590+ Equities)</div>
         <div style="font-size:0.84rem; color:#94A3B8; margin-bottom:10px;">
-            Search any Indian equity, defense, railway, energy, or consumer titan. If uncached, PredicSON gathers live market info and reloads the model on the fly.
+            Search any Indian equity, brand, or sector (e.g. <b>Reliance, Zomato, Blinkit, Zudio, Suzlon, Thar, HAL, IRFC, HDFC</b>).
+            If uncached or outdated, PredicSON gathers live market info from open-source feeds and retrains the model on the fly.
         </div>
     </div>
     """, unsafe_allow_html=True)
 
-    # Search Bar & Trending Quick Buttons
-    col_input, col_go = st.columns([4, 1])
+    # Search Bar & Predict Button
+    col_input, col_go = st.columns([4.2, 1])
     with col_input:
         search_text = st.text_input(
             "Search Ticker or Company",
-            placeholder="Type any stock name or symbol (e.g. Reliance, Zomato, Suzlon, Tata Motors, HAL, Trent)...",
+            placeholder="Type any stock, brand, or sector (e.g. Jio, Zudio, Blinkit, Suzlon, Thar, Railways, Defense, TCS)...",
             label_visibility="collapsed"
         )
     with col_go:
@@ -442,29 +451,34 @@ def main():
     matched_stocks = search_stock_directory(search_text, limit=6) if search_text else []
     
     if search_text and matched_stocks:
-        st.markdown("<div style='font-size:0.80rem; font-weight:700; color:#00F2FE; margin-top:-8px; margin-bottom:8px;'>Matching Assets Found:</div>", unsafe_allow_html=True)
+        st.markdown("<div style='font-size:0.82rem; font-weight:700; color:#00F2FE; margin-top:-6px; margin-bottom:8px;'>Matching Stocks on NSE / BSE:</div>", unsafe_allow_html=True)
         m_cols = st.columns(min(len(matched_stocks), 6))
         for idx, s in enumerate(matched_stocks[:6]):
             with m_cols[idx]:
-                if st.button(f"{s['symbol'].replace('.NS', '')}\n({s['name'][:16]}...)", key=f"match_{s['symbol']}", use_container_width=True):
+                clean_sym = s['symbol'].replace('.NS', '').replace('.BO', '')
+                sector_tag = s.get('sector', 'Equity')
+                btn_label = f"📌 {clean_sym}\n{s['name'][:14]}...\n[{sector_tag[:10]}]"
+                if st.button(btn_label, key=f"match_{s['symbol']}_{idx}", use_container_width=True):
                     st.session_state.active_ticker = s["symbol"]
                     st.rerun()
 
     # Trending Hot Tickers Bar
     st.markdown("""
-    <div style="display:flex; align-items:center; gap:8px; margin-top:4px; margin-bottom:18px;">
-        <span style="font-size:0.75rem; font-weight:700; color:#64748B; text-transform:uppercase;">Popular:</span>
+    <div style="display:flex; align-items:center; gap:8px; margin-top:6px; margin-bottom:12px;">
+        <span style="font-size:0.75rem; font-weight:700; color:#64748B; text-transform:uppercase;">Trending Assets:</span>
     </div>
     """, unsafe_allow_html=True)
     
-    t_cols = st.columns(6)
+    t_cols = st.columns(8)
     trending_list = [
-        ("RELIANCE.NS", "Reliance (+8.3%)"),
-        ("M&M.NS", "M&M (+7.8%)"),
-        ("ZOMATO.NS", "Zomato"),
-        ("SUZLON.NS", "Suzlon"),
+        ("RELIANCE.NS", "Reliance (Jio)"),
+        ("ZOMATO.NS", "Zomato (Blinkit)"),
+        ("TRENT.NS", "Trent (Zudio)"),
+        ("TATAMOTORS.NS", "Tata Motors"),
+        ("SUZLON.NS", "Suzlon (Green)"),
         ("HAL.NS", "HAL (Defense)"),
-        ("TRENT.NS", "Trent (Zudio)")
+        ("IRFC.NS", "IRFC (Railways)"),
+        ("HDFCBANK.NS", "HDFC Bank")
     ]
     for idx, (sym, label) in enumerate(trending_list):
         with t_cols[idx]:
@@ -478,14 +492,23 @@ def main():
 
     current_ticker = st.session_state.active_ticker
 
+    # Action Toolbar: Live Status & Reload
+    col_hdr, col_reload = st.columns([4, 1.4])
+    with col_hdr:
+        st.markdown(f"<div style='font-size:0.86rem; color:#94A3B8; padding-top:6px;'>Active Forecast Target: <b style='color:#00F2FE;'>{current_ticker}</b></div>", unsafe_allow_html=True)
+    with col_reload:
+        force_reload = st.button("🔄 Force Live Reload", use_container_width=True, help="Refetches live real-time price & retrains model")
+
     # =========================================================================
     # PREDICTION & FORECAST CANVAS
     # =========================================================================
-    st.markdown("<div style='height:8px'></div>", unsafe_allow_html=True)
+    st.markdown("<div style='height:4px'></div>", unsafe_allow_html=True)
 
-    with st.spinner(f"Analyzing {current_ticker}... Ingesting fresh data & fitting LightGBM quantile cones..."):
+    with st.spinner(f"Analyzing {current_ticker}... Ingesting fresh data & calculating quantile projections..."):
         try:
-            history_df, forecast_df, meta = get_stock_prediction(current_ticker)
+            history_df, forecast_df, meta = get_stock_prediction(current_ticker, force_refresh=force_reload)
+            if force_reload:
+                st.toast(f"✅ Real-time data & model retrained for {current_ticker}!", icon="⚡")
         except Exception as e:
             st.error(f"Error analyzing {current_ticker}: {e}")
             return
@@ -509,13 +532,15 @@ def main():
     h3_pill_class = "pill-green" if h3_ret >= 0 else "pill-red"
     h3_sign = "+" if h3_ret > 0 else ""
 
+    exchange_label = "BSE" if current_ticker.endswith(".BO") else "NSE"
+
     # Hero Banner
     st.markdown(f"""
     <div class="terminal-hero">
         <div>
             <div class="asset-headline">
                 {company_name}
-                <span class="ticker-pill"><b>NSE:</b> {current_ticker}</span>
+                <span class="ticker-pill"><b>{exchange_label}:</b> {current_ticker}</span>
                 <span class="ticker-pill"><b>Sector:</b> {sector}</span>
                 <span class="ticker-pill"><b>Regime:</b> {regime}</span>
             </div>
