@@ -12,6 +12,11 @@ from pathlib import Path
 from typing import Dict, Any, Tuple
 import numpy as np
 import pandas as pd
+try:
+    import lightgbm as lgb
+    HAS_LIGHTGBM = True
+except ImportError:
+    HAS_LIGHTGBM = False
 from sklearn.ensemble import HistGradientBoostingRegressor
 from sklearn.linear_model import Ridge
 from sklearn.preprocessing import RobustScaler
@@ -78,21 +83,35 @@ def train_stacked_horizon_ensemble(
 ) -> Dict[str, Any]:
     """
     Trains a heterogeneous ensemble:
-    1. Regularized HistGradientBoosting per quantile with sample weights.
+    1. Regularized Quantile Gradient Boosted Trees (LightGBM / HistGB) per quantile with sample weights.
     2. Robust-scaled Ridge regression to capture broad linear factor drifts.
     """
     tree_models = {}
     for q in QUANTILES:
-        tree = HistGradientBoostingRegressor(
-            loss="quantile",
-            quantile=q,
-            max_iter=180,
-            learning_rate=0.035,
-            min_samples_leaf=25,
-            l2_regularization=2.0,
-            max_leaf_nodes=31,
-            random_state=42
-        )
+        if HAS_LIGHTGBM:
+            tree = lgb.LGBMRegressor(
+                objective="quantile",
+                alpha=q,
+                n_estimators=80,
+                learning_rate=0.04,
+                num_leaves=31,
+                min_child_samples=25,
+                reg_lambda=2.0,
+                n_jobs=-1,
+                random_state=42,
+                verbosity=-1
+            )
+        else:
+            tree = HistGradientBoostingRegressor(
+                loss="quantile",
+                quantile=q,
+                max_iter=50,
+                learning_rate=0.05,
+                min_samples_leaf=25,
+                l2_regularization=2.0,
+                max_leaf_nodes=31,
+                random_state=42
+            )
         tree.fit(X, y, sample_weight=weights)
         tree_models[q] = tree
 

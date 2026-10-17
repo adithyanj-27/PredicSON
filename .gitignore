@@ -30,10 +30,9 @@ wheels/
 # Data storage (don't commit massive raw/features datasets)
 data/raw/
 data/features/
-data/predictions/
-!data/raw/.gitkeep
-!data/features/.gitkeep
+data/predictions/*
 !data/predictions/.gitkeep
+!data/predictions/market_screener.json
 
 # Logs & temp
 *.log
