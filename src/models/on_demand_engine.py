@@ -103,8 +103,19 @@ def get_stock_prediction(ticker: str, force_refresh: bool = False) -> Tuple[pd.D
     # 4. Persist the same-day cache
     try:
         hist_records = hist_df.reset_index().copy()
+        date_col_hist = [c for c in hist_records.columns if str(c).lower() == "date"]
+        if date_col_hist:
+            hist_records.rename(columns={date_col_hist[0]: "date"}, inplace=True)
+        else:
+            hist_records.rename(columns={hist_records.columns[0]: "date"}, inplace=True)
         hist_records["date"] = hist_records["date"].astype(str)
+
         fwd_records = fwd_df.reset_index().copy()
+        date_col_fwd = [c for c in fwd_records.columns if str(c).lower() == "date"]
+        if date_col_fwd:
+            fwd_records.rename(columns={date_col_fwd[0]: "date"}, inplace=True)
+        else:
+            fwd_records.rename(columns={fwd_records.columns[0]: "date"}, inplace=True)
         fwd_records["date"] = fwd_records["date"].astype(str)
 
         with open(cache_file, "w", encoding="utf-8") as f:
@@ -116,7 +127,7 @@ def get_stock_prediction(ticker: str, force_refresh: bool = False) -> Tuple[pd.D
                 "meta": meta,
             }, f, indent=2)
         print(f"[Cache] Saved prediction cache for {ticker} -> {cache_file.name}", flush=True)
-    except (OSError, ValueError, TypeError) as e:
+    except Exception as e:
         print(f"[Cache] Failed to write cache for {ticker}: {e}", flush=True)
 
     return hist_df, fwd_df, meta

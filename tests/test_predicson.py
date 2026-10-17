@@ -122,6 +122,36 @@ def test_search_directory_known_and_custom():
 
     custom = search_stock_directory("ZZZZNONEXISTENT", limit=3)
     assert custom and custom[0]["symbol"].endswith(".NS")
+    assert " " not in custom[0]["symbol"]
+
+
+def test_search_directory_multi_token_and_brand_aliases():
+    # Multi-token company name matching
+    fed = search_stock_directory("federal bank", limit=3)
+    assert any(r["symbol"] == "FEDERALBNK.NS" for r in fed)
+
+    sbi = search_stock_directory("state bank of india", limit=3)
+    assert any(r["symbol"] == "SBIN.NS" for r in sbi)
+
+    pnb = search_stock_directory("punjab national bank", limit=3)
+    assert any(r["symbol"] == "PNB.NS" for r in pnb)
+
+    tm = search_stock_directory("tata motors", limit=3)
+    assert any(r["symbol"] == "TATAMOTORS.NS" for r in tm)
+
+    # Brand and alias matching
+    zudio = search_stock_directory("zudio", limit=3)
+    assert any(r["symbol"] == "TRENT.NS" for r in zudio)
+
+    blinkit = search_stock_directory("blinkit", limit=3)
+    assert any(r["symbol"] == "ZOMATO.NS" for r in blinkit)
+
+
+def test_custom_fallback_never_creates_spaces_in_ticker():
+    # Multi-word nonsense queries must NEVER produce tickers with spaces (e.g. 'SOME FAKE TICKER.NS')
+    res = search_stock_directory("completely unknown stock name xyz 123", limit=3)
+    for r in res:
+        assert " " not in r["symbol"]
 
 
 # --- feature-matrix versioning ---

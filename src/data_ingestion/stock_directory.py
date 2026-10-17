@@ -57,70 +57,120 @@ def load_master_directory() -> List[Dict]:
 
 STOCK_DIRECTORY: List[Dict] = load_master_directory()
 
-# Pre-computed lowercase lookup fields (built once, not on every keystroke).
-_INDEX = [
-    {
+# Pre-computed tokenized lookup fields for sub-millisecond multi-token search
+_INDEX = []
+for item in STOCK_DIRECTORY:
+    sym = item.get("symbol", "").replace(".NS", "").replace(".BO", "").lower()
+    name = item.get("name", "").lower()
+    name_words = [w for w in name.split() if w]
+    sector = item.get("sector", "").lower()
+    aliases = [a.lower() for a in item.get("aliases", [])]
+    alias_words = [w for a in aliases for w in a.split() if w]
+    all_tokens = [sym] + name_words + aliases + alias_words
+    _INDEX.append({
         "item": item,
-        "sym": item.get("symbol", "").replace(".NS", "").replace(".BO", "").lower(),
-        "name": item.get("name", "").lower(),
-        "sector": item.get("sector", "").lower(),
-        "aliases": [a.lower() for a in item.get("aliases", [])],
-    }
-    for item in STOCK_DIRECTORY
-]
+        "sym": sym,
+        "name": name,
+        "name_words": name_words,
+        "sector": sector,
+        "aliases": aliases,
+        "all_tokens": all_tokens,
+    })
 
 
 def search_stock_directory(query: str, limit: int = 12) -> List[Dict]:
     """
-    Smart multi-match search across all NSE & BSE stocks, in priority order:
-    1. Exact symbol match (e.g. TCS -> TCS.NS)
-    2. Prefix symbol match (e.g. TATA -> TATAMOTORS.NS, TATASTEEL.NS)
-    3. Alias / brand match (e.g. zudio -> TRENT.NS, blinkit -> ZOMATO.NS)
-    4. Company-name substring match (e.g. State Bank -> SBIN.NS)
-    5. Sector match (e.g. railways, defense)
-    6. Dynamic fallback for any custom NSE (.NS) / BSE (.BO) ticker.
+    High-precision multi-token ranked search across all Indian stocks (NSE/BSE).
+    Matches company names (e.g. 'Federal Bank' -> FEDERALBNK.NS), brands, aliases, and tickers.
+    Never produces invalid ticker symbols containing spaces.
     """
     if not query:
         return STOCK_DIRECTORY[:limit]
 
     q = query.strip().lower()
-    clean_q = q.replace(".ns", "").replace(".bo", "").replace(" ", "")
+    q_clean = q.replace(".ns", "").replace(".bo", "").strip()
+    q_words = [w for w in q_clean.split() if w]
 
-    exact, prefix, alias, name, sector = [], [], [], [], []
+    scored_candidates = []
 
     for entry in _INDEX:
-        sym, nm, sec, aliases = entry["sym"], entry["name"], entry["sector"], entry["aliases"]
-        if clean_q == sym:
-            exact.append(entry["item"])
-        elif sym.startswith(clean_q):
-            prefix.append(entry["item"])
-        elif any(clean_q == a or a.startswith(clean_q) or clean_q in a for a in aliases):
-            alias.append(entry["item"])
-        elif clean_q in nm:
-            name.append(entry["item"])
-        elif clean_q in sec:
-            sector.append(entry["item"])
+        sym = entry["sym"]
+        name = entry["name"]
+        aliases = entry["aliases"]
+        sector = entry["sector"]
+        all_tokens = entry["all_tokens"]
 
-    combined = exact + prefix + alias + name + sector
+        score = 0
 
-    # Deduplicate while preserving priority order
-    seen = set()
-    results = []
-    for c in combined:
-        if c["symbol"] not in seen:
-            seen.add(c["symbol"])
-            results.append(c)
+        # 1. Exact matches (Highest Priority)
+        if q_clean == sym:
+            score = 1000
+        elif q_clean == name:
+            score = 950
+        elif any(q_clean == a for a in aliases):
+            score = 900
 
-    # Dynamic fallback: an exact custom ticker not present in the directory
+        # 2. Prefix matches on symbol or company name
+        elif sym.startswith(q_clean):
+            score = 800
+        elif name.startswith(q_clean):
+            score = 750
+
+        # 3. Multi-token (order-independent) matching (e.g. 'federal bank', 'state bank of india', 'tata motors')
+        elif len(q_words) > 1:
+            all_matched = True
+            token_pts = 0
+            for qw in q_words:
+                matched_qw = False
+                for t in all_tokens:
+                    if t == qw:
+                        matched_qw = True
+                        token_pts += 150
+                        break
+                    elif t.startswith(qw):
+                        matched_qw = True
+                        token_pts += 100
+                        break
+                    elif qw in t:
+                        matched_qw = True
+                        token_pts += 50
+                        break
+                if not matched_qw:
+                    all_matched = False
+                    break
+            if all_matched:
+                score = 700 + min(token_pts, 150)
+
+        # 4. Single-token substring matching
+        elif q_clean in sym:
+            score = 550
+        elif q_clean in name:
+            score = 500
+        elif any(q_clean in a for a in aliases):
+            score = 450
+        elif sector and q_clean in sector:
+            score = 350
+
+        if score > 0:
+            scored_candidates.append((score, entry["item"]))
+
+    # Sort descending by relevance score
+    scored_candidates.sort(key=lambda x: x[0], reverse=True)
+    results = [item for _, item in scored_candidates]
+
+    # Only offer a custom fallback if the query looks like a valid alphanumeric ticker with NO spaces!
     if not results and query:
-        custom_sym = query.strip().upper()
-        if "." not in custom_sym:
-            custom_sym = f"{custom_sym}.BO" if custom_sym.isdigit() else f"{custom_sym}.NS"
-        results.append({
-            "symbol": custom_sym,
-            "name": f"Custom Asset ({custom_sym})",
-            "sector": "Indian Equities",
-            "aliases": [query.lower()]
-        })
+        single_word = query.strip().upper()
+        if " " not in single_word and len(single_word) <= 15:
+            if not single_word.endswith(".NS") and not single_word.endswith(".BO") and "." not in single_word:
+                custom_sym = f"{single_word}.BO" if single_word.isdigit() else f"{single_word}.NS"
+            else:
+                custom_sym = single_word
+            results.append({
+                "symbol": custom_sym,
+                "name": f"Custom Ticker ({custom_sym})",
+                "sector": "Indian Equities",
+                "aliases": [query.lower()]
+            })
 
     return results[:limit]
