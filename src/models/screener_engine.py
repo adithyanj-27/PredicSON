@@ -61,14 +61,16 @@ def generate_market_screener(use_cache: bool = False) -> pd.DataFrame:
             rev_growth = str(drivers.get("rev_growth", "10%"))
             analyst_conviction = str(drivers.get("analyst_conviction", "50%"))
 
+            conviction_pct = float(str(analyst_conviction).replace("%", "").strip()) if "%" in str(analyst_conviction) else 50.0
+
             # Quantitative Signal Determination
-            if med_ret_3m > 7.0 and cmf > 0.01 and peg < 2.0:
+            if med_ret_3m > 6.0 and (cmf > 0.0 or conviction_pct >= 85.0) and peg < 2.0:
                 signal = "STRONG BUY"
                 badge = "🟢"
-            elif med_ret_3m > 1.5 and cmf >= -0.06:
+            elif med_ret_3m > 1.8 and (cmf >= -0.09 or conviction_pct >= 70.0):
                 signal = "ACCUMULATE"
                 badge = "🔵"
-            elif med_ret_3m < -6.0 or (cmf < -0.10 and med_ret_3m < 0):
+            elif med_ret_3m < -4.0 or (cmf < -0.12 and med_ret_3m < 0):
                 signal = "AVOID / TRIM"
                 badge = "🔴"
             else:

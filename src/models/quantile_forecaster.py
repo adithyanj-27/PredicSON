@@ -26,6 +26,7 @@ sys.path.append(str(Path(__file__).resolve().parent.parent.parent))
 
 from config.settings import FEATURES_DATA_DIR
 from src.models.regime_classifier import REGIME_NAMES, get_current_market_regime
+from src.utils.data_loader import load_expert_consensus
 
 
 QUANTILES = [0.10, 0.25, 0.50, 0.75, 0.90]
@@ -163,6 +164,28 @@ def generate_stock_forecast(ticker: str) -> Dict[str, Any]:
     current_regime = get_current_market_regime()
     vol_mult = current_regime["volatility_multiplier"]
 
+    # Load universal institutional consensus & forward catalyst targets
+    expert_records = load_expert_consensus(latest_date)
+    stock_consensus = next((r for r in expert_records if r.get("ticker") == ticker), None)
+    
+    if stock_consensus and stock_consensus.get("price_targets"):
+        pt = stock_consensus["price_targets"]
+        recos = stock_consensus.get("recommendation_counts", {})
+        target_mean = float(pt.get("mean") or current_price)
+        target_high = float(pt.get("high") or (current_price * 1.25))
+        target_low = float(pt.get("low") or (current_price * 0.85))
+
+        total_ratings = sum(recos.values()) if recos else 0
+        buys = (recos.get("strongBuy", 0) + recos.get("buy", 0)) if recos else 0
+        conviction = (buys / total_ratings) if total_ratings > 0 else 0.50
+        # Adaptive Black-Litterman blending weight (0.15 to 0.60 based on analyst conviction)
+        consensus_weight = 0.15 + (0.45 * conviction)
+    else:
+        target_mean = current_price
+        target_high = current_price * 1.20
+        target_low = current_price * 0.85
+        consensus_weight = 0.0
+
     forecasts = {}
 
     for horizon_name, horizon_days in HORIZONS.items():
@@ -178,12 +201,32 @@ def generate_stock_forecast(ticker: str) -> Dict[str, Any]:
         # 2. Linear factor drift
         linear_pred = float(ensemble["linear"].predict(X_latest_scaled)[0])
 
-        # 3. Stacked blend (80% Non-linear Tree + 20% Regularized Factor Drift)
+        # 3. Forward Institutional Catalyst Cones (Black-Litterman View)
+        t_h = min(1.0, (horizon_days / 180.0) ** 0.70)
+        upside_mean = (target_mean - current_price) / max(1.0, current_price)
+        upside_high = (target_high - current_price) / max(1.0, current_price)
+        upside_low = (target_low - current_price) / max(1.0, current_price)
+
+        cons_p50 = np.log(max(0.1, 1.0 + (upside_mean * t_h)))
+        cons_p90 = np.log(max(0.1, 1.0 + (upside_high * t_h)))
+        cons_p10 = np.log(max(0.1, 1.0 + (upside_low * t_h)))
+        cons_p25 = 0.5 * (cons_p10 + cons_p50)
+        cons_p75 = 0.5 * (cons_p50 + cons_p90)
+
+        consensus_quantiles = {
+            0.10: cons_p10,
+            0.25: cons_p25,
+            0.50: cons_p50,
+            0.75: cons_p75,
+            0.90: cons_p90
+        }
+
+        # 4. Stacked & Black-Litterman Posterior Synthesis
         blended_preds = {}
         for q in QUANTILES:
-            # Shift quantiles with linear factor anchor
             drift_correction = linear_pred - tree_preds[0.50]
-            blended_preds[q] = tree_preds[q] + (0.20 * drift_correction)
+            stat_pred = tree_preds[q] + (0.20 * drift_correction)
+            blended_preds[q] = ((1.0 - consensus_weight) * stat_pred) + (consensus_weight * consensus_quantiles[q])
 
         # 4. Enforce strict monotonicity (no quantile crossing)
         monotonic_preds = enforce_monotonic_quantiles(blended_preds)
