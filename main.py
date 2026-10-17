@@ -33,6 +33,11 @@ def handle_ingestion(start_date: str = "2018-01-01"):
     print("\n--- Subtask 3: Financial Experts & Brokerage Consensus ---")
     run_expert_ingestion()
 
+    # 4. Corporate Fundamentals & Balance Sheet Health
+    print("\n--- Subtask 4: Corporate Balance Sheets & Valuations ---")
+    from src.data_ingestion.fundamentals_scraper import run_fundamentals_ingestion
+    run_fundamentals_ingestion()
+
     print("\n" + "=" * 70)
     print(">>> INGESTION COMPLETE. ALL RAW DATASTORED IN Parquet/JSON <<<")
     print("=" * 70)

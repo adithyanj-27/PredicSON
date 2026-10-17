@@ -38,7 +38,34 @@ PILOT_UNIVERSE = {
     "SBIN.NS": {"name": "State Bank of India", "sector": "Public Sector Banking", "bse_code": "500112"},
     "ITC.NS": {"name": "ITC Limited", "sector": "FMCG / Diversified", "bse_code": "500875"},
     "LT.NS": {"name": "Larsen & Toubro", "sector": "Infrastructure / Capital Goods", "bse_code": "500510"},
-    "HINDUNILVR.NS": {"name": "Hindustan Unilever", "sector": "FMCG / Consumer Goods", "bse_code": "500696"}
+    "HINDUNILVR.NS": {"name": "Hindustan Unilever", "sector": "FMCG / Consumer Goods", "bse_code": "500696"},
+    
+    # Financial Services & Banking
+    "BAJFINANCE.NS": {"name": "Bajaj Finance", "sector": "NBFC / Retail Lending", "bse_code": "500034"},
+    "KOTAKBANK.NS": {"name": "Kotak Mahindra Bank", "sector": "Private Banking", "bse_code": "500247"},
+    "AXISBANK.NS": {"name": "Axis Bank", "sector": "Private Banking", "bse_code": "532215"},
+    
+    # Automobiles & Mobility
+    "MARUTI.NS": {"name": "Maruti Suzuki India", "sector": "Automobile / Passenger Vehicles", "bse_code": "532500"},
+    "M&M.NS": {"name": "Mahindra & Mahindra", "sector": "Automobile / Utility & Tractors", "bse_code": "500520"},
+    
+    # Healthcare & Pharmaceuticals
+    "SUNPHARMA.NS": {"name": "Sun Pharmaceutical", "sector": "Healthcare / Specialty Pharma", "bse_code": "524715"},
+    "CIPLA.NS": {"name": "Cipla", "sector": "Healthcare / Generic Pharma", "bse_code": "500087"},
+    
+    # Metals & Materials
+    "TATASTEEL.NS": {"name": "Tata Steel", "sector": "Metals & Mining", "bse_code": "500470"},
+    "HINDALCO.NS": {"name": "Hindalco Industries", "sector": "Metals / Aluminum & Copper", "bse_code": "500440"},
+    "ULTRACEMCO.NS": {"name": "UltraTech Cement", "sector": "Materials / Cement & Infra", "bse_code": "532538"},
+    
+    # Energy, Utilities & Power
+    "NTPC.NS": {"name": "NTPC Limited", "sector": "Power Generation / Green Energy", "bse_code": "532555"},
+    "POWERGRID.NS": {"name": "Power Grid Corporation", "sector": "Power Transmission", "bse_code": "532898"},
+    "ONGC.NS": {"name": "Oil & Natural Gas Corporation", "sector": "Upstream Oil & Gas", "bse_code": "500312"},
+    
+    # Consumer Discretionary
+    "TITAN.NS": {"name": "Titan Company", "sector": "Consumer Discretionary / Jewelry", "bse_code": "500114"},
+    "ASIANPAINT.NS": {"name": "Asian Paints", "sector": "Consumer / Decorative Paints", "bse_code": "500820"}
 }
 
 # Macro Tickers (Global & Domestic Drivers)

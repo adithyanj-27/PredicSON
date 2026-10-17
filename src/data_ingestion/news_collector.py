@@ -33,7 +33,22 @@ COMPANY_KEYWORD_MAP = {
     "SBIN.NS": ["sbi", "state bank of india", "dinesh khara"],
     "ITC.NS": ["itc", "itc ltd", "sanjiv puri"],
     "LT.NS": ["l&t", "larsen & toubro", "larsen and toubro", "subrahmanyan"],
-    "HINDUNILVR.NS": ["hindustan unilever", "hul", "unilever", "rohit jawa"]
+    "HINDUNILVR.NS": ["hindustan unilever", "hul", "unilever", "rohit jawa"],
+    "BAJFINANCE.NS": ["bajaj finance", "bajaj finserv", "sanjiv bajaj"],
+    "KOTAKBANK.NS": ["kotak", "kotak mahindra", "uday kotak", "ashok vaswani"],
+    "AXISBANK.NS": ["axis bank", "amitabh chaudhry"],
+    "MARUTI.NS": ["maruti", "maruti suzuki", "rc bhargava"],
+    "M&M.NS": ["mahindra", "m&m", "anand mahindra", "anish shah"],
+    "SUNPHARMA.NS": ["sun pharma", "sun pharmaceutical", "dilip shanghvi"],
+    "CIPLA.NS": ["cipla", "umang vohra"],
+    "TATASTEEL.NS": ["tata steel", "tv narendran"],
+    "HINDALCO.NS": ["hindalco", "aditya birla group", "satish pai"],
+    "ULTRACEMCO.NS": ["ultratech", "ultratech cement", "kumar mangalam birla"],
+    "NTPC.NS": ["ntpc", "gurdeep singh"],
+    "POWERGRID.NS": ["power grid", "powergrid", "pgcil"],
+    "ONGC.NS": ["ongc", "oil and natural gas", "arun kumar singh"],
+    "TITAN.NS": ["titan", "tanishq", "ck venkataraman"],
+    "ASIANPAINT.NS": ["asian paints", "amit syngle"]
 }
 
 
