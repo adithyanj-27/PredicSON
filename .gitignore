@@ -27,12 +27,7 @@ wheels/
 .installed.cfg
 *.egg
 
-# Data storage (don't commit massive raw/features datasets)
-data/raw/
-data/features/
-data/predictions/*
-!data/predictions/.gitkeep
-!data/predictions/market_screener.json
+# Pre-calculated features & screener cache included for instant Cloud deployment (~25MB total)
 
 # Logs & temp
 *.log

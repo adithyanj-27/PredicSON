@@ -1,0 +1,133 @@
+{
+  "RELIANCE.NS": {
+    "ticker": "RELIANCE.NS",
+    "summary": {
+      "1M": {
+        "total_windows_tested": 3,
+        "directional_accuracy_pct": 100.0,
+        "cone_50_coverage_pct": 0.0,
+        "cone_80_coverage_pct": 33.3,
+        "mean_absolute_error_pct": 6.11,
+        "test_windows": [
+          {
+            "eval_date": "2024-10-04",
+            "current_price": 1386.53,
+            "actual_price": 1302.15,
+            "pred_median_return_pct": -2.07,
+            "actual_return_pct": -6.09,
+            "directional_correct": true,
+            "inside_50_cone": false,
+            "inside_80_cone": false,
+            "abs_error_pct": 4.02
+          },
+          {
+            "eval_date": "2025-04-07",
+            "current_price": 1165.7,
+            "actual_price": 1436.5,
+            "pred_median_return_pct": 11.26,
+            "actual_return_pct": 23.23,
+            "directional_correct": true,
+            "inside_50_cone": false,
+            "inside_80_cone": true,
+            "abs_error_pct": 11.97
+          },
+          {
+            "eval_date": "2025-10-09",
+            "current_price": 1377.8,
+            "actual_price": 1493.4,
+            "pred_median_return_pct": 6.06,
+            "actual_return_pct": 8.39,
+            "directional_correct": true,
+            "inside_50_cone": false,
+            "inside_80_cone": false,
+            "abs_error_pct": 2.33
+          }
+        ]
+      },
+      "3M": {
+        "total_windows_tested": 3,
+        "directional_accuracy_pct": 100.0,
+        "cone_50_coverage_pct": 33.3,
+        "cone_80_coverage_pct": 66.7,
+        "mean_absolute_error_pct": 4.77,
+        "test_windows": [
+          {
+            "eval_date": "2024-10-04",
+            "current_price": 1386.53,
+            "actual_price": 1218.0,
+            "pred_median_return_pct": -5.97,
+            "actual_return_pct": -12.15,
+            "directional_correct": true,
+            "inside_50_cone": false,
+            "inside_80_cone": false,
+            "abs_error_pct": 6.18
+          },
+          {
+            "eval_date": "2025-04-07",
+            "current_price": 1165.7,
+            "actual_price": 1519.0,
+            "pred_median_return_pct": 22.43,
+            "actual_return_pct": 30.31,
+            "directional_correct": true,
+            "inside_50_cone": false,
+            "inside_80_cone": true,
+            "abs_error_pct": 7.87
+          },
+          {
+            "eval_date": "2025-10-09",
+            "current_price": 1377.8,
+            "actual_price": 1475.3,
+            "pred_median_return_pct": 7.35,
+            "actual_return_pct": 7.08,
+            "directional_correct": true,
+            "inside_50_cone": true,
+            "inside_80_cone": true,
+            "abs_error_pct": 0.27
+          }
+        ]
+      },
+      "6M": {
+        "total_windows_tested": 3,
+        "directional_accuracy_pct": 100.0,
+        "cone_50_coverage_pct": 66.7,
+        "cone_80_coverage_pct": 66.7,
+        "mean_absolute_error_pct": 2.7,
+        "test_windows": [
+          {
+            "eval_date": "2024-10-04",
+            "current_price": 1386.53,
+            "actual_price": 1165.7,
+            "pred_median_return_pct": -8.26,
+            "actual_return_pct": -15.93,
+            "directional_correct": true,
+            "inside_50_cone": false,
+            "inside_80_cone": false,
+            "abs_error_pct": 7.67
+          },
+          {
+            "eval_date": "2025-04-07",
+            "current_price": 1165.7,
+            "actual_price": 1377.8,
+            "pred_median_return_pct": 17.81,
+            "actual_return_pct": 18.2,
+            "directional_correct": true,
+            "inside_50_cone": true,
+            "inside_80_cone": true,
+            "abs_error_pct": 0.39
+          },
+          {
+            "eval_date": "2025-10-09",
+            "current_price": 1377.8,
+            "actual_price": 1343.3,
+            "pred_median_return_pct": -2.54,
+            "actual_return_pct": -2.5,
+            "directional_correct": true,
+            "inside_50_cone": true,
+            "inside_80_cone": true,
+            "abs_error_pct": 0.03
+          }
+        ]
+      }
+    }
+  }
+}

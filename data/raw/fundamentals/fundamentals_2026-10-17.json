@@ -1,0 +1,702 @@
+{
+  "RELIANCE.NS": {
+    "ticker": "RELIANCE.NS",
+    "fetched_at": "2026-10-17T10:10:52.592760",
+    "valuation": {
+      "pe_trailing": 21.93408,
+      "pe_forward": 17.045551,
+      "pb_ratio": 1.8130515,
+      "peg_ratio": 0.82,
+      "ev_to_ebitda": 11.424
+    },
+    "growth": {
+      "revenue_growth_yoy": 0.297,
+      "earnings_growth_yoy": -0.224,
+      "profit_margins": 0.066149995,
+      "operating_margins": 0.12331
+    },
+    "solvency_and_quality": {
+      "roe": null,
+      "roa": null,
+      "debt_to_equity": 46.278,
+      "current_ratio": null,
+      "free_cash_flow": null
+    },
+    "ownership": {
+      "insider_pct": 0.51798,
+      "institutional_pct": 0.28224
+    }
+  },
+  "TCS.NS": {
+    "ticker": "TCS.NS",
+    "fetched_at": "2026-10-17T10:10:53.629519",
+    "valuation": {
+      "pe_trailing": 17.278845,
+      "pe_forward": 15.29818,
+      "pb_ratio": 7.495499,
+      "peg_ratio": 3.19,
+      "ev_to_ebitda": 11.719
+    },
+    "growth": {
+      "revenue_growth_yoy": 0.112,
+      "earnings_growth_yoy": 0.15,
+      "profit_margins": 0.1822,
+      "operating_margins": 0.23986
+    },
+    "solvency_and_quality": {
+      "roe": 0.45573002,
+      "roa": 0.23786,
+      "debt_to_equity": 9.83,
+      "current_ratio": 2.479,
+      "free_cash_flow": 394597498880.0
+    },
+    "ownership": {
+      "insider_pct": 0.71794,
+      "institutional_pct": 0.17549999
+    }
+  },
+  "HDFCBANK.NS": {
+    "ticker": "HDFCBANK.NS",
+    "fetched_at": "2026-10-17T10:10:54.349930",
+    "valuation": {
+      "pe_trailing": 15.931147,
+      "pe_forward": 11.636828,
+      "pb_ratio": 1.8507515,
+      "peg_ratio": 0.89,
+      "ev_to_ebitda": null
+    },
+    "growth": {
+      "revenue_growth_yoy": 0.166,
+      "earnings_growth_yoy": 0.181,
+      "profit_margins": 0.26787,
+      "operating_margins": 0.33291999
+    },
+    "solvency_and_quality": {
+      "roe": 0.13838,
+      "roa": 0.0175,
+      "debt_to_equity": null,
+      "current_ratio": null,
+      "free_cash_flow": null
+    },
+    "ownership": {
+      "insider_pct": 0.0018000001,
+      "institutional_pct": 0.6122
+    }
+  },
+  "INFY.NS": {
+    "ticker": "INFY.NS",
+    "fetched_at": "2026-10-17T10:10:55.079191",
+    "valuation": {
+      "pe_trailing": 15.820163,
+      "pe_forward": 14.507464,
+      "pb_ratio": 5.1723514,
+      "peg_ratio": 1.99,
+      "ev_to_ebitda": 1048.707
+    },
+    "growth": {
+      "revenue_growth_yoy": 0.029,
+      "earnings_growth_yoy": 0.053,
+      "profit_margins": 0.16370001,
+      "operating_margins": 0.21173
+    },
+    "solvency_and_quality": {
+      "roe": 0.32,
+      "roa": 0.15297,
+      "debt_to_equity": 9.541,
+      "current_ratio": 1.862,
+      "free_cash_flow": 3165625088.0
+    },
+    "ownership": {
+      "insider_pct": 0.15988,
+      "institutional_pct": 0.51225
+    }
+  },
+  "ICICIBANK.NS": {
+    "ticker": "ICICIBANK.NS",
+    "fetched_at": "2026-10-17T10:10:55.647925",
+    "valuation": {
+      "pe_trailing": 18.058428,
+      "pe_forward": 14.93085,
+      "pb_ratio": 2.6339753,
+      "peg_ratio": 0.53,
+      "ev_to_ebitda": null
+    },
+    "growth": {
+      "revenue_growth_yoy": 0.114,
+      "earnings_growth_yoy": 0.138,
+      "profit_margins": 0.27531,
+      "operating_margins": 0.38509998
+    },
+    "solvency_and_quality": {
+      "roe": 0.16073999,
+      "roa": 0.021070002,
+      "debt_to_equity": null,
+      "current_ratio": null,
+      "free_cash_flow": null
+    },
+    "ownership": {
+      "insider_pct": 0.035350002,
+      "institutional_pct": 0.59103
+    }
+  },
+  "BHARTIARTL.NS": {
+    "ticker": "BHARTIARTL.NS",
+    "fetched_at": "2026-10-17T10:10:56.333203",
+    "valuation": {
+      "pe_trailing": 39.820232,
+      "pe_forward": 23.158287,
+      "pb_ratio": 7.3416343,
+      "peg_ratio": null,
+      "ev_to_ebitda": 11.94
+    },
+    "growth": {
+      "revenue_growth_yoy": 0.184,
+      "earnings_growth_yoy": 0.351,
+      "profit_margins": 0.1314,
+      "operating_margins": 0.32573003
+    },
+    "solvency_and_quality": {
+      "roe": 0.20151,
+      "roa": 0.08163,
+      "debt_to_equity": 100.415,
+      "current_ratio": 0.57,
+      "free_cash_flow": 630565896192.0
+    },
+    "ownership": {
+      "insider_pct": 0.53145003,
+      "institutional_pct": 0.3568
+    }
+  },
+  "SBIN.NS": {
+    "ticker": "SBIN.NS",
+    "fetched_at": "2026-10-17T10:10:56.870290",
+    "valuation": {
+      "pe_trailing": 10.317256,
+      "pe_forward": 9.124142,
+      "pb_ratio": 1.4286584,
+      "peg_ratio": 0.53,
+      "ev_to_ebitda": null
+    },
+    "growth": {
+      "revenue_growth_yoy": 0.103,
+      "earnings_growth_yoy": 0.099,
+      "profit_margins": 0.22376,
+      "operating_margins": 0.35717
+    },
+    "solvency_and_quality": {
+      "roe": 0.15177,
+      "roa": 0.01132,
+      "debt_to_equity": null,
+      "current_ratio": null,
+      "free_cash_flow": null
+    },
+    "ownership": {
+      "insider_pct": 0.5723,
+      "institutional_pct": 0.28935
+    }
+  },
+  "ITC.NS": {
+    "ticker": "ITC.NS",
+    "fetched_at": "2026-10-17T10:10:57.854404",
+    "valuation": {
+      "pe_trailing": 16.635101,
+      "pe_forward": 15.657133,
+      "pb_ratio": 4.5533876,
+      "peg_ratio": 1.78,
+      "ev_to_ebitda": 12.104
+    },
+    "growth": {
+      "revenue_growth_yoy": -0.111,
+      "earnings_growth_yoy": -0.16,
+      "profit_margins": 0.25937998,
+      "operating_margins": 0.24867001
+    },
+    "solvency_and_quality": {
+      "roe": null,
+      "roa": null,
+      "debt_to_equity": 3.293,
+      "current_ratio": null,
+      "free_cash_flow": null
+    },
+    "ownership": {
+      "insider_pct": 0.29485,
+      "institutional_pct": 0.52254003
+    }
+  },
+  "LT.NS": {
+    "ticker": "LT.NS",
+    "fetched_at": "2026-10-17T10:10:58.386921",
+    "valuation": {
+      "pe_trailing": 30.08793,
+      "pe_forward": 20.186205,
+      "pb_ratio": 4.565434,
+      "peg_ratio": 1.06,
+      "ev_to_ebitda": 16.317
+    },
+    "growth": {
+      "revenue_growth_yoy": 0.081,
+      "earnings_growth_yoy": 0.14,
+      "profit_margins": 0.05588,
+      "operating_margins": 0.10609999
+    },
+    "solvency_and_quality": {
+      "roe": null,
+      "roa": null,
+      "debt_to_equity": 97.64,
+      "current_ratio": null,
+      "free_cash_flow": null
+    },
+    "ownership": {
+      "insider_pct": 0.14828,
+      "institutional_pct": 0.52477
+    }
+  },
+  "HINDUNILVR.NS": {
+    "ticker": "HINDUNILVR.NS",
+    "fetched_at": "2026-10-17T10:10:59.012916",
+    "valuation": {
+      "pe_trailing": 42.461887,
+      "pe_forward": 35.667934,
+      "pb_ratio": 9.129563,
+      "peg_ratio": 3.69,
+      "ev_to_ebitda": 29.615
+    },
+    "growth": {
+      "revenue_growth_yoy": 0.05,
+      "earnings_growth_yoy": 0.084,
+      "profit_margins": 0.22644,
+      "operating_margins": 0.20725
+    },
+    "solvency_and_quality": {
+      "roe": null,
+      "roa": null,
+      "debt_to_equity": 3.016,
+      "current_ratio": null,
+      "free_cash_flow": null
+    },
+    "ownership": {
+      "insider_pct": 0.62274,
+      "institutional_pct": 0.20758
+    }
+  },
+  "BAJFINANCE.NS": {
+    "ticker": "BAJFINANCE.NS",
+    "fetched_at": "2026-10-17T10:10:59.724573",
+    "valuation": {
+      "pe_trailing": 29.360237,
+      "pe_forward": 19.511534,
+      "pb_ratio": 5.3566847,
+      "peg_ratio": null,
+      "ev_to_ebitda": null
+    },
+    "growth": {
+      "revenue_growth_yoy": 0.261,
+      "earnings_growth_yoy": 0.272,
+      "profit_margins": 0.43495,
+      "operating_margins": 0.61552
+    },
+    "solvency_and_quality": {
+      "roe": null,
+      "roa": null,
+      "debt_to_equity": 314.833,
+      "current_ratio": null,
+      "free_cash_flow": null
+    },
+    "ownership": {
+      "insider_pct": 0.56471,
+      "institutional_pct": 0.27885
+    }
+  },
+  "KOTAKBANK.NS": {
+    "ticker": "KOTAKBANK.NS",
+    "fetched_at": "2026-10-17T10:11:00.690849",
+    "valuation": {
+      "pe_trailing": 21.931374,
+      "pe_forward": 19.04602,
+      "pb_ratio": 2.4555297,
+      "peg_ratio": 0.94,
+      "ev_to_ebitda": null
+    },
+    "growth": {
+      "revenue_growth_yoy": 0.21,
+      "earnings_growth_yoy": 0.225,
+      "profit_margins": 0.28467,
+      "operating_margins": 0.34761003
+    },
+    "solvency_and_quality": {
+      "roe": null,
+      "roa": null,
+      "debt_to_equity": null,
+      "current_ratio": null,
+      "free_cash_flow": null
+    },
+    "ownership": {
+      "insider_pct": 0.28406,
+      "institutional_pct": 0.47223
+    }
+  },
+  "AXISBANK.NS": {
+    "ticker": "AXISBANK.NS",
+    "fetched_at": "2026-10-17T10:11:01.315283",
+    "valuation": {
+      "pe_trailing": 14.505791,
+      "pe_forward": 10.686696,
+      "pb_ratio": 1.7977916,
+      "peg_ratio": 0.54,
+      "ev_to_ebitda": null
+    },
+    "growth": {
+      "revenue_growth_yoy": 0.14,
+      "earnings_growth_yoy": 0.218,
+      "profit_margins": 0.36031,
+      "operating_margins": 0.49181998
+    },
+    "solvency_and_quality": {
+      "roe": 0.13352999,
+      "roa": 0.01535,
+      "debt_to_equity": null,
+      "current_ratio": null,
+      "free_cash_flow": null
+    },
+    "ownership": {
+      "insider_pct": 0.033269998,
+      "institutional_pct": 0.70403
+    }
+  },
+  "MARUTI.NS": {
+    "ticker": "MARUTI.NS",
+    "fetched_at": "2026-10-17T10:11:01.904021",
+    "valuation": {
+      "pe_trailing": 25.20015,
+      "pe_forward": 19.666582,
+      "pb_ratio": 3.3709214,
+      "peg_ratio": 0.77,
+      "ev_to_ebitda": 16.206
+    },
+    "growth": {
+      "revenue_growth_yoy": 0.359,
+      "earnings_growth_yoy": -0.091,
+      "profit_margins": 0.07269,
+      "operating_margins": 0.04828
+    },
+    "solvency_and_quality": {
+      "roe": null,
+      "roa": null,
+      "debt_to_equity": 0.096,
+      "current_ratio": null,
+      "free_cash_flow": null
+    },
+    "ownership": {
+      "insider_pct": 0.61585,
+      "institutional_pct": 0.25739
+    }
+  },
+  "M&M.NS": {
+    "ticker": "M&M.NS",
+    "fetched_at": "2026-10-17T10:11:02.519652",
+    "valuation": {
+      "pe_trailing": 17.781092,
+      "pe_forward": 18.864473,
+      "pb_ratio": 3.5063772,
+      "peg_ratio": 1.26,
+      "ev_to_ebitda": 10.724
+    },
+    "growth": {
+      "revenue_growth_yoy": 0.275,
+      "earnings_growth_yoy": 0.334,
+      "profit_margins": 0.08609,
+      "operating_margins": 0.17031
+    },
+    "solvency_and_quality": {
+      "roe": null,
+      "roa": null,
+      "debt_to_equity": 125.278,
+      "current_ratio": null,
+      "free_cash_flow": null
+    },
+    "ownership": {
+      "insider_pct": 0.25174,
+      "institutional_pct": 0.53442
+    }
+  },
+  "SUNPHARMA.NS": {
+    "ticker": "SUNPHARMA.NS",
+    "fetched_at": "2026-10-17T10:11:03.085644",
+    "valuation": {
+      "pe_trailing": 34.896824,
+      "pe_forward": 27.146366,
+      "pb_ratio": 5.0495977,
+      "peg_ratio": 1.04,
+      "ev_to_ebitda": 23.724
+    },
+    "growth": {
+      "revenue_growth_yoy": 0.105,
+      "earnings_growth_yoy": 0.274,
+      "profit_margins": 0.20188999,
+      "operating_margins": 0.23247999
+    },
+    "solvency_and_quality": {
+      "roe": null,
+      "roa": null,
+      "debt_to_equity": 5.517,
+      "current_ratio": null,
+      "free_cash_flow": null
+    },
+    "ownership": {
+      "insider_pct": 0.55608004,
+      "institutional_pct": 0.29167998
+    }
+  },
+  "CIPLA.NS": {
+    "ticker": "CIPLA.NS",
+    "fetched_at": "2026-10-17T10:11:03.909776",
+    "valuation": {
+      "pe_trailing": 31.776978,
+      "pe_forward": 20.903667,
+      "pb_ratio": 3.1087172,
+      "peg_ratio": null,
+      "ev_to_ebitda": 18.856
+    },
+    "growth": {
+      "revenue_growth_yoy": 0.035,
+      "earnings_growth_yoy": -0.392,
+      "profit_margins": 0.12009,
+      "operating_margins": 0.12549
+    },
+    "solvency_and_quality": {
+      "roe": null,
+      "roa": null,
+      "debt_to_equity": 1.778,
+      "current_ratio": null,
+      "free_cash_flow": null
+    },
+    "ownership": {
+      "insider_pct": 0.31134,
+      "institutional_pct": 0.44981
+    }
+  },
+  "TATASTEEL.NS": {
+    "ticker": "TATASTEEL.NS",
+    "fetched_at": "2026-10-17T10:11:04.944176",
+    "valuation": {
+      "pe_trailing": 19.830507,
+      "pe_forward": 9.804469,
+      "pb_ratio": 2.1443756,
+      "peg_ratio": null,
+      "ev_to_ebitda": 8.917
+    },
+    "growth": {
+      "revenue_growth_yoy": 0.143,
+      "earnings_growth_yoy": 0.114,
+      "profit_margins": 0.04602,
+      "operating_margins": 0.09252
+    },
+    "solvency_and_quality": {
+      "roe": null,
+      "roa": null,
+      "debt_to_equity": 89.017,
+      "current_ratio": null,
+      "free_cash_flow": null
+    },
+    "ownership": {
+      "insider_pct": 0.35404998,
+      "institutional_pct": 0.35317
+    }
+  },
+  "HINDALCO.NS": {
+    "ticker": "HINDALCO.NS",
+    "fetched_at": "2026-10-17T10:11:05.595702",
+    "valuation": {
+      "pe_trailing": 12.318545,
+      "pe_forward": 8.213148,
+      "pb_ratio": 1.4757413,
+      "peg_ratio": null,
+      "ev_to_ebitda": 6.707
+    },
+    "growth": {
+      "revenue_growth_yoy": 0.321,
+      "earnings_growth_yoy": 0.751,
+      "profit_margins": 0.05549,
+      "operating_margins": 0.13668999
+    },
+    "solvency_and_quality": {
+      "roe": null,
+      "roa": null,
+      "debt_to_equity": 72.598,
+      "current_ratio": null,
+      "free_cash_flow": null
+    },
+    "ownership": {
+      "insider_pct": 0.37572,
+      "institutional_pct": 0.40483
+    }
+  },
+  "ULTRACEMCO.NS": {
+    "ticker": "ULTRACEMCO.NS",
+    "fetched_at": "2026-10-17T10:11:06.352903",
+    "valuation": {
+      "pe_trailing": 37.750935,
+      "pe_forward": 25.673433,
+      "pb_ratio": 4.1867843,
+      "peg_ratio": 1.22,
+      "ev_to_ebitda": 19.364
+    },
+    "growth": {
+      "revenue_growth_yoy": 0.159,
+      "earnings_growth_yoy": 0.168,
+      "profit_margins": 0.092930004,
+      "operating_margins": 0.15478
+    },
+    "solvency_and_quality": {
+      "roe": null,
+      "roa": null,
+      "debt_to_equity": 29.432,
+      "current_ratio": null,
+      "free_cash_flow": null
+    },
+    "ownership": {
+      "insider_pct": 0.61965,
+      "institutional_pct": 0.22495002
+    }
+  },
+  "NTPC.NS": {
+    "ticker": "NTPC.NS",
+    "fetched_at": "2026-10-17T10:11:07.019400",
+    "valuation": {
+      "pe_trailing": 11.007685,
+      "pe_forward": 11.287251,
+      "pb_ratio": 1.5046982,
+      "peg_ratio": null,
+      "ev_to_ebitda": 9.78
+    },
+    "growth": {
+      "revenue_growth_yoy": 0.078,
+      "earnings_growth_yoy": 0.118,
+      "profit_margins": 0.14531,
+      "operating_margins": 0.21673
+    },
+    "solvency_and_quality": {
+      "roe": null,
+      "roa": null,
+      "debt_to_equity": 128.345,
+      "current_ratio": null,
+      "free_cash_flow": null
+    },
+    "ownership": {
+      "insider_pct": 0.53998,
+      "institutional_pct": 0.34862
+    }
+  },
+  "POWERGRID.NS": {
+    "ticker": "POWERGRID.NS",
+    "fetched_at": "2026-10-17T10:11:07.565359",
+    "valuation": {
+      "pe_trailing": 14.646198,
+      "pe_forward": 12.939227,
+      "pb_ratio": 2.3178868,
+      "peg_ratio": null,
+      "ev_to_ebitda": 9.533
+    },
+    "growth": {
+      "revenue_growth_yoy": 0.027,
+      "earnings_growth_yoy": -0.008,
+      "profit_margins": 0.33797002,
+      "operating_margins": 0.55737996
+    },
+    "solvency_and_quality": {
+      "roe": null,
+      "roa": null,
+      "debt_to_equity": 150.813,
+      "current_ratio": null,
+      "free_cash_flow": null
+    },
+    "ownership": {
+      "insider_pct": 0.52908003,
+      "institutional_pct": 0.36081
+    }
+  },
+  "ONGC.NS": {
+    "ticker": "ONGC.NS",
+    "fetched_at": "2026-10-17T10:11:08.651954",
+    "valuation": {
+      "pe_trailing": 6.4161854,
+      "pe_forward": 5.3252134,
+      "pb_ratio": 0.75126904,
+      "peg_ratio": null,
+      "ev_to_ebitda": 4.35
+    },
+    "growth": {
+      "revenue_growth_yoy": 0.257,
+      "earnings_growth_yoy": 0.214,
+      "profit_margins": 0.06181,
+      "operating_margins": 0.02931
+    },
+    "solvency_and_quality": {
+      "roe": null,
+      "roa": null,
+      "debt_to_equity": 42.548,
+      "current_ratio": null,
+      "free_cash_flow": null
+    },
+    "ownership": {
+      "insider_pct": 0.69209,
+      "institutional_pct": 0.22368999
+    }
+  },
+  "TITAN.NS": {
+    "ticker": "TITAN.NS",
+    "fetched_at": "2026-10-17T10:11:09.762398",
+    "valuation": {
+      "pe_trailing": 68.50802,
+      "pe_forward": 49.77042,
+      "pb_ratio": 25.129183,
+      "peg_ratio": null,
+      "ev_to_ebitda": 47.396
+    },
+    "growth": {
+      "revenue_growth_yoy": 0.293,
+      "earnings_growth_yoy": 0.628,
+      "profit_margins": 0.062319998,
+      "operating_margins": 0.123339996
+    },
+    "solvency_and_quality": {
+      "roe": null,
+      "roa": null,
+      "debt_to_equity": 195.001,
+      "current_ratio": null,
+      "free_cash_flow": null
+    },
+    "ownership": {
+      "insider_pct": 0.58791,
+      "institutional_pct": 0.21942
+    }
+  },
+  "ASIANPAINT.NS": {
+    "ticker": "ASIANPAINT.NS",
+    "fetched_at": "2026-10-17T10:11:10.355364",
+    "valuation": {
+      "pe_trailing": 46.938404,
+      "pe_forward": 38.494377,
+      "pb_ratio": 10.466008,
+      "peg_ratio": null,
+      "ev_to_ebitda": 31.889
+    },
+    "growth": {
+      "revenue_growth_yoy": 0.179,
+      "earnings_growth_yoy": 0.399,
+      "profit_margins": 0.12813,
+      "operating_margins": 0.17687
+    },
+    "solvency_and_quality": {
+      "roe": null,
+      "roa": null,
+      "debt_to_equity": 17.847,
+      "current_ratio": null,
+      "free_cash_flow": null
+    },
+    "ownership": {
+      "insider_pct": 0.52902,
+      "institutional_pct": 0.27351
+    }
+  }
+}

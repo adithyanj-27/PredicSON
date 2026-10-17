@@ -32,10 +32,13 @@ def load_macro_indicators() -> Optional[pd.DataFrame]:
 
 
 def load_daily_news(date_str: str) -> List[Dict]:
-    """Load news articles collected on a specific date (YYYY-MM-DD)."""
+    """Load news articles collected on a specific date (YYYY-MM-DD), with fallback to latest."""
     target = NEWS_DIR / f"news_{date_str}.jsonl"
     if not target.exists():
-        return []
+        news_files = sorted(NEWS_DIR.glob("news_*.jsonl"))
+        if not news_files:
+            return []
+        target = news_files[-1]
     articles = []
     with open(target, "r", encoding="utf-8") as f:
         for line in f:
@@ -48,9 +51,12 @@ def load_daily_news(date_str: str) -> List[Dict]:
 
 
 def load_expert_consensus(date_str: str) -> List[Dict]:
-    """Load expert consensus snapshot for a given date."""
+    """Load expert consensus snapshot for a given date, with fallback to latest."""
     target = EXPERTS_DIR / f"expert_consensus_{date_str}.json"
     if not target.exists():
-        return []
+        expert_files = sorted(EXPERTS_DIR.glob("expert_consensus_*.json"))
+        if not expert_files:
+            return []
+        target = expert_files[-1]
     with open(target, "r", encoding="utf-8") as f:
         return json.load(f)
