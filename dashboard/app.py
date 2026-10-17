@@ -3,10 +3,10 @@ PredicSON — Institutional AI Stock Quant Forecaster (NSE/BSE)
 Clean Google/Perplexity-style Search Architecture & Stoxify Brokerage Aesthetic.
 """
 
+import html
 import sys
 from pathlib import Path
 from datetime import datetime
-import json
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -15,10 +15,9 @@ import plotly.graph_objects as go
 # Add project root to sys.path
 sys.path.append(str(Path(__file__).resolve().parent.parent))
 
-from config.settings import PILOT_UNIVERSE
 from src.data_ingestion.stock_directory import STOCK_DIRECTORY, search_stock_directory
 from src.models.on_demand_engine import get_stock_prediction
-from src.utils.data_loader import load_daily_news, load_expert_consensus
+from src.utils.data_loader import load_expert_consensus
 
 # Page Configuration
 st.set_page_config(
@@ -429,9 +428,9 @@ def render_homepage():
                 with c_info:
                     st.markdown(f"""
                     <div style="padding: 10px 14px; background: rgba(15,23,42,0.85); border:1px solid rgba(255,255,255,0.08); border-radius:8px; margin-bottom:6px;">
-                        <span style="font-weight:700; font-size:1.0rem; color:#F8FAFC;">{clean_sym}</span>
-                        <span style="color:#94A3B8; font-size:0.86rem; margin-left:10px;">{s['name']}</span>
-                        <span style="font-size:0.75rem; color:#0EA5E9; margin-left:10px; background:rgba(14,165,233,0.12); padding:2px 8px; border-radius:4px; font-weight:600;">{sector_tag}</span>
+                        <span style="font-weight:700; font-size:1.0rem; color:#F8FAFC;">{html.escape(clean_sym)}</span>
+                        <span style="color:#94A3B8; font-size:0.86rem; margin-left:10px;">{html.escape(str(s['name']))}</span>
+                        <span style="font-size:0.75rem; color:#0EA5E9; margin-left:10px; background:rgba(14,165,233,0.12); padding:2px 8px; border-radius:4px; font-weight:600;">{html.escape(str(sector_tag))}</span>
                     </div>
                     """, unsafe_allow_html=True)
                 with c_action:
@@ -555,13 +554,13 @@ def render_prediction_canvas(current_ticker: str):
     <div class="terminal-hero">
         <div>
             <div class="asset-headline">
-                {company_name}
-                <span class="ticker-pill"><b>{exchange_label}:</b> {current_ticker}</span>
-                <span class="ticker-pill"><b>Sector:</b> {sector}</span>
-                <span class="ticker-pill"><b>Regime:</b> {regime}</span>
+                {html.escape(str(company_name))}
+                <span class="ticker-pill"><b>{exchange_label}:</b> {html.escape(str(current_ticker))}</span>
+                <span class="ticker-pill"><b>Sector:</b> {html.escape(str(sector))}</span>
+                <span class="ticker-pill"><b>Regime:</b> {html.escape(str(regime))}</span>
             </div>
             <div style="font-size:0.84rem; color:#64748B; margin-top:5px;">
-                Black-Litterman Catalyst Blending • Dynamic LightGBM Quantile Ensemble
+                Capped Consensus Overlay • Dynamic LightGBM Quantile Ensemble
             </div>
         </div>
         <div style="text-align:right;">

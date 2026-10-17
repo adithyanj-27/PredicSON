@@ -1,0 +1,22 @@
+[project]
+name = "predicson"
+version = "0.2.0"
+description = "Probabilistic multi-horizon price-cone forecasting and quant allocation for NSE/BSE equities."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+dynamic = ["dependencies"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.dynamic]
+dependencies = { file = ["requirements.txt"] }
+
+[tool.setuptools.packages.find]
+include = ["config*", "src*", "dashboard*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

@@ -1,14 +1,14 @@
 """
 Fundamental & Balance Sheet Ingestion Engine (Free Tier)
 Fetches quarterly earnings growth, valuation multiples (PE, PB), capital efficiency (ROE, ROCE),
-debt leverage, and promoter shareholding/pledge metrics via yfinance & Screener.
+debt leverage, and ownership metrics via yfinance.
 """
 
 import sys
 import json
-from datetime import datetime
+from datetime import datetime, timezone
 from pathlib import Path
-from typing import Dict, Any, Optional
+from typing import Dict, Any
 import pandas as pd
 import yfinance as yf
 
@@ -21,6 +21,17 @@ FUNDAMENTALS_DIR = RAW_DATA_DIR / "fundamentals"
 FUNDAMENTALS_DIR.mkdir(parents=True, exist_ok=True)
 
 
+def _to_float(value):
+    """Coerce a yfinance field to float, returning None for missing/invalid values."""
+    try:
+        if value is None:
+            return None
+        f = float(value)
+        return f if pd.notna(f) else None
+    except (TypeError, ValueError):
+        return None
+
+
 def fetch_stock_fundamentals(ticker: str) -> Dict[str, Any]:
     """Fetch complete balance sheet, valuation, and governance metrics for a stock."""
     print(f"Fetching fundamental balance sheet metrics for {ticker}...")
@@ -28,57 +39,34 @@ def fetch_stock_fundamentals(ticker: str) -> Dict[str, Any]:
         t = yf.Ticker(ticker)
         info = t.info or {}
 
-        # 1. Valuation Multiples
-        pe_trailing = info.get("trailingPE")
-        pe_forward = info.get("forwardPE")
-        pb_ratio = info.get("priceToBook")
-        peg_ratio = info.get("pegRatio")
-        ev_to_ebitda = info.get("enterpriseToEbitda")
-
-        # 2. Growth & Profitability
-        rev_growth = info.get("revenueGrowth")          # Quarterly YoY
-        earnings_growth = info.get("earningsGrowth")    # Quarterly YoY
-        profit_margins = info.get("profitMargins")
-        operating_margins = info.get("operatingMargins")
-
-        # 3. Capital Efficiency & Solvency
-        roe = info.get("returnOnEquity")
-        roa = info.get("returnOnAssets")
-        debt_to_equity = info.get("debtToEquity")
-        current_ratio = info.get("currentRatio")
-        free_cash_flow = info.get("freeCashflow")
-
-        # 4. Ownership & Governance
-        insider_ownership = info.get("heldPercentInsiders")
-        institutional_ownership = info.get("heldPercentInstitutions")
-
         record = {
             "ticker": ticker,
-            "fetched_at": datetime.utcnow().isoformat(),
+            "fetched_at": datetime.now(timezone.utc).isoformat(),
             "valuation": {
-                "pe_trailing": float(pe_trailing) if pe_trailing and pd.notna(pe_trailing) else None,
-                "pe_forward": float(pe_forward) if pe_forward and pd.notna(pe_forward) else None,
-                "pb_ratio": float(pb_ratio) if pb_ratio and pd.notna(pb_ratio) else None,
-                "peg_ratio": float(peg_ratio) if peg_ratio and pd.notna(peg_ratio) else None,
-                "ev_to_ebitda": float(ev_to_ebitda) if ev_to_ebitda and pd.notna(ev_to_ebitda) else None
+                "pe_trailing": _to_float(info.get("trailingPE")),
+                "pe_forward": _to_float(info.get("forwardPE")),
+                "pb_ratio": _to_float(info.get("priceToBook")),
+                "peg_ratio": _to_float(info.get("pegRatio")),
+                "ev_to_ebitda": _to_float(info.get("enterpriseToEbitda")),
             },
             "growth": {
-                "revenue_growth_yoy": float(rev_growth) if rev_growth and pd.notna(rev_growth) else None,
-                "earnings_growth_yoy": float(earnings_growth) if earnings_growth and pd.notna(earnings_growth) else None,
-                "profit_margins": float(profit_margins) if profit_margins and pd.notna(profit_margins) else None,
-                "operating_margins": float(operating_margins) if operating_margins and pd.notna(operating_margins) else None
+                "revenue_growth_yoy": _to_float(info.get("revenueGrowth")),
+                "earnings_growth_yoy": _to_float(info.get("earningsGrowth")),
+                "profit_margins": _to_float(info.get("profitMargins")),
+                "operating_margins": _to_float(info.get("operatingMargins")),
             },
             "solvency_and_quality": {
-                "roe": float(roe) if roe and pd.notna(roe) else None,
-                "roa": float(roa) if roa and pd.notna(roa) else None,
-                "debt_to_equity": float(debt_to_equity) if debt_to_equity and pd.notna(debt_to_equity) else None,
-                "current_ratio": float(current_ratio) if current_ratio and pd.notna(current_ratio) else None,
-                "free_cash_flow": float(free_cash_flow) if free_cash_flow and pd.notna(free_cash_flow) else None
+                "roe": _to_float(info.get("returnOnEquity")),
+                "roa": _to_float(info.get("returnOnAssets")),
+                "debt_to_equity": _to_float(info.get("debtToEquity")),
+                "current_ratio": _to_float(info.get("currentRatio")),
+                "free_cash_flow": _to_float(info.get("freeCashflow")),
             },
             "ownership": {
-                "insider_pct": float(insider_ownership) if insider_ownership and pd.notna(insider_ownership) else None,
-                "institutional_pct": float(institutional_ownership) if institutional_ownership and pd.notna(institutional_ownership) else None
-            }
+                # yfinance maps promoter/insider stake to heldPercentInsiders for NSE names.
+                "insider_pct": _to_float(info.get("heldPercentInsiders")),
+                "institutional_pct": _to_float(info.get("heldPercentInstitutions")),
+            },
         }
         return record
     except Exception as e:
@@ -94,8 +82,7 @@ def run_fundamentals_ingestion() -> Path:
 
     all_records = {}
     for ticker in PILOT_UNIVERSE.keys():
-        record = fetch_stock_fundamentals(ticker)
-        all_records[ticker] = record
+        all_records[ticker] = fetch_stock_fundamentals(ticker)
 
     date_str = datetime.now().strftime("%Y-%m-%d")
     out_file = FUNDAMENTALS_DIR / f"fundamentals_{date_str}.json"

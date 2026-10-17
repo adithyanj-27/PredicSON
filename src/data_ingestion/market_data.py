@@ -2,6 +2,10 @@
 Market Data Ingestion Engine (Free Tier)
 Fetches historical OHLCV data for equities and macro indicators using yfinance.
 Saves data efficiently in Parquet format.
+
+Prices are fetched with auto_adjust=True so the stored `close` column is already
+adjusted for splits and dividends (total-return basis). Return-based modelling
+must not mix raw and adjusted prices across sources.
 """
 
 import sys
@@ -28,10 +32,11 @@ def clean_yfinance_df(df: pd.DataFrame) -> pd.DataFrame:
         df.columns = [col[0] for col in df.columns]
 
     df.columns = [c.strip().lower().replace(" ", "_") for c in df.columns]
-    
+
     # Ensure index is datetime with timezone stripped for consistency
     if isinstance(df.index, pd.DatetimeIndex):
-        df.index = df.index.tz_localize(None)
+        if df.index.tz is not None:
+            df.index = df.index.tz_localize(None)
         df.index.name = "date"
     return df
 
@@ -41,14 +46,14 @@ def fetch_and_save_stock_history(ticker: str, start_date: str = "2018-01-01") ->
     print(f"Fetching {ticker} from {start_date}...")
     try:
         t = yf.Ticker(ticker)
-        df = t.history(start=start_date, auto_adjust=False)
-        
+        df = t.history(start=start_date, auto_adjust=True)
+
         if df.empty:
             print(f"Warning: No data returned for {ticker}")
             return None
 
         df = clean_yfinance_df(df)
-        
+
         # Save as parquet
         sanitized_name = ticker.replace("^", "").replace("=", "_").replace(".", "_")
         target_path = OHLCV_DIR / f"{sanitized_name}.parquet"
@@ -69,7 +74,7 @@ def fetch_and_save_macro_data(start_date: str = "2018-01-01") -> Path:
         try:
             print(f"  Fetching macro: {label} ({ticker})...")
             t = yf.Ticker(ticker)
-            df = t.history(start=start_date, auto_adjust=False)
+            df = t.history(start=start_date, auto_adjust=True)
             if not df.empty:
                 df = clean_yfinance_df(df)
                 # Keep Close price as the primary macro signal
@@ -84,8 +89,9 @@ def fetch_and_save_macro_data(start_date: str = "2018-01-01") -> Path:
     # Merge all macro series on date
     combined_macro = pd.DataFrame(macro_frames)
     combined_macro.sort_index(inplace=True)
-    # Forward-fill missing dates (holidays vary between US/India/Commodity markets)
-    combined_macro = combined_macro.ffill().bfill()
+    # Forward-fill only: markets close on different holidays. We deliberately do
+    # NOT back-fill, which would copy future values backwards into the past.
+    combined_macro = combined_macro.ffill()
 
     target_path = MACRO_DIR / "macro_indicators.parquet"
     combined_macro.to_parquet(target_path, engine="pyarrow", compression="snappy")

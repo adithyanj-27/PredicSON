@@ -8,7 +8,7 @@ Captures financial expert research, target prices, and brokerage recommendations
 
 import sys
 import json
-from datetime import datetime
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Dict, Any, List
 import pandas as pd
@@ -25,7 +25,7 @@ def fetch_yfinance_expert_consensus(ticker: str) -> Dict[str, Any]:
     print(f"Fetching expert consensus for {ticker}...")
     try:
         t = yf.Ticker(ticker)
-        
+
         # 1. Price Targets (Current, High, Low, Mean, Median)
         price_targets = {}
         try:
@@ -49,37 +49,39 @@ def fetch_yfinance_expert_consensus(ticker: str) -> Dict[str, Any]:
                 # Get the most recent period row
                 latest_reco = recos.iloc[0].to_dict()
                 reco_summary = {k: int(v) if pd.notna(v) else 0 for k, v in latest_reco.items() if k != "period"}
-        except Exception as e:
+        except Exception:
             try:
                 # Fallback to recommendations dataframe
                 recos_df = t.recommendations
                 if recos_df is not None and not recos_df.empty:
                     reco_summary = recos_df.iloc[-1].to_dict()
-            except Exception:
-                pass
+            except Exception as e:
+                print(f"  Note: Recommendation summary not available for {ticker}: {e}")
 
         # 3. Recent Upgrades & Downgrades from Brokerages
         recent_actions = []
         try:
             upgrades = t.upgrades_downgrades
             if upgrades is not None and not upgrades.empty:
-                # Take the latest 5 actions
+                # Take the latest 5 actions. The date lives in the index, whose
+                # name varies by yfinance version (e.g. "GradeDate"), so read the
+                # first column after reset_index() rather than guessing "index".
                 latest_upgrades = upgrades.head(5).reset_index()
+                date_col = latest_upgrades.columns[0]
                 for _, row in latest_upgrades.iterrows():
-                    action_date = str(row.get("index", row.get("Date", "")))
                     recent_actions.append({
-                        "date": action_date,
+                        "date": str(row.get(date_col, "")),
                         "firm": str(row.get("Firm", "")),
                         "to_grade": str(row.get("ToGrade", "")),
                         "from_grade": str(row.get("FromGrade", "")),
                         "action": str(row.get("Action", ""))
                     })
         except Exception as e:
-            pass
+            print(f"  Note: Broker actions not available for {ticker}: {e}")
 
         return {
             "ticker": ticker,
-            "fetched_at": datetime.utcnow().isoformat(),
+            "fetched_at": datetime.now(timezone.utc).isoformat(),
             "price_targets": price_targets,
             "recommendation_counts": reco_summary,
             "recent_broker_actions": recent_actions
@@ -120,7 +122,8 @@ def extract_expert_calls_from_news() -> List[Dict[str, Any]]:
                         "published": article.get("published_raw"),
                         "link": article.get("link")
                     })
-            except Exception:
+            except (json.JSONDecodeError, KeyError) as e:
+                print(f"  Skipping malformed news record: {e}")
                 continue
 
     return extracted_calls
@@ -141,7 +144,7 @@ def run_expert_ingestion() -> Path:
     # Save to JSON
     date_str = datetime.now().strftime("%Y-%m-%d")
     out_file = EXPERTS_DIR / f"expert_consensus_{date_str}.json"
-    
+
     with open(out_file, "w", encoding="utf-8") as f:
         json.dump(consensus_records, f, indent=2)
 

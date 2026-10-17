@@ -40,9 +40,9 @@ def generate_macro_features(macro_df: pd.DataFrame) -> pd.DataFrame:
         vix = macro_df["INDIA_VIX"]
         m_feat["vix_level"] = vix
         m_feat["vix_change_20d"] = vix - vix.shift(20)
-        # Percentile rank of current VIX over past 1 year (252 trading days)
-        m_feat["vix_pct_rank_252d"] = vix.rolling(252).apply(
-            lambda x: pd.Series(x).rank(pct=True).iloc[-1] if len(x) > 0 else np.nan
+        # Percentile rank of current VIX over the trailing year (vectorised).
+        m_feat["vix_pct_rank_252d"] = vix.rolling(252, min_periods=60).apply(
+            lambda x: float((x <= x[-1]).mean()), raw=True
         )
 
     # 4. US 10-Year Treasury Yield (Global Liquidity & FII Driver)

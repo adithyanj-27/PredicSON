@@ -1,6 +1,6 @@
 """
 PredicSON Master Execution Script
-Unified entrypoint for running ingestion, feature generation, modeling, and dashboard.
+Unified entrypoint for ingestion, feature generation, modelling, and the dashboard.
 """
 
 import sys
@@ -16,30 +16,26 @@ from src.data_ingestion.expert_scraper import run_expert_ingestion
 
 
 def handle_ingestion(start_date: str = "2018-01-01"):
-    """Execute complete Layer 1 zero-cost data ingestion."""
+    """Execute the complete zero-cost data ingestion suite."""
     print("=" * 70)
-    print(">>> STEP 1: RUNNING DATA INGESTION SUITE (ALL FREE SOURCES) <<<")
+    print(">>> STEP 1: DATA INGESTION SUITE (ALL FREE SOURCES) <<<")
     print("=" * 70)
-    
-    # 1. Market & Macro Data
+
     print("\n--- Subtask 1: Equities & Macro Indicators ---")
     run_full_market_ingestion(start_date=start_date)
 
-    # 2. Live News Feeds
     print("\n--- Subtask 2: Indian Financial News Feeds ---")
     run_news_ingestion()
 
-    # 3. Expert Research & Consensus
     print("\n--- Subtask 3: Financial Experts & Brokerage Consensus ---")
     run_expert_ingestion()
 
-    # 4. Corporate Fundamentals & Balance Sheet Health
     print("\n--- Subtask 4: Corporate Balance Sheets & Valuations ---")
     from src.data_ingestion.fundamentals_scraper import run_fundamentals_ingestion
     run_fundamentals_ingestion()
 
     print("\n" + "=" * 70)
-    print(">>> INGESTION COMPLETE. ALL RAW DATASTORED IN Parquet/JSON <<<")
+    print(">>> INGESTION COMPLETE. RAW DATA STORED IN Parquet/JSON <<<")
     print("=" * 70)
 
 
@@ -47,23 +43,22 @@ def main():
     parser = argparse.ArgumentParser(description="PredicSON AI Stock Prediction Platform")
     subparsers = parser.add_subparsers(dest="command", help="Command to execute")
 
-    # Ingestion command
     ingest_parser = subparsers.add_parser("ingest", help="Ingest raw market, macro, news & expert data")
     ingest_parser.add_argument("--start", default="2018-01-01", help="Start date for historical price data (YYYY-MM-DD)")
 
-    # Feature engineering command
-    subparsers.add_parser("features", help="Compute technical, macro, and alignment features")
+    subparsers.add_parser("features", help="Compute the feature matrices")
 
-    # Predict command
-    predict_parser = subparsers.add_parser("predict", help="Generate multi-horizon quantile forecast")
+    predict_parser = subparsers.add_parser("predict", help="Generate a multi-horizon quantile forecast")
     predict_parser.add_argument("--ticker", default="RELIANCE.NS", help="Ticker symbol (e.g. RELIANCE.NS)")
 
-    # Backtest command
-    backtest_parser = subparsers.add_parser("backtest", help="Run walk-forward out-of-sample backtesting scorecard")
+    backtest_parser = subparsers.add_parser("backtest", help="Run a purged walk-forward backtest for one ticker")
     backtest_parser.add_argument("--ticker", default="RELIANCE.NS", help="Ticker symbol to backtest")
 
-    # Dashboard command
-    subparsers.add_parser("dashboard", help="Launch interactive Streamlit dashboard")
+    subparsers.add_parser("backtest-all", help="Run the purged backtest across the whole universe")
+
+    subparsers.add_parser("screener", help="Build the cross-sectional market screener")
+
+    subparsers.add_parser("dashboard", help="Launch the interactive Streamlit dashboard")
 
     args = parser.parse_args()
 
@@ -76,13 +71,16 @@ def main():
     elif args.command == "predict":
         import json
         from src.models.quantile_forecaster import generate_stock_forecast
-        ticker = getattr(args, "ticker", "RELIANCE.NS")
-        result = generate_stock_forecast(ticker)
-        print(json.dumps(result, indent=2))
+        print(json.dumps(generate_stock_forecast(getattr(args, "ticker", "RELIANCE.NS")), indent=2))
     elif args.command == "backtest":
         from src.models.backtester import run_targeted_backtest
-        ticker = getattr(args, "ticker", "RELIANCE.NS")
-        run_targeted_backtest(ticker)
+        run_targeted_backtest(getattr(args, "ticker", "RELIANCE.NS"))
+    elif args.command == "backtest-all":
+        from src.models.backtester import run_full_backtest
+        run_full_backtest()
+    elif args.command == "screener":
+        from src.models.screener_engine import generate_market_screener
+        generate_market_screener(use_cache=False)
     elif args.command == "dashboard":
         import subprocess
         subprocess.run([sys.executable, "-m", "streamlit", "run", "dashboard/app.py"])

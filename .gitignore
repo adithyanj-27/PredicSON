@@ -27,7 +27,12 @@ wheels/
 .installed.cfg
 *.egg
 
-# Pre-calculated features & screener cache included for instant Cloud deployment (~25MB total)
+# Pre-calculated features & screener cache are intentionally committed so the app
+# deploys to Streamlit Community Cloud with no build step.
+
+# Locally-fitted model cache (regenerable, machine-specific)
+data/model_cache/
+*.joblib
 
 # Logs & temp
 *.log
@@ -35,3 +40,8 @@ wheels/
 
 # Streamlit credentials
 .streamlit/credentials.toml
+
+# Test / tooling caches
+.pytest_cache/
+.coverage
+htmlcov/

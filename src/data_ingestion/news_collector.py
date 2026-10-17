@@ -1,13 +1,14 @@
 """
 Financial News Ingestion Engine (Free Tier)
 Aggregates live financial news from RSS feeds across MoneyControl, Economic Times, LiveMint, etc.
-Performs basic entity matching against the Indian Stock Universe and saves structured news records.
+Performs entity matching against the Indian Stock Universe and saves structured news records.
 """
 
 import sys
 import json
+import re
 import hashlib
-from datetime import datetime
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import List, Dict, Any
 import feedparser
@@ -26,9 +27,9 @@ from config.settings import (
 COMPANY_KEYWORD_MAP = {
     "RELIANCE.NS": ["reliance", "ril", "mukesh ambani", "jio", "reliance retail"],
     "TCS.NS": ["tcs", "tata consultancy", "tata consultancy services"],
-    "HDFCBANK.NS": ["hdfc bank", "hdfc", "sashidhar jagdishan"],
+    "HDFCBANK.NS": ["hdfc bank", "sashidhar jagdishan"],
     "INFY.NS": ["infosys", "salil parekh", "nandan nilekani"],
-    "ICICIBANK.NS": ["icici bank", "icici", "sandeep bakhshi"],
+    "ICICIBANK.NS": ["icici bank", "sandeep bakhshi"],
     "BHARTIARTL.NS": ["bharti airtel", "airtel", "sunil mittal"],
     "SBIN.NS": ["sbi", "state bank of india", "dinesh khara"],
     "ITC.NS": ["itc", "itc ltd", "sanjiv puri"],
@@ -51,6 +52,13 @@ COMPANY_KEYWORD_MAP = {
     "ASIANPAINT.NS": ["asian paints", "amit syngle"]
 }
 
+# Word-boundary matchers. Plain substring matching produced false positives such
+# as "kitchen" -> ITC, "titanium" -> TITAN, "April" -> RELIANCE (via "ril").
+_KEYWORD_PATTERNS = {
+    ticker: re.compile(r"\b(?:" + "|".join(re.escape(kw) for kw in keywords) + r")\b", re.IGNORECASE)
+    for ticker, keywords in COMPANY_KEYWORD_MAP.items()
+}
+
 
 def clean_html(raw_html: str) -> str:
     """Strip HTML markup from summaries."""
@@ -61,13 +69,10 @@ def clean_html(raw_html: str) -> str:
 
 
 def identify_tickers(text: str) -> List[str]:
-    """Identify which stocks in our universe are mentioned in the text."""
-    lower_text = text.lower()
-    matched = []
-    for ticker, keywords in COMPANY_KEYWORD_MAP.items():
-        if any(kw in lower_text for kw in keywords):
-            matched.append(ticker)
-    return matched
+    """Identify which stocks in our universe are mentioned in the text (word-boundary match)."""
+    if not text:
+        return []
+    return [ticker for ticker, pattern in _KEYWORD_PATTERNS.items() if pattern.search(text)]
 
 
 def generate_article_id(title: str, link: str) -> str:
@@ -84,7 +89,7 @@ def fetch_rss_feed(source_name: str, feed_url: str) -> List[Dict[str, Any]]:
             title = entry.get("title", "").strip()
             link = entry.get("link", "").strip()
             summary = clean_html(entry.get("summary", entry.get("description", "")))
-            published = entry.get("published", entry.get("updated", datetime.utcnow().isoformat()))
+            published = entry.get("published", entry.get("updated", datetime.now(timezone.utc).isoformat()))
 
             full_text = f"{title}. {summary}"
             tickers = identify_tickers(full_text)
@@ -96,7 +101,7 @@ def fetch_rss_feed(source_name: str, feed_url: str) -> List[Dict[str, Any]]:
                 "summary": summary,
                 "link": link,
                 "published_raw": published,
-                "fetched_at": datetime.utcnow().isoformat(),
+                "fetched_at": datetime.now(timezone.utc).isoformat(),
                 "matched_tickers": tickers
             }
             articles.append(article_record)
