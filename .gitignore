@@ -1,0 +1,43 @@
+# Environment variables
+.env
+*.env
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Data storage (don't commit massive raw/features datasets)
+data/raw/
+data/features/
+data/predictions/
+!data/raw/.gitkeep
+!data/features/.gitkeep
+!data/predictions/.gitkeep
+
+# Logs & temp
+*.log
+.DS_Store
+
+# Streamlit credentials
+.streamlit/credentials.toml
