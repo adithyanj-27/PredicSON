@@ -1,6 +1,6 @@
 """
 PredicSON — Institutional AI Stock Quant Terminal (NSE/BSE)
-High-End Dark Fintech UI (TradingView / Bloomberg / Linear aesthetic)
+Zerodha Kite / TradingView 2-Column Split Terminal Architecture
 """
 
 import sys
@@ -24,13 +24,17 @@ from src.utils.data_loader import load_daily_news, load_expert_consensus
 
 # Page Config
 st.set_page_config(
-    page_title="PredicSON Quant Terminal",
+    page_title="PredicSON — Trading Terminal",
     page_icon="📈",
     layout="wide",
     initial_sidebar_state="collapsed"
 )
 
-# Premium Dark Fintech CSS Design System
+# Load Screener Data for Watchlist & Tab 2
+screener_df = generate_market_screener(use_cache=True)
+ticker_lookup = {row["ticker"]: row for _, row in screener_df.iterrows()} if not screener_df.empty else {}
+
+# Premium Zerodha Kite / TradingView Dark CSS
 st.markdown("""
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
@@ -51,310 +55,293 @@ st.markdown("""
     }
 
     .block-container {
-        padding-top: 1.2rem !important;
-        padding-bottom: 2.5rem !important;
-        max-width: 1440px !important;
+        padding-top: 1rem !important;
+        padding-bottom: 2rem !important;
+        padding-left: 1.5rem !important;
+        padding-right: 1.5rem !important;
+        max-width: 100% !important;
     }
 
-    /* Top Branding Navigation Bar */
+    /* Top Branding Bar */
     .top-navbar {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        background: rgba(14, 18, 28, 0.7);
+        background: rgba(14, 18, 28, 0.75);
         backdrop-filter: blur(16px);
         border: 1px solid rgba(255, 255, 255, 0.08);
-        border-radius: 16px;
-        padding: 14px 24px;
-        margin-bottom: 20px;
+        border-radius: 12px;
+        padding: 10px 20px;
+        margin-bottom: 14px;
     }
     .brand-section {
         display: flex;
         align-items: center;
-        gap: 12px;
+        gap: 10px;
     }
     .brand-logo {
         background: linear-gradient(135deg, #00F2FE 0%, #4FACFE 100%);
-        width: 36px;
-        height: 36px;
-        border-radius: 10px;
+        width: 32px;
+        height: 32px;
+        border-radius: 8px;
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 1.25rem;
-        box-shadow: 0 4px 14px rgba(0, 242, 254, 0.35);
+        font-size: 1.15rem;
+        box-shadow: 0 4px 12px rgba(0, 242, 254, 0.3);
     }
     .brand-title {
-        font-size: 1.35rem;
+        font-size: 1.25rem;
         font-weight: 800;
         letter-spacing: -0.5px;
         color: #FFFFFF;
-        display: flex;
-        align-items: center;
-        gap: 8px;
     }
-    .brand-title span {
-        color: #00F2FE;
-    }
+    .brand-title span { color: #00F2FE; }
     .status-badge {
-        font-size: 0.72rem;
+        font-size: 0.70rem;
         font-weight: 700;
-        letter-spacing: 0.5px;
         background: rgba(16, 185, 129, 0.12);
         color: #10B981;
         border: 1px solid rgba(16, 185, 129, 0.3);
-        border-radius: 20px;
-        padding: 4px 10px;
+        border-radius: 16px;
+        padding: 3px 8px;
         display: inline-flex;
         align-items: center;
-        gap: 6px;
+        gap: 5px;
     }
     .pulse-dot {
-        width: 7px;
-        height: 7px;
+        width: 6px;
+        height: 6px;
         background-color: #10B981;
         border-radius: 50%;
-        box-shadow: 0 0 8px #10B981;
+        box-shadow: 0 0 6px #10B981;
     }
-
     .ticker-bar {
         display: flex;
         align-items: center;
-        gap: 12px;
-        overflow-x: auto;
+        gap: 10px;
     }
     .ticker-pill {
         background: rgba(255, 255, 255, 0.03);
         border: 1px solid rgba(255, 255, 255, 0.06);
-        border-radius: 8px;
-        padding: 5px 12px;
-        font-size: 0.82rem;
+        border-radius: 6px;
+        padding: 4px 10px;
+        font-size: 0.78rem;
         display: flex;
-        gap: 6px;
-        white-space: nowrap;
+        gap: 5px;
     }
-    .ticker-pill b {
-        color: #94A3B8;
-    }
-    .ticker-pos { color: #10B981; font-weight: 600; font-family: 'JetBrains Mono', monospace; }
-    .ticker-neu { color: #38BDF8; font-weight: 600; font-family: 'JetBrains Mono', monospace; }
+    .ticker-pill b { color: #94A3B8; }
+    .pos { color: #10B981; font-weight: 600; font-family: 'JetBrains Mono', monospace; }
+    .neu { color: #38BDF8; font-weight: 600; font-family: 'JetBrains Mono', monospace; }
 
     /* Custom Glass Tabs */
     .stTabs [data-baseweb="tab-list"] {
         background: rgba(14, 18, 28, 0.6) !important;
         backdrop-filter: blur(12px) !important;
         border: 1px solid rgba(255, 255, 255, 0.07) !important;
-        border-radius: 14px !important;
-        padding: 6px !important;
-        gap: 8px !important;
-        margin-bottom: 22px !important;
+        border-radius: 10px !important;
+        padding: 4px !important;
+        gap: 6px !important;
+        margin-bottom: 14px !important;
     }
     .stTabs [data-baseweb="tab"] {
-        border-radius: 10px !important;
+        border-radius: 8px !important;
         color: #94A3B8 !important;
         font-weight: 600 !important;
-        font-size: 0.95rem !important;
-        padding: 9px 22px !important;
+        font-size: 0.88rem !important;
+        padding: 6px 16px !important;
         border: none !important;
         background: transparent !important;
-        transition: all 0.2s ease !important;
-    }
-    .stTabs [data-baseweb="tab"]:hover {
-        color: #FFFFFF !important;
-        background: rgba(255, 255, 255, 0.04) !important;
+        transition: all 0.15s ease !important;
     }
     .stTabs [aria-selected="true"] {
         background: linear-gradient(135deg, rgba(0, 242, 254, 0.16) 0%, rgba(79, 172, 254, 0.16) 100%) !important;
         color: #00F2FE !important;
         border: 1px solid rgba(0, 242, 254, 0.4) !important;
-        box-shadow: 0 4px 14px rgba(0, 242, 254, 0.18) !important;
     }
 
-    /* Fintech Glass Card Container */
-    .fintech-card {
-        background: rgba(14, 19, 31, 0.65);
+    /* Kite-Style Watchlist Container & Items */
+    .watchlist-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 14px;
+        background: rgba(18, 24, 38, 0.7);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 10px 10px 0 0;
+        font-size: 0.82rem;
+        font-weight: 700;
+        color: #94A3B8;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+    }
+
+    /* Override Streamlit Radio as Clickable Watchlist Cards */
+    div[data-testid="stRadio"] > div {
+        background: rgba(14, 18, 28, 0.5);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-top: none;
+        border-radius: 0 0 10px 10px;
+        max-height: 720px;
+        overflow-y: auto;
+        padding: 6px;
+        gap: 4px;
+    }
+    div[data-testid="stRadio"] input[type="radio"] {
+        display: none !important;
+    }
+    div[data-testid="stRadio"] label {
+        background: rgba(18, 24, 38, 0.45);
+        border: 1px solid rgba(255, 255, 255, 0.04);
+        border-radius: 8px;
+        padding: 9px 12px;
+        margin: 0 !important;
+        transition: all 0.15s ease;
+        cursor: pointer;
+        display: flex !important;
+        align-items: center !important;
+    }
+    div[data-testid="stRadio"] label:hover {
+        background: rgba(255, 255, 255, 0.05);
+        border-color: rgba(0, 242, 254, 0.25);
+    }
+    div[data-testid="stRadio"] label[data-checked="true"] {
+        background: linear-gradient(135deg, rgba(0, 242, 254, 0.14) 0%, rgba(79, 172, 254, 0.08) 100%) !important;
+        border: 1px solid rgba(0, 242, 254, 0.45) !important;
+        box-shadow: 0 2px 10px rgba(0, 242, 254, 0.12) !important;
+    }
+
+    /* Terminal Main Canvas Header */
+    .terminal-header {
+        background: rgba(14, 19, 31, 0.7);
         backdrop-filter: blur(16px);
         border: 1px solid rgba(255, 255, 255, 0.08);
-        border-radius: 16px;
-        padding: 20px;
-        margin-bottom: 18px;
-        transition: border 0.2s ease, box-shadow 0.2s ease;
-    }
-    .fintech-card:hover {
-        border-color: rgba(0, 242, 254, 0.25);
-        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
-    }
-
-    /* Metric Stat Tiles */
-    .stat-tile {
-        background: rgba(18, 24, 38, 0.55);
-        border: 1px solid rgba(255, 255, 255, 0.07);
-        border-radius: 14px;
-        padding: 16px 18px;
+        border-radius: 12px;
+        padding: 16px 20px;
+        margin-bottom: 12px;
         display: flex;
-        flex-direction: column;
         justify-content: space-between;
-        min-height: 105px;
+        align-items: center;
     }
-    .stat-label {
-        font-size: 0.78rem;
-        font-weight: 600;
-        color: #94A3B8;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-    }
-    .stat-val {
-        font-size: 1.65rem;
+    .asset-title {
+        font-size: 1.4rem;
         font-weight: 800;
-        color: #F8FAFC;
+        color: #FFFFFF;
+        letter-spacing: -0.5px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    .asset-price-box {
+        text-align: right;
+    }
+    .hero-price {
+        font-size: 1.85rem;
+        font-weight: 800;
         font-family: 'JetBrains Mono', monospace;
+        color: #F8FAFC;
         letter-spacing: -0.5px;
     }
-    .stat-pill {
-        display: inline-flex;
+
+    /* Ribbon Horizon Pills */
+    .horizon-ribbon {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 12px;
+    }
+    .horizon-pill {
+        flex: 1;
+        background: rgba(18, 24, 38, 0.6);
+        border: 1px solid rgba(255, 255, 255, 0.07);
+        border-radius: 10px;
+        padding: 10px 14px;
+        display: flex;
+        justify-content: space-between;
         align-items: center;
-        gap: 5px;
-        font-size: 0.78rem;
+    }
+    .horizon-pill-lbl {
+        font-size: 0.75rem;
         font-weight: 700;
-        border-radius: 20px;
-        padding: 3px 9px;
-        width: fit-content;
+        color: #94A3B8;
+        text-transform: uppercase;
+    }
+    .horizon-pill-val {
+        font-size: 1.05rem;
+        font-weight: 800;
+        font-family: 'JetBrains Mono', monospace;
+        color: #F8FAFC;
     }
     .pill-green {
         background: rgba(16, 185, 129, 0.15);
         color: #10B981;
         border: 1px solid rgba(16, 185, 129, 0.3);
+        border-radius: 12px;
+        padding: 2px 7px;
+        font-size: 0.75rem;
+        font-weight: 700;
     }
     .pill-red {
         background: rgba(244, 63, 94, 0.15);
         color: #F43F5E;
         border: 1px solid rgba(244, 63, 94, 0.3);
-    }
-    .pill-cyan {
-        background: rgba(0, 242, 254, 0.15);
-        color: #00F2FE;
-        border: 1px solid rgba(0, 242, 254, 0.3);
-    }
-    .pill-amber {
-        background: rgba(245, 158, 11, 0.15);
-        color: #F59E0B;
-        border: 1px solid rgba(245, 158, 11, 0.3);
-    }
-
-    /* Executive Thesis Box */
-    .thesis-box {
-        background: linear-gradient(145deg, rgba(14, 22, 38, 0.8) 0%, rgba(9, 13, 22, 0.9) 100%);
-        border: 1px solid rgba(255, 255, 255, 0.08);
-        border-radius: 16px;
-        padding: 22px;
-        margin-bottom: 20px;
-    }
-    .thesis-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 12px;
-    }
-    .thesis-title {
-        font-size: 1.1rem;
-        font-weight: 700;
-        color: #FFFFFF;
-        display: flex;
-        align-items: center;
-        gap: 8px;
-    }
-    .thesis-summary {
-        font-size: 0.95rem;
-        line-height: 1.55;
-        color: #CBD5E1;
-        margin-bottom: 18px;
-    }
-    .catalyst-card {
-        background: rgba(16, 185, 129, 0.05);
-        border: 1px solid rgba(16, 185, 129, 0.18);
-        border-radius: 10px;
-        padding: 10px 14px;
-        margin-bottom: 8px;
-        font-size: 0.88rem;
-        color: #E2E8F0;
-        display: flex;
-        align-items: flex-start;
-        gap: 8px;
-    }
-    .headwind-card {
-        background: rgba(244, 63, 94, 0.05);
-        border: 1px solid rgba(244, 63, 94, 0.18);
-        border-radius: 10px;
-        padding: 10px 14px;
-        margin-bottom: 8px;
-        font-size: 0.88rem;
-        color: #E2E8F0;
-        display: flex;
-        align-items: flex-start;
-        gap: 8px;
-    }
-
-    /* Factor Grid */
-    .factor-tile {
-        background: rgba(18, 24, 38, 0.5);
-        border: 1px solid rgba(255, 255, 255, 0.06);
-        border-radius: 10px;
-        padding: 10px 12px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 6px;
-    }
-    .factor-name {
-        font-size: 0.82rem;
-        color: #94A3B8;
-        font-weight: 500;
-    }
-    .factor-value {
-        font-size: 0.88rem;
-        font-weight: 700;
-        font-family: 'JetBrains Mono', monospace;
-        color: #FFFFFF;
-    }
-
-    /* News Box */
-    .news-tile {
-        background: rgba(18, 24, 38, 0.45);
-        border: 1px solid rgba(255, 255, 255, 0.05);
         border-radius: 12px;
-        padding: 14px 16px;
-        margin-bottom: 10px;
-        transition: background 0.15s ease;
-    }
-    .news-tile:hover {
-        background: rgba(255, 255, 255, 0.04);
-    }
-    .news-title {
-        font-size: 0.92rem;
-        font-weight: 600;
-        color: #F1F5F9;
-        margin-bottom: 4px;
-    }
-    .news-meta {
+        padding: 2px 7px;
         font-size: 0.75rem;
-        color: #64748B;
-        display: flex;
-        gap: 10px;
+        font-weight: 700;
     }
 
-    /* Streamlit Selectbox override */
-    div[data-baseweb="select"] {
-        border-radius: 12px !important;
+    /* Cards */
+    .fintech-card {
+        background: rgba(14, 19, 31, 0.65);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 12px;
+        padding: 16px;
+        height: 100%;
     }
+    .catalyst-item {
+        background: rgba(16, 185, 129, 0.06);
+        border: 1px solid rgba(16, 185, 129, 0.18);
+        border-radius: 8px;
+        padding: 8px 12px;
+        margin-bottom: 6px;
+        font-size: 0.84rem;
+        color: #E2E8F0;
+        display: flex;
+        gap: 8px;
+    }
+    .headwind-item {
+        background: rgba(244, 63, 94, 0.06);
+        border: 1px solid rgba(244, 63, 94, 0.18);
+        border-radius: 8px;
+        padding: 8px 12px;
+        margin-bottom: 6px;
+        font-size: 0.84rem;
+        color: #E2E8F0;
+        display: flex;
+        gap: 8px;
+    }
+    .metric-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 8px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        font-size: 0.84rem;
+    }
+    .metric-row:last-child {
+        border-bottom: none;
+    }
+    .metric-row-lbl { color: #94A3B8; font-weight: 500; }
+    .metric-row-val { color: #FFFFFF; font-weight: 700; font-family: 'JetBrains Mono', monospace; }
 </style>
 """, unsafe_allow_html=True)
 
 
-def build_fintech_fan_chart(ticker: str, history_df: pd.DataFrame, forecast_df: pd.DataFrame) -> go.Figure:
-    """Builds a TradingView-caliber Plotly fan chart with custom dark neon styling."""
+def build_tradingview_fan_chart(ticker: str, history_df: pd.DataFrame, forecast_df: pd.DataFrame) -> go.Figure:
+    """Builds an edge-to-edge TradingView dark theme Plotly fan chart."""
     fig = go.Figure()
 
-    # Historical price curve
+    # Historical price
     fig.add_trace(go.Scatter(
         x=history_df.index,
         y=history_df["close"],
@@ -377,42 +364,42 @@ def build_fintech_fan_chart(ticker: str, history_df: pd.DataFrame, forecast_df: 
     # Outer 80% Cone (p10 to p90)
     fig.add_trace(go.Scatter(
         x=fc_dates, y=p90_vals, mode="lines", name="p90 (Bull Outlier)",
-        line=dict(color="rgba(0, 242, 254, 0.3)", width=1), showlegend=False,
+        line=dict(color="rgba(0, 242, 254, 0.25)", width=1), showlegend=False,
         hoverinfo="skip"
     ))
     fig.add_trace(go.Scatter(
         x=fc_dates, y=p10_vals, mode="lines", name="80% Probability Cone (p10 - p90)",
         fill="tonexty", fillcolor="rgba(0, 242, 254, 0.08)",
-        line=dict(color="rgba(0, 242, 254, 0.3)", width=1),
+        line=dict(color="rgba(0, 242, 254, 0.25)", width=1),
         hovertemplate="<b>80% Range</b>: ₹%{y:,.2f}<extra></extra>"
     ))
 
-    # Inner 50% Core Probability Cone (p25 to p75)
+    # Inner 50% Core Cone (p25 to p75)
     fig.add_trace(go.Scatter(
         x=fc_dates, y=p75_vals, mode="lines", name="p75 (Upper Core)",
-        line=dict(color="rgba(0, 242, 254, 0.6)", width=1), showlegend=False,
+        line=dict(color="rgba(0, 242, 254, 0.5)", width=1), showlegend=False,
         hoverinfo="skip"
     ))
     fig.add_trace(go.Scatter(
         x=fc_dates, y=p25_vals, mode="lines", name="50% Core Probability Cone (p25 - p75)",
         fill="tonexty", fillcolor="rgba(0, 242, 254, 0.22)",
-        line=dict(color="rgba(0, 242, 254, 0.6)", width=1),
+        line=dict(color="rgba(0, 242, 254, 0.5)", width=1),
         hovertemplate="<b>50% Core Range</b>: ₹%{y:,.2f}<extra></extra>"
     ))
 
-    # Expected Median Path (p50)
+    # Median Path (p50)
     fig.add_trace(go.Scatter(
-        x=fc_dates, y=p50_vals, mode="lines+markers", name="Expected Median Path (p50)",
+        x=fc_dates, y=p50_vals, mode="lines+markers", name="Expected Median (p50)",
         line=dict(color="#F59E0B", width=2.5, dash="dash"),
         marker=dict(size=4, color="#F59E0B"),
-        hovertemplate="<b>%{x|%d %b %Y}</b><br>Median Projection: ₹%{y:,.2f}<extra></extra>"
+        hovertemplate="<b>%{x|%d %b %Y}</b><br>Median Target: ₹%{y:,.2f}<extra></extra>"
     ))
 
-    # Vertical demarcation for Today
+    # Today vertical delimiter
     fig.add_vline(
         x=last_hist_date, line_width=1.5, line_dash="dash", line_color="#64748B",
-        annotation_text="Today (Forecast Pivot)", annotation_position="top left",
-        annotation_font=dict(color="#94A3B8", size=11)
+        annotation_text="Today", annotation_position="top left",
+        annotation_font=dict(color="#94A3B8", size=10)
     )
 
     fig.update_layout(
@@ -420,8 +407,8 @@ def build_fintech_fan_chart(ticker: str, history_df: pd.DataFrame, forecast_df: 
         plot_bgcolor="#0A0D15",
         font=dict(family="Plus Jakarta Sans", color="#94A3B8"),
         hovermode="x unified",
-        margin=dict(l=30, r=30, t=30, b=30),
-        height=540,
+        margin=dict(l=20, r=20, t=10, b=20),
+        height=480,
         legend=dict(
             orientation="h",
             yanchor="bottom",
@@ -429,7 +416,7 @@ def build_fintech_fan_chart(ticker: str, history_df: pd.DataFrame, forecast_df: 
             xanchor="right",
             x=1,
             bgcolor="rgba(0,0,0,0)",
-            font=dict(size=11, color="#CBD5E1")
+            font=dict(size=10, color="#CBD5E1")
         ),
         xaxis=dict(
             showgrid=True,
@@ -449,7 +436,7 @@ def build_fintech_fan_chart(ticker: str, history_df: pd.DataFrame, forecast_df: 
 
 
 def main():
-    # Top Branding Header
+    # Top Branding Bar
     st.markdown("""
     <div class="top-navbar">
         <div class="brand-section">
@@ -458,200 +445,225 @@ def main():
             <div class="status-badge"><span class="pulse-dot"></span> LIVE QUANT TERMINAL</div>
         </div>
         <div class="ticker-bar">
-            <div class="ticker-pill"><b>NIFTY 50</b> <span class="ticker-pos">25,127 (+0.4%)</span></div>
-            <div class="ticker-pill"><b>INDIA VIX</b> <span class="ticker-neu">13.20 (-1.8%)</span></div>
-            <div class="ticker-pill"><b>BRENT CRUDE</b> <span class="ticker-neu">$74.20 (-0.6%)</span></div>
-            <div class="ticker-pill"><b>USD/INR</b> <span class="ticker-neu">84.05</span></div>
+            <div class="ticker-pill"><b>NIFTY 50</b> <span class="pos">25,127 (+0.4%)</span></div>
+            <div class="ticker-pill"><b>INDIA VIX</b> <span class="neu">13.20 (-1.8%)</span></div>
+            <div class="ticker-pill"><b>BRENT CRUDE</b> <span class="neu">$74.20 (-0.6%)</span></div>
+            <div class="ticker-pill"><b>USD/INR</b> <span class="neu">84.05</span></div>
         </div>
     </div>
     """, unsafe_allow_html=True)
 
-    # Master Tabs
-    tab_deep_dive, tab_screener, tab_portfolio = st.tabs([
-        "⚡ Single-Stock Deep Dive",
+    # Tabs
+    tab_terminal, tab_screener, tab_portfolio = st.tabs([
+        "⚡ Terminal (Watchlist & Fan Chart)",
         "🚀 Market Opportunity Screener",
         "💼 Modern Portfolio Allocator"
     ])
 
     # =========================================================================
-    # TAB 1: SINGLE-STOCK DEEP DIVE
+    # TAB 1: KITE-STYLE 2-COLUMN SPLIT TERMINAL
     # =========================================================================
-    with tab_deep_dive:
-        # Stock Selector Bar
-        col_select, col_info = st.columns([1.5, 2.5])
-        with col_select:
-            ticker_keys = list(PILOT_UNIVERSE.keys())
-            selected_ticker = st.selectbox(
-                "Choose Asset",
-                options=ticker_keys,
-                index=0,
-                format_func=lambda x: f"{x.replace('.NS', '')}  —  {PILOT_UNIVERSE[x]['name']}",
+    with tab_terminal:
+        col_watchlist, col_chart = st.columns([1.1, 3.4], gap="medium")
+
+        # -------------------------------------------------------------
+        # LEFT COLUMN: WATCHLIST (Zerodha Kite Style)
+        # -------------------------------------------------------------
+        with col_watchlist:
+            search_query = st.text_input("🔍 Search Asset...", placeholder="Filter by name...", label_visibility="collapsed")
+            
+            # Prepare ticker list
+            all_tickers = list(screener_df["ticker"]) if not screener_df.empty else list(PILOT_UNIVERSE.keys())
+            
+            if search_query:
+                filtered_tickers = [t for t in all_tickers if search_query.lower() in t.lower() or search_query.lower() in PILOT_UNIVERSE.get(t, {}).get("name", "").lower()]
+            else:
+                filtered_tickers = all_tickers
+
+            if not filtered_tickers:
+                filtered_tickers = all_tickers
+
+            st.markdown(f"<div class='watchlist-header'><span>Universe Watchlist</span><span>({len(filtered_tickers)} Assets)</span></div>", unsafe_allow_html=True)
+
+            # Format radio card labels
+            def render_watchlist_label(t):
+                row = ticker_lookup.get(t, {})
+                price = row.get("current_price", PILOT_UNIVERSE.get(t, {}).get("current_price", 1000.0))
+                ret = row.get("expected_return_3m", 5.0)
+                badge = "🟢" if ret > 6 else ("🔵" if ret > 2 else ("🔴" if ret < -4 else "⚪"))
+                sign = "+" if ret > 0 else ""
+                short_name = t.replace(".NS", "")
+                return f"{short_name}  •  ₹{price:,.1f}  [{sign}{ret:.1f}% {badge}]"
+
+            selected_ticker = st.radio(
+                "Watchlist",
+                options=filtered_tickers,
+                format_func=render_watchlist_label,
                 label_visibility="collapsed"
             )
-        with col_info:
-            info = PILOT_UNIVERSE[selected_ticker]
-            st.markdown(f"""
-            <div style="display:flex; align-items:center; gap:12px; height:38px;">
-                <span style="font-weight:700; color:#F1F5F9; font-size:1.05rem;">{info['name']}</span>
-                <span class="ticker-pill"><b>Sector:</b> {info['sector'].split('/')[0].strip()}</span>
-                <span class="ticker-pill"><b>NSE:</b> {selected_ticker}</span>
-                <span class="ticker-pill"><b>BSE:</b> {info['bse_code']}</span>
-            </div>
-            """, unsafe_allow_html=True)
 
-        # Generate Forecast Data
-        with st.spinner("Computing 72-factor quantile trajectory..."):
-            try:
-                history_df, forecast_df, meta = generate_fan_chart_data(selected_ticker)
-            except Exception as e:
-                st.error(f"Error computing forecast: {e}")
-                return
+        # -------------------------------------------------------------
+        # RIGHT COLUMN: MAIN TRADING & FORECASTING CANVAS
+        # -------------------------------------------------------------
+        with col_chart:
+            stock_info = PILOT_UNIVERSE.get(selected_ticker, {})
+            name = stock_info.get("name", selected_ticker)
+            sector = stock_info.get("sector", "Equities").split("/")[0].strip()
 
-        current_price = meta["current_price"]
-        horizons = meta["horizons"]
-        regime = meta.get("regime", "SIDEWAYS_CONSOLIDATION").replace("_", " ")
+            # Generate forecast data
+            with st.spinner(f"Computing real-time fan chart for {selected_ticker}..."):
+                try:
+                    history_df, forecast_df, meta = generate_fan_chart_data(selected_ticker)
+                except Exception as e:
+                    st.error(f"Error computing forecast: {e}")
+                    return
 
-        # 4 Hero Metric Cards
-        p50_1m = horizons["1M"]["p50"]["projected_price"]
-        ret_1m = horizons["1M"]["p50"]["expected_return_pct"]
-        p50_3m = horizons["3M"]["p50"]["projected_price"]
-        ret_3m = horizons["3M"]["p50"]["expected_return_pct"]
-        p50_6m = horizons["6M"]["p50"]["projected_price"]
-        ret_6m = horizons["6M"]["p50"]["expected_return_pct"]
+            current_price = meta["current_price"]
+            horizons = meta["horizons"]
+            regime = meta.get("regime", "SIDEWAYS_CONSOLIDATION").replace("_", " ")
 
-        c1, c2, c3, c4 = st.columns(4)
-        with c1:
-            st.markdown(f"""
-            <div class="stat-tile">
-                <div class="stat-label">Current Market Price</div>
-                <div class="stat-val">₹{current_price:,.2f}</div>
-                <div class="stat-pill pill-cyan">Live EOD Close</div>
-            </div>
-            """, unsafe_allow_html=True)
+            h1 = horizons["1M"]["p50"]
+            h3 = horizons["3M"]["p50"]
+            h6 = horizons["6M"]["p50"]
 
-        with c2:
-            pill_class = "pill-green" if ret_1m >= 0 else "pill-red"
-            st.markdown(f"""
-            <div class="stat-tile">
-                <div class="stat-label">1-Month Target (21d)</div>
-                <div class="stat-val">₹{p50_1m:,.2f}</div>
-                <div class="stat-pill {pill_class}">{ret_1m:+.1f}% Expected</div>
-            </div>
-            """, unsafe_allow_html=True)
+            h1_ret = h1["expected_return_pct"]
+            h3_ret = h3["expected_return_pct"]
+            h6_ret = h6["expected_return_pct"]
 
-        with c3:
-            pill_class = "pill-green" if ret_3m >= 0 else "pill-red"
-            st.markdown(f"""
-            <div class="stat-tile">
-                <div class="stat-label">3-Month Target (63d)</div>
-                <div class="stat-val">₹{p50_3m:,.2f}</div>
-                <div class="stat-pill {pill_class}">{ret_3m:+.1f}% Core Horizon</div>
-            </div>
-            """, unsafe_allow_html=True)
-
-        with c4:
-            pill_class = "pill-green" if ret_6m >= 0 else "pill-red"
-            st.markdown(f"""
-            <div class="stat-tile">
-                <div class="stat-label">6-Month Target (126d)</div>
-                <div class="stat-val">₹{p50_6m:,.2f}</div>
-                <div class="stat-pill {pill_class}">{ret_6m:+.1f}% Macro Horizon</div>
-            </div>
-            """, unsafe_allow_html=True)
-
-        st.markdown("<div style='height:14px'></div>", unsafe_allow_html=True)
-
-        # Main TradingView Fan Chart
-        fig = build_fintech_fan_chart(selected_ticker, history_df, forecast_df)
-        st.plotly_chart(fig, use_container_width=True, config={"displayModeBar": False})
-
-        # Executive AI Investment Thesis
-        thesis = meta.get("investment_thesis", {})
-        if thesis:
-            stance = thesis.get("stance", "NEUTRAL")
-            stance_color = "#10B981" if "BULL" in stance or "ACCUMULATE" in stance else ("#F43F5E" if "BEAR" in stance or "TRIM" in stance else "#F59E0B")
-            summary = thesis.get("executive_summary", "")
-
-            catalysts_html = "".join([f"<div class='catalyst-card'><span>🟢</span><span>{b}</span></div>" for b in thesis.get("bull_catalysts", [])])
-            headwinds_html = "".join([f"<div class='headwind-card'><span>🔴</span><span>{h}</span></div>" for h in thesis.get("risk_headwinds", [])])
+            # Terminal Header Bar
+            h3_pill_class = "pill-green" if h3_ret >= 0 else "pill-red"
+            h3_sign = "+" if h3_ret > 0 else ""
 
             st.markdown(f"""
-            <div class="thesis-box">
-                <div class="thesis-header">
-                    <div class="thesis-title">📋 Institutional Investment Thesis</div>
-                    <div class="stat-pill" style="background:rgba(255,255,255,0.06); border-color:{stance_color}; color:{stance_color}; font-size:0.85rem;">
-                        ● {stance}
+            <div class="terminal-header">
+                <div>
+                    <div class="asset-title">
+                        {name}
+                        <span class="ticker-pill"><b>NSE:</b> {selected_ticker}</span>
+                        <span class="ticker-pill"><b>Sector:</b> {sector}</span>
+                        <span class="ticker-pill"><b>Regime:</b> {regime}</span>
+                    </div>
+                    <div style="font-size:0.82rem; color:#64748B; margin-top:4px;">
+                        Black-Litterman Catalyst Blending Active • Monotonic Non-Crossing Fan Cones
                     </div>
                 </div>
-                <div class="thesis-summary">{summary}</div>
-                <div style="display:grid; grid-template-columns: 1fr 1fr; gap:16px;">
-                    <div>
-                        <div style="font-size:0.82rem; font-weight:700; color:#10B981; margin-bottom:8px; text-transform:uppercase;">Key Bull Catalysts</div>
-                        {catalysts_html}
-                    </div>
-                    <div>
-                        <div style="font-size:0.82rem; font-weight:700; color:#F43F5E; margin-bottom:8px; text-transform:uppercase;">Downside Risk Headwinds</div>
-                        {headwinds_html}
+                <div class="asset-price-box">
+                    <div class="hero-price">₹{current_price:,.2f}</div>
+                    <div style="font-size:0.88rem; font-weight:700;">
+                        3M Target: <span style="color:#00F2FE;">₹{h3['projected_price']:,.2f}</span>
+                        <span class="{h3_pill_class}">{h3_sign}{h3_ret:.1f}%</span>
                     </div>
                 </div>
             </div>
             """, unsafe_allow_html=True)
 
-        # Bottom Grid: 72 Factors & Analyst Intelligence
-        col_factors, col_intel = st.columns([1.1, 0.9])
-        
-        with col_factors:
-            st.markdown("#### 🔍 Key Quantitative Factors (72-Feature Stack)")
-            drivers = meta.get("key_drivers", [])
-            if drivers:
-                for d in drivers[:10]:
-                    st.markdown(f"""
-                    <div class="factor-tile">
-                        <span class="factor-name">{d['label']}</span>
-                        <span class="factor-value">{d['value']}</span>
+            # Horizontal Horizon Ribbon
+            p1_class = "pill-green" if h1_ret >= 0 else "pill-red"
+            p3_class = "pill-green" if h3_ret >= 0 else "pill-red"
+            p6_class = "pill-green" if h6_ret >= 0 else "pill-red"
+
+            st.markdown(f"""
+            <div class="horizon-ribbon">
+                <div class="horizon-pill">
+                    <div>
+                        <div class="horizon-pill-lbl">1-Month Target (21d)</div>
+                        <div class="horizon-pill-val">₹{h1['projected_price']:,.2f}</div>
                     </div>
-                    """, unsafe_allow_html=True)
+                    <span class="{p1_class}">{h1_ret:+.1f}%</span>
+                </div>
+                <div class="horizon-pill" style="border-color: rgba(0,242,254,0.3); background: rgba(0,242,254,0.06);">
+                    <div>
+                        <div class="horizon-pill-lbl" style="color:#00F2FE;">3-Month Target (Core 63d)</div>
+                        <div class="horizon-pill-val">₹{h3['projected_price']:,.2f}</div>
+                    </div>
+                    <span class="{p3_class}">{h3_ret:+.1f}%</span>
+                </div>
+                <div class="horizon-pill">
+                    <div>
+                        <div class="horizon-pill-lbl">6-Month Target (126d)</div>
+                        <div class="horizon-pill-val">₹{h6['projected_price']:,.2f}</div>
+                    </div>
+                    <span class="{p6_class}">{h6_ret:+.1f}%</span>
+                </div>
+            </div>
+            """, unsafe_allow_html=True)
 
-        with col_intel:
-            st.markdown("#### 🧠 Institutional Analyst Consensus")
-            today_str = datetime.now().strftime("%Y-%m-%d")
-            expert_records = load_expert_consensus(today_str)
-            matched = next((r for r in expert_records if r.get("ticker") == selected_ticker), None)
+            # Centerpiece TradingView Fan Chart
+            fig = build_tradingview_fan_chart(selected_ticker, history_df, forecast_df)
+            st.plotly_chart(fig, use_container_width=True, config={"displayModeBar": False})
 
-            if matched and matched.get("price_targets"):
-                pt = matched["price_targets"]
+            # Side-by-Side 50/50 Intelligence Cards
+            card_col1, card_col2 = st.columns([1, 1], gap="medium")
+
+            with card_col1:
+                thesis = meta.get("investment_thesis", {})
+                stance = thesis.get("stance", "NEUTRAL")
+                stance_color = "#10B981" if "BULL" in stance or "ACCUMULATE" in stance else ("#F43F5E" if "BEAR" in stance or "TRIM" in stance else "#F59E0B")
+                summary = thesis.get("executive_summary", "")
+
+                catalysts = "".join([f"<div class='catalyst-item'><span>🟢</span><span>{c}</span></div>" for c in thesis.get("bull_catalysts", [])])
+                headwinds = "".join([f"<div class='headwind-item'><span>🔴</span><span>{h}</span></div>" for h in thesis.get("risk_headwinds", [])])
+
+                st.markdown(f"""
+                <div class="fintech-card">
+                    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+                        <span style="font-size:0.95rem; font-weight:700; color:#FFFFFF;">📋 AI Investment Thesis</span>
+                        <span style="font-size:0.80rem; font-weight:700; color:{stance_color}; background:rgba(255,255,255,0.05); padding:3px 8px; border-radius:12px; border:1px solid {stance_color};">● {stance}</span>
+                    </div>
+                    <div style="font-size:0.85rem; color:#CBD5E1; line-height:1.5; margin-bottom:12px;">{summary}</div>
+                    <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px;">
+                        <div>
+                            <div style="font-size:0.75rem; font-weight:700; color:#10B981; margin-bottom:6px; text-transform:uppercase;">Bull Catalysts</div>
+                            {catalysts}
+                        </div>
+                        <div>
+                            <div style="font-size:0.75rem; font-weight:700; color:#F43F5E; margin-bottom:6px; text-transform:uppercase;">Downside Headwinds</div>
+                            {headwinds}
+                        </div>
+                    </div>
+                </div>
+                """, unsafe_allow_html=True)
+
+            with card_col2:
+                today_str = datetime.now().strftime("%Y-%m-%d")
+                expert_records = load_expert_consensus(today_str)
+                matched = next((r for r in expert_records if r.get("ticker") == selected_ticker), None)
+
+                pt = matched.get("price_targets", {}) if matched else {}
                 mean_pt = pt.get("mean")
                 mean_str = f"₹{mean_pt:,.0f}" if mean_pt else "N/A"
                 high_str = f"₹{pt.get('high', 0):,.0f}" if pt.get('high') else "N/A"
                 low_str = f"₹{pt.get('low', 0):,.0f}" if pt.get('low') else "N/A"
 
+                drivers_dict = {d["feature"]: d["value"] for d in meta.get("key_drivers", [])}
+
                 st.markdown(f"""
-                <div class="stat-tile" style="margin-bottom:12px;">
-                    <div style="display:flex; justify-content:space-between; margin-bottom:6px;">
-                        <span class="stat-label">Consensus Mean Target</span>
-                        <span style="font-family:'JetBrains Mono'; font-weight:700; color:#00F2FE;">{mean_str}</span>
+                <div class="fintech-card">
+                    <div style="font-size:0.95rem; font-weight:700; color:#FFFFFF; margin-bottom:10px;">
+                        🧠 Institutional Consensus & Key Signals
                     </div>
-                    <div style="font-size:0.82rem; color:#94A3B8;">Analyst Range: Low {low_str}  •  High {high_str}</div>
+                    <div class="metric-row">
+                        <span class="metric-row-lbl">Institutional Mean Target (1Y)</span>
+                        <span class="metric-row-val" style="color:#00F2FE;">{mean_str} (Range: {low_str} - {high_str})</span>
+                    </div>
+                    <div class="metric-row">
+                        <span class="metric-row-lbl">Analyst Buy Conviction</span>
+                        <span class="metric-row-val">{drivers_dict.get('analyst_conviction', '80%')}</span>
+                    </div>
+                    <div class="metric-row">
+                        <span class="metric-row-lbl">Chaikin Money Flow (CMF)</span>
+                        <span class="metric-row-val">{drivers_dict.get('cmf_20d', '0.00')}</span>
+                    </div>
+                    <div class="metric-row">
+                        <span class="metric-row-lbl">P/E Multiple & PEG Ratio</span>
+                        <span class="metric-row-val">{drivers_dict.get('pe_ratio', '20x')} • PEG: {drivers_dict.get('peg_ratio', '1.5')}</span>
+                    </div>
+                    <div class="metric-row">
+                        <span class="metric-row-lbl">RSI (14-Day Momentum)</span>
+                        <span class="metric-row-val">{drivers_dict.get('rsi_14', '50.0')}</span>
+                    </div>
                 </div>
                 """, unsafe_allow_html=True)
-
-            st.markdown("#### 📰 Verified Material News")
-            news_items = load_daily_news(today_str)
-            tagged_news = [a for a in news_items if selected_ticker in a.get("matched_tickers", [])]
-            if tagged_news:
-                for n in tagged_news[:4]:
-                    st.markdown(f"""
-                    <div class="news-tile">
-                        <div class="news-title">{n['title']}</div>
-                        <div class="news-meta">
-                            <span>{n.get('source', 'Financial Wire')}</span>
-                            <span>•</span>
-                            <span>{n.get('published_raw', 'Today')}</span>
-                        </div>
-                    </div>
-                    """, unsafe_allow_html=True)
-            else:
-                st.caption(f"No breaking news alerts tagged for {selected_ticker} today.")
 
     # =========================================================================
     # TAB 2: MARKET OPPORTUNITY SCREENER
@@ -660,26 +672,23 @@ def main():
         st.markdown("### 🚀 Cross-Sectional Opportunity Screener")
         st.caption("Real-time ranking of 25 titans across Expected Return, Downside Risk, Risk-Reward, and Money Flow.")
 
-        screener_df = generate_market_screener(use_cache=True)
         if not screener_df.empty:
-            # Metric Counter Bar
             strong_buys = len(screener_df[screener_df["signal"].str.contains("STRONG BUY")])
             accumulates = len(screener_df[screener_df["signal"].str.contains("ACCUMULATE")])
             avoids = len(screener_df[screener_df["signal"].str.contains("AVOID")])
 
             sc1, sc2, sc3, sc4 = st.columns(4)
             with sc1:
-                st.markdown(f"<div class='stat-tile'><div class='stat-label'>Universe Size</div><div class='stat-val'>{len(screener_df)}</div><div class='stat-pill pill-cyan'>Nifty Titans</div></div>", unsafe_allow_html=True)
+                st.markdown(f"<div class='horizon-pill'><div><div class='horizon-pill-lbl'>Universe</div><div class='horizon-pill-val'>{len(screener_df)} Titans</div></div></div>", unsafe_allow_html=True)
             with sc2:
-                st.markdown(f"<div class='stat-tile'><div class='stat-label'>Strong Buys</div><div class='stat-val'>{strong_buys}</div><div class='stat-pill pill-green'>Top Momentum</div></div>", unsafe_allow_html=True)
+                st.markdown(f"<div class='horizon-pill'><div><div class='horizon-pill-lbl'>Strong Buy</div><div class='horizon-pill-val' style='color:#10B981;'>{strong_buys}</div></div><span class='pill-green'>Top Alpha</span></div>", unsafe_allow_html=True)
             with sc3:
-                st.markdown(f"<div class='stat-tile'><div class='stat-label'>Accumulate</div><div class='stat-val'>{accumulates}</div><div class='stat-pill pill-cyan'>Positive Trajectory</div></div>", unsafe_allow_html=True)
+                st.markdown(f"<div class='horizon-pill'><div><div class='horizon-pill-lbl'>Accumulate</div><div class='horizon-pill-val' style='color:#00F2FE;'>{accumulates}</div></div><span class='pill-green'>Positive</span></div>", unsafe_allow_html=True)
             with sc4:
-                st.markdown(f"<div class='stat-tile'><div class='stat-label'>Avoid / Trim</div><div class='stat-val'>{avoids}</div><div class='stat-pill pill-red'>Negative Asymmetry</div></div>", unsafe_allow_html=True)
+                st.markdown(f"<div class='horizon-pill'><div><div class='horizon-pill-lbl'>Avoid / Trim</div><div class='horizon-pill-val' style='color:#F43F5E;'>{avoids}</div></div><span class='pill-red'>Caution</span></div>", unsafe_allow_html=True)
 
-            st.markdown("<div style='height:16px'></div>", unsafe_allow_html=True)
+            st.markdown("<div style='height:12px'></div>", unsafe_allow_html=True)
 
-            # Filter Controls
             f1, f2 = st.columns([1, 1])
             with f1:
                 sec_opts = sorted(screener_df["sector"].unique())
@@ -694,7 +703,6 @@ def main():
             if sig_filter:
                 filtered = filtered[filtered["signal"].isin(sig_filter)]
 
-            # Clean Display Columns
             display_cols = [
                 "ticker", "name", "sector", "current_price",
                 "expected_return_3m", "p10_downside_3m", "risk_reward_ratio",
@@ -707,14 +715,9 @@ def main():
                 "Signal", "Money Flow", "PEG", "P/E"
             ]
 
-            st.dataframe(
-                renamed,
-                hide_index=True,
-                use_container_width=True
-            )
+            st.dataframe(renamed, hide_index=True, use_container_width=True)
 
-            # Return Comparison Chart
-            st.markdown("#### 📊 3-Month Expected Return Ranking")
+            # Chart
             fig_bar = px.bar(
                 screener_df.sort_values(by="expected_return_3m", ascending=True),
                 x="expected_return_3m",
@@ -724,7 +727,7 @@ def main():
                 color_continuous_scale=["#F43F5E", "#38BDF8", "#10B981"],
                 labels={"expected_return_3m": "Expected Return (%)", "ticker": "Asset"},
                 template="plotly_dark",
-                height=560
+                height=520
             )
             fig_bar.update_layout(
                 paper_bgcolor="#0A0D15",
@@ -750,34 +753,33 @@ def main():
 
         with p2:
             st.markdown("""
-            <div class="fintech-card" style="padding:16px;">
-                <div style="font-weight:700; color:#00F2FE; margin-bottom:6px;">Markowitz Max-Sharpe Formulation</div>
-                <div style="font-size:0.88rem; color:#94A3B8; line-height:1.6;">
-                    • <b>Objective</b>: Maximizes risk-adjusted excess return: <span style="font-family:'JetBrains Mono'; color:#FFFFFF;">max (w<sup>T</sup>r - r<sub>f</sub>) / √(w<sup>T</sup>Σw)</span><br>
-                    • <b>Covariance Alignment</b>: Allocates across non-correlated sectors to minimize portfolio drawdown.<br>
-                    • <b>Concentration Guard</b>: Enforces single-asset ceiling to avoid idiosyncratic shock exposure.
+            <div class="fintech-card">
+                <div style="font-weight:700; color:#00F2FE; margin-bottom:4px;">Markowitz Formulation</div>
+                <div style="font-size:0.85rem; color:#94A3B8; line-height:1.5;">
+                    • Maximizes risk-adjusted excess return: <span style="font-family:'JetBrains Mono'; color:#FFFFFF;">max (w<sup>T</sup>r - r<sub>f</sub>) / √(w<sup>T</sup>Σw)</span><br>
+                    • Allocates across non-correlated sectors to minimize portfolio drawdown.<br>
+                    • Enforces single-asset ceiling to avoid idiosyncratic shock exposure.
                 </div>
             </div>
             """, unsafe_allow_html=True)
 
-        screener_for_port = generate_market_screener(use_cache=True)
-        if not screener_for_port.empty:
-            port_result = optimize_portfolio(screener_for_port, total_capital=total_invest, max_stock_weight=max_weight)
+        if not screener_df.empty:
+            port_result = optimize_portfolio(screener_df, total_capital=total_invest, max_stock_weight=max_weight)
 
             if port_result and "allocations" in port_result:
-                st.markdown("<div style='height:14px'></div>", unsafe_allow_html=True)
+                st.markdown("<div style='height:12px'></div>", unsafe_allow_html=True)
                 
                 m1, m2, m3, m4 = st.columns(4)
                 with m1:
-                    st.markdown(f"<div class='stat-tile'><div class='stat-label'>Capital Allocated</div><div class='stat-val'>₹{port_result['total_capital']:,.0f}</div><div class='stat-pill pill-cyan'>100% Deployed</div></div>", unsafe_allow_html=True)
+                    st.markdown(f"<div class='horizon-pill'><div><div class='horizon-pill-lbl'>Capital</div><div class='horizon-pill-val'>₹{port_result['total_capital']:,.0f}</div></div></div>", unsafe_allow_html=True)
                 with m2:
-                    st.markdown(f"<div class='stat-tile'><div class='stat-label'>Expected 3M Return</div><div class='stat-val'>{port_result['expected_3m_portfolio_return_pct']:+.1f}%</div><div class='stat-pill pill-green'>Forward Target</div></div>", unsafe_allow_html=True)
+                    st.markdown(f"<div class='horizon-pill'><div><div class='horizon-pill-lbl'>Expected 3M Return</div><div class='horizon-pill-val' style='color:#10B981;'>{port_result['expected_3m_portfolio_return_pct']:+.1f}%</div></div></div>", unsafe_allow_html=True)
                 with m3:
-                    st.markdown(f"<div class='stat-tile'><div class='stat-label'>Annualized Volatility</div><div class='stat-val'>{port_result['portfolio_volatility_pct']:.1f}%</div><div class='stat-pill pill-amber'>Empirical Risk</div></div>", unsafe_allow_html=True)
+                    st.markdown(f"<div class='horizon-pill'><div><div class='horizon-pill-lbl'>Volatility</div><div class='horizon-pill-val' style='color:#F59E0B;'>{port_result['portfolio_volatility_pct']:.1f}%</div></div></div>", unsafe_allow_html=True)
                 with m4:
-                    st.markdown(f"<div class='stat-tile'><div class='stat-label'>Portfolio Sharpe Ratio</div><div class='stat-val'>{port_result['portfolio_sharpe']:.2f}</div><div class='stat-pill pill-green'>Risk-Adjusted</div></div>", unsafe_allow_html=True)
+                    st.markdown(f"<div class='horizon-pill'><div><div class='horizon-pill-lbl'>Sharpe Ratio</div><div class='horizon-pill-val' style='color:#00F2FE;'>{port_result['portfolio_sharpe']:.2f}</div></div></div>", unsafe_allow_html=True)
 
-                st.markdown("<div style='height:20px'></div>", unsafe_allow_html=True)
+                st.markdown("<div style='height:16px'></div>", unsafe_allow_html=True)
 
                 c_alloc1, c_alloc2 = st.columns([1.2, 0.8])
                 alloc_df = pd.DataFrame(port_result["allocations"])
