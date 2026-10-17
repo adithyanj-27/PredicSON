@@ -195,19 +195,55 @@ def generate_stock_forecast(ticker: str) -> Dict[str, Any]:
     regime_code = int(get_latest_val("regime_code", 1))
     regime_name = REGIME_NAMES.get(regime_code, "SIDEWAYS_CONSOLIDATION")
 
+    drivers_dict = {
+        "regime": regime_name.replace("_", " "),
+        "chaikin_money_flow_20d": round(get_latest_val("chaikin_money_flow_20d", 0.0), 3),
+        "vol_z_score_50d": round(get_latest_val("vol_z_score_50d", 0.0), 2),
+        "trend_sharpe_63d": round(get_latest_val("trend_sharpe_63d", 0.0), 2),
+        "rsi_14": round(get_latest_val("rsi_14", 50.0), 1),
+        "close_to_sma_200": f"{round(get_latest_val('close_to_sma_200', 0.0) * 100, 1)}%",
+        "vix_level": round(get_latest_val("vix_level", 15.0), 1),
+        "crude_ret_63d": f"{round(get_latest_val('crude_ret_63d', 0.0) * 100, 1)}%",
+        "news_sentiment_score": round(get_latest_val("news_sentiment_score", 0.0), 3),
+        "consensus_upside_pct": f"{round(get_latest_val('consensus_upside_pct', 0.0) * 100, 1)}%",
+        "analyst_bullish_ratio": f"{round(get_latest_val('analyst_bullish_ratio', 0.5) * 100, 1)}%",
+        "fund_pe_ratio": round(get_latest_val("fund_pe_ratio", 20.0), 1),
+        "fund_peg_ratio": round(get_latest_val("fund_peg_ratio", 1.5), 2),
+        "fund_rev_growth_yoy": round(get_latest_val("fund_rev_growth_yoy", 0.10), 3),
+        "fund_operating_margin": f"{round(get_latest_val('fund_operating_margin', 0.15) * 100, 1)}%",
+        "residual_alpha_21d": f"{round(get_latest_val('residual_alpha_21d', 0.0) * 100, 1)}%"
+    }
+
     key_drivers = [
-        {"feature": "regime", "label": "Market Macro Regime", "value": regime_name.replace("_", " ")},
-        {"feature": "cmf_20d", "label": "Chaikin Money Flow (CMF)", "value": round(get_latest_val("chaikin_money_flow_20d", 0.0), 3)},
-        {"feature": "vol_z", "label": "Volatility Z-Score (vs 50-DMA)", "value": f"{round(get_latest_val('vol_z_score_50d', 0.0), 2)} σ"},
-        {"feature": "trend_sharpe", "label": "63-Day Trend Sharpe", "value": round(get_latest_val("trend_sharpe_63d", 0.0), 2)},
-        {"feature": "rsi_14", "label": "RSI (14-day momentum)", "value": round(get_latest_val("rsi_14", 50.0), 1)},
-        {"feature": "close_to_sma_200", "label": "200-DMA Distance", "value": f"{round(get_latest_val('close_to_sma_200', 0.0) * 100, 1)}%"},
-        {"feature": "vix_level", "label": "India VIX Volatility", "value": round(get_latest_val("vix_level", 15.0), 1)},
-        {"feature": "crude_ret_63d", "label": "Brent Crude 3M Trend", "value": f"{round(get_latest_val('crude_ret_63d', 0.0) * 100, 1)}%"},
-        {"feature": "news_sentiment", "label": "News Sentiment Index", "value": round(get_latest_val("news_sentiment_score", 0.0), 3)},
-        {"feature": "analyst_upside", "label": "Consensus Target Upside", "value": f"{round(get_latest_val('consensus_upside_pct', 0.0) * 100, 1)}%"},
-        {"feature": "analyst_conviction", "label": "Analyst Bullish Conviction", "value": f"{round(get_latest_val('analyst_bullish_ratio', 0.5) * 100, 1)}%"}
+        {"feature": "regime", "label": "Macro Regime", "value": drivers_dict["regime"]},
+        {"feature": "pe_ratio", "label": "P/E Valuation Multiple", "value": f"{drivers_dict['fund_pe_ratio']}×"},
+        {"feature": "peg_ratio", "label": "PEG Ratio (Growth/Valuation)", "value": drivers_dict["fund_peg_ratio"]},
+        {"feature": "rev_growth", "label": "Quarterly Revenue Growth", "value": f"{round(float(drivers_dict['fund_rev_growth_yoy']) * 100, 1)}% YoY"},
+        {"feature": "op_margin", "label": "Operating Profit Margin", "value": drivers_dict["fund_operating_margin"]},
+        {"feature": "cmf_20d", "label": "Chaikin Money Flow (CMF)", "value": drivers_dict["chaikin_money_flow_20d"]},
+        {"feature": "vol_z", "label": "Volatility Z-Score", "value": f"{drivers_dict['vol_z_score_50d']} σ"},
+        {"feature": "trend_sharpe", "label": "63-Day Trend Sharpe", "value": drivers_dict["trend_sharpe_63d"]},
+        {"feature": "rsi_14", "label": "RSI (14-day momentum)", "value": drivers_dict["rsi_14"]},
+        {"feature": "close_to_sma_200", "label": "200-DMA Distance", "value": drivers_dict["close_to_sma_200"]},
+        {"feature": "vix_level", "label": "India VIX Volatility", "value": drivers_dict["vix_level"]},
+        {"feature": "crude_ret_63d", "label": "Brent Crude 3M Trend", "value": drivers_dict["crude_ret_63d"]},
+        {"feature": "residual_alpha", "label": "Idiosyncratic Alpha (1M)", "value": drivers_dict["residual_alpha_21d"]},
+        {"feature": "analyst_upside", "label": "Consensus Target Upside", "value": drivers_dict["consensus_upside_pct"]},
+        {"feature": "analyst_conviction", "label": "Analyst Bullish Conviction", "value": drivers_dict["analyst_bullish_ratio"]}
     ]
+
+    # Generate Institutional Investment Thesis
+    from src.models.narrative_engine import generate_investment_thesis
+    from config.settings import PILOT_UNIVERSE
+    stock_name = PILOT_UNIVERSE.get(ticker, {}).get("name", ticker)
+    thesis = generate_investment_thesis(
+        ticker=ticker,
+        stock_name=stock_name,
+        current_price=current_price,
+        horizons=forecasts,
+        drivers_dict=drivers_dict,
+        regime_name=regime_name
+    )
 
     return {
         "ticker": ticker,
@@ -215,5 +251,6 @@ def generate_stock_forecast(ticker: str) -> Dict[str, Any]:
         "current_price": round(current_price, 2),
         "regime": regime_name,
         "horizons": forecasts,
-        "key_drivers": key_drivers
+        "key_drivers": key_drivers,
+        "investment_thesis": thesis
     }

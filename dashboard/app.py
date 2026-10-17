@@ -225,6 +225,25 @@ def main():
             delta=f"{ret_6m:+.1f}% (Cone: ₹{horizons['6M']['p10']['projected_price']:,.0f} - ₹{horizons['6M']['p90']['projected_price']:,.0f})"
         )
 
+    # Institutional Executive Investment Thesis
+    thesis = meta.get("investment_thesis", {})
+    if thesis:
+        st.markdown("---")
+        stance_str = thesis.get("stance", "NEUTRAL")
+        stance_color = thesis.get("stance_color", "orange")
+        st.markdown(f"### 📋 Institutional Investment Thesis: :{stance_color}[**{stance_str}**]")
+        st.info(thesis.get("executive_summary", ""))
+
+        t_col1, t_col2 = st.columns(2)
+        with t_col1:
+            st.markdown("#### 🟢 Key Bull Catalysts")
+            for b in thesis.get("bull_catalysts", []):
+                st.markdown(f"* {b}")
+        with t_col2:
+            st.markdown("#### 🔴 Key Downside Headwinds")
+            for r in thesis.get("risk_headwinds", []):
+                st.markdown(f"* {r}")
+
     # Main Chart
     st.markdown("---")
     fig = build_fan_chart_figure(selected_ticker, history_df, forecast_df)
