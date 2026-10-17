@@ -53,69 +53,102 @@ def load_master_directory() -> List[Dict]:
 STOCK_DIRECTORY: List[Dict] = load_master_directory()
 
 
-def search_stock_directory(query: str, limit: int = 12) -> List[Dict]:
+def search_stock_directory(query: str, limit: int = 10) -> List[Dict]:
     """
-    Smart multi-match search across all NSE & BSE stocks:
-    1. Exact symbol match (e.g. TCS -> TCS.NS)
-    2. Prefix symbol match (e.g. TATA -> TATAMOTORS.NS, TATASTEEL.NS, TATAPOWER.NS)
-    3. Alias and brand match (e.g. zudio -> TRENT.NS, blinkit -> ZOMATO.NS, thar -> M&M.NS)
-    4. Company name substring match (e.g. State Bank -> SBIN.NS)
-    5. Sector match (e.g. railways, defense, green energy)
-    6. Dynamic fallback for any custom NSE (.NS) or BSE (.BO) ticker.
+    High-precision multi-token ranked search across all Indian stocks (NSE/BSE).
+    Matches company names (e.g. 'Federal Bank' -> FEDERALBNK.NS), brands, aliases, and tickers.
     """
     if not query:
         return STOCK_DIRECTORY[:limit]
 
     q = query.strip().lower()
-    clean_q = q.replace(".ns", "").replace(".bo", "").replace(" ", "")
+    q_clean = q.replace(".ns", "").replace(".bo", "").strip()
+    q_words = [w for w in q_clean.split() if w]
 
-    exact_matches = []
-    symbol_prefix_matches = []
-    alias_matches = []
-    name_matches = []
-    sector_matches = []
+    scored_candidates = []
 
     for item in STOCK_DIRECTORY:
-        sym_clean = item["symbol"].replace(".NS", "").replace(".BO", "").lower()
-        name_clean = item["name"].lower()
-        sector_clean = item.get("sector", "").lower()
+        sym = item["symbol"].upper().replace(".NS", "").replace(".BO", "").lower()
+        name = item["name"].lower()
+        name_words = [w for w in name.split() if w]
+        sector = item.get("sector", "").lower()
         aliases = [a.lower() for a in item.get("aliases", [])]
+        all_tokens = [sym] + name_words + [w for a in aliases for w in a.split()]
 
-        if clean_q == sym_clean:
-            exact_matches.append(item)
-        elif sym_clean.startswith(clean_q):
-            symbol_prefix_matches.append(item)
-        elif any(clean_q == a or a.startswith(clean_q) or clean_q in a for a in aliases):
-            alias_matches.append(item)
-        elif clean_q in name_clean:
-            name_matches.append(item)
-        elif clean_q in sector_clean:
-            sector_matches.append(item)
+        score = 0
 
-    combined = exact_matches + symbol_prefix_matches + alias_matches + name_matches + sector_matches
+        # 1. Exact matches (Highest Priority)
+        if q_clean == sym:
+            score = 1000
+        elif q_clean == name:
+            score = 950
+        elif any(q_clean == a for a in aliases):
+            score = 900
+        
+        # 2. Prefix matches on symbol or company name
+        elif sym.startswith(q_clean):
+            score = 800
+        elif name.startswith(q_clean):
+            score = 750
 
-    # Deduplicate while preserving priority order
-    seen = set()
-    results = []
-    for c in combined:
-        if c["symbol"] not in seen:
-            seen.add(c["symbol"])
-            results.append(c)
+        # 3. Multi-token (order-independent) matching (e.g. 'federal bank', 'tata motors', 'state bank of india')
+        elif len(q_words) > 1:
+            all_matched = True
+            token_pts = 0
+            for qw in q_words:
+                matched_qw = False
+                for t in all_tokens:
+                    if t == qw:
+                        matched_qw = True
+                        token_pts += 150
+                        break
+                    elif t.startswith(qw):
+                        matched_qw = True
+                        token_pts += 100
+                        break
+                    elif qw in t:
+                        matched_qw = True
+                        token_pts += 50
+                        break
+                if not matched_qw:
+                    all_matched = False
+                    break
+            if all_matched:
+                score = 700 + min(token_pts, 150)
 
-    # Dynamic fallback: If user entered an exact custom ticker not in directory
+        # 4. Single-token substring matching
+        elif q_clean in sym:
+            score = 550
+        elif q_clean in name:
+            score = 500
+        elif any(q_clean in a for a in aliases):
+            score = 450
+        elif sector and q_clean in sector:
+            score = 350
+
+        if score > 0:
+            scored_candidates.append((score, item))
+
+    # Sort descending by relevance score
+    scored_candidates.sort(key=lambda x: x[0], reverse=True)
+    results = [item for _, item in scored_candidates]
+
+    # Only offer a custom fallback if the query looks like a valid alphanumeric ticker with NO spaces!
     if not results and query:
-        custom_sym = query.strip().upper()
-        if not custom_sym.endswith(".NS") and not custom_sym.endswith(".BO") and "." not in custom_sym:
-            # Check if it looks like a BSE numeric scrip code (e.g. 500325)
-            if custom_sym.isdigit():
-                custom_sym = f"{custom_sym}.BO"
+        single_word = query.strip().upper()
+        if " " not in single_word and len(single_word) <= 15:
+            if not single_word.endswith(".NS") and not single_word.endswith(".BO") and "." not in single_word:
+                if single_word.isdigit():
+                    custom_sym = f"{single_word}.BO"
+                else:
+                    custom_sym = f"{single_word}.NS"
             else:
-                custom_sym = f"{custom_sym}.NS"
-        results.append({
-            "symbol": custom_sym,
-            "name": f"Custom Asset ({custom_sym})",
-            "sector": "Indian Equities",
-            "aliases": [query.lower()]
-        })
+                custom_sym = single_word
+            results.append({
+                "symbol": custom_sym,
+                "name": f"Custom Ticker ({custom_sym})",
+                "sector": "Indian Equities",
+                "aliases": [query.lower()]
+            })
 
     return results[:limit]

@@ -398,31 +398,44 @@ def render_homepage():
     # Centered Search Bar Container
     c_left, c_mid, c_right = st.columns([1, 4.5, 1])
     with c_mid:
-        search_query = st.text_input(
-            "Search Input",
-            placeholder="Search any stock, ticker, brand, or sector (e.g. Jio, Zomato, Suzlon, Trent, HAL, Tata Motors, 500325)...",
-            label_visibility="collapsed"
-        )
+        with st.form("search_form", clear_on_submit=False, border=False):
+            col_search_input, col_search_btn = st.columns([4.2, 1])
+            with col_search_input:
+                search_query = st.text_input(
+                    "Search Input",
+                    placeholder="Search any stock, ticker, brand, or sector (e.g. Federal Bank, Tata Motors, Jio, Zomato)...",
+                    label_visibility="collapsed"
+                )
+            with col_search_btn:
+                search_submitted = st.form_submit_button("⚡ Forecast", use_container_width=True)
 
-        matched_stocks = search_stock_directory(search_query, limit=6) if search_query else []
+        matched_stocks = search_stock_directory(search_query, limit=5) if search_query else []
+
+        # If user pressed Enter or clicked the Forecast button:
+        if search_submitted and search_query:
+            if matched_stocks:
+                st.session_state.active_ticker = matched_stocks[0]["symbol"]
+                st.rerun()
+            else:
+                st.error(f"No Indian equity found matching '{search_query}'. Please check the symbol or name.")
 
         # If user is searching, render immediate match cards
         if search_query and matched_stocks:
-            st.markdown("<div style='font-size:0.82rem; font-weight:700; color:#0EA5E9; margin-top:8px; margin-bottom:8px;'>Matching Stocks:</div>", unsafe_allow_html=True)
-            for s in matched_stocks:
+            st.markdown("<div style='font-size:0.82rem; font-weight:700; color:#0EA5E9; margin-top:8px; margin-bottom:8px;'>Matching Stocks on NSE / BSE (Press Enter or Click to Forecast):</div>", unsafe_allow_html=True)
+            for idx, s in enumerate(matched_stocks):
                 clean_sym = s['symbol'].replace('.NS', '').replace('.BO', '')
                 sector_tag = s.get('sector', 'Equities')
-                c_info, c_action = st.columns([4, 1.2])
+                c_info, c_action = st.columns([4.2, 1])
                 with c_info:
                     st.markdown(f"""
-                    <div style="padding: 8px 12px; background: rgba(15,23,42,0.7); border:1px solid rgba(255,255,255,0.08); border-radius:8px; margin-bottom:6px;">
-                        <span style="font-weight:700; color:#F8FAFC;">{clean_sym}</span>
-                        <span style="color:#94A3B8; font-size:0.85rem; margin-left:8px;">{s['name']}</span>
-                        <span style="font-size:0.75rem; color:#0EA5E9; margin-left:8px; background:rgba(14,165,233,0.12); padding:2px 6px; border-radius:4px;">{sector_tag}</span>
+                    <div style="padding: 10px 14px; background: rgba(15,23,42,0.85); border:1px solid rgba(255,255,255,0.08); border-radius:8px; margin-bottom:6px;">
+                        <span style="font-weight:700; font-size:1.0rem; color:#F8FAFC;">{clean_sym}</span>
+                        <span style="color:#94A3B8; font-size:0.86rem; margin-left:10px;">{s['name']}</span>
+                        <span style="font-size:0.75rem; color:#0EA5E9; margin-left:10px; background:rgba(14,165,233,0.12); padding:2px 8px; border-radius:4px; font-weight:600;">{sector_tag}</span>
                     </div>
                     """, unsafe_allow_html=True)
                 with c_action:
-                    if st.button(f"⚡ Forecast", key=f"home_pick_{s['symbol']}", use_container_width=True):
+                    if st.button(f"View {clean_sym}", key=f"home_pick_{s['symbol']}_{idx}", use_container_width=True):
                         st.session_state.active_ticker = s["symbol"]
                         st.rerun()
 
@@ -477,17 +490,24 @@ def render_prediction_canvas(current_ticker: str):
         """, unsafe_allow_html=True)
 
     with col_nav_search:
-        quick_search = st.text_input(
-            "Quick Search",
-            placeholder="Search another stock (e.g. TCS, Suzlon, Trent)...",
-            key="quick_search_input",
-            label_visibility="collapsed"
-        )
-        if quick_search:
-            quick_matches = search_stock_directory(quick_search, limit=1)
-            if quick_matches:
-                st.session_state.active_ticker = quick_matches[0]["symbol"]
-                st.rerun()
+        with st.form("nav_search_form", border=False):
+            c_nav_inp, c_nav_btn = st.columns([3.5, 1])
+            with c_nav_inp:
+                quick_search = st.text_input(
+                    "Quick Search",
+                    placeholder="Search another stock (e.g. Federal Bank, TCS)...",
+                    label_visibility="collapsed"
+                )
+            with c_nav_btn:
+                nav_submitted = st.form_submit_button("Go", use_container_width=True)
+
+            if nav_submitted and quick_search:
+                quick_matches = search_stock_directory(quick_search, limit=1)
+                if quick_matches:
+                    st.session_state.active_ticker = quick_matches[0]["symbol"]
+                    st.rerun()
+                else:
+                    st.error(f"No stock found matching '{quick_search}'")
 
     with col_nav_back:
         if st.button("← Back to Search", use_container_width=True):
