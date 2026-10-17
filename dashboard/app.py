@@ -1,13 +1,12 @@
 """
-PredicSON 😭 — Institutional AI Stock Quant Engine (NSE/BSE)
-"son 😭😭😭😭" Universal Search & Predict Architecture
+PredicSON — Institutional AI Stock Quant Forecaster (NSE/BSE)
+Clean Google/Perplexity-style Search Architecture & Stoxify Brokerage Aesthetic.
 """
 
 import sys
 from pathlib import Path
 from datetime import datetime
 import json
-import base64
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -21,27 +20,27 @@ from src.data_ingestion.stock_directory import STOCK_DIRECTORY, search_stock_dir
 from src.models.on_demand_engine import get_stock_prediction
 from src.utils.data_loader import load_daily_news, load_expert_consensus
 
-# Page Config
+# Page Configuration
 st.set_page_config(
-    page_title="PredicSON 😭 — Institutional Stock Forecaster",
-    page_icon="😭",
+    page_title="PredicSON — Institutional AI Stock Forecaster",
+    page_icon="📈",
     layout="wide",
     initial_sidebar_state="collapsed"
 )
 
-# Custom Styling: Iconic "Son 😭" Dark Neon Fintech Design
+# Stoxify-inspired Dark Brokerage Styling
 st.markdown("""
 <style>
-    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
 
     html, body, [class*="css"] {
-        font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif !important;
-        background-color: #06080D !important;
-        color: #E2E8F0 !important;
+        font-family: 'Sora', -apple-system, BlinkMacSystemFont, sans-serif !important;
+        background-color: #080D14 !important;
+        color: #F8FAFC !important;
     }
 
     .stApp {
-        background: radial-gradient(circle at 50% 0%, rgba(16, 32, 60, 0.5) 0%, #06080D 70%) !important;
+        background: radial-gradient(circle at 50% 0%, rgba(14, 165, 233, 0.12) 0%, #080D14 65%) !important;
     }
 
     #MainMenu, footer, header, .stDeployButton {
@@ -49,67 +48,69 @@ st.markdown("""
     }
 
     .block-container {
-        padding-top: 1.2rem !important;
+        padding-top: 1.5rem !important;
         padding-bottom: 3rem !important;
-        max-width: 1320px !important;
+        max-width: 1280px !important;
     }
 
-    /* Top Meme Header */
-    .meme-navbar {
+    /* Primary Gradient Brand Text */
+    .brand-gradient {
+        background: linear-gradient(135deg, #0EA5E9 0%, #10B981 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    /* Google/Perplexity Centered Homepage */
+    .home-hero {
+        text-align: center;
+        padding-top: 6vh;
+        padding-bottom: 24px;
+    }
+    .home-logo-wrap {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 18px;
+        filter: drop-shadow(0 0 24px rgba(14, 165, 233, 0.35));
+    }
+    .home-title {
+        font-size: 3.2rem;
+        font-weight: 800;
+        letter-spacing: -1.2px;
+        color: #F8FAFC;
+        margin-bottom: 6px;
+        line-height: 1.1;
+    }
+    .home-subtitle {
+        font-size: 1.05rem;
+        font-weight: 500;
+        color: #94A3B8;
+        margin-bottom: 28px;
+    }
+
+    /* Persistent Top Navbar */
+    .terminal-nav {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        background: rgba(14, 19, 31, 0.75);
+        background: rgba(15, 23, 42, 0.75);
         backdrop-filter: blur(16px);
         border: 1px solid rgba(255, 255, 255, 0.08);
         border-radius: 14px;
-        padding: 12px 24px;
-        margin-bottom: 20px;
+        padding: 12px 20px;
+        margin-bottom: 18px;
     }
-    .brand-group {
+    .nav-brand {
         display: flex;
         align-items: center;
-        gap: 14px;
+        gap: 12px;
+        cursor: pointer;
     }
-    .son-avatar {
-        width: 52px;
-        height: 52px;
-        border-radius: 50%;
-        border: 2px solid #00F2FE;
-        box-shadow: 0 0 16px rgba(0, 242, 254, 0.4);
-        overflow: hidden;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: #0A0D15;
-        flex-shrink: 0;
-    }
-    .son-avatar img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        display: block;
-    }
-    .brand-title {
-        font-size: 1.55rem;
+    .nav-brand-title {
+        font-size: 1.35rem;
         font-weight: 800;
         letter-spacing: -0.5px;
-        color: #FFFFFF;
-        line-height: 1.1;
-    }
-    .brand-title span {
-        color: #00F2FE;
-        text-shadow: 0 0 12px rgba(0, 242, 254, 0.4);
-    }
-    .brand-tagline {
-        font-size: 0.82rem;
-        color: #94A3B8;
-        font-style: italic;
-        margin-top: 2px;
-    }
-    .brand-tagline b {
         color: #F8FAFC;
-        font-style: normal;
     }
 
     .market-badge {
@@ -132,58 +133,9 @@ st.markdown("""
         box-shadow: 0 0 6px #10B981;
     }
 
-    /* Universal Search Bar */
-    .search-container {
-        background: rgba(14, 20, 34, 0.7);
-        backdrop-filter: blur(20px);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        border-radius: 16px;
-        padding: 20px 24px;
-        margin-bottom: 22px;
-        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
-    }
-    .search-title {
-        font-size: 1.05rem;
-        font-weight: 700;
-        color: #FFFFFF;
-        margin-bottom: 8px;
-        display: flex;
-        align-items: center;
-        gap: 8px;
-    }
-    .trending-chips {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 8px;
-        margin-top: 10px;
-        align-items: center;
-    }
-    .trending-lbl {
-        font-size: 0.76rem;
-        font-weight: 700;
-        color: #64748B;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-    }
-    .chip-item {
-        background: rgba(255, 255, 255, 0.04);
-        border: 1px solid rgba(255, 255, 255, 0.08);
-        border-radius: 20px;
-        padding: 4px 12px;
-        font-size: 0.80rem;
-        color: #CBD5E1;
-        cursor: pointer;
-        transition: all 0.15s ease;
-    }
-    .chip-item:hover {
-        background: rgba(0, 242, 254, 0.12);
-        border-color: rgba(0, 242, 254, 0.4);
-        color: #00F2FE;
-    }
-
-    /* Hero Canvas Header */
+    /* Stock Terminal Hero Canvas */
     .terminal-hero {
-        background: rgba(14, 19, 31, 0.75);
+        background: rgba(15, 23, 42, 0.75);
         backdrop-filter: blur(16px);
         border: 1px solid rgba(255, 255, 255, 0.08);
         border-radius: 14px;
@@ -202,6 +154,15 @@ st.markdown("""
         align-items: center;
         gap: 10px;
     }
+    .ticker-pill {
+        background: rgba(255, 255, 255, 0.06);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 6px;
+        padding: 2px 8px;
+        font-size: 0.78rem;
+        font-weight: 700;
+        color: #CBD5E1;
+    }
     .hero-price {
         font-size: 2.2rem;
         font-weight: 800;
@@ -218,7 +179,7 @@ st.markdown("""
     }
     .horizon-pill {
         flex: 1;
-        background: rgba(18, 24, 38, 0.6);
+        background: rgba(15, 23, 42, 0.6);
         border: 1px solid rgba(255, 255, 255, 0.07);
         border-radius: 10px;
         padding: 12px 16px;
@@ -257,55 +218,87 @@ st.markdown("""
         font-weight: 700;
     }
 
-    /* Cards */
+    /* Research Cards */
     .fintech-card {
-        background: rgba(14, 19, 31, 0.65);
+        background: rgba(15, 23, 42, 0.65);
         border: 1px solid rgba(255, 255, 255, 0.08);
-        border-radius: 14px;
-        padding: 18px;
-        height: 100%;
+        border-radius: 12px;
+        padding: 16px 20px;
+        margin-bottom: 12px;
     }
     .catalyst-item {
-        background: rgba(16, 185, 129, 0.06);
-        border: 1px solid rgba(16, 185, 129, 0.18);
-        border-radius: 8px;
-        padding: 8px 12px;
-        margin-bottom: 6px;
-        font-size: 0.85rem;
-        color: #E2E8F0;
         display: flex;
+        align-items: flex-start;
         gap: 8px;
+        font-size: 0.84rem;
+        color: #E2E8F0;
+        margin-bottom: 6px;
+        line-height: 1.4;
     }
     .headwind-item {
-        background: rgba(244, 63, 94, 0.06);
-        border: 1px solid rgba(244, 63, 94, 0.18);
-        border-radius: 8px;
-        padding: 8px 12px;
-        margin-bottom: 6px;
-        font-size: 0.85rem;
-        color: #E2E8F0;
         display: flex;
+        align-items: flex-start;
         gap: 8px;
+        font-size: 0.84rem;
+        color: #CBD5E1;
+        margin-bottom: 6px;
+        line-height: 1.4;
     }
     .metric-row {
         display: flex;
         justify-content: space-between;
-        align-items: center;
-        padding: 8px 0;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-        font-size: 0.85rem;
-    }
-    .metric-row:last-child {
-        border-bottom: none;
+        padding: 6px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+        font-size: 0.84rem;
     }
     .metric-row-lbl { color: #94A3B8; font-weight: 500; }
-    .metric-row-val { color: #FFFFFF; font-weight: 700; font-family: 'JetBrains Mono', monospace; }
+    .metric-row-val { font-family: 'JetBrains Mono', monospace; font-weight: 700; color: #F8FAFC; }
+
+    /* Match Dropdown Cards */
+    .match-card {
+        background: rgba(15, 23, 42, 0.9);
+        border: 1px solid rgba(14, 165, 233, 0.25);
+        border-radius: 10px;
+        padding: 10px 14px;
+        margin-bottom: 8px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: all 0.15s ease;
+    }
+    .match-card:hover {
+        border-color: #0EA5E9;
+        background: rgba(14, 165, 233, 0.12);
+    }
 </style>
 """, unsafe_allow_html=True)
 
 
+def get_stoxify_icon_svg(size: int = 64) -> str:
+    """Stoxify-inspired vector brand icon representing multi-quantile forecast cone and upward trajectory."""
+    return f"""
+    <svg width="{size}" height="{size}" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="stoxGrad" x1="15%" y1="85%" x2="85%" y2="15%">
+          <stop offset="0%" stop-color="#0284C7"/>
+          <stop offset="50%" stop-color="#0EA5E9"/>
+          <stop offset="100%" stop-color="#10B981"/>
+        </linearGradient>
+        <linearGradient id="coneGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="rgba(14, 165, 233, 0.35)"/>
+          <stop offset="100%" stop-color="rgba(16, 185, 129, 0.05)"/>
+        </linearGradient>
+      </defs>
+      <rect x="2" y="2" width="60" height="60" rx="16" fill="#0F172A" stroke="rgba(14, 165, 233, 0.45)" stroke-width="1.5"/>
+      <path d="M14 44 L48 18 L48 38 Z" fill="url(#coneGrad)" />
+      <path d="M14 44 L25 33 L31 38 L48 20" stroke="url(#stoxGrad)" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="48" cy="20" r="3.5" fill="#10B981"/>
+    </svg>
+    """
+
+
 def build_tradingview_fan_chart(ticker: str, history_df: pd.DataFrame, forecast_df: pd.DataFrame) -> go.Figure:
-    """Builds a full TradingView dark theme Plotly fan chart."""
+    """TradingView-grade dark fan chart with historical series and probabilistic quantiles."""
     fig = go.Figure()
 
     # Historical price
@@ -320,7 +313,7 @@ def build_tradingview_fan_chart(ticker: str, history_df: pd.DataFrame, forecast_
 
     last_hist_date = history_df.index[-1]
     last_hist_price = float(history_df["close"].iloc[-1])
-    
+
     fc_dates = [last_hist_date] + list(forecast_df.index)
     p10_vals = [last_hist_price] + list(forecast_df["p10"])
     p25_vals = [last_hist_price] + list(forecast_df["p25"])
@@ -331,34 +324,34 @@ def build_tradingview_fan_chart(ticker: str, history_df: pd.DataFrame, forecast_
     # Outer 80% Cone (p10 to p90)
     fig.add_trace(go.Scatter(
         x=fc_dates, y=p90_vals, mode="lines", name="p90 (Bull Target)",
-        line=dict(color="rgba(0, 242, 254, 0.25)", width=1), showlegend=False,
+        line=dict(color="rgba(14, 165, 233, 0.25)", width=1), showlegend=False,
         hoverinfo="skip"
     ))
     fig.add_trace(go.Scatter(
         x=fc_dates, y=p10_vals, mode="lines", name="80% Probability Cone (p10 - p90)",
-        fill="tonexty", fillcolor="rgba(0, 242, 254, 0.08)",
-        line=dict(color="rgba(0, 242, 254, 0.25)", width=1),
+        fill="tonexty", fillcolor="rgba(14, 165, 233, 0.08)",
+        line=dict(color="rgba(14, 165, 233, 0.25)", width=1),
         hovertemplate="<b>80% Range</b>: ₹%{y:,.2f}<extra></extra>"
     ))
 
     # Inner 50% Core Cone (p25 to p75)
     fig.add_trace(go.Scatter(
         x=fc_dates, y=p75_vals, mode="lines", name="p75 (Upper Core)",
-        line=dict(color="rgba(0, 242, 254, 0.5)", width=1), showlegend=False,
+        line=dict(color="rgba(14, 165, 233, 0.5)", width=1), showlegend=False,
         hoverinfo="skip"
     ))
     fig.add_trace(go.Scatter(
         x=fc_dates, y=p25_vals, mode="lines", name="50% Core Probability Cone (p25 - p75)",
-        fill="tonexty", fillcolor="rgba(0, 242, 254, 0.22)",
-        line=dict(color="rgba(0, 242, 254, 0.5)", width=1),
+        fill="tonexty", fillcolor="rgba(14, 165, 233, 0.22)",
+        line=dict(color="rgba(14, 165, 233, 0.5)", width=1),
         hovertemplate="<b>50% Core Range</b>: ₹%{y:,.2f}<extra></extra>"
     ))
 
     # Median Path (p50)
     fig.add_trace(go.Scatter(
         x=fc_dates, y=p50_vals, mode="lines+markers", name="Expected Median Target (p50)",
-        line=dict(color="#F59E0B", width=2.5, dash="dash"),
-        marker=dict(size=4, color="#F59E0B"),
+        line=dict(color="#10B981", width=2.5, dash="dash"),
+        marker=dict(size=4, color="#10B981"),
         hovertemplate="<b>%{x|%d %b %Y}</b><br>Median Projection: ₹%{y:,.2f}<extra></extra>"
     ))
 
@@ -371,10 +364,10 @@ def build_tradingview_fan_chart(ticker: str, history_df: pd.DataFrame, forecast_
     fig.update_layout(
         paper_bgcolor="#0A0D15",
         plot_bgcolor="#0A0D15",
-        font=dict(family="Plus Jakarta Sans", color="#94A3B8"),
+        font=dict(family="Sora", color="#94A3B8"),
         hovermode="x unified",
         margin=dict(l=20, r=20, t=10, b=20),
-        height=520,
+        height=500,
         legend=dict(
             orientation="h",
             yanchor="bottom",
@@ -390,129 +383,137 @@ def build_tradingview_fan_chart(ticker: str, history_df: pd.DataFrame, forecast_
     return fig
 
 
-def get_son_avatar_b64() -> str:
-    avatar_path = Path(__file__).resolve().parent.parent / "assets" / "son_avatar_128.png"
-    if avatar_path.exists():
-        return base64.b64encode(avatar_path.read_bytes()).decode()
-    return ""
-
-
-def main():
-    # Session state initialization
-    if "active_ticker" not in st.session_state:
-        st.session_state.active_ticker = "RELIANCE.NS"
-
-    # Load Anthony Mackie Son Meme Avatar
-    avatar_b64 = get_son_avatar_b64()
-    if avatar_b64:
-        avatar_html = f'<div class="son-avatar"><img src="data:image/png;base64,{avatar_b64}" alt="Son meme" /></div>'
-    else:
-        avatar_html = '<div class="son-avatar" style="font-size:32px;">😭</div>'
-
-    # Top Meme Header
+def render_homepage():
+    """Clean Google/Perplexity-style Centered Search Landing Page."""
+    # Centered Brand Hero
+    icon_svg = get_stoxify_icon_svg(size=72)
     st.markdown(f"""
-    <div class="meme-navbar">
-        <div class="brand-group">
-            {avatar_html}
-            <div class="brand-title">Predic<span>SON</span> <span style="font-size:1.25rem;">😭</span></div>
-        </div>
-        <div style="display:flex; align-items:center; gap:12px;">
-            <div class="market-badge"><span class="pulse-dot"></span> LIVE ON-DEMAND ENGINE • 2,590+ STOCKS</div>
-        </div>
+    <div class="home-hero">
+        <div class="home-logo-wrap">{icon_svg}</div>
+        <div class="home-title">Predic<span class="brand-gradient">SON</span></div>
+        <div class="home-subtitle">Institutional AI Stock Quant & Forecast Engine • Indian Equities (NSE & BSE)</div>
     </div>
     """, unsafe_allow_html=True)
 
-    # Universal Search Bar Container
-    st.markdown("""
-    <div class="search-container">
-        <div class="search-title">🔍 Search Any Stock on NSE & BSE (All 2,590+ Equities)</div>
-        <div style="font-size:0.84rem; color:#94A3B8; margin-bottom:10px;">
-            Search any Indian equity, brand, or sector (e.g. <b>Reliance, Zomato, Blinkit, Zudio, Suzlon, Thar, HAL, IRFC, HDFC</b>).
-            If uncached or outdated, PredicSON gathers live market info from open-source feeds and retrains the model on the fly.
-        </div>
-    </div>
-    """, unsafe_allow_html=True)
-
-    # Search Bar & Predict Button
-    col_input, col_go = st.columns([4.2, 1])
-    with col_input:
-        search_text = st.text_input(
-            "Search Ticker or Company",
-            placeholder="Type any stock, brand, or sector (e.g. Jio, Zudio, Blinkit, Suzlon, Thar, Railways, Defense, TCS)...",
+    # Centered Search Bar Container
+    c_left, c_mid, c_right = st.columns([1, 4.5, 1])
+    with c_mid:
+        search_query = st.text_input(
+            "Search Input",
+            placeholder="Search any stock, ticker, brand, or sector (e.g. Jio, Zomato, Suzlon, Trent, HAL, Tata Motors, 500325)...",
             label_visibility="collapsed"
         )
-    with col_go:
-        search_clicked = st.button("⚡ Predict Asset", use_container_width=True)
 
-    # Search matching logic
-    matched_stocks = search_stock_directory(search_text, limit=6) if search_text else []
-    
-    if search_text and matched_stocks:
-        st.markdown("<div style='font-size:0.82rem; font-weight:700; color:#00F2FE; margin-top:-6px; margin-bottom:8px;'>Matching Stocks on NSE / BSE:</div>", unsafe_allow_html=True)
-        m_cols = st.columns(min(len(matched_stocks), 6))
-        for idx, s in enumerate(matched_stocks[:6]):
-            with m_cols[idx]:
+        matched_stocks = search_stock_directory(search_query, limit=6) if search_query else []
+
+        # If user is searching, render immediate match cards
+        if search_query and matched_stocks:
+            st.markdown("<div style='font-size:0.82rem; font-weight:700; color:#0EA5E9; margin-top:8px; margin-bottom:8px;'>Matching Stocks:</div>", unsafe_allow_html=True)
+            for s in matched_stocks:
                 clean_sym = s['symbol'].replace('.NS', '').replace('.BO', '')
-                sector_tag = s.get('sector', 'Equity')
-                btn_label = f"📌 {clean_sym}\n{s['name'][:14]}...\n[{sector_tag[:10]}]"
-                if st.button(btn_label, key=f"match_{s['symbol']}_{idx}", use_container_width=True):
-                    st.session_state.active_ticker = s["symbol"]
+                sector_tag = s.get('sector', 'Equities')
+                c_info, c_action = st.columns([4, 1.2])
+                with c_info:
+                    st.markdown(f"""
+                    <div style="padding: 8px 12px; background: rgba(15,23,42,0.7); border:1px solid rgba(255,255,255,0.08); border-radius:8px; margin-bottom:6px;">
+                        <span style="font-weight:700; color:#F8FAFC;">{clean_sym}</span>
+                        <span style="color:#94A3B8; font-size:0.85rem; margin-left:8px;">{s['name']}</span>
+                        <span style="font-size:0.75rem; color:#0EA5E9; margin-left:8px; background:rgba(14,165,233,0.12); padding:2px 6px; border-radius:4px;">{sector_tag}</span>
+                    </div>
+                    """, unsafe_allow_html=True)
+                with c_action:
+                    if st.button(f"⚡ Forecast", key=f"home_pick_{s['symbol']}", use_container_width=True):
+                        st.session_state.active_ticker = s["symbol"]
+                        st.rerun()
+
+        # Popular / Trending Assets Row
+        st.markdown("""
+        <div style="text-align:center; margin-top:22px; margin-bottom:12px;">
+            <span style="font-size:0.78rem; font-weight:700; color:#64748B; text-transform:uppercase; letter-spacing:0.5px;">Trending Assets:</span>
+        </div>
+        """, unsafe_allow_html=True)
+
+        t_cols = st.columns(4)
+        trending_list = [
+            ("RELIANCE.NS", "Reliance (Jio)"),
+            ("ZOMATO.NS", "Zomato (Blinkit)"),
+            ("TRENT.NS", "Trent (Zudio)"),
+            ("TATAMOTORS.NS", "Tata Motors"),
+            ("SUZLON.NS", "Suzlon (Green)"),
+            ("HAL.NS", "HAL (Defense)"),
+            ("IRFC.NS", "IRFC (Railways)"),
+            ("HDFCBANK.NS", "HDFC Bank")
+        ]
+        for idx, (sym, label) in enumerate(trending_list):
+            col_target = t_cols[idx % 4]
+            with col_target:
+                if st.button(label, key=f"home_trend_{sym}", use_container_width=True):
+                    st.session_state.active_ticker = sym
                     st.rerun()
 
-    # Trending Hot Tickers Bar
-    st.markdown("""
-    <div style="display:flex; align-items:center; gap:8px; margin-top:6px; margin-bottom:12px;">
-        <span style="font-size:0.75rem; font-weight:700; color:#64748B; text-transform:uppercase;">Trending Assets:</span>
-    </div>
-    """, unsafe_allow_html=True)
+        # Bottom Feature Badges
+        st.markdown("""
+        <div style="display:flex; justify-content:center; gap:20px; margin-top:40px; font-size:0.80rem; color:#64748B;">
+            <span>⚡ <b>Sub-Second Caching</b></span>
+            <span>🎯 <b>LightGBM Quantile Ensemble</b></span>
+            <span>🇮🇳 <b>2,590+ Listed Indian Equities</b></span>
+        </div>
+        """, unsafe_allow_html=True)
+
+
+def render_prediction_canvas(current_ticker: str):
+    """Stock Prediction Dashboard when a stock is actively searched."""
+    # Top Persistent Navigation Bar
+    mini_icon = get_stoxify_icon_svg(size=36)
     
-    t_cols = st.columns(8)
-    trending_list = [
-        ("RELIANCE.NS", "Reliance (Jio)"),
-        ("ZOMATO.NS", "Zomato (Blinkit)"),
-        ("TRENT.NS", "Trent (Zudio)"),
-        ("TATAMOTORS.NS", "Tata Motors"),
-        ("SUZLON.NS", "Suzlon (Green)"),
-        ("HAL.NS", "HAL (Defense)"),
-        ("IRFC.NS", "IRFC (Railways)"),
-        ("HDFCBANK.NS", "HDFC Bank")
-    ]
-    for idx, (sym, label) in enumerate(trending_list):
-        with t_cols[idx]:
-            if st.button(f"🔥 {label}", key=f"trend_{sym}", use_container_width=True):
-                st.session_state.active_ticker = sym
+    col_nav_left, col_nav_search, col_nav_back, col_nav_reload = st.columns([2.5, 3.5, 1.3, 1.3])
+    
+    with col_nav_left:
+        st.markdown(f"""
+        <div class="nav-brand">
+            {mini_icon}
+            <div class="nav-brand-title">Predic<span class="brand-gradient">SON</span></div>
+        </div>
+        """, unsafe_allow_html=True)
+
+    with col_nav_search:
+        quick_search = st.text_input(
+            "Quick Search",
+            placeholder="Search another stock (e.g. TCS, Suzlon, Trent)...",
+            key="quick_search_input",
+            label_visibility="collapsed"
+        )
+        if quick_search:
+            quick_matches = search_stock_directory(quick_search, limit=1)
+            if quick_matches:
+                st.session_state.active_ticker = quick_matches[0]["symbol"]
                 st.rerun()
 
-    if search_clicked and matched_stocks:
-        st.session_state.active_ticker = matched_stocks[0]["symbol"]
-        st.rerun()
+    with col_nav_back:
+        if st.button("← Back to Search", use_container_width=True):
+            st.session_state.active_ticker = None
+            st.rerun()
 
-    current_ticker = st.session_state.active_ticker
+    with col_nav_reload:
+        force_reload = st.button("🔄 Force Reload", use_container_width=True, help="Fetch fresh live data and retrain model")
 
-    # Action Toolbar: Live Status & Reload
-    col_hdr, col_reload = st.columns([4, 1.4])
-    with col_hdr:
-        st.markdown(f"<div style='font-size:0.86rem; color:#94A3B8; padding-top:6px;'>Active Forecast Target: <b style='color:#00F2FE;'>{current_ticker}</b></div>", unsafe_allow_html=True)
-    with col_reload:
-        force_reload = st.button("🔄 Force Live Reload", use_container_width=True, help="Refetches live real-time price & retrains model")
-
-    # =========================================================================
-    # PREDICTION & FORECAST CANVAS
-    # =========================================================================
-    st.markdown("<div style='height:4px'></div>", unsafe_allow_html=True)
-
-    with st.spinner(f"Analyzing {current_ticker}... Ingesting fresh data & calculating quantile projections..."):
+    # Load / Compute Prediction Data
+    with st.spinner(f"Gathering latest market information & fitting model for {current_ticker}..."):
         try:
             history_df, forecast_df, meta = get_stock_prediction(current_ticker, force_refresh=force_reload)
             if force_reload:
                 st.toast(f"✅ Real-time data & model retrained for {current_ticker}!", icon="⚡")
         except Exception as e:
             st.error(f"Error analyzing {current_ticker}: {e}")
+            if st.button("← Back to Search"):
+                st.session_state.active_ticker = None
+                st.rerun()
             return
 
     stock_meta = next((s for s in STOCK_DIRECTORY if s["symbol"] == current_ticker), {})
     company_name = stock_meta.get("name", current_ticker.replace(".NS", ""))
     sector = stock_meta.get("sector", "Equities")
+    exchange_label = "BSE" if current_ticker.endswith(".BO") else "NSE"
 
     current_price = meta["current_price"]
     horizons = meta["horizons"]
@@ -528,8 +529,6 @@ def main():
 
     h3_pill_class = "pill-green" if h3_ret >= 0 else "pill-red"
     h3_sign = "+" if h3_ret > 0 else ""
-
-    exchange_label = "BSE" if current_ticker.endswith(".BO") else "NSE"
 
     # Hero Banner
     st.markdown(f"""
@@ -548,7 +547,7 @@ def main():
         <div style="text-align:right;">
             <div class="hero-price">₹{current_price:,.2f}</div>
             <div style="font-size:0.92rem; font-weight:700;">
-                3M Target: <span style="color:#00F2FE;">₹{h3['projected_price']:,.2f}</span>
+                3M Target: <span style="color:#0EA5E9;">₹{h3['projected_price']:,.2f}</span>
                 <span class="{h3_pill_class}">{h3_sign}{h3_ret:.1f}%</span>
             </div>
         </div>
@@ -569,9 +568,9 @@ def main():
             </div>
             <span class="{p1_class}">{h1_ret:+.1f}%</span>
         </div>
-        <div class="horizon-pill" style="border-color: rgba(0,242,254,0.35); background: rgba(0,242,254,0.06);">
+        <div class="horizon-pill" style="border-color: rgba(14,165,233,0.35); background: rgba(14,165,233,0.06);">
             <div>
-                <div class="horizon-pill-lbl" style="color:#00F2FE;">3-Month Target (Core 63d)</div>
+                <div class="horizon-pill-lbl" style="color:#0EA5E9;">3-Month Target (Core 63d)</div>
                 <div class="horizon-pill-val">₹{h3['projected_price']:,.2f}</div>
             </div>
             <span class="{p3_class}">{h3_ret:+.1f}%</span>
@@ -590,7 +589,7 @@ def main():
     fig = build_tradingview_fan_chart(current_ticker, history_df, forecast_df)
     st.plotly_chart(fig, use_container_width=True, config={"displayModeBar": False})
 
-    # Side-by-Side Intelligence Cards
+    # Side-by-Side Research Cards
     c1, c2 = st.columns([1, 1], gap="medium")
 
     with c1:
@@ -642,7 +641,7 @@ def main():
             </div>
             <div class="metric-row">
                 <span class="metric-row-lbl">Consensus Mean Target (1Y)</span>
-                <span class="metric-row-val" style="color:#00F2FE;">{mean_str} (Range: {low_str} - {high_str})</span>
+                <span class="metric-row-val" style="color:#0EA5E9;">{mean_str} (Range: {low_str} - {high_str})</span>
             </div>
             <div class="metric-row">
                 <span class="metric-row-lbl">Analyst Buy Conviction</span>
@@ -662,6 +661,16 @@ def main():
             </div>
         </div>
         """, unsafe_allow_html=True)
+
+
+def main():
+    if "active_ticker" not in st.session_state:
+        st.session_state.active_ticker = None
+
+    if st.session_state.active_ticker is None:
+        render_homepage()
+    else:
+        render_prediction_canvas(st.session_state.active_ticker)
 
 
 if __name__ == "__main__":

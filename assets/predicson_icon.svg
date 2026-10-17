@@ -1,0 +1,17 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="predicGrad" x1="15%" y1="85%" x2="85%" y2="15%">
+      <stop offset="0%" stop-color="#0284C7"/>
+      <stop offset="50%" stop-color="#0EA5E9"/>
+      <stop offset="100%" stop-color="#10B981"/>
+    </linearGradient>
+    <linearGradient id="coneGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="rgba(14, 165, 233, 0.35)"/>
+      <stop offset="100%" stop-color="rgba(16, 185, 129, 0.05)"/>
+    </linearGradient>
+  </defs>
+  <rect x="2" y="2" width="60" height="60" rx="16" fill="#0F172A" stroke="rgba(14, 165, 233, 0.4)" stroke-width="1.5"/>
+  <path d="M14 44 L48 18 L48 38 Z" fill="url(#coneGrad)" />
+  <path d="M14 44 L25 33 L31 38 L48 20" stroke="url(#predicGrad)" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="48" cy="20" r="3.5" fill="#10B981"/>
+</svg>
