@@ -80,6 +80,18 @@ CURATED_ALIASES: Dict[str, List[str]] = {
     "APOLLOHOSP.NS": ["apollo hospitals", "apollo hospital", "apollo pharmacy"]
 }
 
+NIFTY_HEAVYWEIGHTS: Set[str] = {
+    "RELIANCE.NS", "TCS.NS", "HDFCBANK.NS", "INFY.NS", "ICICIBANK.NS", "SBIN.NS",
+    "BHARTIARTL.NS", "ITC.NS", "LT.NS", "BAJFINANCE.NS", "HINDUNILVR.NS", "MARUTI.NS",
+    "SUNPHARMA.NS", "TITAN.NS", "TATASTEEL.NS", "M&M.NS", "TATAMOTORS.NS", "ZOMATO.NS",
+    "TRENT.NS", "JIOFIN.NS", "SUZLON.NS", "HAL.NS", "IRFC.NS", "PAYTM.NS", "SWIGGY.NS",
+    "OLAELEC.NS", "ASIANPAINT.NS", "KOTAKBANK.NS", "AXISBANK.NS", "ADANIENT.NS",
+    "ADANIPORTS.NS", "NTPC.NS", "POWERGRID.NS", "COALINDIA.NS", "ONGC.NS", "WIPRO.NS",
+    "HCLTECH.NS", "ULTRACEMCO.NS", "BAJAJ-AUTO.NS", "HEROMOTOCO.NS", "EICHERMOT.NS",
+    "JSWSTEEL.NS", "HINDALCO.NS", "VEDL.NS", "BEL.NS", "BSE.NS", "CDSL.NS", "ANGELONE.NS",
+    "FEDERALBNK.NS", "PNB.NS", "BANKBARODA.NS", "PIDILITIND.NS", "MRF.NS", "TECHM.NS"
+}
+
 CURATED_FALLBACK: List[Dict] = [
     {"symbol": "RELIANCE.NS", "name": "Reliance Industries Ltd", "sector": "Energy", "aliases": ["ril", "reliance", "mukesh ambani", "jio"]},
     {"symbol": "TCS.NS", "name": "Tata Consultancy Services Ltd", "sector": "IT", "aliases": ["tcs", "tata consultancy"]},
@@ -258,6 +270,13 @@ def search_stock_directory(query: str, limit: int = 12) -> List[Dict]:
             score = 400
 
         if score > 0:
+            # Benchmark Heavyweights vs SME scripts
+            sym_full = entry["symbol"]
+            if sym_full in NIFTY_HEAVYWEIGHTS:
+                score += 260
+            elif sym_full.endswith("-SM.NS") or sym_full.endswith("-BE.NS"):
+                score -= 160
+
             # Exchange preference adjustment
             if explicit_bse:
                 if not is_nse:

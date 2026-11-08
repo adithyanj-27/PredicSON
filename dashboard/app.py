@@ -16,7 +16,12 @@ import plotly.graph_objects as go
 # Add project root to sys.path
 sys.path.append(str(Path(__file__).resolve().parent.parent))
 
-from src.data_ingestion.stock_directory import STOCK_DIRECTORY, search_stock_directory
+from src.data_ingestion.stock_directory import (
+    STOCK_DIRECTORY,
+    CURATED_ALIASES,
+    NIFTY_HEAVYWEIGHTS,
+    search_stock_directory
+)
 from src.data_ingestion.institutional_engine import (
     fetch_institutional_consensus,
     build_institutional_corridor_figure,
@@ -272,49 +277,92 @@ div[data-testid="InputInstructions"], small[data-testid="InputInstructions"] {
     display: none !important;
 }
 
-/* Input Fields */
-.stTextInput > div > div > input {
-    background: rgba(13, 19, 31, 0.92) !important;
-    border: 1px solid rgba(14, 165, 233, 0.3) !important;
-    border-radius: 10px !important;
-    color: #F8FAFC !important;
+/* Universal Search Bar - Single Modern Stoxify/Kite Combobox */
+div[data-testid="stSelectbox"] {
+    width: 100% !important;
+}
+
+div[data-baseweb="select"] {
+    background-color: rgba(13, 19, 31, 0.95) !important;
+    border: 1px solid rgba(14, 165, 233, 0.35) !important;
+    border-radius: 12px !important;
+    padding: 3px 10px !important;
+    min-height: 52px !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5) !important;
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+div[data-baseweb="select"]:hover {
+    border-color: rgba(14, 165, 233, 0.7) !important;
+    box-shadow: 0 0 18px rgba(14, 165, 233, 0.3) !important;
+}
+
+div[data-baseweb="select"]:focus-within {
+    border-color: #0EA5E9 !important;
+    box-shadow: 0 0 26px rgba(14, 165, 233, 0.5) !important;
+}
+
+/* Selected value & placeholder text */
+div[data-baseweb="select"] div,
+div[data-baseweb="select"] span,
+div[data-baseweb="select"] input {
     font-family: 'Sora', sans-serif !important;
     font-size: 0.95rem !important;
-    padding: 10px 16px !important;
-    transition: all 0.2s ease !important;
-}
-.stTextInput > div > div > input:focus {
-    border-color: #0EA5E9 !important;
-    box-shadow: 0 0 20px rgba(14, 165, 233, 0.35) !important;
+    color: #F8FAFC !important;
+    text-align: left !important;
 }
 
-/* Stoxify Search Dropdown Button Cards - Click Anywhere to Open */
-.stox-dropdown .stButton > button {
+/* Dropdown popover container */
+div[data-baseweb="popover"] {
+    background-color: #0B101B !important;
+    border: 1px solid rgba(14, 165, 233, 0.4) !important;
+    border-radius: 12px !important;
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.85) !important;
+    margin-top: 6px !important;
+    overflow: hidden !important;
+}
+
+div[data-baseweb="popover"] ul {
+    background-color: #0B101B !important;
+    padding: 4px 0 !important;
+}
+
+/* Individual suggestion items in the dropdown - strictly LEFT ALIGNED */
+li[data-baseweb="menu-item"] {
+    background-color: transparent !important;
+    color: #E2E8F0 !important;
+    font-family: 'Sora', sans-serif !important;
+    font-size: 0.90rem !important;
+    font-weight: 500 !important;
+    padding: 12px 18px !important;
+    text-align: left !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04) !important;
+    cursor: pointer !important;
+    transition: all 0.12s ease !important;
+}
+
+li[data-baseweb="menu-item"]:hover,
+li[data-baseweb="menu-item"][aria-selected="true"] {
+    background-color: rgba(14, 165, 233, 0.18) !important;
+    color: #38BDF8 !important;
+    padding-left: 22px !important;
+}
+
+/* Dropdown chevron & clear icons */
+div[data-baseweb="select"] svg {
+    fill: #64748B !important;
+    transition: fill 0.2s ease !important;
+}
+div[data-baseweb="select"]:hover svg {
+    fill: #0EA5E9 !important;
+}
+
+/* Table stock row button - left-aligned link style */
+.stButton > button {
     justify-content: flex-start !important;
     text-align: left !important;
-    padding: 12px 18px !important;
-    background: rgba(15, 23, 42, 0.88) !important;
-    border: 1px solid rgba(255, 255, 255, 0.08) !important;
-    border-radius: 10px !important;
-    margin-bottom: 6px !important;
-    font-size: 0.92rem !important;
-    color: #F8FAFC !important;
-    transition: all 0.18s cubic-bezier(0.16, 1, 0.3, 1) !important;
-    display: flex !important;
-    align-items: center !important;
-}
-
-.stox-dropdown .stButton > button:hover {
-    background: rgba(14, 165, 233, 0.15) !important;
-    border-color: #0EA5E9 !important;
-    box-shadow: 0 4px 16px rgba(14, 165, 233, 0.25) !important;
-    transform: translateX(4px) !important;
-}
-
-.stox-dropdown .stButton > button p {
-    text-align: left !important;
-    width: 100% !important;
-    margin: 0 !important;
 }
 
 /* Tab Headers */
@@ -355,12 +403,50 @@ def get_broker_avatar_initials(inst_name: str) -> str:
     return "IB"
 
 
+@st.cache_data
+def get_searchable_stock_options():
+    """Build high-priority ordered stock universe for instantaneous client-side typeahead."""
+    pilot_order = [
+        "RELIANCE.NS", "TCS.NS", "HDFCBANK.NS", "INFY.NS", "ICICIBANK.NS", "SBIN.NS",
+        "BHARTIARTL.NS", "ITC.NS", "LT.NS", "BAJFINANCE.NS", "HINDUNILVR.NS", "MARUTI.NS",
+        "SUNPHARMA.NS", "TITAN.NS", "TATASTEEL.NS", "M&M.NS", "TATAMOTORS.NS", "ZOMATO.NS",
+        "TRENT.NS", "JIOFIN.NS", "SUZLON.NS", "HAL.NS", "IRFC.NS", "PAYTM.NS", "SWIGGY.NS",
+        "OLAELEC.NS", "ASIANPAINT.NS", "KOTAKBANK.NS", "AXISBANK.NS", "ADANIENT.NS",
+        "ADANIPORTS.NS", "NTPC.NS", "POWERGRID.NS", "COALINDIA.NS", "ONGC.NS", "WIPRO.NS",
+        "HCLTECH.NS", "ULTRACEMCO.NS", "BAJAJ-AUTO.NS", "HEROMOTOCO.NS", "EICHERMOT.NS",
+        "JSWSTEEL.NS", "HINDALCO.NS", "VEDL.NS", "BEL.NS", "BSE.NS", "CDSL.NS", "ANGELONE.NS",
+        "FEDERALBNK.NS", "PNB.NS", "BANKBARODA.NS", "PIDILITIND.NS", "MRF.NS", "TECHM.NS"
+    ]
+    pilot_set = set(pilot_order)
+    pilot_stocks = [s for sym in pilot_order for s in STOCK_DIRECTORY if s["symbol"] == sym]
+    other_nse = [s for s in STOCK_DIRECTORY if s["symbol"].endswith(".NS") and s["symbol"] not in pilot_set and not s["symbol"].endswith("-SM.NS") and not s["symbol"].endswith("-BE.NS")]
+    sme_nse = [s for s in STOCK_DIRECTORY if s["symbol"].endswith("-SM.NS") or s["symbol"].endswith("-BE.NS")]
+    bse_stocks = [s for s in STOCK_DIRECTORY if s["symbol"].endswith(".BO") and s["symbol"] not in pilot_set]
+    return pilot_stocks + other_nse + bse_stocks + sme_nse
+
+ALL_SEARCH_STOCKS = get_searchable_stock_options()
+
+
+def format_search_stock(item: dict) -> str:
+    """Format single stock dictionary into left-aligned informative dropdown label."""
+    if not item or not isinstance(item, dict):
+        return ""
+    sym = item.get("symbol", "")
+    clean_sym = sym.replace(".NS", "").replace(".BO", "")
+    exch = "BSE" if sym.endswith(".BO") else "NSE"
+    name = item.get("name", "")
+    sector = item.get("sector", "Equities")
+    aliases = CURATED_ALIASES.get(sym, [])
+    alias_str = f" · ({', '.join(aliases[:2])})" if aliases else ""
+    return f"{clean_sym} — {name} [{exch}] · {sector}{alias_str}"
+
+
 def render_all_stocks_tab():
     """Browse, search, and paginate through all 10,680+ Indian equities on NSE and BSE."""
     st.markdown(
         "<div style='margin-top:12px; margin-bottom:14px;'>"
         "<div style='font-size:1.15rem; font-weight:800; color:#FFFFFF;'>National & Bombay Stock Exchange Directory</div>"
-        "<div style='font-size:0.82rem; color:#94A3B8;'>Filter through all 10,680+ listed equities across NSE and BSE. Click <b>View →</b> on any company to pull real-time sell-side consensus, analyst targets, and institutional research calls on demand.</div>"
+        "<div style='font-size:0.82rem; color:#94A3B8;'>Filter through all 10,680+ listed equities across NSE and BSE. Click on any company name to view real-time sell-side consensus, analyst targets, and institutional research calls.</div>"
         "</div>",
         unsafe_allow_html=True
     )
@@ -438,11 +524,9 @@ def render_all_stocks_tab():
     # Table Header
     st.markdown(
         "<div style='display:flex; justify-content:space-between; padding:8px 12px; background:rgba(255,255,255,0.03); border-radius:6px; margin-top:10px; margin-bottom:6px; font-size:0.75rem; font-weight:700; color:#64748B; text-transform:uppercase;'>"
-        "<span style='width:18%;'>Ticker / Symbol</span>"
-        "<span style='width:42%;'>Company Name</span>"
-        "<span style='width:20%;'>Sector</span>"
-        "<span style='width:8%; text-align:center;'>Exchange</span>"
-        "<span style='width:12%; text-align:right;'>Action</span>"
+        "<span style='width:56%;'>Ticker & Company Name (Click to Open)</span>"
+        "<span style='width:28%;'>Sector</span>"
+        "<span style='width:16%; text-align:center;'>Exchange</span>"
         "</div>",
         unsafe_allow_html=True
     )
@@ -454,20 +538,16 @@ def render_all_stocks_tab():
     for idx, item in enumerate(page_items):
         clean_sym = item["symbol"].replace(".NS", "").replace(".BO", "")
         exch = "BSE" if item["symbol"].endswith(".BO") else "NSE"
-        c_sym, c_name, c_sec, c_exch, c_action = st.columns([1.8, 4.2, 2.0, 0.8, 1.2])
+        c_sym_name, c_sec, c_exch = st.columns([5.6, 2.8, 1.6])
 
-        with c_sym:
-            st.markdown(f"<div style='padding-top:8px; font-family:JetBrains Mono, monospace; font-weight:800; font-size:0.92rem; color:#38BDF8;'>{html.escape(clean_sym)}</div>", unsafe_allow_html=True)
-        with c_name:
-            st.markdown(f"<div style='padding-top:8px; font-size:0.86rem; color:#F8FAFC; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;'>{html.escape(item['name'])}</div>", unsafe_allow_html=True)
-        with c_sec:
-            st.markdown(f"<div style='padding-top:8px; font-size:0.76rem; color:#94A3B8;'>{html.escape(item.get('sector', 'Equities'))}</div>", unsafe_allow_html=True)
-        with c_exch:
-            st.markdown(f"<div style='padding-top:8px; text-align:center;'><span class='ticker-pill' style='font-size:0.68rem; padding:2px 6px;'>{exch}</span></div>", unsafe_allow_html=True)
-        with c_action:
-            if st.button("View →", key=f"dir_btn_{item['symbol']}_{start_idx + idx}", use_container_width=True):
+        with c_sym_name:
+            if st.button(f"{clean_sym}  ·  {item['name']}", key=f"dir_btn_{item['symbol']}_{start_idx + idx}", use_container_width=True):
                 st.session_state.active_ticker = item["symbol"]
                 st.rerun()
+        with c_sec:
+            st.markdown(f"<div style='padding-top:8px; font-size:0.80rem; color:#94A3B8;'>{html.escape(item.get('sector', 'Equities'))}</div>", unsafe_allow_html=True)
+        with c_exch:
+            st.markdown(f"<div style='padding-top:8px; text-align:center;'><span class='ticker-pill' style='font-size:0.70rem; padding:2px 8px;'>{exch}</span></div>", unsafe_allow_html=True)
 
 
 def render_desks_directory_tab():
@@ -509,58 +589,28 @@ def render_homepage():
         "<div style='font-size:3.5rem; font-weight:800; letter-spacing:-1.8px; color:#F8FAFC; line-height:1.0; margin-bottom:6px;'>"
         "Predic<span class='brand-gradient'>SON</span>"
         "</div>"
+        "<div style='font-size:1.02rem; font-weight:500; color:#94A3B8;'>"
+        "Institutional Consensus & Expert Price Targets across 10,680+ Indian Equities"
+        "</div>"
         "</div>",
         unsafe_allow_html=True
     )
 
-    # 1. Universal Search (Covers all 10,680+ stocks + live exchange fallback)
-    c_left, c_mid, c_right = st.columns([0.8, 4.4, 0.8])
+    # 1. Unified Universal Search (Single modern search bar, live typeahead dropdown on each keystroke)
+    c_left, c_mid, c_right = st.columns([1.0, 5.0, 1.0])
     with c_mid:
-        col_inp, col_btn = st.columns([4.4, 1.1])
-        with col_inp:
-            search_query = st.text_input(
-                "Universal Search",
-                placeholder="Search company, brand, or ticker (e.g. Reliance, Zudio, Blinkit, Tata Motors, HDFC Bank)...",
-                label_visibility="collapsed"
-            ).strip()
-        with col_btn:
-            search_btn = st.button("Search", use_container_width=True, type="primary")
-
-        matched_stocks = search_stock_directory(search_query, limit=6) if search_query else []
-
-        # If user explicitly clicked the Search button:
-        if search_btn and search_query:
-            if matched_stocks:
-                clean_q = search_query.upper().replace(".NS", "").replace(".BO", "")
-                exact = next((m for m in matched_stocks if m["symbol"].replace(".NS", "").replace(".BO", "") == clean_q), None)
-                if exact:
-                    st.session_state.active_ticker = exact["symbol"]
-                    st.rerun()
-                elif len(matched_stocks) == 1:
-                    st.session_state.active_ticker = matched_stocks[0]["symbol"]
-                    st.rerun()
-            else:
-                st.error(f"No Indian equity found matching '{search_query}'. Please check the symbol or name.")
-
-        # Stoxify-style Suggestions Dropdown: Each stock is a single full-width clickable card
-        if search_query and matched_stocks:
-            st.markdown(
-                f"<div style='font-size:0.75rem; font-weight:700; color:#38BDF8; text-transform:uppercase; letter-spacing:0.8px; margin-top:14px; margin-bottom:8px;'>"
-                f"Suggestions ({len(matched_stocks)}) — Click any stock to open:"
-                f"</div>",
-                unsafe_allow_html=True
-            )
-            st.markdown("<div class='stox-dropdown'>", unsafe_allow_html=True)
-            for idx, m in enumerate(matched_stocks):
-                clean_sym = m["symbol"].replace(".NS", "").replace(".BO", "")
-                is_nse = m["symbol"].endswith(".NS")
-                exch_badge = "NSE" if is_nse else "BSE"
-                sector_tag = m.get("sector", "Equities")
-                btn_label = f"**{clean_sym}** \u2002 {m['name']} \u2002 `{exch_badge}` \u2002 :gray[[{sector_tag}]]"
-                if st.button(btn_label, key=f"stock_row_{m['symbol']}_{idx}", use_container_width=True):
-                    st.session_state.active_ticker = m["symbol"]
-                    st.rerun()
-            st.markdown("</div>", unsafe_allow_html=True)
+        selected_stock = st.selectbox(
+            "Search Indian Equities",
+            options=ALL_SEARCH_STOCKS,
+            index=None,
+            placeholder="🔍 Search company, brand, or symbol (e.g. Reliance, Mahindra, Zudio, Blinkit, Tata Motors)...",
+            format_func=format_search_stock,
+            label_visibility="collapsed",
+            key="home_stock_search"
+        )
+        if selected_stock:
+            st.session_state.active_ticker = selected_stock["symbol"]
+            st.rerun()
 
     # Quick Jump Trending Equities Pills
     st.markdown("<div style='text-align:center; margin-top:16px; margin-bottom:12px;'><span style='font-size:0.74rem; font-weight:700; color:#64748B; text-transform:uppercase;'>Trending Heavyweights:</span></div>", unsafe_allow_html=True)
@@ -646,19 +696,14 @@ def render_homepage():
             )
 
             for idx, row in enumerate(rankings):
-                c_rank, c_name, c_cmp, c_target, c_upside, c_reco, c_mcap, c_btn = st.columns([0.5, 2.5, 1.1, 1.1, 1.1, 1.5, 1.2, 1.1])
+                c_rank, c_name, c_cmp, c_target, c_upside, c_reco, c_mcap = st.columns([0.5, 3.5, 1.2, 1.2, 1.2, 1.6, 0.8])
                 with c_rank:
                     st.markdown(f"<div style='padding-top:8px; font-weight:700; color:#64748B; font-size:0.88rem;'>#{idx+1}</div>", unsafe_allow_html=True)
                 with c_name:
                     clean_sym = row['ticker'].replace('.NS', '')
-                    st.markdown(
-                        f"<div style='padding-top:2px;'>"
-                        f"<span style='font-weight:800; color:#F8FAFC; font-size:0.92rem;'>{html.escape(clean_sym)}</span>"
-                        f"<span style='font-size:0.76rem; color:#94A3B8; margin-left:6px;'>{html.escape(row['name'])}</span>"
-                        f"<div style='font-size:0.70rem; color:#64748B;'>{html.escape(row['sector'])}</div>"
-                        f"</div>",
-                        unsafe_allow_html=True
-                    )
+                    if st.button(f"{clean_sym}  ·  {row['name']}", key=f"tbl_btn_{row['ticker']}", use_container_width=True):
+                        st.session_state.active_ticker = row["ticker"]
+                        st.rerun()
                 with c_cmp:
                     st.markdown(f"<div style='padding-top:8px; font-family:JetBrains Mono, monospace; font-size:0.88rem; color:#CBD5E1;'>₹{row['current_price']:,.1f}</div>", unsafe_allow_html=True)
                 with c_target:
@@ -678,10 +723,6 @@ def render_homepage():
                     )
                 with c_mcap:
                     st.markdown(f"<div style='padding-top:8px; font-size:0.78rem; color:#94A3B8;'>{row.get('market_cap_str', 'N/A')}</div>", unsafe_allow_html=True)
-                with c_btn:
-                    if st.button("View →", key=f"tbl_btn_{row['ticker']}", use_container_width=True):
-                        st.session_state.active_ticker = row["ticker"]
-                        st.rerun()
 
     with tab_all_stocks:
         render_all_stocks_tab()
@@ -705,24 +746,25 @@ def render_prediction_canvas(current_ticker: str):
         )
 
     with col_nav_switch:
-        col_sw_inp, col_sw_btn = st.columns([3.8, 1.2])
-        with col_sw_inp:
-            sw_text = st.text_input(
-                "Switch Stock",
-                placeholder=f"Active: {current_ticker.replace('.NS', '').replace('.BO', '')} — Search another stock...",
-                label_visibility="collapsed"
-            ).strip()
-        with col_sw_btn:
-            sw_btn = st.button("Search", use_container_width=True)
-        if (sw_btn or sw_text) and sw_text:
-            sw_matches = search_stock_directory(sw_text, limit=1)
-            if sw_matches and sw_matches[0]["symbol"] != current_ticker:
-                st.session_state.active_ticker = sw_matches[0]["symbol"]
-                st.rerun()
+        clean_cur = current_ticker.replace('.NS', '').replace('.BO', '')
+        nav_selected = st.selectbox(
+            "Switch Stock",
+            options=ALL_SEARCH_STOCKS,
+            index=None,
+            placeholder=f"🔍 Active: {clean_cur} — Switch to another stock (e.g. Tata Motors, Trent)...",
+            format_func=format_search_stock,
+            label_visibility="collapsed",
+            key="canvas_stock_switch"
+        )
+        if nav_selected and nav_selected["symbol"] != current_ticker:
+            st.session_state.active_ticker = nav_selected["symbol"]
+            st.rerun()
 
     with col_nav_back:
         if st.button("← Terminal", use_container_width=True):
             st.session_state.active_ticker = None
+            st.session_state.pop("home_stock_search", None)
+            st.session_state.pop("canvas_stock_switch", None)
             st.rerun()
 
     with col_nav_reload:
