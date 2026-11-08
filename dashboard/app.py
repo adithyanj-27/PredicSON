@@ -288,21 +288,33 @@ div[data-testid="InputInstructions"], small[data-testid="InputInstructions"] {
     box-shadow: 0 0 20px rgba(14, 165, 233, 0.35) !important;
 }
 
-/* Stoxify Search Dropdown Row */
-.search-result-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 16px;
-    border-radius: 8px;
-    background: rgba(15, 23, 42, 0.85);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    margin-bottom: 5px;
-    transition: all 0.15s ease;
+/* Stoxify Search Dropdown Button Cards - Click Anywhere to Open */
+.stox-dropdown .stButton > button {
+    justify-content: flex-start !important;
+    text-align: left !important;
+    padding: 12px 18px !important;
+    background: rgba(15, 23, 42, 0.88) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-radius: 10px !important;
+    margin-bottom: 6px !important;
+    font-size: 0.92rem !important;
+    color: #F8FAFC !important;
+    transition: all 0.18s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    display: flex !important;
+    align-items: center !important;
 }
-.search-result-row:hover {
-    background: rgba(14, 165, 233, 0.12);
-    border-color: rgba(14, 165, 233, 0.4);
+
+.stox-dropdown .stButton > button:hover {
+    background: rgba(14, 165, 233, 0.15) !important;
+    border-color: #0EA5E9 !important;
+    box-shadow: 0 4px 16px rgba(14, 165, 233, 0.25) !important;
+    transform: translateX(4px) !important;
+}
+
+.stox-dropdown .stButton > button p {
+    text-align: left !important;
+    width: 100% !important;
+    margin: 0 !important;
 }
 
 /* Tab Headers */
@@ -530,34 +542,25 @@ def render_homepage():
             else:
                 st.error(f"No Indian equity found matching '{search_query}'. Please check the symbol or name.")
 
-        # Stoxify-style Suggestions Dropdown Card Container
+        # Stoxify-style Suggestions Dropdown: Each stock is a single full-width clickable card
         if search_query and matched_stocks:
             st.markdown(
-                f"<div style='font-size:0.75rem; font-weight:700; color:#38BDF8; text-transform:uppercase; letter-spacing:0.8px; margin-top:12px; margin-bottom:8px;'>"
-                f"Suggestions on NSE & BSE ({len(matched_stocks)}):"
+                f"<div style='font-size:0.75rem; font-weight:700; color:#38BDF8; text-transform:uppercase; letter-spacing:0.8px; margin-top:14px; margin-bottom:8px;'>"
+                f"Suggestions ({len(matched_stocks)}) — Click any stock to open:"
                 f"</div>",
                 unsafe_allow_html=True
             )
+            st.markdown("<div class='stox-dropdown'>", unsafe_allow_html=True)
             for idx, m in enumerate(matched_stocks):
-                c_info, c_action = st.columns([4.4, 1.1])
                 clean_sym = m["symbol"].replace(".NS", "").replace(".BO", "")
                 is_nse = m["symbol"].endswith(".NS")
                 exch_badge = "NSE" if is_nse else "BSE"
-                exch_style = "background:rgba(16,185,129,0.15); color:#10B981; border:1px solid rgba(16,185,129,0.3);" if is_nse else "background:rgba(14,165,233,0.15); color:#38BDF8; border:1px solid rgba(14,165,233,0.3);"
-                with c_info:
-                    st.markdown(
-                        f"<div class='search-result-row'>"
-                        f"<div><b style='color:#38BDF8; font-family:JetBrains Mono, monospace; font-size:0.95rem;'>{html.escape(clean_sym)}</b> "
-                        f"<span style='color:#F8FAFC; margin-left:12px; font-weight:500;'>{html.escape(m['name'])}</span></div>"
-                        f"<div><span style='font-size:0.70rem; font-weight:700; border-radius:4px; padding:3px 8px; margin-right:8px; {exch_style}'>{exch_badge}</span>"
-                        f"<span style='font-size:0.76rem; color:#94A3B8;'>[{html.escape(m.get('sector', 'Equities'))}]</span></div>"
-                        f"</div>",
-                        unsafe_allow_html=True
-                    )
-                with c_action:
-                    if st.button("View →", key=f"srch_pick_{m['symbol']}_{idx}", use_container_width=True):
-                        st.session_state.active_ticker = m["symbol"]
-                        st.rerun()
+                sector_tag = m.get("sector", "Equities")
+                btn_label = f"**{clean_sym}** \u2002 {m['name']} \u2002 `{exch_badge}` \u2002 :gray[[{sector_tag}]]"
+                if st.button(btn_label, key=f"stock_row_{m['symbol']}_{idx}", use_container_width=True):
+                    st.session_state.active_ticker = m["symbol"]
+                    st.rerun()
+            st.markdown("</div>", unsafe_allow_html=True)
 
     # Quick Jump Trending Equities Pills
     st.markdown("<div style='text-align:center; margin-top:16px; margin-bottom:12px;'><span style='font-size:0.74rem; font-weight:700; color:#64748B; text-transform:uppercase;'>Trending Heavyweights:</span></div>", unsafe_allow_html=True)
