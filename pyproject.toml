@@ -1,7 +1,7 @@
 [project]
 name = "predicson"
-version = "0.2.0"
-description = "Probabilistic multi-horizon price-cone forecasting and quant allocation for NSE/BSE equities."
+version = "0.3.0"
+description = "Institutional consensus, sell-side price targets, and Dalal Street intelligence terminal for NSE/BSE equities."
 readme = "README.md"
 requires-python = ">=3.10"
 license = { file = "LICENSE" }

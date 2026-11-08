@@ -1,0 +1,111 @@
+{
+  "ticker": "JPL.NS",
+  "as_of_date": "2026-10-31",
+  "fetched_at": "2026-10-31T15:49:05.608322+00:00",
+  "current_price": 1431.3,
+  "has_analyst_coverage": true,
+  "total_analysts": 3,
+  "price_targets": {
+    "current": 1431.3,
+    "mean": 1375.0,
+    "median": 1350.0,
+    "high": 1435.0,
+    "low": 1340.0
+  },
+  "mean_upside_pct": -3.93,
+  "bull_upside_pct": 0.26,
+  "bear_downside_pct": -6.38,
+  "dispersion_pct": 6.64,
+  "recommendation_breakdown": {
+    "strongBuy": 2,
+    "buy": 1,
+    "hold": 0,
+    "sell": 0,
+    "strongSell": 0
+  },
+  "recommendation_trend": [
+    {
+      "period": "0m",
+      "strongBuy": 2,
+      "buy": 1,
+      "hold": 0,
+      "sell": 0,
+      "strongSell": 0,
+      "total": 3
+    }
+  ],
+  "buy_ratio_pct": 100.0,
+  "consensus_stance": "STRONG BUY",
+  "stance_color": "#10B981",
+  "fundamentals": {
+    "company_name": "Jio Platforms Limited",
+    "market_cap": 13180886276638.709,
+    "market_cap_str": "\u20b913.18 Lakh Cr",
+    "pe_ratio": 42.9,
+    "forward_pe": 30.7,
+    "pb_ratio": 3.72,
+    "dividend_yield": null,
+    "fifty_two_week_high": 1489.7,
+    "fifty_two_week_low": 1357.0,
+    "fifty_two_week_pct": 56.0,
+    "sector": "Technology",
+    "industry": "Software - Infrastructure",
+    "business_summary": "Jio Platforms Limited provides mobile and fixed broadband connectivity along with digital products, services, platforms, and applications across entertainment, gaming, cloud computing, cloud storage, and artificial intelligence in India. The company offers 4G and 5G mobile broadb..."
+  },
+  "individual_institution_predictions": [
+    {
+      "institution": "Motilal Oswal",
+      "institution_type": "Domestic Institutional Desk",
+      "hq": "Mumbai",
+      "stance": "Buy",
+      "stance_color": "#10B981",
+      "target_price": 1350.0,
+      "implied_upside": -5.7,
+      "headline": "Buy Jio Platforms; target of Rs 1350: Motilal Oswal - Moneycontrol.com",
+      "published_date": "Wed, 28 Oct 2026",
+      "source": "Moneycontrol.com",
+      "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQTjBNM3I0NEVNOEdpUVIwN3JQbDFMaUhCS0YwR3RQUTN2LXd3YVE1UXJaZDBXVzhEVFJnaUtYTmRRVFJ0SUZlaGpHb01tc2lZZW5YRDZjaHpqdS1ZNEMxaVJzTTVCTy05cTc5Q1BQaWtEOFZjVmhuUUVvbFg3Q0RueW9KaXcyTVpycFJobGdaR1lMdVRoOXZFS3F4MGtmRlVBQllwNml0WF9ZUdIBrwFBVV95cUxNdU5Eak1JdjNYcWk2cEFIZDJPaGlobFFQNmdSYVN2TjRyX0FKOG9WbjRjWnpfVjM5TTNPeUtOTlZrdEtXTGpnM3RyRGlQVGxkNDU0V2RXbmo4YjFKblNxNnpUYzVkTmdQSk84a0dJVUlrQXZNa3hHVmMtcVBFMGRNeF9MYVNKeUVRMWttT3lGVGFZN3d3UmxaU2pxWmg1QnpzdFhKVElTMVhYQlZXTlJv?oc=5"
+    },
+    {
+      "institution": "Nomura",
+      "institution_type": "Global Investment Bank",
+      "hq": "Tokyo / Mumbai",
+      "stance": "Research Call",
+      "stance_color": "#38BDF8",
+      "target_price": 1340.0,
+      "implied_upside": -6.4,
+      "headline": "Jio Platforms Listing: Why Nomura\u2019s \u20b91,340 Target Trails \u20b91,358 Debut - NiftyTrader",
+      "published_date": "Wed, 28 Oct 2026",
+      "source": "NiftyTrader",
+      "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTE5HUkJQYVc2emJpeldQRC1vN2tvdkxxZ1daNjRCZmNXNGNIUTNFNkZYZ2lDZ0lzSkliOXlxRXZHQ01VRE1RSjc2Y1Z0X0lDOXdzREJQLW1qRGlXZ1U5SFFwUkR1d3l5N0lXUnhTS2gyU3RRQnhMbDRoeEFBQQ?oc=5"
+    }
+  ],
+  "expert_news": [
+    {
+      "title": "Mukesh Ambani stocks: Reliance Industries vs Jio Platforms shares compared - RIL or JPL? What to buy? Experts' views",
+      "source": "Livemint Markets",
+      "published": "Sat, 31 Oct 2026 14:50:55 +0530",
+      "link": "https://www.livemint.com/market/stock-market-news/mukesh-ambani-stocks-reliance-industries-vs-jio-platforms-shares-compared-ril-or-jpl-what-to-buy-experts-views-11793435085388.html"
+    },
+    {
+      "title": "RIL, JPL Q2 results 2026 impact: Reliance Industries, Jio Platforms shares in focus on Monday 2 Nov - What to expect?",
+      "source": "Livemint Markets",
+      "published": "Fri, 30 Oct 2026 22:27:01 +0530",
+      "link": "https://www.livemint.com/market/stock-market-news/ril-jpl-q2-results-2026-impact-reliance-industries-jio-platforms-shares-in-focus-on-monday-2-nov-what-to-expect-11793373081405.html"
+    }
+  ],
+  "history": [
+    {
+      "date": "2026-10-28",
+      "close": 1417.5
+    },
+    {
+      "date": "2026-10-29",
+      "close": 1421.6
+    },
+    {
+      "date": "2026-10-30",
+      "close": 1431.3
+    }
+  ]
+}

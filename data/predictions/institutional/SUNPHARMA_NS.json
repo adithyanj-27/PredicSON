@@ -1,0 +1,1176 @@
+{
+  "ticker": "SUNPHARMA.NS",
+  "as_of_date": "2026-11-08",
+  "fetched_at": "2026-11-08T14:57:03.909694+00:00",
+  "current_price": 1915.0,
+  "has_analyst_coverage": true,
+  "total_analysts": 34,
+  "price_targets": {
+    "current": 1915.0,
+    "mean": 2111.94,
+    "median": 2140.0,
+    "high": 2320.0,
+    "low": 1770.0
+  },
+  "mean_upside_pct": 10.28,
+  "bull_upside_pct": 21.15,
+  "bear_downside_pct": -7.57,
+  "dispersion_pct": 28.72,
+  "recommendation_breakdown": {
+    "strongBuy": 10,
+    "buy": 19,
+    "hold": 1,
+    "sell": 1,
+    "strongSell": 3
+  },
+  "recommendation_trend": [
+    {
+      "period": "0m",
+      "strongBuy": 10,
+      "buy": 19,
+      "hold": 1,
+      "sell": 1,
+      "strongSell": 3,
+      "total": 34
+    },
+    {
+      "period": "-1m",
+      "strongBuy": 10,
+      "buy": 18,
+      "hold": 1,
+      "sell": 1,
+      "strongSell": 3,
+      "total": 33
+    },
+    {
+      "period": "-2m",
+      "strongBuy": 10,
+      "buy": 18,
+      "hold": 1,
+      "sell": 1,
+      "strongSell": 3,
+      "total": 33
+    },
+    {
+      "period": "-3m",
+      "strongBuy": 10,
+      "buy": 19,
+      "hold": 1,
+      "sell": 1,
+      "strongSell": 3,
+      "total": 34
+    }
+  ],
+  "buy_ratio_pct": 85.3,
+  "consensus_stance": "STRONG BUY",
+  "stance_color": "#10B981",
+  "fundamentals": {
+    "company_name": "Sun Pharmaceutical Industries Limited",
+    "market_cap": 4594726467550.0,
+    "market_cap_str": "\u20b94.59 Lakh Cr",
+    "pe_ratio": 41.9,
+    "forward_pe": 30.5,
+    "pb_ratio": 5.14,
+    "dividend_yield": 86.0,
+    "fifty_two_week_high": 2046.9,
+    "fifty_two_week_low": 1583.7,
+    "fifty_two_week_pct": 71.5,
+    "sector": "Healthcare",
+    "industry": "Drug Manufacturers - Specialty & Generic",
+    "business_summary": "Sun Pharmaceutical Industries Limited, a generic pharmaceutical company, develops, manufactures, and markets branded and generic formulations, and active pharmaceutical ingredients (APIs) in India, the United States, and internationally. The company offers formulations in various..."
+  },
+  "individual_institution_predictions": [
+    {
+      "institution": "Prabhudas Lilladher",
+      "institution_type": "Domestic Institutional Desk",
+      "hq": "Mumbai",
+      "stance": "Buy",
+      "stance_color": "#10B981",
+      "target_price": 2150.0,
+      "implied_upside": 12.3,
+      "headline": "Buy Sun Pharmaceutical Industries; target of Rs 2150: Prabhudas Lilladher - Moneycontrol.com",
+      "published_date": "Mon, 02 Nov 2026",
+      "source": "Moneycontrol.com",
+      "link": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPZDQyc3lMbXJhMVMzTm1XTTRMVkt6RS1kRzJRRHpxaG1pMmVwUGxCV2tiRlNMbzZ3V0Iwc2l3ZnA0T1hOZlo2OTdpU0J4R3dxVlhpY3ByeXFfNWNsemdNQlVEV2tQNklxdkJtZy1BZmNDU2EwUTBHM29WclUzVDRja2JYYWt6NnMyMDNFRzE0ajdTMXd6TVNWdG1DSGVzOXR4ajdQSW5UNEMzQm5RTG45QVR4Wml0d2JsUUw3UWlScnhXVElmVU82eWZmUGlZZGZRVE5z0gHYAUFVX3lxTE9DWnRTeURaVUVmakdnOEJWdVBrLW5qM0VreXJBRG1UOV9WRUhzaFp6M0s4cS0tOFZ0OTl6R3BoNHYyckhwSmRnbTM1dzVoVzNlTEhGcmdQek1Ralg3WGFBRGVTcXNuU2pacm9NY1RxZTR4R3JtWmhZUTE1aWM1dURtbEI1X2lPQU1LeC00V1RtZGJtWHdZdVdvWG1GM1BpZEhYdjZUTzdzSkx6LVY2Tmp6dFhYaVZOV3AxM2wyeVo4MUFyVnZmWGdsT0FvTXJaNUlLaU1Yd2xybQ?oc=5"
+    },
+    {
+      "institution": "Geojit",
+      "institution_type": "Domestic Research House",
+      "hq": "Kochi",
+      "stance": "Buy",
+      "stance_color": "#10B981",
+      "target_price": 2070.0,
+      "implied_upside": 8.1,
+      "headline": "Buy Sun Pharmaceutical Industries; target of Rs 2070: Geojit Financial Services - Moneycontrol.com",
+      "published_date": "Mon, 21 Sep 2026",
+      "source": "Moneycontrol.com",
+      "link": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxOb2pXVW95TWM0RDhyTWRkLUptazBSb084cjNUWm5tVXNoRnhZWGZKU1dOSTYweGVlNjBCR2F0MkMyWjZGTjhaTWpERFp5RmFka1FYNzBoQWRxOHZCcXBTSER0Uk9PTzNRTG1WSGFXYVBJTmg0XzVuMEhzcTVWUFRMTlJhVWQwUFkzd3Z1OThsNWhfTlVlMUpsOW9sZlQ3YjVOc2VNVUhVdlpQenM1bUNGRGhLLWdnY1lWZmEyZTg0N3dQMWdlb19XcGRkSm9UMktIUWRsQU5CRE3SAd4BQVVfeXFMTmZ4VWVMOG1YeFJGZnZwU0JkbFlIVHpCWWZEd0NNdTd3dkNyN2pRcDNoNUhwWDI5bjBFRmFab1JhNzM5TDNJdVNtaGdtU2liMS1tSTNxLVpJaWhDclZuWGFJbjU3VnhnbEFqdE51cHRDLUxTbHFOQnZnLUVzNDA2MEdZM3BWOUVVUi0yNDdxWnJEeTk4LXJzakxXQTJuSUs3QS1Qa2I4VlRBdzZxdU1VMEg4cVpiV0RDTU1tdVZzd3MyUXhwYkVxX1cxVWNNV3hqR2FoNkFDam1ueE1qaG1R?oc=5"
+    },
+    {
+      "institution": "Motilal Oswal",
+      "institution_type": "Domestic Institutional Desk",
+      "hq": "Mumbai",
+      "stance": "Buy",
+      "stance_color": "#10B981",
+      "target_price": 2310.0,
+      "implied_upside": 20.6,
+      "headline": "Buy Sun Pharma; target of Rs 2310: Motilal Oswal - Moneycontrol.com",
+      "published_date": "Mon, 03 Aug 2026",
+      "source": "Moneycontrol.com",
+      "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQXzJKTW0tRFVRNElfOC1JNmZLc3ZlS3hBc1NJVWhLRnZpTTF4OTBjUkE4Szhqelp2UEVqOEJRd1pyc3cxdldyUWVpd3YzdEpoenNhTmhPM2hJV252UVhRLUNqcGFDNGJnNDNkeGJZSldkMk11TFNHd1JmUzhkNTJ2YktZWXdyaEhyMjgwWUNMNWlFWVZJbkFiWGlHLTdaMFN2NURlcU9R0gGrAUFVX3lxTE9Hb0NaaDhfV3VKWWZUSTBKR2dTM1VocEdQT255ZWNVNXlOU2Z3TnlxWUtKb2tUSUNvWkRwOWVsSnV6WXhwVGplVlBKbFRtZGpLS3k2M013TlViWUNkVnlKaXc2RlhQeFNmdDBmbTNlaV9Yck9nVENNeVl4UFJaV25yOTFjaVZVTFVmMFQ3YnF3aFpBM0xLRDcyY09UV2owM2NOWHVDSXgxSDlXOA?oc=5"
+    },
+    {
+      "institution": "Emkay",
+      "institution_type": "Domestic Institutional Desk",
+      "hq": "Mumbai",
+      "stance": "Buy",
+      "stance_color": "#10B981",
+      "target_price": 2100.0,
+      "implied_upside": 9.7,
+      "headline": "Buy Sun Pharma; target of Rs 2100: Emkay Global Financial - Moneycontrol.com",
+      "published_date": "Tue, 28 Apr 2026",
+      "source": "Moneycontrol.com",
+      "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPa3pDR2tORnRzWnMtX19BeVNaOE5wQmEtaGxBWHFIbHF4b2t4bkl0dy1IZTFMZmtmWlowbjE3V1NRTm5lbnNKY3hyVC1sWmYxMG9oVmZ0anFxWUpXMElhcjEySGNOQzlUNGVlNmZTVXNaU0w4T1NpemtpaXh0emc4ZzZCdmRNdEItY19UaEFiMUdoQzRSRC1PVzlpZHpGLVBnWDBSUTZJdTlHNTJ4WGNYbXdZQVZSZG54cEI40gHAAUFVX3lxTE9ZWnZpQThTZ3RiODdzZG9EUjNtajZ1RHZUQVVCdlBrQnhqSGRBQTJMMFNIOWFyR1BFX2VHSUxCRC1ZR0RiZDRpYzdneW4wX3RhLWRJamRnWkdDdW90S0xTdHFTV05FZ1k0ajJnZjdTOEhVVkIxSERyRkg2dVRrd0tGb3FmdV9lTFpmUGtCNzUwS2JHbmZ3NUt0aHoyZFlEWExhUmxpQ29vc0pfdVFrNktucFNzY1oxSFBLLVlFT002ZA?oc=5"
+    }
+  ],
+  "expert_news": [
+    {
+      "title": "Taking Stock: Market fails to hold on to day#39;s gains, ends marginally higher",
+      "source": "Moneycontrol Markets",
+      "published": "Tue, 23 Apr 2024 15:46:31 +0530",
+      "link": "https://www.moneycontrol.com/news/local-markets/taking-stock-market-fails-to-holdto-day39s-gains-ends-marginally-higher_17531871.html"
+    },
+    {
+      "title": "Muhurat trading: Sensex up 320 pts, Nifty crosses 25,100; Tata Steel, Sun Pharma among top gainers",
+      "source": "Economictimes Markets",
+      "published": "Sun, 08 Nov 2026 15:05:11 +0530",
+      "link": "https://economictimes.indiatimes.com/markets/stocks/news/muhurat-trading-sensex-up-320-pts-nifty-crosses-25100-tata-steel-sun-pharma-among-top-gainers/videoshow/135656015.cms"
+    },
+    {
+      "title": "Sun Pharma Share Price Highlights: Sun Pharma Stock Price History",
+      "source": "Economictimes Markets",
+      "published": "Sun, 08 Nov 2026 08:31:56 +0530",
+      "link": "https://economictimes.indiatimes.com/markets/stocks/stock-liveblog/sun-pharma-stock-price-today-live-08-nov-2026/liveblog/135650076.cms"
+    },
+    {
+      "title": "Muhurat trading: Sensex up 320 pts, Nifty crosses 25,100; Tata Steel, Sun Pharma among top gainers",
+      "source": "Economictimes Stocks",
+      "published": "Sun, 08 Nov 2026 15:05:11 +0530",
+      "link": "https://economictimes.indiatimes.com/markets/stocks/news/muhurat-trading-sensex-up-320-pts-nifty-crosses-25100-tata-steel-sun-pharma-among-top-gainers/videoshow/135656015.cms"
+    },
+    {
+      "title": "Sun Pharma Share Price Highlights: Sun Pharma Stock Price History",
+      "source": "Economictimes Stocks",
+      "published": "Sun, 08 Nov 2026 08:31:56 +0530",
+      "link": "https://economictimes.indiatimes.com/markets/stocks/stock-liveblog/sun-pharma-stock-price-today-live-08-nov-2026/liveblog/135650076.cms"
+    },
+    {
+      "title": "Muhurat Trading 2026: Tata Steel, Sun Pharma, BSE among top gainers as Nifty 50, Sensex swing between gains and losses",
+      "source": "Livemint Markets",
+      "published": "Sun, 08 Nov 2026 14:50:02 +0530",
+      "link": "https://www.livemint.com/market/stock-market-news/muhurat-trading-2026-tata-steel-sun-pharma-bse-among-top-gainers-as-nifty-50-sensex-swing-between-gains-and-losses-11794128799050.html"
+    }
+  ],
+  "history": [
+    {
+      "date": "2025-11-06",
+      "close": 1670.64
+    },
+    {
+      "date": "2025-11-07",
+      "close": 1676.09
+    },
+    {
+      "date": "2025-11-10",
+      "close": 1682.43
+    },
+    {
+      "date": "2025-11-11",
+      "close": 1700.57
+    },
+    {
+      "date": "2025-11-12",
+      "close": 1716.42
+    },
+    {
+      "date": "2025-11-13",
+      "close": 1721.67
+    },
+    {
+      "date": "2025-11-14",
+      "close": 1741.2
+    },
+    {
+      "date": "2025-11-17",
+      "close": 1747.93
+    },
+    {
+      "date": "2025-11-18",
+      "close": 1742.88
+    },
+    {
+      "date": "2025-11-19",
+      "close": 1767.95
+    },
+    {
+      "date": "2025-11-20",
+      "close": 1761.31
+    },
+    {
+      "date": "2025-11-21",
+      "close": 1763.59
+    },
+    {
+      "date": "2025-11-24",
+      "close": 1764.68
+    },
+    {
+      "date": "2025-11-25",
+      "close": 1760.72
+    },
+    {
+      "date": "2025-11-26",
+      "close": 1788.56
+    },
+    {
+      "date": "2025-11-27",
+      "close": 1793.92
+    },
+    {
+      "date": "2025-11-28",
+      "close": 1815.02
+    },
+    {
+      "date": "2025-12-01",
+      "close": 1791.04
+    },
+    {
+      "date": "2025-12-02",
+      "close": 1783.21
+    },
+    {
+      "date": "2025-12-03",
+      "close": 1790.35
+    },
+    {
+      "date": "2025-12-04",
+      "close": 1801.84
+    },
+    {
+      "date": "2025-12-05",
+      "close": 1788.96
+    },
+    {
+      "date": "2025-12-08",
+      "close": 1779.94
+    },
+    {
+      "date": "2025-12-09",
+      "close": 1759.93
+    },
+    {
+      "date": "2025-12-10",
+      "close": 1769.34
+    },
+    {
+      "date": "2025-12-11",
+      "close": 1790.84
+    },
+    {
+      "date": "2025-12-12",
+      "close": 1777.27
+    },
+    {
+      "date": "2025-12-15",
+      "close": 1780.83
+    },
+    {
+      "date": "2025-12-16",
+      "close": 1765.18
+    },
+    {
+      "date": "2025-12-17",
+      "close": 1776.67
+    },
+    {
+      "date": "2025-12-18",
+      "close": 1730.1
+    },
+    {
+      "date": "2025-12-19",
+      "close": 1729.11
+    },
+    {
+      "date": "2025-12-22",
+      "close": 1753.78
+    },
+    {
+      "date": "2025-12-23",
+      "close": 1740.01
+    },
+    {
+      "date": "2025-12-24",
+      "close": 1721.28
+    },
+    {
+      "date": "2025-12-26",
+      "close": 1703.94
+    },
+    {
+      "date": "2025-12-29",
+      "close": 1701.66
+    },
+    {
+      "date": "2025-12-30",
+      "close": 1704.63
+    },
+    {
+      "date": "2025-12-31",
+      "close": 1704.14
+    },
+    {
+      "date": "2026-01-01",
+      "close": 1705.52
+    },
+    {
+      "date": "2026-01-02",
+      "close": 1712.36
+    },
+    {
+      "date": "2026-01-05",
+      "close": 1713.25
+    },
+    {
+      "date": "2026-01-06",
+      "close": 1744.27
+    },
+    {
+      "date": "2026-01-07",
+      "close": 1766.47
+    },
+    {
+      "date": "2026-01-08",
+      "close": 1744.76
+    },
+    {
+      "date": "2026-01-09",
+      "close": 1714.24
+    },
+    {
+      "date": "2026-01-12",
+      "close": 1720.29
+    },
+    {
+      "date": "2026-01-13",
+      "close": 1713.05
+    },
+    {
+      "date": "2026-01-14",
+      "close": 1685.31
+    },
+    {
+      "date": "2026-01-15",
+      "close": 1685.31
+    },
+    {
+      "date": "2026-01-16",
+      "close": 1653.79
+    },
+    {
+      "date": "2026-01-19",
+      "close": 1660.24
+    },
+    {
+      "date": "2026-01-20",
+      "close": 1599.19
+    },
+    {
+      "date": "2026-01-21",
+      "close": 1598.3
+    },
+    {
+      "date": "2026-01-22",
+      "close": 1619.41
+    },
+    {
+      "date": "2026-01-23",
+      "close": 1617.13
+    },
+    {
+      "date": "2026-01-27",
+      "close": 1624.07
+    },
+    {
+      "date": "2026-01-28",
+      "close": 1596.02
+    },
+    {
+      "date": "2026-01-29",
+      "close": 1574.92
+    },
+    {
+      "date": "2026-01-30",
+      "close": 1580.86
+    },
+    {
+      "date": "2026-02-02",
+      "close": 1613.17
+    },
+    {
+      "date": "2026-02-03",
+      "close": 1686.69
+    },
+    {
+      "date": "2026-02-04",
+      "close": 1688.97
+    },
+    {
+      "date": "2026-02-05",
+      "close": 1698.15
+    },
+    {
+      "date": "2026-02-06",
+      "close": 1690.67
+    },
+    {
+      "date": "2026-02-09",
+      "close": 1700.14
+    },
+    {
+      "date": "2026-02-10",
+      "close": 1703.34
+    },
+    {
+      "date": "2026-02-11",
+      "close": 1706.63
+    },
+    {
+      "date": "2026-02-12",
+      "close": 1710.42
+    },
+    {
+      "date": "2026-02-13",
+      "close": 1693.06
+    },
+    {
+      "date": "2026-02-16",
+      "close": 1696.05
+    },
+    {
+      "date": "2026-02-17",
+      "close": 1712.61
+    },
+    {
+      "date": "2026-02-18",
+      "close": 1719.89
+    },
+    {
+      "date": "2026-02-19",
+      "close": 1708.92
+    },
+    {
+      "date": "2026-02-20",
+      "close": 1719.89
+    },
+    {
+      "date": "2026-02-23",
+      "close": 1727.77
+    },
+    {
+      "date": "2026-02-24",
+      "close": 1727.27
+    },
+    {
+      "date": "2026-02-25",
+      "close": 1759.59
+    },
+    {
+      "date": "2026-02-26",
+      "close": 1781.03
+    },
+    {
+      "date": "2026-02-27",
+      "close": 1732.46
+    },
+    {
+      "date": "2026-03-02",
+      "close": 1747.92
+    },
+    {
+      "date": "2026-03-04",
+      "close": 1745.92
+    },
+    {
+      "date": "2026-03-05",
+      "close": 1779.84
+    },
+    {
+      "date": "2026-03-06",
+      "close": 1794.7
+    },
+    {
+      "date": "2026-03-09",
+      "close": 1802.68
+    },
+    {
+      "date": "2026-03-10",
+      "close": 1808.06
+    },
+    {
+      "date": "2026-03-11",
+      "close": 1821.13
+    },
+    {
+      "date": "2026-03-12",
+      "close": 1820.53
+    },
+    {
+      "date": "2026-03-13",
+      "close": 1796.89
+    },
+    {
+      "date": "2026-03-16",
+      "close": 1778.54
+    },
+    {
+      "date": "2026-03-17",
+      "close": 1789.71
+    },
+    {
+      "date": "2026-03-18",
+      "close": 1773.65
+    },
+    {
+      "date": "2026-03-19",
+      "close": 1739.84
+    },
+    {
+      "date": "2026-03-20",
+      "close": 1772.45
+    },
+    {
+      "date": "2026-03-23",
+      "close": 1753.8
+    },
+    {
+      "date": "2026-03-24",
+      "close": 1748.72
+    },
+    {
+      "date": "2026-03-25",
+      "close": 1790.71
+    },
+    {
+      "date": "2026-03-27",
+      "close": 1788.91
+    },
+    {
+      "date": "2026-03-30",
+      "close": 1752.61
+    },
+    {
+      "date": "2026-04-01",
+      "close": 1723.98
+    },
+    {
+      "date": "2026-04-02",
+      "close": 1689.17
+    },
+    {
+      "date": "2026-04-06",
+      "close": 1690.17
+    },
+    {
+      "date": "2026-04-07",
+      "close": 1713.51
+    },
+    {
+      "date": "2026-04-08",
+      "close": 1710.12
+    },
+    {
+      "date": "2026-04-09",
+      "close": 1712.61
+    },
+    {
+      "date": "2026-04-10",
+      "close": 1650.57
+    },
+    {
+      "date": "2026-04-13",
+      "close": 1647.88
+    },
+    {
+      "date": "2026-04-15",
+      "close": 1692.17
+    },
+    {
+      "date": "2026-04-16",
+      "close": 1688.67
+    },
+    {
+      "date": "2026-04-17",
+      "close": 1671.12
+    },
+    {
+      "date": "2026-04-20",
+      "close": 1664.24
+    },
+    {
+      "date": "2026-04-21",
+      "close": 1660.85
+    },
+    {
+      "date": "2026-04-22",
+      "close": 1665.44
+    },
+    {
+      "date": "2026-04-23",
+      "close": 1675.71
+    },
+    {
+      "date": "2026-04-24",
+      "close": 1616.16
+    },
+    {
+      "date": "2026-04-27",
+      "close": 1728.97
+    },
+    {
+      "date": "2026-04-28",
+      "close": 1742.73
+    },
+    {
+      "date": "2026-04-29",
+      "close": 1774.05
+    },
+    {
+      "date": "2026-04-30",
+      "close": 1803.57
+    },
+    {
+      "date": "2026-05-04",
+      "close": 1818.73
+    },
+    {
+      "date": "2026-05-05",
+      "close": 1816.04
+    },
+    {
+      "date": "2026-05-06",
+      "close": 1845.36
+    },
+    {
+      "date": "2026-05-07",
+      "close": 1829.6
+    },
+    {
+      "date": "2026-05-08",
+      "close": 1843.07
+    },
+    {
+      "date": "2026-05-11",
+      "close": 1867.8
+    },
+    {
+      "date": "2026-05-12",
+      "close": 1840.88
+    },
+    {
+      "date": "2026-05-13",
+      "close": 1820.03
+    },
+    {
+      "date": "2026-05-14",
+      "close": 1858.33
+    },
+    {
+      "date": "2026-05-15",
+      "close": 1873.29
+    },
+    {
+      "date": "2026-05-18",
+      "close": 1900.82
+    },
+    {
+      "date": "2026-05-19",
+      "close": 1877.38
+    },
+    {
+      "date": "2026-05-20",
+      "close": 1875.39
+    },
+    {
+      "date": "2026-05-21",
+      "close": 1886.36
+    },
+    {
+      "date": "2026-05-22",
+      "close": 1839.78
+    },
+    {
+      "date": "2026-05-25",
+      "close": 1835.79
+    },
+    {
+      "date": "2026-05-26",
+      "close": 1835.99
+    },
+    {
+      "date": "2026-05-27",
+      "close": 1839.48
+    },
+    {
+      "date": "2026-05-29",
+      "close": 1794.5
+    },
+    {
+      "date": "2026-06-01",
+      "close": 1791.8
+    },
+    {
+      "date": "2026-06-02",
+      "close": 1785.22
+    },
+    {
+      "date": "2026-06-03",
+      "close": 1783.82
+    },
+    {
+      "date": "2026-06-04",
+      "close": 1775.45
+    },
+    {
+      "date": "2026-06-05",
+      "close": 1777.54
+    },
+    {
+      "date": "2026-06-08",
+      "close": 1784.12
+    },
+    {
+      "date": "2026-06-09",
+      "close": 1774.35
+    },
+    {
+      "date": "2026-06-10",
+      "close": 1781.73
+    },
+    {
+      "date": "2026-06-11",
+      "close": 1789.51
+    },
+    {
+      "date": "2026-06-12",
+      "close": 1802.97
+    },
+    {
+      "date": "2026-06-15",
+      "close": 1801.28
+    },
+    {
+      "date": "2026-06-16",
+      "close": 1795.99
+    },
+    {
+      "date": "2026-06-17",
+      "close": 1815.64
+    },
+    {
+      "date": "2026-06-18",
+      "close": 1820.03
+    },
+    {
+      "date": "2026-06-19",
+      "close": 1833.49
+    },
+    {
+      "date": "2026-06-22",
+      "close": 1858.03
+    },
+    {
+      "date": "2026-06-23",
+      "close": 1863.12
+    },
+    {
+      "date": "2026-06-24",
+      "close": 1869.5
+    },
+    {
+      "date": "2026-06-25",
+      "close": 1857.93
+    },
+    {
+      "date": "2026-06-29",
+      "close": 1869.9
+    },
+    {
+      "date": "2026-06-30",
+      "close": 1857.63
+    },
+    {
+      "date": "2026-07-01",
+      "close": 1861.32
+    },
+    {
+      "date": "2026-07-02",
+      "close": 1866.11
+    },
+    {
+      "date": "2026-07-03",
+      "close": 1899.82
+    },
+    {
+      "date": "2026-07-06",
+      "close": 1907.8
+    },
+    {
+      "date": "2026-07-07",
+      "close": 1903.4
+    },
+    {
+      "date": "2026-07-08",
+      "close": 1888.2
+    },
+    {
+      "date": "2026-07-09",
+      "close": 1938.7
+    },
+    {
+      "date": "2026-07-10",
+      "close": 1935.5
+    },
+    {
+      "date": "2026-07-13",
+      "close": 1921.4
+    },
+    {
+      "date": "2026-07-14",
+      "close": 1942.6
+    },
+    {
+      "date": "2026-07-15",
+      "close": 1951.5
+    },
+    {
+      "date": "2026-07-16",
+      "close": 1950.1
+    },
+    {
+      "date": "2026-07-17",
+      "close": 1932.6
+    },
+    {
+      "date": "2026-07-20",
+      "close": 1956.4
+    },
+    {
+      "date": "2026-07-21",
+      "close": 1961.9
+    },
+    {
+      "date": "2026-07-22",
+      "close": 1943.0
+    },
+    {
+      "date": "2026-07-23",
+      "close": 1954.0
+    },
+    {
+      "date": "2026-07-24",
+      "close": 1941.1
+    },
+    {
+      "date": "2026-07-27",
+      "close": 1973.7
+    },
+    {
+      "date": "2026-07-28",
+      "close": 1976.7
+    },
+    {
+      "date": "2026-07-29",
+      "close": 1989.9
+    },
+    {
+      "date": "2026-07-30",
+      "close": 2001.1
+    },
+    {
+      "date": "2026-07-31",
+      "close": 1990.5
+    },
+    {
+      "date": "2026-08-03",
+      "close": 1963.5
+    },
+    {
+      "date": "2026-08-04",
+      "close": 1964.0
+    },
+    {
+      "date": "2026-08-05",
+      "close": 1940.0
+    },
+    {
+      "date": "2026-08-06",
+      "close": 1951.0
+    },
+    {
+      "date": "2026-08-07",
+      "close": 1945.0
+    },
+    {
+      "date": "2026-08-10",
+      "close": 1944.4
+    },
+    {
+      "date": "2026-08-11",
+      "close": 1942.0
+    },
+    {
+      "date": "2026-08-12",
+      "close": 1944.0
+    },
+    {
+      "date": "2026-08-13",
+      "close": 1932.0
+    },
+    {
+      "date": "2026-08-14",
+      "close": 1930.0
+    },
+    {
+      "date": "2026-08-17",
+      "close": 1882.0
+    },
+    {
+      "date": "2026-08-18",
+      "close": 1875.1
+    },
+    {
+      "date": "2026-08-19",
+      "close": 1900.0
+    },
+    {
+      "date": "2026-08-20",
+      "close": 1904.0
+    },
+    {
+      "date": "2026-08-21",
+      "close": 1902.4
+    },
+    {
+      "date": "2026-08-24",
+      "close": 1910.0
+    },
+    {
+      "date": "2026-08-25",
+      "close": 1922.0
+    },
+    {
+      "date": "2026-08-26",
+      "close": 1899.5
+    },
+    {
+      "date": "2026-08-27",
+      "close": 1913.3
+    },
+    {
+      "date": "2026-08-28",
+      "close": 1920.0
+    },
+    {
+      "date": "2026-08-31",
+      "close": 1984.8
+    },
+    {
+      "date": "2026-09-01",
+      "close": 1929.0
+    },
+    {
+      "date": "2026-09-02",
+      "close": 1931.7
+    },
+    {
+      "date": "2026-09-03",
+      "close": 1916.0
+    },
+    {
+      "date": "2026-09-04",
+      "close": 1899.0
+    },
+    {
+      "date": "2026-09-07",
+      "close": 1895.0
+    },
+    {
+      "date": "2026-09-08",
+      "close": 1885.9
+    },
+    {
+      "date": "2026-09-09",
+      "close": 1864.9
+    },
+    {
+      "date": "2026-09-10",
+      "close": 1861.0
+    },
+    {
+      "date": "2026-09-11",
+      "close": 1840.0
+    },
+    {
+      "date": "2026-09-15",
+      "close": 1835.0
+    },
+    {
+      "date": "2026-09-16",
+      "close": 1853.5
+    },
+    {
+      "date": "2026-09-17",
+      "close": 1867.3
+    },
+    {
+      "date": "2026-09-18",
+      "close": 1837.3
+    },
+    {
+      "date": "2026-09-21",
+      "close": 1868.9
+    },
+    {
+      "date": "2026-09-22",
+      "close": 1846.4
+    },
+    {
+      "date": "2026-09-23",
+      "close": 1865.0
+    },
+    {
+      "date": "2026-09-24",
+      "close": 1849.9
+    },
+    {
+      "date": "2026-09-25",
+      "close": 1852.2
+    },
+    {
+      "date": "2026-09-28",
+      "close": 1838.0
+    },
+    {
+      "date": "2026-09-29",
+      "close": 1865.0
+    },
+    {
+      "date": "2026-09-30",
+      "close": 1816.6
+    },
+    {
+      "date": "2026-10-01",
+      "close": 1801.0
+    },
+    {
+      "date": "2026-10-05",
+      "close": 1779.7
+    },
+    {
+      "date": "2026-10-06",
+      "close": 1804.1
+    },
+    {
+      "date": "2026-10-07",
+      "close": 1781.0
+    },
+    {
+      "date": "2026-10-08",
+      "close": 1759.8
+    },
+    {
+      "date": "2026-10-09",
+      "close": 1760.0
+    },
+    {
+      "date": "2026-10-12",
+      "close": 1760.0
+    },
+    {
+      "date": "2026-10-13",
+      "close": 1770.7
+    },
+    {
+      "date": "2026-10-14",
+      "close": 1746.4
+    },
+    {
+      "date": "2026-10-15",
+      "close": 1764.0
+    },
+    {
+      "date": "2026-10-16",
+      "close": 1758.8
+    },
+    {
+      "date": "2026-10-19",
+      "close": 1743.0
+    },
+    {
+      "date": "2026-10-21",
+      "close": 1745.1
+    },
+    {
+      "date": "2026-10-22",
+      "close": 1758.0
+    },
+    {
+      "date": "2026-10-23",
+      "close": 1748.0
+    },
+    {
+      "date": "2026-10-26",
+      "close": 1740.0
+    },
+    {
+      "date": "2026-10-27",
+      "close": 1751.2
+    },
+    {
+      "date": "2026-10-28",
+      "close": 1757.5
+    },
+    {
+      "date": "2026-10-29",
+      "close": 1761.0
+    },
+    {
+      "date": "2026-10-30",
+      "close": 1777.7
+    },
+    {
+      "date": "2026-11-02",
+      "close": 1770.0
+    },
+    {
+      "date": "2026-11-03",
+      "close": 1769.9
+    },
+    {
+      "date": "2026-11-04",
+      "close": 1773.4
+    },
+    {
+      "date": "2026-11-05",
+      "close": 1829.0
+    },
+    {
+      "date": "2026-11-06",
+      "close": 1860.0
+    },
+    {
+      "date": "2026-11-08",
+      "close": 1915.0
+    }
+  ]
+}

@@ -1,40 +1,30 @@
-# PredicSON — Probabilistic Stock Forecaster & Quant Allocator (NSE / BSE)
+# PredicSON — Institutional Consensus & Expert Intelligence Terminal (NSE / BSE)
 
-> **Zero-cost quantitative forecasting for Indian equities.**
-> Produces probabilistic price cones (1M / 3M / 6M) for 25 Nifty heavyweights, plus a
-> cross-sectional screener and a maximum-Sharpe capital allocator. Everything runs on
-> free data sources and local, open-source models.
+> **Wisdom of Institutional Crowds for Indian Equities.**
+> Aggregates sell-side research, institutional price targets, and analyst ratings from 800+ covering brokerage desks
+> across Dalal Street and premier global investment banks. Zero brittle retail models — pure institutional consensus.
 
 ---
 
 ## What it actually does
 
-- **Probabilistic price cones**, not point guesses. For each horizon it reports
-  p10 / p25 / p50 / p75 / p90 with a strict non-crossing guarantee
-  (`p10 <= p25 <= p50 <= p75 <= p90`), and the cone is forced to widen with horizon.
-- **Multi-signal model.** Technical/momentum/volatility features, macro drivers
-  (Brent, USD/INR, India VIX, US 10Y, Nifty beta), a noise-gated financial-news
-  sentiment series with exponential decay, and a macro regime classifier.
-- **Purged walk-forward backtest** that reports directional accuracy, cone coverage,
-  and MAE out-of-sample.
-- **Cross-sectional screener** ranking the universe by expected 3M return,
-  risk-reward, valuation, and money flow.
-- **Max-Sharpe allocator** (Modern Portfolio Theory) with per-stock caps.
+- **Institutional Consensus & Price Targets**: For any equity across NSE/BSE, retrieves
+  Mean, Median, High (Bull Case), and Low (Bear Case) price targets published by sell-side research desks.
+- **Institutional Corridor Visualizer**: TradingView-grade interactive chart charting 1Y historical
+  price extending forward into the 12-month sell-side target corridor.
+- **Rating Breakdown & 3-Month Momentum**: Full distribution of Strong Buy, Buy, Hold, and
+  Sell recommendations, along with quarterly stance revision trends.
+- **Brokerage Actions & Research Estimates**: Firm-by-firm breakdown of price targets and recommendations
+  from global and domestic institutions (Jefferies, Morgan Stanley, Goldman Sachs, Motilal Oswal, ICICI Direct, Kotak, CLSA, Nomura).
+- **Dalal Street Wire**: Real-time aggregation of brokerage reports, Q2 preview commentary,
+  and target upgrades from Moneycontrol, Economic Times, and Livemint.
+- **Universe Screener**: Ranks 25 large caps and ~2,600 Indian equities by highest institutional upside potential.
 
 ### Honest scope and limitations
 
-- The **analyst-consensus overlay is a live-only adjustment**, capped at 0.35 and
-  disabled when fewer than three analysts cover a name. It is *not* applied in the
-  backtest, because no point-in-time consensus history exists — so the scorecard
-  describes the model-only forecast.
-- **Fundamental and consensus features are a single "as-of" snapshot** broadcast flat
-  across history. They carry no historical variation, so they are **dropped before
-  model fitting** (a per-stock tree model cannot split on a constant) and used only
-  for the narrative and the live overlay. The model itself is driven by the
-  time-varying technical, macro, alpha, regime, and sentiment features.
-- **News sentiment is thin in the bundled snapshot** (a single day's articles), so it
-  contributes little for most names. Ingest more history to give it weight.
-- This is a research/education tool. It is **not investment advice**.
+- Consensus data reflects sell-side analyst price targets and recommendations published via formal research reports.
+- Small-cap or micro-cap equities with limited institutional coverage (< 3 covering desks) display transparent coverage status.
+- This is a research and market intelligence tool. It is **not investment advice**.
 
 ---
 
@@ -50,23 +40,19 @@ also fetch any NSE/BSE symbol from the bundled directory (~2,600 names).
 
 ```
 PredicSON/
-├── config/settings.py              # universe, macro tickers, RSS feeds, paths, schema version
+├── config/settings.py              # universe, RSS feeds, cache paths
 ├── data/
-│   ├── raw/                        # ohlcv, macro, news, experts, fundamentals
-│   ├── features/                   # per-stock feature matrices (+ .meta.json version stamps)
-│   ├── predictions/                # screener & backtest scorecard caches
-│   └── model_cache/                # persisted trained models (git-ignored)
+│   ├── raw/news/                   # live financial news wire snapshots
+│   ├── predictions/institutional/  # same-day sell-side consensus caches
+│   └── indian_stocks_master.json   # 10,680+ Indian equities master directory
 ├── src/
-│   ├── data_ingestion/             # market_data, news_collector, expert_scraper,
-│   │                               # fundamentals_scraper, stock_directory
-│   ├── feature_engineering/        # technical, macro, alpha, sentiment, consensus,
-│   │                               # fundamental, build_dataset
-│   ├── models/                     # quantile_forecaster, backtester, regime_classifier,
-│   │                               # narrative_engine, screener_engine, portfolio_allocator,
-│   │                               # fan_chart_generator, on_demand_engine
-│   └── utils/data_loader.py        # typed loaders + feature-version checks
-├── dashboard/app.py                # Streamlit terminal (search homepage + forecast canvas)
-├── tests/test_predicson.py         # unit tests
+│   ├── data_ingestion/
+│   │   ├── institutional_engine.py # ⭐ Sell-side targets, broker calls, corridor chart
+│   │   ├── stock_directory.py      # ⭐ Multi-token search & company directory
+│   │   └── news_collector.py       # Live RSS feed ingestion from financial press
+│   └── utils/data_loader.py        # Ticker sanitization & news loader
+├── dashboard/app.py                # Streamlit institutional terminal UI
+├── tests/test_predicson.py         # Unit tests (entity tagging, search, consensus)
 ├── main.py                         # CLI entrypoint
 ├── requirements.txt / pyproject.toml
 └── LICENSE (MIT)
@@ -77,54 +63,26 @@ PredicSON/
 ## Quickstart
 
 ```bash
-# 1. Install
+# 1. Install dependencies
 pip install -r requirements.txt
 
-# 2. Ingest data (equities, macro, news, fundamentals, expert consensus)
-python main.py ingest
+# 2. Check institutional consensus for a specific stock
+python main.py consensus --ticker RELIANCE.NS
 
-# 3. Build the feature matrices (writes data/features/*.parquet + .meta.json)
-python main.py features
+# 3. View institutional universe rankings (highest upside)
+python main.py consensus-all
 
-# 4. Forecast a single stock
-python main.py predict --ticker RELIANCE.NS
-
-# 5. Purged walk-forward backtest (one ticker, or the whole universe)
-python main.py backtest --ticker RELIANCE.NS
-python main.py backtest-all
-
-# 6. Build the screener, or launch the dashboard
-python main.py screener
+# 4. Launch the Streamlit Institutional Terminal
 python main.py dashboard      # or: streamlit run dashboard/app.py
 ```
-
-Trained models are persisted under `data/model_cache/` and reused until the
-underlying data changes, so repeat forecasts are fast; the first forecast per stock
-fits the models and takes noticeably longer.
-
----
-
-## Methodology notes
-
-- **No look-ahead.** Labels use `close.shift(-h)`; the backtest purges the last `h`
-  training rows before each evaluation anchor so no training label is derived from a
-  post-anchor price.
-- **Adjusted prices.** Prices are split/dividend-adjusted (`auto_adjust=True`, and the
-  loader promotes a legacy `adj_close` column when present) before any return maths.
-- **Feature versioning.** Each feature matrix records the schema version it was built
-  with; a mismatch forces a rebuild, so stale artifacts can't silently feed the model.
-- **Reproducibility.** Fixed random seed (`RANDOM_SEED`) throughout.
 
 ---
 
 ## Testing
 
 ```bash
-pip install pytest
 pytest -q
 ```
-
-CI runs the suite on Python 3.11 and 3.12 (`.github/workflows/ci.yml`).
 
 ---
 

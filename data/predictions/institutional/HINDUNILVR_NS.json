@@ -1,0 +1,1185 @@
+{
+  "ticker": "HINDUNILVR.NS",
+  "as_of_date": "2026-11-08",
+  "fetched_at": "2026-11-08T14:56:50.370230+00:00",
+  "current_price": 1997.0,
+  "has_analyst_coverage": true,
+  "total_analysts": 39,
+  "price_targets": {
+    "current": 1997.0,
+    "mean": 2258.03,
+    "median": 2222.5,
+    "high": 2750.0,
+    "low": 1800.0
+  },
+  "mean_upside_pct": 13.07,
+  "bull_upside_pct": 37.71,
+  "bear_downside_pct": -9.86,
+  "dispersion_pct": 47.57,
+  "recommendation_breakdown": {
+    "strongBuy": 8,
+    "buy": 20,
+    "hold": 9,
+    "sell": 0,
+    "strongSell": 2
+  },
+  "recommendation_trend": [
+    {
+      "period": "0m",
+      "strongBuy": 8,
+      "buy": 20,
+      "hold": 9,
+      "sell": 0,
+      "strongSell": 2,
+      "total": 39
+    },
+    {
+      "period": "-1m",
+      "strongBuy": 8,
+      "buy": 19,
+      "hold": 9,
+      "sell": 1,
+      "strongSell": 2,
+      "total": 39
+    },
+    {
+      "period": "-2m",
+      "strongBuy": 9,
+      "buy": 18,
+      "hold": 9,
+      "sell": 1,
+      "strongSell": 2,
+      "total": 39
+    },
+    {
+      "period": "-3m",
+      "strongBuy": 9,
+      "buy": 18,
+      "hold": 9,
+      "sell": 1,
+      "strongSell": 2,
+      "total": 39
+    }
+  ],
+  "buy_ratio_pct": 71.8,
+  "consensus_stance": "ACCUMULATE / BUY",
+  "stance_color": "#0EA5E9",
+  "fundamentals": {
+    "company_name": "Hindustan Unilever Limited",
+    "market_cap": 4692133750214.0,
+    "market_cap_str": "\u20b94.69 Lakh Cr",
+    "pe_ratio": 44.3,
+    "forward_pe": 37.4,
+    "pb_ratio": 9.61,
+    "dividend_yield": 2.05,
+    "fifty_two_week_high": 2488.0,
+    "fifty_two_week_low": 1758.2,
+    "fifty_two_week_pct": 32.7,
+    "sector": "Consumer Defensive",
+    "industry": "Household & Personal Products",
+    "business_summary": "Hindustan Unilever Limited, a fast-moving consumer goods company, manufactures and sells food, home care, and personal care products in India and internationally. It operates through Home Care, Beauty & Wellbeing, Personal Care, Foods, and Others segments. The company offers dete..."
+  },
+  "individual_institution_predictions": [
+    {
+      "institution": "Nuvama",
+      "institution_type": "Domestic Institutional Desk",
+      "hq": "Mumbai",
+      "stance": "Buy",
+      "stance_color": "#10B981",
+      "target_price": null,
+      "implied_upside": null,
+      "headline": "HUL share price target: From \u20b91973 to \u20b92820 in 12 months - Buy rating from Nuvama for Hindustan Unilever stock - Livemint",
+      "published_date": "Sun, 06 Sep 2026",
+      "source": "Livemint",
+      "link": "https://news.google.com/rss/articles/CBMihgJBVV95cUxNeU1WR2xLWTFWc0wwMi04OU9rSUtibTZjbzFHcTY5LS1qaG5ZRkZYMGdjTDBsNGQzaHhMcHhhOW9nd0k1akxmVWdBU0VtS0ZDcWw4SlMxMmpJaUZDVTJjZVJENjhpSm9BWjMteWg0YUVNT1lSaGJyNERmS0VrdFdrVWIyeUFUSmJJZGJDT0dRa3VmT3pqaU9jeUI1OTBqbG9vTDlXcDJndC0tQWY4bjF0X2JlVXBFU1g3bzNZd3ljdVBRVnRPbGpvSTNTZFNMeERydWJURXdaRG02WWdtUTd3TEJCMVJjdHpYMW9wbmlYZVBRRnpfakJlcjB2RzVfZzlfSUxvbS1n0gGLAkFVX3lxTE4ySXFacjk0T21RQjZVSW03czFPeWhpRGVRbnFtV1NuWWRwbEQ0RUJyVllMakNLNEM1WnNrSU93OVJ2NVhldG5kLTd6Uk9YdHVGMnFRNEJMY1pSbXAtdU1Qem1HN00zcDJQSk51Z05ZbWVEQnhaOXUyYmZUZjk2Y3E0UFJvTkhTYXI2dF9OUlNmU3VOMDd3RmtVdTBOQ0VBdFdGdkFKTVdpcUptOEFseW56cmN5bHVfRWUtU24wZFdaN1dUTEJEdzNTSW9WMG9UMlFRWHBfVDlkY3VPMFFBNThWRE5kcDVvRWFPZGFfaDI1YmcwdDkzY2dNa2lxZG1Ld2FzbWg4RGlFQll2UQ?oc=5"
+    },
+    {
+      "institution": "Motilal Oswal",
+      "institution_type": "Domestic Institutional Desk",
+      "hq": "Mumbai",
+      "stance": "Buy",
+      "stance_color": "#10B981",
+      "target_price": 2400.0,
+      "implied_upside": 20.2,
+      "headline": "Buy Hindustan Unilever Ltd for the Target Rs.2,400 by Motilal Oswal Financial Services Ltd - Investment Guru India",
+      "published_date": "Mon, 07 Sep 2026",
+      "source": "Investment Guru India",
+      "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQYk16R0RmVk1mSGs5Y3dqOUotckRPamgtX0dEVG1uVlktaVJXdmVFWWVxTGxCTVdRYjVoVGVlRXFSVXR3bEN4Yzg4T0p4T3dlVzlKQ1BZZjMyUXdUSjFYOUtMbG9oTzRJdDFkeUM3alBUa2pOSWxNa3h0bzAxakgwR1FxeEIxLVNzTHdxcGdJcEktY0hCWi1rNXpfc0duTjk1WWw1emxDSjQ1X0dUZWFUZDVyZ3ZQWUN1UktZdk5QanpyR3NaUnBfcnJIUTJuSTdXTEpJZDd3?oc=5"
+    },
+    {
+      "institution": "ICICI Securities",
+      "institution_type": "Domestic Institutional Desk",
+      "hq": "Mumbai",
+      "stance": "Buy",
+      "stance_color": "#10B981",
+      "target_price": 2800.0,
+      "implied_upside": 40.2,
+      "headline": "Buy Hindustan Unilever; target of Rs 2800: ICICI Securities - Moneycontrol.com",
+      "published_date": "Thu, 16 Jul 2026",
+      "source": "Moneycontrol.com",
+      "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNNnQ3SmQwVlNGZVpXNzlNRHlNdGNlSXJjUWpQbDFmb0RISXktSXA4ZTdMRllpTkxqSEF4OWxoeUhTcmtVVXo3dHQwcGtfaE5icmNzQVVRSnFnY3BjVU5WMmdJWWJPYTlKeDVMRGc0ei15X3Jlekd4MlRkcXp1T04xYWY2TGNjQThXNmYwUGNHQURidlFHSjNkMUxrcFMyZ2ZieGExYktYWEZLcE1md19FZlVkRkd0SXVrUUlfb256amzSAcYBQVVfeXFMTmtmU21QdjhaYWkwblZNOUJjUXUtTlFRNHNQd3FEc3hjcVpiRVJTYS1GTEhRal94ZTEwNXJ6Wk0xSjQ0SHhoZkNTWjBqUlhUbFVKa1NZVXBWd0xRWmRxS1BEUDN5b1R4QVpValp0RWZJTV9SVkJyZ0xBUF9hV3FkTWFHYmk2eExvUU1pZGE3ZGhDVXpUUHJOQzBmTVJKR2l5RHcxLVFTQzR6VU5VTjZqYWEwM0QxQ3RmLVVaeGZybkZTTmlROGxn?oc=5"
+    },
+    {
+      "institution": "Prabhudas Lilladher",
+      "institution_type": "Domestic Institutional Desk",
+      "hq": "Mumbai",
+      "stance": "Accumulate",
+      "stance_color": "#0EA5E9",
+      "target_price": 2320.0,
+      "implied_upside": 16.2,
+      "headline": "Accumulate Hindustan Unilever; target of Rs 2320: Prabhudas Lilladher - Moneycontrol.com",
+      "published_date": "Thu, 30 Jul 2026",
+      "source": "Moneycontrol.com",
+      "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPM1kzNUtoVXktQTJYMmR0U29FUFVVWFpTRHdJbWlsYWxJSHdZTE41dU5TZFdldXozOG1CVGJpRndYekhra19yQ3lHQkkwWjBndUZDaklBeTVPU0RlM0VOQkVIS2hTZnBjdWgtcDMzd0NRckRqQXE3RXZmb1BfdEhMZU5LeVM5UUJ3NHV1Y0hsLWtWWmFrN0VtdUd6eGhFNkpjcU5LWEtGbmxMWXNCRGJ2bGwxWjl3VlpiTTQ3b2tzYlkwOUVjdF9XdEc4X2Zpd9IB0wFBVV95cUxOeDR0cURSM21BenlqLXVjajZURklSVU1CSmVKN2FwTlNvVTlsRnhhOWVzSEJ4Mjh4ZnZWcXV5Q2gtMzFyQlpxeWlNQUpBbTlDWHJubE8yN2RhMzdaUDZnajlIbFlrN2RTemlIeXVFdmpiQkcxYkFZY1VmaXJPNExrMEpoX0k1VkpIbkpWbEx1Zy16WmhmcmRGWDVINDNxdUhRenY1LVpIZWhFYk9heWgtcXpOXzgzY0Z5M3UydzBhbW1LMHZZb1ZWNzBrX2dkbENZTVpZ?oc=5"
+    },
+    {
+      "institution": "Nomura",
+      "institution_type": "Global Investment Bank",
+      "hq": "Tokyo / Mumbai",
+      "stance": "Buy",
+      "stance_color": "#10B981",
+      "target_price": null,
+      "implied_upside": null,
+      "headline": "Hindustan Unilever Q1 volumes meet Nomura estimates but miss Street expectations; Nomura retains Buy, cuts... - Moneycontrol.com",
+      "published_date": "Thu, 30 Jul 2026",
+      "source": "Moneycontrol.com",
+      "link": "https://news.google.com/rss/articles/CBMingJBVV95cUxNMnZaaFdtQnNJSzZZTmo4VFNjMUNlV0UwYXZSVVkzblpRcFJfX1VOODRRRGdpeWdlUm9hNDJxT01DTlRpOURKb21WZzBUT1Rkd0RXRkRSV1JEanlwbHExS0RQRGVzMk96Si1nNGdOa3BpbFQ2Qk0yMWZMeXBBdFkyRjc1SnNfampnZ2RQVHBFQ3hRMGQ0MUx6TlBnYXpOQlB4eVFMMXVjR2JScDZaNkJ4THI2UFRlanBZVzB5MzFPbnJwU3NpVkZ4T2FwRjVMZnhBMzliYlU0Wi03TFVRTTlHZTBtVDN0R2dpaWxkbjJWaU44UmZ6Uy1VZUtjdDFweWNLRkFHcjRFU08xLTB6RXJWWHdsS1hyZy1DTmloal930gGjAkFVX3lxTFBJbllpczNLN1J1NmN3cjhaZWx3ODJFaHhEbGwxd3lfWXIyQmN1ZGx0YkFUZHR3MDQwVkVNem9NN0ZUVWlnM0N4V2ZoT1VPT1Z4aXFjRTR1RjBtQ1JydG9rZ1hYNmZpZWRjZGpsdE5DcGNFVkNPT1VPUVFERmtLNVlhc1NLdHEzSXhqdEwyakg5VEtNVENMSTlKUktrOE91N21OT1J5c3d4a1hfb0JtREZzWHM2SjhYQjRmYV9hVEV1NXg4UEp6TGx6Q2FMaXNxem02alczUlV3eHV0QWFMeU9kZU96TENrSE14UGpCYnd5MzJrTGxxNXU5N3h6S1NzZVREY21XNjB4OU5RVDZocnhGXzhlSEZoQThMbWc3Rm5mVnVjcw?oc=5"
+    },
+    {
+      "institution": "ICICI Direct",
+      "institution_type": "Domestic Research House",
+      "hq": "Mumbai",
+      "stance": "Research Call",
+      "stance_color": "#38BDF8",
+      "target_price": null,
+      "implied_upside": null,
+      "headline": "HINDUSTAN UNILEVER SHARE PRICE - ICICI Direct",
+      "published_date": "Sat, 08 Jan 2022",
+      "source": "ICICI Direct",
+      "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE02c1haVThYc3c5Z1JGRVRzd0I0aDV6d1dXSWNGU0c0WTRieThUcmlIWUtLaklGM2w1Z05uZlhMNUhTTkFXdTV6NmEtUlhWUnFMSWZ4WnNibHVzZTNjTGxKTGpIT2VxclZkcmEweUJ3bXAycVRvYkQ2aQ?oc=5"
+    },
+    {
+      "institution": "Jefferies",
+      "institution_type": "Global Investment Bank",
+      "hq": "New York / Mumbai",
+      "stance": "Hold",
+      "stance_color": "#F59E0B",
+      "target_price": null,
+      "implied_upside": null,
+      "headline": "Jefferies gives \u2018hold\u2019 rating to Hindustan Unilever, reduces target price; here\u2019s why - Livemint",
+      "published_date": "Thu, 07 Dec 2023",
+      "source": "Livemint",
+      "link": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxQZGJUeGVFR3VYWFFmWkQxdWRpdjlJWldDUWs2MmllYlZUaTdsdVFVRm4wUzRQQkkzMlBXWXBYZ0tRQ2ZLeHBic2xiLU05R0Zkam56T2lQOW1wcjFKcVM2YUxjTzJMd0RkRGRmMmJPeXV1ZVI2ZXNfME1lTnV2bWNxWW95MkJ0Um4zdWxXUzdhVW8wNHpDbkJ1NEtQelRoTVVCd0Z6MzNMY2RXZjByOUEwNGYxYzEtdllyLTNMT0k0dC11b2VQenpMSGNpN0hDM3RyU2gwLU1wdVlkOHNqMjZEVk1kX09BZ9IB6wFBVV95cUxPSHN2T21KcHVKYVZzbG9GRW5SYjVLcFlxOFVRTkdhMDlRVEhfbXlNWlFtTXBPSlpVQUFzMHktamY4UHRBZlZpV3FzUjJZbTFWZ0s3M3RNWjEyOVB6Tm5ReGQyX0ZTcnA3MERyQUlvdXRzdWt0cnR2YmdxdGZPZTNxaHVjNGVwVldLT2NxWlJDV3lfVnl4U251X0p2bWw0elAwcEJkaV93eFBWME5DYjY5cWFkX285S1pqUHlTQmlrU0RJeDRqeTJ2T0NrdTR3WVhWNnUyenNhZGVzZFNCczROcERwNE9jUHdzWEY0?oc=5"
+    }
+  ],
+  "expert_news": [
+    {
+      "title": "Hindustan Unilever Q4 Preview: Price cuts, slow demand, regional competition to hurt topline",
+      "source": "Moneycontrol Business",
+      "published": "Tue, 23 Apr 2024 16:05:45 +0530",
+      "link": "https://www.moneycontrol.com/news/business/hindustan-unilever-q4-preview-price-cuts-slow-demand-regional-competition-to-hurt-topline_17531901.html"
+    }
+  ],
+  "history": [
+    {
+      "date": "2025-11-06",
+      "close": 2392.66
+    },
+    {
+      "date": "2025-11-07",
+      "close": 2389.69
+    },
+    {
+      "date": "2025-11-10",
+      "close": 2384.55
+    },
+    {
+      "date": "2025-11-11",
+      "close": 2403.06
+    },
+    {
+      "date": "2025-11-12",
+      "close": 2400.09
+    },
+    {
+      "date": "2025-11-13",
+      "close": 2383.36
+    },
+    {
+      "date": "2025-11-14",
+      "close": 2403.26
+    },
+    {
+      "date": "2025-11-17",
+      "close": 2400.58
+    },
+    {
+      "date": "2025-11-18",
+      "close": 2379.79
+    },
+    {
+      "date": "2025-11-19",
+      "close": 2417.02
+    },
+    {
+      "date": "2025-11-20",
+      "close": 2403.95
+    },
+    {
+      "date": "2025-11-21",
+      "close": 2409.19
+    },
+    {
+      "date": "2025-11-24",
+      "close": 2399.79
+    },
+    {
+      "date": "2025-11-25",
+      "close": 2389.79
+    },
+    {
+      "date": "2025-11-26",
+      "close": 2400.78
+    },
+    {
+      "date": "2025-11-27",
+      "close": 2427.01
+    },
+    {
+      "date": "2025-11-28",
+      "close": 2441.76
+    },
+    {
+      "date": "2025-12-01",
+      "close": 2439.68
+    },
+    {
+      "date": "2025-12-02",
+      "close": 2452.85
+    },
+    {
+      "date": "2025-12-03",
+      "close": 2423.35
+    },
+    {
+      "date": "2025-12-04",
+      "close": 2437.41
+    },
+    {
+      "date": "2025-12-05",
+      "close": 2315.05
+    },
+    {
+      "date": "2025-12-08",
+      "close": 2290.7
+    },
+    {
+      "date": "2025-12-09",
+      "close": 2283.28
+    },
+    {
+      "date": "2025-12-10",
+      "close": 2278.52
+    },
+    {
+      "date": "2025-12-11",
+      "close": 2282.38
+    },
+    {
+      "date": "2025-12-12",
+      "close": 2237.84
+    },
+    {
+      "date": "2025-12-15",
+      "close": 2270.41
+    },
+    {
+      "date": "2025-12-16",
+      "close": 2258.13
+    },
+    {
+      "date": "2025-12-17",
+      "close": 2252.69
+    },
+    {
+      "date": "2025-12-18",
+      "close": 2242.69
+    },
+    {
+      "date": "2025-12-19",
+      "close": 2257.04
+    },
+    {
+      "date": "2025-12-22",
+      "close": 2266.45
+    },
+    {
+      "date": "2025-12-23",
+      "close": 2279.41
+    },
+    {
+      "date": "2025-12-24",
+      "close": 2259.22
+    },
+    {
+      "date": "2025-12-26",
+      "close": 2262.39
+    },
+    {
+      "date": "2025-12-29",
+      "close": 2270.21
+    },
+    {
+      "date": "2025-12-30",
+      "close": 2267.14
+    },
+    {
+      "date": "2025-12-31",
+      "close": 2292.58
+    },
+    {
+      "date": "2026-01-01",
+      "close": 2299.61
+    },
+    {
+      "date": "2026-01-02",
+      "close": 2324.36
+    },
+    {
+      "date": "2026-01-05",
+      "close": 2360.09
+    },
+    {
+      "date": "2026-01-06",
+      "close": 2400.29
+    },
+    {
+      "date": "2026-01-07",
+      "close": 2375.24
+    },
+    {
+      "date": "2026-01-08",
+      "close": 2362.67
+    },
+    {
+      "date": "2026-01-09",
+      "close": 2348.71
+    },
+    {
+      "date": "2026-01-12",
+      "close": 2381.97
+    },
+    {
+      "date": "2026-01-13",
+      "close": 2365.44
+    },
+    {
+      "date": "2026-01-14",
+      "close": 2329.8
+    },
+    {
+      "date": "2026-01-15",
+      "close": 2329.8
+    },
+    {
+      "date": "2026-01-16",
+      "close": 2336.63
+    },
+    {
+      "date": "2026-01-19",
+      "close": 2389.59
+    },
+    {
+      "date": "2026-01-20",
+      "close": 2355.14
+    },
+    {
+      "date": "2026-01-21",
+      "close": 2344.16
+    },
+    {
+      "date": "2026-01-22",
+      "close": 2366.53
+    },
+    {
+      "date": "2026-01-23",
+      "close": 2385.24
+    },
+    {
+      "date": "2026-01-27",
+      "close": 2376.72
+    },
+    {
+      "date": "2026-01-28",
+      "close": 2354.45
+    },
+    {
+      "date": "2026-01-29",
+      "close": 2328.91
+    },
+    {
+      "date": "2026-01-30",
+      "close": 2349.11
+    },
+    {
+      "date": "2026-02-02",
+      "close": 2333.56
+    },
+    {
+      "date": "2026-02-03",
+      "close": 2344.75
+    },
+    {
+      "date": "2026-02-04",
+      "close": 2347.13
+    },
+    {
+      "date": "2026-02-05",
+      "close": 2330.69
+    },
+    {
+      "date": "2026-02-06",
+      "close": 2399.79
+    },
+    {
+      "date": "2026-02-09",
+      "close": 2410.48
+    },
+    {
+      "date": "2026-02-10",
+      "close": 2428.89
+    },
+    {
+      "date": "2026-02-11",
+      "close": 2438.1
+    },
+    {
+      "date": "2026-02-12",
+      "close": 2385.44
+    },
+    {
+      "date": "2026-02-13",
+      "close": 2281.99
+    },
+    {
+      "date": "2026-02-16",
+      "close": 2295.65
+    },
+    {
+      "date": "2026-02-17",
+      "close": 2289.02
+    },
+    {
+      "date": "2026-02-18",
+      "close": 2300.1
+    },
+    {
+      "date": "2026-02-19",
+      "close": 2256.35
+    },
+    {
+      "date": "2026-02-20",
+      "close": 2291.2
+    },
+    {
+      "date": "2026-02-23",
+      "close": 2321.78
+    },
+    {
+      "date": "2026-02-24",
+      "close": 2334.85
+    },
+    {
+      "date": "2026-02-25",
+      "close": 2350.99
+    },
+    {
+      "date": "2026-02-26",
+      "close": 2359.3
+    },
+    {
+      "date": "2026-02-27",
+      "close": 2314.56
+    },
+    {
+      "date": "2026-03-02",
+      "close": 2297.23
+    },
+    {
+      "date": "2026-03-04",
+      "close": 2238.53
+    },
+    {
+      "date": "2026-03-05",
+      "close": 2232.29
+    },
+    {
+      "date": "2026-03-06",
+      "close": 2203.29
+    },
+    {
+      "date": "2026-03-09",
+      "close": 2172.5
+    },
+    {
+      "date": "2026-03-10",
+      "close": 2168.15
+    },
+    {
+      "date": "2026-03-11",
+      "close": 2139.64
+    },
+    {
+      "date": "2026-03-12",
+      "close": 2115.38
+    },
+    {
+      "date": "2026-03-13",
+      "close": 2138.25
+    },
+    {
+      "date": "2026-03-16",
+      "close": 2153.79
+    },
+    {
+      "date": "2026-03-17",
+      "close": 2136.47
+    },
+    {
+      "date": "2026-03-18",
+      "close": 2113.8
+    },
+    {
+      "date": "2026-03-19",
+      "close": 2056.38
+    },
+    {
+      "date": "2026-03-20",
+      "close": 2061.73
+    },
+    {
+      "date": "2026-03-23",
+      "close": 2031.54
+    },
+    {
+      "date": "2026-03-24",
+      "close": 2064.01
+    },
+    {
+      "date": "2026-03-25",
+      "close": 2113.3
+    },
+    {
+      "date": "2026-03-27",
+      "close": 2053.51
+    },
+    {
+      "date": "2026-03-30",
+      "close": 2034.51
+    },
+    {
+      "date": "2026-04-01",
+      "close": 2043.91
+    },
+    {
+      "date": "2026-04-02",
+      "close": 2044.5
+    },
+    {
+      "date": "2026-04-06",
+      "close": 2063.81
+    },
+    {
+      "date": "2026-04-07",
+      "close": 2089.35
+    },
+    {
+      "date": "2026-04-08",
+      "close": 2124.0
+    },
+    {
+      "date": "2026-04-09",
+      "close": 2111.72
+    },
+    {
+      "date": "2026-04-10",
+      "close": 2133.6
+    },
+    {
+      "date": "2026-04-13",
+      "close": 2105.78
+    },
+    {
+      "date": "2026-04-15",
+      "close": 2135.88
+    },
+    {
+      "date": "2026-04-16",
+      "close": 2117.56
+    },
+    {
+      "date": "2026-04-17",
+      "close": 2218.24
+    },
+    {
+      "date": "2026-04-20",
+      "close": 2209.03
+    },
+    {
+      "date": "2026-04-21",
+      "close": 2287.43
+    },
+    {
+      "date": "2026-04-22",
+      "close": 2344.95
+    },
+    {
+      "date": "2026-04-23",
+      "close": 2342.57
+    },
+    {
+      "date": "2026-04-24",
+      "close": 2303.87
+    },
+    {
+      "date": "2026-04-27",
+      "close": 2304.86
+    },
+    {
+      "date": "2026-04-28",
+      "close": 2266.45
+    },
+    {
+      "date": "2026-04-29",
+      "close": 2291.1
+    },
+    {
+      "date": "2026-04-30",
+      "close": 2228.24
+    },
+    {
+      "date": "2026-05-04",
+      "close": 2286.05
+    },
+    {
+      "date": "2026-05-05",
+      "close": 2303.97
+    },
+    {
+      "date": "2026-05-06",
+      "close": 2293.77
+    },
+    {
+      "date": "2026-05-07",
+      "close": 2249.32
+    },
+    {
+      "date": "2026-05-08",
+      "close": 2264.66
+    },
+    {
+      "date": "2026-05-11",
+      "close": 2283.97
+    },
+    {
+      "date": "2026-05-12",
+      "close": 2239.22
+    },
+    {
+      "date": "2026-05-13",
+      "close": 2244.47
+    },
+    {
+      "date": "2026-05-14",
+      "close": 2226.06
+    },
+    {
+      "date": "2026-05-15",
+      "close": 2249.32
+    },
+    {
+      "date": "2026-05-18",
+      "close": 2231.5
+    },
+    {
+      "date": "2026-05-19",
+      "close": 2210.42
+    },
+    {
+      "date": "2026-05-20",
+      "close": 2187.05
+    },
+    {
+      "date": "2026-05-21",
+      "close": 2157.06
+    },
+    {
+      "date": "2026-05-22",
+      "close": 2181.41
+    },
+    {
+      "date": "2026-05-25",
+      "close": 2174.38
+    },
+    {
+      "date": "2026-05-26",
+      "close": 2187.15
+    },
+    {
+      "date": "2026-05-27",
+      "close": 2176.26
+    },
+    {
+      "date": "2026-05-29",
+      "close": 2131.82
+    },
+    {
+      "date": "2026-06-01",
+      "close": 2063.31
+    },
+    {
+      "date": "2026-06-02",
+      "close": 2072.62
+    },
+    {
+      "date": "2026-06-03",
+      "close": 2069.55
+    },
+    {
+      "date": "2026-06-04",
+      "close": 2058.46
+    },
+    {
+      "date": "2026-06-05",
+      "close": 2100.14
+    },
+    {
+      "date": "2026-06-08",
+      "close": 2088.85
+    },
+    {
+      "date": "2026-06-09",
+      "close": 2111.32
+    },
+    {
+      "date": "2026-06-10",
+      "close": 2147.66
+    },
+    {
+      "date": "2026-06-11",
+      "close": 2118.25
+    },
+    {
+      "date": "2026-06-12",
+      "close": 2146.96
+    },
+    {
+      "date": "2026-06-15",
+      "close": 2134.39
+    },
+    {
+      "date": "2026-06-16",
+      "close": 2177.75
+    },
+    {
+      "date": "2026-06-17",
+      "close": 2175.47
+    },
+    {
+      "date": "2026-06-18",
+      "close": 2196.16
+    },
+    {
+      "date": "2026-06-19",
+      "close": 2172.5
+    },
+    {
+      "date": "2026-06-22",
+      "close": 2162.9
+    },
+    {
+      "date": "2026-06-23",
+      "close": 2160.1
+    },
+    {
+      "date": "2026-06-24",
+      "close": 2157.8
+    },
+    {
+      "date": "2026-06-25",
+      "close": 2174.2
+    },
+    {
+      "date": "2026-06-29",
+      "close": 2151.3
+    },
+    {
+      "date": "2026-06-30",
+      "close": 2118.2
+    },
+    {
+      "date": "2026-07-01",
+      "close": 2182.0
+    },
+    {
+      "date": "2026-07-02",
+      "close": 2210.6
+    },
+    {
+      "date": "2026-07-03",
+      "close": 2201.2
+    },
+    {
+      "date": "2026-07-06",
+      "close": 2202.0
+    },
+    {
+      "date": "2026-07-07",
+      "close": 2208.8
+    },
+    {
+      "date": "2026-07-08",
+      "close": 2135.8
+    },
+    {
+      "date": "2026-07-09",
+      "close": 2144.5
+    },
+    {
+      "date": "2026-07-10",
+      "close": 2150.6
+    },
+    {
+      "date": "2026-07-13",
+      "close": 2130.6
+    },
+    {
+      "date": "2026-07-14",
+      "close": 2120.2
+    },
+    {
+      "date": "2026-07-15",
+      "close": 2102.6
+    },
+    {
+      "date": "2026-07-16",
+      "close": 2098.4
+    },
+    {
+      "date": "2026-07-17",
+      "close": 2143.8
+    },
+    {
+      "date": "2026-07-20",
+      "close": 2139.7
+    },
+    {
+      "date": "2026-07-21",
+      "close": 2142.5
+    },
+    {
+      "date": "2026-07-22",
+      "close": 2154.6
+    },
+    {
+      "date": "2026-07-23",
+      "close": 2161.8
+    },
+    {
+      "date": "2026-07-24",
+      "close": 2145.0
+    },
+    {
+      "date": "2026-07-27",
+      "close": 2174.6
+    },
+    {
+      "date": "2026-07-28",
+      "close": 2022.7
+    },
+    {
+      "date": "2026-07-29",
+      "close": 2117.8
+    },
+    {
+      "date": "2026-07-30",
+      "close": 2107.9
+    },
+    {
+      "date": "2026-07-31",
+      "close": 2101.3
+    },
+    {
+      "date": "2026-08-03",
+      "close": 2138.0
+    },
+    {
+      "date": "2026-08-04",
+      "close": 2096.5
+    },
+    {
+      "date": "2026-08-05",
+      "close": 2085.3
+    },
+    {
+      "date": "2026-08-06",
+      "close": 2079.5
+    },
+    {
+      "date": "2026-08-07",
+      "close": 2096.0
+    },
+    {
+      "date": "2026-08-10",
+      "close": 2087.2
+    },
+    {
+      "date": "2026-08-11",
+      "close": 2064.9
+    },
+    {
+      "date": "2026-08-12",
+      "close": 2063.0
+    },
+    {
+      "date": "2026-08-13",
+      "close": 2092.0
+    },
+    {
+      "date": "2026-08-14",
+      "close": 2077.0
+    },
+    {
+      "date": "2026-08-17",
+      "close": 2055.0
+    },
+    {
+      "date": "2026-08-18",
+      "close": 2035.0
+    },
+    {
+      "date": "2026-08-19",
+      "close": 2020.7
+    },
+    {
+      "date": "2026-08-20",
+      "close": 2028.0
+    },
+    {
+      "date": "2026-08-21",
+      "close": 2015.0
+    },
+    {
+      "date": "2026-08-24",
+      "close": 2030.0
+    },
+    {
+      "date": "2026-08-25",
+      "close": 2024.2
+    },
+    {
+      "date": "2026-08-26",
+      "close": 2021.0
+    },
+    {
+      "date": "2026-08-27",
+      "close": 2009.0
+    },
+    {
+      "date": "2026-08-28",
+      "close": 2010.4
+    },
+    {
+      "date": "2026-08-31",
+      "close": 1967.4
+    },
+    {
+      "date": "2026-09-01",
+      "close": 1994.8
+    },
+    {
+      "date": "2026-09-02",
+      "close": 1975.0
+    },
+    {
+      "date": "2026-09-03",
+      "close": 1962.0
+    },
+    {
+      "date": "2026-09-04",
+      "close": 1973.4
+    },
+    {
+      "date": "2026-09-07",
+      "close": 1960.0
+    },
+    {
+      "date": "2026-09-08",
+      "close": 1980.0
+    },
+    {
+      "date": "2026-09-09",
+      "close": 1945.0
+    },
+    {
+      "date": "2026-09-10",
+      "close": 1942.3
+    },
+    {
+      "date": "2026-09-11",
+      "close": 1927.0
+    },
+    {
+      "date": "2026-09-15",
+      "close": 1938.1
+    },
+    {
+      "date": "2026-09-16",
+      "close": 1962.0
+    },
+    {
+      "date": "2026-09-17",
+      "close": 1942.2
+    },
+    {
+      "date": "2026-09-18",
+      "close": 1932.0
+    },
+    {
+      "date": "2026-09-21",
+      "close": 1947.0
+    },
+    {
+      "date": "2026-09-22",
+      "close": 1933.8
+    },
+    {
+      "date": "2026-09-23",
+      "close": 1950.0
+    },
+    {
+      "date": "2026-09-24",
+      "close": 1933.5
+    },
+    {
+      "date": "2026-09-25",
+      "close": 1942.9
+    },
+    {
+      "date": "2026-09-28",
+      "close": 1896.0
+    },
+    {
+      "date": "2026-09-29",
+      "close": 1863.8
+    },
+    {
+      "date": "2026-09-30",
+      "close": 1879.1
+    },
+    {
+      "date": "2026-10-01",
+      "close": 1836.0
+    },
+    {
+      "date": "2026-10-05",
+      "close": 1838.4
+    },
+    {
+      "date": "2026-10-06",
+      "close": 1895.2
+    },
+    {
+      "date": "2026-10-07",
+      "close": 1865.4
+    },
+    {
+      "date": "2026-10-08",
+      "close": 1844.5
+    },
+    {
+      "date": "2026-10-09",
+      "close": 1856.7
+    },
+    {
+      "date": "2026-10-12",
+      "close": 1820.7
+    },
+    {
+      "date": "2026-10-13",
+      "close": 1875.5
+    },
+    {
+      "date": "2026-10-14",
+      "close": 1895.5
+    },
+    {
+      "date": "2026-10-15",
+      "close": 1897.1
+    },
+    {
+      "date": "2026-10-16",
+      "close": 1893.8
+    },
+    {
+      "date": "2026-10-19",
+      "close": 1853.2
+    },
+    {
+      "date": "2026-10-21",
+      "close": 1850.2
+    },
+    {
+      "date": "2026-10-22",
+      "close": 1828.3
+    },
+    {
+      "date": "2026-10-23",
+      "close": 1814.7
+    },
+    {
+      "date": "2026-10-26",
+      "close": 1818.6
+    },
+    {
+      "date": "2026-10-27",
+      "close": 1818.0
+    },
+    {
+      "date": "2026-10-28",
+      "close": 1815.8
+    },
+    {
+      "date": "2026-10-29",
+      "close": 1858.2
+    },
+    {
+      "date": "2026-10-30",
+      "close": 1864.6
+    },
+    {
+      "date": "2026-11-02",
+      "close": 1898.3
+    },
+    {
+      "date": "2026-11-03",
+      "close": 1962.8
+    },
+    {
+      "date": "2026-11-04",
+      "close": 1977.1
+    },
+    {
+      "date": "2026-11-05",
+      "close": 1982.0
+    },
+    {
+      "date": "2026-11-06",
+      "close": 1998.4
+    },
+    {
+      "date": "2026-11-08",
+      "close": 1997.0
+    }
+  ]
+}

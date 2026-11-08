@@ -1,0 +1,1217 @@
+{
+  "ticker": "TITAN.NS",
+  "as_of_date": "2026-11-08",
+  "fetched_at": "2026-11-08T14:57:21.873340+00:00",
+  "current_price": 4990.5,
+  "has_analyst_coverage": true,
+  "total_analysts": 35,
+  "price_targets": {
+    "current": 4990.5,
+    "mean": 5466.46,
+    "median": 5483.0,
+    "high": 6000.0,
+    "low": 4500.0
+  },
+  "mean_upside_pct": 9.54,
+  "bull_upside_pct": 20.23,
+  "bear_downside_pct": -9.83,
+  "dispersion_pct": 30.06,
+  "recommendation_breakdown": {
+    "strongBuy": 14,
+    "buy": 16,
+    "hold": 3,
+    "sell": 0,
+    "strongSell": 2
+  },
+  "recommendation_trend": [
+    {
+      "period": "0m",
+      "strongBuy": 14,
+      "buy": 16,
+      "hold": 3,
+      "sell": 0,
+      "strongSell": 2,
+      "total": 35
+    },
+    {
+      "period": "-1m",
+      "strongBuy": 13,
+      "buy": 16,
+      "hold": 4,
+      "sell": 0,
+      "strongSell": 2,
+      "total": 35
+    },
+    {
+      "period": "-2m",
+      "strongBuy": 13,
+      "buy": 16,
+      "hold": 5,
+      "sell": 0,
+      "strongSell": 2,
+      "total": 36
+    },
+    {
+      "period": "-3m",
+      "strongBuy": 12,
+      "buy": 16,
+      "hold": 5,
+      "sell": 0,
+      "strongSell": 3,
+      "total": 36
+    }
+  ],
+  "buy_ratio_pct": 85.7,
+  "consensus_stance": "STRONG BUY",
+  "stance_color": "#10B981",
+  "fundamentals": {
+    "company_name": "Titan Company Limited",
+    "market_cap": 4428132207817.5,
+    "market_cap_str": "\u20b94.43 Lakh Cr",
+    "pe_ratio": 63.0,
+    "forward_pe": 55.9,
+    "pb_ratio": 24.25,
+    "dividend_yield": 30.0,
+    "fifty_two_week_high": 5186.7,
+    "fifty_two_week_low": 3751.0,
+    "fifty_two_week_pct": 86.3,
+    "sector": "Consumer Cyclical",
+    "industry": "Luxury Goods",
+    "business_summary": "Titan Company Limited, together with its subsidiaries, manufactures and sells watches, jewelry, eyewear, fragrances, women's bags, and other accessories and products in India and internationally. The company operates through four segments: Watches and Wearables, Jewellery, Eyecar..."
+  },
+  "individual_institution_predictions": [
+    {
+      "institution": "Prabhudas Lilladher",
+      "institution_type": "Domestic Institutional Desk",
+      "hq": "Mumbai",
+      "stance": "Accumulate",
+      "stance_color": "#0EA5E9",
+      "target_price": 5330.0,
+      "implied_upside": 6.8,
+      "headline": "Accumulate Titan Company; target of Rs 5330: Prabhudas Lilladher - Moneycontrol.com",
+      "published_date": "Fri, 06 Nov 2026",
+      "source": "Moneycontrol.com",
+      "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxObEJ1OUlUS3NwbjA1NS1qZUoxMjFQQ2ZrM1Z4R200T2FvTk5mcjZUeWZXeUt5QlUxLVhYbk1aOThNUGNmVk5Id1R1d3ZMSDljUzMxMmJIU0pETkV6RHpJZy01VnZNMDVsNEppWUJ4WVhkLWlQMDN6anZrYnEyMzRJY1dFZk9aY1VSUHlvQzkzUUxOdzRmZXNSS1NXMTYySEVSbDk5enRFaDZsRnJiVkJPZlNUNUhvZzlfaWFGd1A0MHI1RDBt0gHKAUFVX3lxTE90bGdsSGx0OThxUFcwLTk0a3Rtb0RVVEJOZ04wb1hQQmpuU3VyUGFTUDJyeV9wQndjcEJNZU5sU0htNkpuSmQ0TV92bndoZmRLY1Z6dWJMaWJQRkZYRzBsc2UxOXpmQjJiMFZRbXpBdzloZHlHajE5UndBbTh6Z1MxT0VGc0RPTzA3SHEwcW5JX25oLURSc1lGR2dDOWRFMk9RdUpZTXhlWWNxYTN0blpvRXo0SlJqMG9TMUc2TjNoRXZCYzM3NTBwelE?oc=5"
+    },
+    {
+      "institution": "Nuvama",
+      "institution_type": "Domestic Institutional Desk",
+      "hq": "Mumbai",
+      "stance": "Accumulate",
+      "stance_color": "#0EA5E9",
+      "target_price": null,
+      "implied_upside": null,
+      "headline": "Titan Company shares drop 3% after Q2 results. Why Emkay, Nuvama and others remain bullish - The Economic Times",
+      "published_date": "Fri, 06 Nov 2026",
+      "source": "The Economic Times",
+      "link": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxQQ3BvdjJxYVhkX3FPcXNma3FzTlZhakdTQVVybk9MWEJ6bXBlVWpJUFI0Qm9za3NUOGc3eWpTeElSVkowVXlOdkZGUlpaZEFQVXUtZURfRXgwNkVnODhnVmd1SUNBWHM0SjFHNHotdmk3M1RGcDdFNFItSlI4S0l4YjROY1FYbU5ER2NjX0J4dk5ST002R0QyTEpRWUhtUU5EQnNHbnJvMzlQVVJ0a0N4MHpnS1JkSUloa25WaU9KZTkxNE1xRzgwTWtVdUZNMDlUdkZtLW53RzlwVDhKeWJpekNSb25OU29wSFlHbFkyU2FpeVHSAfgBQVVfeXFMTV8tTzR3Q21lYTFlNkhiV0ZHaHRjdlRFb1I3NDNVemJxdXdYeTJIZUFfTGVnczlFSDBFWkxwYi0wb1NRYVJGaWlpdk9XV1VFM3lmT3RkbV82TS16dURhRzdfc2Fnb3NndC16bUlQa0diaWtTeS1yMHJXSEY2N0ppdDdWT1JGQk5QWEpyUU1pQldoMDdUVGNHOHFoTUR3Q3FfRWlFbWpvMWRtSE9qVWRsU25mMGhPN05wZTdyajBTVk9qb0F4NGNmUFVwLUR6WlNka3ZCc09lNmlPLVQ3cGVtdnFGQmNGa1ZVWjd1M0VoN3ZmUlBvMnRJXzM?oc=5"
+    },
+    {
+      "institution": "Jefferies",
+      "institution_type": "Global Investment Bank",
+      "hq": "New York / Mumbai",
+      "stance": "Buy",
+      "stance_color": "#10B981",
+      "target_price": 5190.1,
+      "implied_upside": 4.0,
+      "headline": "Titan shares rally 4% after Q2 results beat estimates; Jefferies, Citi say \u2018Buy\u2019 - TradingView",
+      "published_date": "Fri, 06 Nov 2026",
+      "source": "TradingView",
+      "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxOYVlaX1ZNNHMyajJPbU9IUzhEWUZBSFNIVE1jOFRicmRxVTBtQ0czUTBINjdYVGpYRDhfbk5rSDI4ZlZQSEVPRVpGNzA1dS1BUUphWHI0TTQ2S1pfazdWNWVPS0VkWkZyVldjQjVBazgyVWdDWWk0bVIxeDVxamJCcnFwVmRKdUJNUzlhXzVqVGR2aGlXUWk3bXVvY3dWTm85QXdiczVYUjNvaHBZc1pOTXJuVGxWb1RZdkhRMG9ZaThTN3dsYWtKSVU3VW5pdFVTYk5NQg?oc=5"
+    },
+    {
+      "institution": "Motilal Oswal",
+      "institution_type": "Domestic Institutional Desk",
+      "hq": "Mumbai",
+      "stance": "Buy",
+      "stance_color": "#10B981",
+      "target_price": 5700.0,
+      "implied_upside": 14.2,
+      "headline": "Buy Titan Company Ltd For Target Rs.5,700 by Motilal Oswal Financial Services Ltd - Investment Guru India",
+      "published_date": "Fri, 06 Nov 2026",
+      "source": "Investment Guru India",
+      "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNa2tCTUJPZjIyTDZwZy13MDRQdUw4cjcwVHoyUktvWVBWWlJ5MDlhRFlaUGowdWNIWnYwV3pXM3ZRR2kzSHdPYThGd192aHcwYmt2eHhLanlaZzVPOGxQYUh2a1JjRWtobmpidktXYnBCMUc2LU42aHZFRUxZMkpvQWpyWHJjNlFSVnBzQVEzVUx3MlBUVVRIRGdDX0x2Y0hzR3dGYkF3aUVXS2xXNlZ1OExhaUpUWFRVaDNNcFNsMG9KMENNb1o1WHRR?oc=5"
+    },
+    {
+      "institution": "Nomura",
+      "institution_type": "Global Investment Bank",
+      "hq": "Tokyo / Mumbai",
+      "stance": "Buy",
+      "stance_color": "#10B981",
+      "target_price": null,
+      "implied_upside": null,
+      "headline": "Titan Share Price Today: Stock Falls 4% Despite 25% Q2 Revenue Growth; Nomura Retains Buy - India Infoline",
+      "published_date": "Wed, 07 Oct 2026",
+      "source": "India Infoline",
+      "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPOEVVT1Y3MHFWaElMYTg4SFVnOWZwc240eHZFcEs5WXFyV3BuY0xFZTU5ZFlMQ0F2bVpYdG1Ka3RmM3dVWnNtejJlT00wM1NtZFVoUU90Qzk2TFE1OUZCbnRibnZHN21DRzdyX0V1Y2hHell6YW1CSm5KQXk1cVdDSUx3OXA1VVdmc3B5R1Vvb2FYY1B4dkNVNDlLa0NfUXdNN3lpeDhKYVhya282R1NORDRQQXhhOF9fTnA2am8tVXowdEZXQlpPN2xn?oc=5"
+    },
+    {
+      "institution": "Elara Capital",
+      "institution_type": "Domestic Institutional Desk",
+      "hq": "Mumbai",
+      "stance": "Accumulate",
+      "stance_color": "#0EA5E9",
+      "target_price": 5300.0,
+      "implied_upside": 6.2,
+      "headline": "Accumulate Titan Company Ltd for Target Rs 5,300 by Elara Capital - Investment Guru India",
+      "published_date": "Fri, 06 Nov 2026",
+      "source": "Investment Guru India",
+      "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPT3FUcTA4Y3ExZ0RDSXZodUx3Z1BMTEVtZXVHOTFmTkYxREVFaEc2WHpDckMyb3EwY0tHcFBqRlUyMmhZcElld3o4MmQzVU9kWEh0UmdObHJSRGIzUS0wY19OaVBrTWtKVWJqeHZkZWdaN1dxaS1CbWp6ZURvS3dSekI3eVdZSkRPQlY4Qm03ODdCdERKUUNfV2ZaZjMxd1VMWkZrQTVDdWdPdTE3aUxVbzJURnBxZw?oc=5"
+    },
+    {
+      "institution": "Geojit",
+      "institution_type": "Domestic Research House",
+      "hq": "Kochi",
+      "stance": "Buy",
+      "stance_color": "#10B981",
+      "target_price": 5635.0,
+      "implied_upside": 12.9,
+      "headline": "Buy Titan Company; target of Rs 5635: Geojit Financial Services - Moneycontrol.com",
+      "published_date": "Mon, 17 Aug 2026",
+      "source": "Moneycontrol.com",
+      "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQeXg4cENBbzU3cUZhVXhDZ19jdFdCY0hRWDlHR3pveWkyOGZGR044UDBybkhzN2VOUmxLa0lsbmVQalgzSjRUSUdiVDhqdDFFdmxPNTFBNjh4VnkxRVJvc1BCS2xpeU4tVVhCLUlXSkcyaV9aUnpwZ1NuQ0RmeWgzTGZtTTBKWG1DeERQX19DbGV3dkpWSU9xYTNLU1ZKUEV6N0FxcVZ3VS1MTVhQS2F3cDdBWkZYa2ZUT0VWcGpJVnpueFnSAcgBQVVfeXFMT0E4X0dCMm1SbTZjdFBzVFd4c3VZYm52RTNVVUdCQWsxQlZNMzlKZFN4ajMtY19mVXdzM3k4c3FodVlZWUlReTV0TERFYV9IR0ZSY2lGSk9zQlJGbFNqelBydTYxcTNDeEk2ekZnb3JEeWVtZEUtY29MSzhwVnRhU3RFNXFvbDBQR3p6SlFweXZfRHNiUk1rTGhlRTdHUjJwUlpQc0pQdVZMZXc2RkJtNERmZGYyLXFjT0hNWDBoMlZOVTZuRVdfSUE?oc=5"
+    },
+    {
+      "institution": "Kotak",
+      "institution_type": "Domestic Institutional Desk",
+      "hq": "Mumbai",
+      "stance": "Buy",
+      "stance_color": "#10B981",
+      "target_price": null,
+      "implied_upside": null,
+      "headline": "Diwali 2026 Muhurat Trading Investment Ideas: Kotak Neo's 7 stocks to buy for Samvat 2083- HAL, Titan, Eternal, and more - Livemint",
+      "published_date": "Fri, 06 Nov 2026",
+      "source": "Livemint",
+      "link": "https://news.google.com/rss/articles/CBMikgJBVV95cUxPRnNJT2xER3J4a3o0SXN0WnNmdFE0ck5kLTZuSkZZeWRld3VMcHJXR3ZBMjNfTVRFaUdpTDdwQmFXbzRZRFhuYk5fcE4tOGFVX19IZzdNN1otR2xCYWRyRE93WVl5MF9Jd2JweDNxQk4yVTFySDFHaWJfVEFUWUZnQ0d0eFVBMWpOZDJ6a0FtLThmWUUwdDdzRm83X0pHblU3WFFwSmN3cDFwX0xHbWlaRkxhNGNxSFl1cXBiaXl2Q0d3ek1YeUQ3bTBZUHBMUmVTbE5pcHpaU2RvcEh3UmRWV1V1MmpJYXppa29aZGNWZHBRdlgxVTJRR29Bam9oNE9rMkF1Q08xc2poUVRwY0tYNUZ30gGXAkFVX3lxTE9xMGFjRmJCYVVpengzTTd2Uk1CTy1SNmpVeWtmcW8xX0c2TjRiY2lyclBtdklQZ1VRUHRTbHFQZUxJcmF5bk45VUJLN1VSVWpLSExybkJrQWVSdmdHN2h2WEFwUTI0RFd6UDY5RzFPWDViWUVzR0hsWVJwTmZJc0s0eEdrQVNIRFhyVzZGLVFlRjlCN2ZLMG9vMi1CbGJBWTBPT24wX0p6UloyVGJHOGFVMWZkbGNHMmlBZGR5SXY4NkpjbHFGRE9DYTlrMU83OXU3bm9tSlBsWllnTTA4U3Z5MldkSUdQdUJYREtkbkNIbEhrYTNGUVM3ZmZ4ak1PV3dIdThjNHh5NjJLNEVUVDRucVEzLUVxZw?oc=5"
+    },
+    {
+      "institution": "Religare",
+      "institution_type": "Domestic Institutional Desk",
+      "hq": "New Delhi",
+      "stance": "Sell / Reduce",
+      "stance_color": "#F43F5E",
+      "target_price": null,
+      "implied_upside": null,
+      "headline": "Should you buy or sell IDFC First Bank, PVR INOX, Titan shares? Here's what Religare Broking's Ajit Mishra suggests - Livemint",
+      "published_date": "Fri, 18 Sep 2026",
+      "source": "Livemint",
+      "link": "https://news.google.com/rss/articles/CBMijAJBVV95cUxPSlZpbWU3UkVvZjJEQXVCNEVhbGt6Z3RJMkZQblhVdkJOZjJtcm5paDVTVzYxS2FaczZlUzRJbVQyeTJob01yZGwtNEFJRUFaTVR1anVhQkhXU29sMDFMdE0yUllfNUNjWnByOXN6SGtVaVRKTENZVEtKMHFONW1Ia3RPZmhiYkRCbjBzazl6RURrQ2VPMlNKYThtSkh1NDFuRGU1RWFteGpLVDdOeW9qRHRSVld0enVWaGNjbUh0S1F3LW9PTk1odW9ZN3JVUkFXRTlhQ05IRlk0TENJN09tQUY2ZTMwUXd2enl2c1VFdjZQOFFkT3dTcGNHMG02MDZqaVNHSUVtMzBrVDRq0gGSAkFVX3lxTE1iMU1xR2lSYVRvZktQcWpqVHNfMXBtYjJ6VXdQSExobi1sQUxvVUgxNTJoX1d6X0ExNFo2Vms1bl9ZWjFSRkg4SVQ4QUFMYXFKS1NRMWpCbHphcTY2VTdPbXlqNzAzSlIta2dSQUpZYzVkbkRvMUk2bDlPQXZfd3hxMjBVOF9yMENZVDJnNXg5VmtkanVDU2l4WE0wemxaY0tadEZTX2RlWHpjNFJTXzRFNkRJbHM2azhZZ3h0VWZocXIyN21WdHNNcXhfRlR6alF1czFvaUhPWFlFWU1TWUpibWUyVnlEOHQ0MmNUR2RiLWdZVTliQWx5YUw3djllX2RHR1pNeDAwRklLLTl4RmJ6NWc?oc=5"
+    }
+  ],
+  "expert_news": [
+    {
+      "title": "Titan Company Share Price Highlights: Titan Company Stock Price History",
+      "source": "Economictimes Markets",
+      "published": "Sun, 08 Nov 2026 08:17:28 +0530",
+      "link": "https://economictimes.indiatimes.com/markets/stocks/stock-liveblog/titan-company-stock-price-today-live-08-nov-2026/liveblog/135649916.cms"
+    },
+    {
+      "title": "Titan Company Share Price Highlights: Titan Company Stock Price History",
+      "source": "Economictimes Stocks",
+      "published": "Sun, 08 Nov 2026 08:17:28 +0530",
+      "link": "https://economictimes.indiatimes.com/markets/stocks/stock-liveblog/titan-company-stock-price-today-live-08-nov-2026/liveblog/135649916.cms"
+    }
+  ],
+  "history": [
+    {
+      "date": "2025-11-06",
+      "close": 3762.06
+    },
+    {
+      "date": "2025-11-07",
+      "close": 3756.97
+    },
+    {
+      "date": "2025-11-10",
+      "close": 3790.56
+    },
+    {
+      "date": "2025-11-11",
+      "close": 3799.93
+    },
+    {
+      "date": "2025-11-12",
+      "close": 3838.5
+    },
+    {
+      "date": "2025-11-13",
+      "close": 3826.64
+    },
+    {
+      "date": "2025-11-14",
+      "close": 3816.68
+    },
+    {
+      "date": "2025-11-17",
+      "close": 3855.95
+    },
+    {
+      "date": "2025-11-18",
+      "close": 3866.51
+    },
+    {
+      "date": "2025-11-19",
+      "close": 3920.24
+    },
+    {
+      "date": "2025-11-20",
+      "close": 3889.64
+    },
+    {
+      "date": "2025-11-21",
+      "close": 3891.43
+    },
+    {
+      "date": "2025-11-24",
+      "close": 3861.63
+    },
+    {
+      "date": "2025-11-25",
+      "close": 3842.49
+    },
+    {
+      "date": "2025-11-26",
+      "close": 3884.95
+    },
+    {
+      "date": "2025-11-27",
+      "close": 3890.53
+    },
+    {
+      "date": "2025-11-28",
+      "close": 3894.92
+    },
+    {
+      "date": "2025-12-01",
+      "close": 3882.16
+    },
+    {
+      "date": "2025-12-02",
+      "close": 3873.09
+    },
+    {
+      "date": "2025-12-03",
+      "close": 3805.31
+    },
+    {
+      "date": "2025-12-04",
+      "close": 3787.97
+    },
+    {
+      "date": "2025-12-05",
+      "close": 3800.83
+    },
+    {
+      "date": "2025-12-08",
+      "close": 3754.68
+    },
+    {
+      "date": "2025-12-09",
+      "close": 3836.41
+    },
+    {
+      "date": "2025-12-10",
+      "close": 3833.12
+    },
+    {
+      "date": "2025-12-11",
+      "close": 3832.23
+    },
+    {
+      "date": "2025-12-12",
+      "close": 3867.51
+    },
+    {
+      "date": "2025-12-15",
+      "close": 3853.56
+    },
+    {
+      "date": "2025-12-16",
+      "close": 3916.65
+    },
+    {
+      "date": "2025-12-17",
+      "close": 3895.12
+    },
+    {
+      "date": "2025-12-18",
+      "close": 3906.48
+    },
+    {
+      "date": "2025-12-19",
+      "close": 3917.25
+    },
+    {
+      "date": "2025-12-22",
+      "close": 3920.93
+    },
+    {
+      "date": "2025-12-23",
+      "close": 3912.96
+    },
+    {
+      "date": "2025-12-24",
+      "close": 3896.51
+    },
+    {
+      "date": "2025-12-26",
+      "close": 3978.94
+    },
+    {
+      "date": "2025-12-29",
+      "close": 3970.67
+    },
+    {
+      "date": "2025-12-30",
+      "close": 3961.1
+    },
+    {
+      "date": "2025-12-31",
+      "close": 4038.25
+    },
+    {
+      "date": "2026-01-01",
+      "close": 4036.06
+    },
+    {
+      "date": "2026-01-02",
+      "close": 4038.45
+    },
+    {
+      "date": "2026-01-05",
+      "close": 4066.36
+    },
+    {
+      "date": "2026-01-06",
+      "close": 4098.35
+    },
+    {
+      "date": "2026-01-07",
+      "close": 4259.22
+    },
+    {
+      "date": "2026-01-08",
+      "close": 4235.1
+    },
+    {
+      "date": "2026-01-09",
+      "close": 4188.06
+    },
+    {
+      "date": "2026-01-12",
+      "close": 4217.76
+    },
+    {
+      "date": "2026-01-13",
+      "close": 4225.34
+    },
+    {
+      "date": "2026-01-14",
+      "close": 4207.69
+    },
+    {
+      "date": "2026-01-15",
+      "close": 4207.69
+    },
+    {
+      "date": "2026-01-16",
+      "close": 4183.17
+    },
+    {
+      "date": "2026-01-19",
+      "close": 4130.55
+    },
+    {
+      "date": "2026-01-20",
+      "close": 4062.17
+    },
+    {
+      "date": "2026-01-21",
+      "close": 4065.86
+    },
+    {
+      "date": "2026-01-22",
+      "close": 4005.46
+    },
+    {
+      "date": "2026-01-23",
+      "close": 4008.65
+    },
+    {
+      "date": "2026-01-27",
+      "close": 3983.93
+    },
+    {
+      "date": "2026-01-28",
+      "close": 3962.2
+    },
+    {
+      "date": "2026-01-29",
+      "close": 3926.81
+    },
+    {
+      "date": "2026-01-30",
+      "close": 3964.39
+    },
+    {
+      "date": "2026-02-02",
+      "close": 3940.27
+    },
+    {
+      "date": "2026-02-03",
+      "close": 4055.29
+    },
+    {
+      "date": "2026-02-04",
+      "close": 4130.45
+    },
+    {
+      "date": "2026-02-05",
+      "close": 4084.2
+    },
+    {
+      "date": "2026-02-06",
+      "close": 4127.46
+    },
+    {
+      "date": "2026-02-09",
+      "close": 4243.87
+    },
+    {
+      "date": "2026-02-10",
+      "close": 4255.14
+    },
+    {
+      "date": "2026-02-11",
+      "close": 4235.2
+    },
+    {
+      "date": "2026-02-12",
+      "close": 4261.82
+    },
+    {
+      "date": "2026-02-13",
+      "close": 4165.53
+    },
+    {
+      "date": "2026-02-16",
+      "close": 4167.43
+    },
+    {
+      "date": "2026-02-17",
+      "close": 4222.54
+    },
+    {
+      "date": "2026-02-18",
+      "close": 4234.7
+    },
+    {
+      "date": "2026-02-19",
+      "close": 4184.47
+    },
+    {
+      "date": "2026-02-20",
+      "close": 4222.54
+    },
+    {
+      "date": "2026-02-23",
+      "close": 4258.73
+    },
+    {
+      "date": "2026-02-24",
+      "close": 4280.45
+    },
+    {
+      "date": "2026-02-25",
+      "close": 4310.85
+    },
+    {
+      "date": "2026-02-26",
+      "close": 4328.4
+    },
+    {
+      "date": "2026-02-27",
+      "close": 4313.35
+    },
+    {
+      "date": "2026-03-02",
+      "close": 4256.33
+    },
+    {
+      "date": "2026-03-04",
+      "close": 4190.65
+    },
+    {
+      "date": "2026-03-05",
+      "close": 4261.22
+    },
+    {
+      "date": "2026-03-06",
+      "close": 4230.72
+    },
+    {
+      "date": "2026-03-09",
+      "close": 4145.6
+    },
+    {
+      "date": "2026-03-10",
+      "close": 4206.3
+    },
+    {
+      "date": "2026-03-11",
+      "close": 4126.76
+    },
+    {
+      "date": "2026-03-12",
+      "close": 4116.09
+    },
+    {
+      "date": "2026-03-13",
+      "close": 4059.88
+    },
+    {
+      "date": "2026-03-16",
+      "close": 4077.42
+    },
+    {
+      "date": "2026-03-17",
+      "close": 4077.12
+    },
+    {
+      "date": "2026-03-18",
+      "close": 4131.94
+    },
+    {
+      "date": "2026-03-19",
+      "close": 4024.69
+    },
+    {
+      "date": "2026-03-20",
+      "close": 4093.17
+    },
+    {
+      "date": "2026-03-23",
+      "close": 3840.5
+    },
+    {
+      "date": "2026-03-24",
+      "close": 3886.75
+    },
+    {
+      "date": "2026-03-25",
+      "close": 4026.09
+    },
+    {
+      "date": "2026-03-27",
+      "close": 3968.48
+    },
+    {
+      "date": "2026-03-30",
+      "close": 3938.48
+    },
+    {
+      "date": "2026-04-01",
+      "close": 4052.2
+    },
+    {
+      "date": "2026-04-02",
+      "close": 4083.8
+    },
+    {
+      "date": "2026-04-06",
+      "close": 4232.21
+    },
+    {
+      "date": "2026-04-07",
+      "close": 4216.76
+    },
+    {
+      "date": "2026-04-08",
+      "close": 4477.81
+    },
+    {
+      "date": "2026-04-09",
+      "close": 4425.28
+    },
+    {
+      "date": "2026-04-10",
+      "close": 4490.27
+    },
+    {
+      "date": "2026-04-13",
+      "close": 4424.78
+    },
+    {
+      "date": "2026-04-15",
+      "close": 4507.41
+    },
+    {
+      "date": "2026-04-16",
+      "close": 4446.81
+    },
+    {
+      "date": "2026-04-17",
+      "close": 4511.1
+    },
+    {
+      "date": "2026-04-20",
+      "close": 4498.24
+    },
+    {
+      "date": "2026-04-21",
+      "close": 4465.05
+    },
+    {
+      "date": "2026-04-22",
+      "close": 4440.03
+    },
+    {
+      "date": "2026-04-23",
+      "close": 4441.92
+    },
+    {
+      "date": "2026-04-24",
+      "close": 4395.58
+    },
+    {
+      "date": "2026-04-27",
+      "close": 4427.27
+    },
+    {
+      "date": "2026-04-28",
+      "close": 4402.55
+    },
+    {
+      "date": "2026-04-29",
+      "close": 4425.28
+    },
+    {
+      "date": "2026-04-30",
+      "close": 4370.86
+    },
+    {
+      "date": "2026-05-04",
+      "close": 4348.73
+    },
+    {
+      "date": "2026-05-05",
+      "close": 4359.3
+    },
+    {
+      "date": "2026-05-06",
+      "close": 4345.34
+    },
+    {
+      "date": "2026-05-07",
+      "close": 4293.41
+    },
+    {
+      "date": "2026-05-08",
+      "close": 4494.25
+    },
+    {
+      "date": "2026-05-11",
+      "close": 4191.85
+    },
+    {
+      "date": "2026-05-12",
+      "close": 4042.04
+    },
+    {
+      "date": "2026-05-13",
+      "close": 4077.32
+    },
+    {
+      "date": "2026-05-14",
+      "close": 4121.68
+    },
+    {
+      "date": "2026-05-15",
+      "close": 4155.46
+    },
+    {
+      "date": "2026-05-18",
+      "close": 4156.06
+    },
+    {
+      "date": "2026-05-19",
+      "close": 4088.58
+    },
+    {
+      "date": "2026-05-20",
+      "close": 4092.97
+    },
+    {
+      "date": "2026-05-21",
+      "close": 4069.75
+    },
+    {
+      "date": "2026-05-22",
+      "close": 4066.46
+    },
+    {
+      "date": "2026-05-25",
+      "close": 4145.6
+    },
+    {
+      "date": "2026-05-26",
+      "close": 4092.47
+    },
+    {
+      "date": "2026-05-27",
+      "close": 4124.37
+    },
+    {
+      "date": "2026-05-29",
+      "close": 4061.57
+    },
+    {
+      "date": "2026-06-01",
+      "close": 4011.44
+    },
+    {
+      "date": "2026-06-02",
+      "close": 4064.76
+    },
+    {
+      "date": "2026-06-03",
+      "close": 4075.43
+    },
+    {
+      "date": "2026-06-04",
+      "close": 4217.16
+    },
+    {
+      "date": "2026-06-05",
+      "close": 4246.27
+    },
+    {
+      "date": "2026-06-08",
+      "close": 4178.69
+    },
+    {
+      "date": "2026-06-09",
+      "close": 4091.47
+    },
+    {
+      "date": "2026-06-10",
+      "close": 4028.88
+    },
+    {
+      "date": "2026-06-11",
+      "close": 4012.04
+    },
+    {
+      "date": "2026-06-12",
+      "close": 4170.32
+    },
+    {
+      "date": "2026-06-15",
+      "close": 4269.49
+    },
+    {
+      "date": "2026-06-16",
+      "close": 4323.81
+    },
+    {
+      "date": "2026-06-17",
+      "close": 4366.17
+    },
+    {
+      "date": "2026-06-18",
+      "close": 4373.55
+    },
+    {
+      "date": "2026-06-19",
+      "close": 4405.44
+    },
+    {
+      "date": "2026-06-22",
+      "close": 4358.2
+    },
+    {
+      "date": "2026-06-23",
+      "close": 4291.22
+    },
+    {
+      "date": "2026-06-24",
+      "close": 4309.66
+    },
+    {
+      "date": "2026-06-25",
+      "close": 4277.26
+    },
+    {
+      "date": "2026-06-29",
+      "close": 4263.21
+    },
+    {
+      "date": "2026-06-30",
+      "close": 4389.6
+    },
+    {
+      "date": "2026-07-01",
+      "close": 4384.21
+    },
+    {
+      "date": "2026-07-02",
+      "close": 4466.44
+    },
+    {
+      "date": "2026-07-03",
+      "close": 4446.51
+    },
+    {
+      "date": "2026-07-06",
+      "close": 4469.73
+    },
+    {
+      "date": "2026-07-07",
+      "close": 4589.14
+    },
+    {
+      "date": "2026-07-08",
+      "close": 4571.4
+    },
+    {
+      "date": "2026-07-09",
+      "close": 4555.8
+    },
+    {
+      "date": "2026-07-10",
+      "close": 4584.4
+    },
+    {
+      "date": "2026-07-13",
+      "close": 4601.5
+    },
+    {
+      "date": "2026-07-14",
+      "close": 4573.7
+    },
+    {
+      "date": "2026-07-15",
+      "close": 4579.4
+    },
+    {
+      "date": "2026-07-16",
+      "close": 4625.8
+    },
+    {
+      "date": "2026-07-17",
+      "close": 4638.1
+    },
+    {
+      "date": "2026-07-20",
+      "close": 4643.4
+    },
+    {
+      "date": "2026-07-21",
+      "close": 4688.7
+    },
+    {
+      "date": "2026-07-22",
+      "close": 4711.6
+    },
+    {
+      "date": "2026-07-23",
+      "close": 4697.3
+    },
+    {
+      "date": "2026-07-24",
+      "close": 4677.0
+    },
+    {
+      "date": "2026-07-27",
+      "close": 4740.1
+    },
+    {
+      "date": "2026-07-28",
+      "close": 4849.7
+    },
+    {
+      "date": "2026-07-29",
+      "close": 4850.2
+    },
+    {
+      "date": "2026-07-30",
+      "close": 4850.0
+    },
+    {
+      "date": "2026-07-31",
+      "close": 4875.2
+    },
+    {
+      "date": "2026-08-03",
+      "close": 5000.0
+    },
+    {
+      "date": "2026-08-04",
+      "close": 4935.0
+    },
+    {
+      "date": "2026-08-05",
+      "close": 4912.4
+    },
+    {
+      "date": "2026-08-06",
+      "close": 4998.0
+    },
+    {
+      "date": "2026-08-07",
+      "close": 4941.0
+    },
+    {
+      "date": "2026-08-10",
+      "close": 5090.0
+    },
+    {
+      "date": "2026-08-11",
+      "close": 5128.0
+    },
+    {
+      "date": "2026-08-12",
+      "close": 5099.0
+    },
+    {
+      "date": "2026-08-13",
+      "close": 5063.7
+    },
+    {
+      "date": "2026-08-14",
+      "close": 5056.2
+    },
+    {
+      "date": "2026-08-17",
+      "close": 5068.5
+    },
+    {
+      "date": "2026-08-18",
+      "close": 5048.6
+    },
+    {
+      "date": "2026-08-19",
+      "close": 5068.0
+    },
+    {
+      "date": "2026-08-20",
+      "close": 5068.0
+    },
+    {
+      "date": "2026-08-21",
+      "close": 5086.1
+    },
+    {
+      "date": "2026-08-24",
+      "close": 5079.0
+    },
+    {
+      "date": "2026-08-25",
+      "close": 5124.8
+    },
+    {
+      "date": "2026-08-26",
+      "close": 5100.0
+    },
+    {
+      "date": "2026-08-27",
+      "close": 5139.3
+    },
+    {
+      "date": "2026-08-28",
+      "close": 5169.2
+    },
+    {
+      "date": "2026-08-31",
+      "close": 5102.4
+    },
+    {
+      "date": "2026-09-01",
+      "close": 5050.0
+    },
+    {
+      "date": "2026-09-02",
+      "close": 5074.0
+    },
+    {
+      "date": "2026-09-03",
+      "close": 5027.0
+    },
+    {
+      "date": "2026-09-04",
+      "close": 5020.0
+    },
+    {
+      "date": "2026-09-07",
+      "close": 4995.0
+    },
+    {
+      "date": "2026-09-08",
+      "close": 4987.0
+    },
+    {
+      "date": "2026-09-09",
+      "close": 5005.0
+    },
+    {
+      "date": "2026-09-10",
+      "close": 5021.0
+    },
+    {
+      "date": "2026-09-11",
+      "close": 5009.5
+    },
+    {
+      "date": "2026-09-15",
+      "close": 4856.0
+    },
+    {
+      "date": "2026-09-16",
+      "close": 4908.5
+    },
+    {
+      "date": "2026-09-17",
+      "close": 4841.0
+    },
+    {
+      "date": "2026-09-18",
+      "close": 4798.5
+    },
+    {
+      "date": "2026-09-21",
+      "close": 4875.0
+    },
+    {
+      "date": "2026-09-22",
+      "close": 4928.5
+    },
+    {
+      "date": "2026-09-23",
+      "close": 4880.0
+    },
+    {
+      "date": "2026-09-24",
+      "close": 4832.5
+    },
+    {
+      "date": "2026-09-25",
+      "close": 4884.0
+    },
+    {
+      "date": "2026-09-28",
+      "close": 4819.5
+    },
+    {
+      "date": "2026-09-29",
+      "close": 4675.0
+    },
+    {
+      "date": "2026-09-30",
+      "close": 4587.0
+    },
+    {
+      "date": "2026-10-01",
+      "close": 4515.7
+    },
+    {
+      "date": "2026-10-05",
+      "close": 4580.0
+    },
+    {
+      "date": "2026-10-06",
+      "close": 4550.0
+    },
+    {
+      "date": "2026-10-07",
+      "close": 4377.0
+    },
+    {
+      "date": "2026-10-08",
+      "close": 4359.5
+    },
+    {
+      "date": "2026-10-09",
+      "close": 4410.0
+    },
+    {
+      "date": "2026-10-12",
+      "close": 4400.0
+    },
+    {
+      "date": "2026-10-13",
+      "close": 4487.0
+    },
+    {
+      "date": "2026-10-14",
+      "close": 4444.0
+    },
+    {
+      "date": "2026-10-15",
+      "close": 4455.8
+    },
+    {
+      "date": "2026-10-16",
+      "close": 4444.8
+    },
+    {
+      "date": "2026-10-19",
+      "close": 4424.2
+    },
+    {
+      "date": "2026-10-21",
+      "close": 4380.9
+    },
+    {
+      "date": "2026-10-22",
+      "close": 4350.0
+    },
+    {
+      "date": "2026-10-23",
+      "close": 4299.7
+    },
+    {
+      "date": "2026-10-26",
+      "close": 4323.0
+    },
+    {
+      "date": "2026-10-27",
+      "close": 4365.9
+    },
+    {
+      "date": "2026-10-28",
+      "close": 4337.9
+    },
+    {
+      "date": "2026-10-29",
+      "close": 4434.0
+    },
+    {
+      "date": "2026-10-30",
+      "close": 4436.5
+    },
+    {
+      "date": "2026-11-02",
+      "close": 4476.3
+    },
+    {
+      "date": "2026-11-03",
+      "close": 4562.0
+    },
+    {
+      "date": "2026-11-04",
+      "close": 4754.4
+    },
+    {
+      "date": "2026-11-05",
+      "close": 4834.6
+    },
+    {
+      "date": "2026-11-06",
+      "close": 5000.0
+    },
+    {
+      "date": "2026-11-08",
+      "close": 4990.5
+    }
+  ]
+}

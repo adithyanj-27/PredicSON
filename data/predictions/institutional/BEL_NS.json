@@ -1,0 +1,1241 @@
+{
+  "ticker": "BEL.NS",
+  "as_of_date": "2026-11-08",
+  "fetched_at": "2026-11-08T14:57:41.467558+00:00",
+  "current_price": 397.7,
+  "has_analyst_coverage": true,
+  "total_analysts": 32,
+  "price_targets": {
+    "current": 397.7,
+    "mean": 494.03,
+    "median": 503.0,
+    "high": 550.0,
+    "low": 347.0
+  },
+  "mean_upside_pct": 24.22,
+  "bull_upside_pct": 38.3,
+  "bear_downside_pct": -12.75,
+  "dispersion_pct": 51.04,
+  "recommendation_breakdown": {
+    "strongBuy": 7,
+    "buy": 24,
+    "hold": 0,
+    "sell": 0,
+    "strongSell": 1
+  },
+  "recommendation_trend": [
+    {
+      "period": "0m",
+      "strongBuy": 7,
+      "buy": 24,
+      "hold": 0,
+      "sell": 0,
+      "strongSell": 1,
+      "total": 32
+    },
+    {
+      "period": "-1m",
+      "strongBuy": 8,
+      "buy": 23,
+      "hold": 0,
+      "sell": 0,
+      "strongSell": 1,
+      "total": 32
+    },
+    {
+      "period": "-2m",
+      "strongBuy": 8,
+      "buy": 23,
+      "hold": 0,
+      "sell": 0,
+      "strongSell": 2,
+      "total": 33
+    },
+    {
+      "period": "-3m",
+      "strongBuy": 8,
+      "buy": 21,
+      "hold": 0,
+      "sell": 0,
+      "strongSell": 2,
+      "total": 31
+    }
+  ],
+  "buy_ratio_pct": 96.9,
+  "consensus_stance": "STRONG BUY",
+  "stance_color": "#10B981",
+  "fundamentals": {
+    "company_name": "Bharat Electronics Limited",
+    "market_cap": 2907099129523.9985,
+    "market_cap_str": "\u20b92.91 Lakh Cr",
+    "pe_ratio": 45.5,
+    "forward_pe": 35.6,
+    "pb_ratio": 11.06,
+    "dividend_yield": 63.0,
+    "fifty_two_week_high": 473.45,
+    "fifty_two_week_low": 354.55,
+    "fifty_two_week_pct": 36.3,
+    "sector": "Industrials",
+    "industry": "Aerospace & Defense",
+    "business_summary": "Bharat Electronics Limited designs, manufactures, and supplies electronic equipment and systems for the defense and civilian markets in India. The company's defense products include defense communication products, land-based radars, naval systems, electronic warfare systems, avio..."
+  },
+  "individual_institution_predictions": [
+    {
+      "institution": "Motilal Oswal",
+      "institution_type": "Domestic Institutional Desk",
+      "hq": "Mumbai",
+      "stance": "Buy",
+      "stance_color": "#10B981",
+      "target_price": 540.0,
+      "implied_upside": 35.8,
+      "headline": "Buy Bharat Electronics; target of Rs 540: Motilal Oswal - Moneycontrol.com",
+      "published_date": "Wed, 04 Nov 2026",
+      "source": "Moneycontrol.com",
+      "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPYmJBenJFdFMxM0lrLWV0Z0lUdEVUNEtsRGVERDAyMW9nZTdFRXRDNHJOT0FhZEtUR1RmaGxPcjNMUHMtTGt6Ylc4anZ3b1ZaeVVIQ180WUpzdVZNYW80b1dBTjlJTC1LMkRBUGpSSzZXQkFYZ1FwZ1k2aG9XaEJoVXh4ZUpqUU9WTnR6ZWxKYlgyMEN4SUVXcU1NcUhwWEd3eHVmcGpkSjBVUTdTNVB30gG0AUFVX3lxTE1pRG5TTUdvcURRT2xkOTdIcmxEZjFQSHlGOUVZa3luQ1FtX3Fwa1FjQV9tVm1WYVJnTXBMREc4ZEdfbVloNmV3YjNhUEpVZi0yaHB5VzdySkxZeWdYRU9xSGFiNDNhbGFPTEwtQ0pwSU52d1J6TGF2SVk0WUhHOE9EVGo2YmZha0U1WUJmemVJd0pZVzd4enZPVXpoM2NULTZHWUdDa2RnNV9rVEZVSU9rS1l4UA?oc=5"
+    },
+    {
+      "institution": "ICICI Securities",
+      "institution_type": "Domestic Institutional Desk",
+      "hq": "Mumbai",
+      "stance": "Buy",
+      "stance_color": "#10B981",
+      "target_price": 446.0,
+      "implied_upside": 12.1,
+      "headline": "Buy Bharat Electronics; target of Rs 446: ICICI Securities - TradingView",
+      "published_date": "Wed, 04 Nov 2026",
+      "source": "TradingView",
+      "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOZW5uOEQyZ2dWOEVhRU5nVXk2cEQzNnpvdm8zMG1rVXBHWWNpdzJYQnk3bXZhb2kxNkVvMDByZksybGt6T3hqR3I3SG5XaE43NXkzOTc3U0hVOVkwd2JSdmJIQ0dyamJSaTBGZGEyenlDV1RGVG55b1JwNUoxeEc3bFdkdzd5UGIwaDU0NzJyQU80b1lyN1VSM2haQ2NsZi1mT0FEdlpVc1pGSkVJbnJhcXhPcWVyd0pWc2Rn?oc=5"
+    },
+    {
+      "institution": "Prabhudas Lilladher",
+      "institution_type": "Domestic Institutional Desk",
+      "hq": "Mumbai",
+      "stance": "Buy",
+      "stance_color": "#10B981",
+      "target_price": 490.0,
+      "implied_upside": 23.2,
+      "headline": "Buy Bharat Electronics; target of Rs 490: Prabhudas Lilladher - TradingView",
+      "published_date": "Wed, 04 Nov 2026",
+      "source": "TradingView",
+      "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPWkxSVG4yTC1SeXUzN2FhVzZobDdCUDdGUl9HUzhvaTFiQUJqaFVSblFkMkNCelZudEhrbkhpRDEyanhCSC13M3dQNHJXOGZKQlRINGE5eVZFYzluOEZINXpZaWgyUEFjNHliN3Axc0NZM0VDa2pzUjNqRlR5OTd0bF9Ga1lST1lwSUNJeERHVWlpdXM5dC10RjE4WGtIS1A2N29xNDl5enROZDh5MldRd2UtYVZhYTZJbm1EM1hNNA?oc=5"
+    },
+    {
+      "institution": "Kotak",
+      "institution_type": "Domestic Institutional Desk",
+      "hq": "Mumbai",
+      "stance": "Research Call",
+      "stance_color": "#38BDF8",
+      "target_price": null,
+      "implied_upside": null,
+      "headline": "Defence stock gets an upgrade from Kotak but execution risks temper return expectations - CNBC TV18",
+      "published_date": "Tue, 06 Oct 2026",
+      "source": "CNBC TV18",
+      "link": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxOX0dFb0VFMFFYSU5mdlV5Y1pJeUFmWW9wSi1aQmNkanVvbjJFODVNT3pITEQ3WE5ua3VITzJJb2ZBdFhNSE1MUEdVeURWYXRabFpwRjIwenhzamk2ZjNqRVpFd0QzVmtQTnhzSTdXVXpiSGYzazdSLThNcXQzdk1adXNwbXRBck1pSmZpQVMzeFlBcHhDOV9DakkxM21yczJCWWE4RFJreFVQZ1FsRm8tdFA1NHMtTjZpOTEtX250c3QtN24yWjRacVA4QkJrYnN4eDBlVndmb095VlViTll3bzVob0_SAeoBQVVfeXFMUDlHUVdrY3dXLTV1RkpIdlNuM2RsOGtnTjRJT3c3SGRZbzJwM0hJOGRKR2tad2ZDWkctR2JTV1IyOTAyZFA3Umd1V0N1UnRvZkkwbG5pN1dEWHh0Y3BJaGJhMEp4Q2Z1QXN5Vk9yX18zRXRpRXJyclM0ck9IclgyQVdEbTA2Tm9TV2dBVFF6NHg0dGluamlfcllGTGdTdk9zOGR4UVo2bmtfaU82THZlcjFuNVdZdXFtbXZBTmZ5cDNRWG5zQ1FJOGJUemtfQ09uNzVoV0NUbjZNZWhCU3VrZHNURE5OZXRiOVJ3?oc=5"
+    },
+    {
+      "institution": "Choice Broking",
+      "institution_type": "Domestic Research House",
+      "hq": "Mumbai",
+      "stance": "Buy",
+      "stance_color": "#10B981",
+      "target_price": null,
+      "implied_upside": null,
+      "headline": "Top defence stocks to buy now: HAL, Zen Technologies, Bharat Electronics, Apollo Micro in Choice Broking\u2019s list - Livemint",
+      "published_date": "Tue, 09 Jun 2026",
+      "source": "Livemint",
+      "link": "https://news.google.com/rss/articles/CBMiiwJBVV95cUxOTVJ2dkZZNWpOV3Q3LUVXRFQzeGZraG5DRE5WeXpVV1pzbW5mNVpRUl9fb1Q1TDN1eld5eHFnN2pZMkdIQkJ6SW1oWUdvTENLa2hTWW1iN004aVVVTF9nTGJrNkxmVHJHUFlaTnV2LUpDUkFXam1RSmwzN2J5eUhZeU94S1NUMmZWelRIa3pmdzRFS2ItYVdGc25IUGRlb2N4SWd1MnFIOTJtRmkwSXloR1BtSkRHTDJ3WTRYbENJVTZqQUt6Q0l3dFBkQ1lYNjNScWpxdUpuYlFRcmJ5aExfMTBEYk5WQ1g4YzVjN2c0Tk8tOEVYRldlb2QxNVJPSEw0S3loMFpWZzk1bk3SAZACQVVfeXFMT1Ntb3ltMFZWUFlTc1hwcE5HTGk5UmpVUkwwV3FnWXk0dVY3c0VFWFdteE94NlRCR0lSTXJ1Q25DMFZGN1BoM3lSY012MEVjR25BZWJWVk9Ca2U0LUZKUkdhcFpIb3lsN0hrYVpNcTlKWmdVUFhWNUd0MXRDTmxJckduVlhhc0NYYXB5U2dGb19kZjl4VW5VeDhFMFNYamFtT3J5ekh5Zjh6XzdsU0hWcEFPQ2VqQUJaaXNjMVVHcUpmNDJHMVFoWmpmVHFSa2djbDRCZWRQSzhFUjQ0Tzk5RHczSDNyQWxuY2t0QlBlQjhzeVRQV3I3REJVR19IRGNhOUU2RDNhYTdHNmZBVy15VTQ?oc=5"
+    },
+    {
+      "institution": "JM Financial",
+      "institution_type": "Domestic Institutional Desk",
+      "hq": "Mumbai",
+      "stance": "Buy",
+      "stance_color": "#10B981",
+      "target_price": 532.9,
+      "implied_upside": 34.0,
+      "headline": "Diwali Muhurat Trading 2026 Stock to Buy: BEL, ICICI Bank, Power Grid, Gravita among top 10 picks by JM Financial with up to 34% upside - ET Now",
+      "published_date": "Thu, 05 Nov 2026",
+      "source": "ET Now",
+      "link": "https://news.google.com/rss/articles/CBMimgJBVV95cUxNd255b1ZWVk05S204dFprOXhZeGg0ZV9rdEdXTHBLUDMyYkVFcmktemJlMTgxWk9kNHQxQk5ET3VQamZKM1VpNGp5QmtvZEJhbE91TGpxWFBxREpERE5PbVNHUkNnUVVsdV8xZmtwbmZYRGxGMTdfLTlMV190V2lHRmNRVzBQanNqb213NGRBZzFlWUdKYVRzakpzMWU0d2ZOeS1JNUVzbHAxZm9QZ3o5NWp3YWo2VnNDMk1ORXctbnl0dFBaS3lSVUhSRHdKV05LNEg5NVF2Nk5UWVBSSXoyYS1UR2dkb2NVallnYTBiRDN6bHNndS10UVZqZ28tZE1tdUg2c2g5UzJCYVI3SVhwYUZGNnFUOWExWmfSAZ8CQVVfeXFMT0U3blhnQ1d5d19ISjFRbVlTTkptSEltWk9scXNUYXZuQ19aY0x6UFJLNE15b2R3M0lmRHdlaEV3eUNvc2tiWkhZTTJkSmVhRzN1aWc2ZXBwcFhkQmNSMzltcW1teG1IUFhTRUpFR2VZUzZ5bVNqdTl2ckE2SHVWWU9BS3Z1ZzlyamdsTlloRUVVcmtPaHFocl9GOEZ2Y0gwQzBNcUU5SXR4aGZ2bzE5dTBnQWtJeHRNbWpvVGRRVVRLZjBVeFFzX1FBck9nV195N0VDVjdyV1QtM2VUUTlXNnNJbEhGcml0cWVrTkc1Z1hJNnVLMXZ4eHFoTTJicVl3eTh5YVM1dDFYSWZaOGlFQVBaZzNXY2t3dlR0LW8xbTA?oc=5"
+    },
+    {
+      "institution": "Morgan Stanley",
+      "institution_type": "Global Investment Bank",
+      "hq": "New York / Mumbai",
+      "stance": "Research Call",
+      "stance_color": "#38BDF8",
+      "target_price": null,
+      "implied_upside": null,
+      "headline": "Bharat Electronics In Focus: Morgan Stanley Hikes BEL Target Price On Higher Earnings Estimates - NDTV Profit",
+      "published_date": "Mon, 02 Feb 2026",
+      "source": "NDTV Profit",
+      "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxOS1VwUXVDaEpxRnA2VGJYcThTaHZ1cXJzVGtyeG1sUnNpdDZNOEZ1N2JQNUk3RE9xNXhRemxkdk04Y0dpamJ4d3BLdk5NZ3dhT2FQNURUcVZNS2FLazFOR0pQX0ZvMTdiR2sxcHNZbUg0YXA1LUc5OE51YWhjZzE0ZkZ6dV8xUmJEajhwQXZMN2FNMHRHRFZQanlFYmJLYWpPazNIdTdsRVpfa1RadENQUTRDRllDVTBpaWNMS2NnQnNXSEJJUnlJRWlORkg5YzNuZnJCbdIB3AFBVV95cUxNTE9yZ0FIWXprMlBZMFNEODlXaTFlVXVxTjJyY2JpMVppV0RlakVxWjRBV2NabTJySTZsVHUzSXd2ejdpazZvMG5VZy1lUkNDM1FwOVl5SHNUb0lWX0x2WEhkTjJ6WXY3OFRwT01UX0ZZQkNlVXk3d1ZnVFhuRzVhTUNlYk5CbE9acXZjNFBIVWxrWmlQS19lZDhvTm5tYnczclIzeHphRFBwLWZTaFN2NktJVlZfOHc3SVdsaWlsVXZFejhUWEpRMS1XNlJhRWEtNGdrUjl1SkJEZGFv?oc=5"
+    },
+    {
+      "institution": "Sharekhan",
+      "institution_type": "Domestic Research House",
+      "hq": "Mumbai",
+      "stance": "Buy",
+      "stance_color": "#10B981",
+      "target_price": 152.0,
+      "implied_upside": -61.8,
+      "headline": "Bharat Electronics (BEL) Share price: Sharekhan retains Buy rating with price target of Rs 152 - Zee Business",
+      "published_date": "Mon, 01 Feb 2021",
+      "source": "Zee Business",
+      "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPdkt5NGRxS2JOSmRDcDBCdzFpcnkzUHZmRW51VkJYUk5CVUM2OGluZXBPeW1qUDI3TnFmRzhQV0c2WGtna29sTVVQRmJ5V0ZwUnZwS2hZWmgxRHp6QnJ5WVdFQThfX095ZlpWS2piZk0wdlNHUDJlUms1SjlaVV94cEtCcUg1LXQtNTVKbXlfZ29iUEhQYUtHZUgxOUZzZEtiSktvYnJYZ0pnRzJsNHBpcGRsVUdRUzl6NmtMS3YtNUVUT0hGcDRqWWQ3dFRjQUlpSktZTQ?oc=5"
+    },
+    {
+      "institution": "HDFC Securities",
+      "institution_type": "Domestic Research House",
+      "hq": "Mumbai",
+      "stance": "Research Call",
+      "stance_color": "#38BDF8",
+      "target_price": null,
+      "implied_upside": null,
+      "headline": "SBI, BEL Among Nine Stocks In HDFC Securities' Q2 Review; Sees Upside Of Up To 67%; Check New Target Prices - NDTV Profit",
+      "published_date": "Wed, 04 Nov 2026",
+      "source": "NDTV Profit",
+      "link": "https://news.google.com/rss/articles/CBMinwJBVV95cUxOWkVFMVZDdEZEZTA0dm43eVhZSm5mMTJDMzVBVDRSd1NaRDdXZFZsZEpRYU4wTUx1SkJJN3lacWgwdWM1QzZ3dTM3ekJxdEdpWi1XZGswSThqN1h5RzZ1YzRqdm9aRnBEUktaWlE2N1oyS1k4OHhBR21xVGdlWUlLM3dsSVNNaXFRNDNYVk91SDJTSTlqQm4yRWZvMkZ0N2stWW5FQWI0dUx4WkpjekcwcUR1RF80V3k5N1llR0Y1ZzJQUU5selRhb1RzdTllQnc1dU1HeEhnSU1fT1NGdm1ERm9zbHZDUUw5M2MzMG41YXFUM1VSLVRyZDA2bFR0UDRBVHQxRnUtSlVFRkp1eUxiS21VU3R1amo2T0wyc2QwUQ?oc=5"
+    }
+  ],
+  "expert_news": [
+    {
+      "title": "Muhurat Trading 2026 Highlights | Closing Bell: Sensex ends Muhurat Trading marginally lower, Nifty below 25,000; Divi's Labs surges 7%",
+      "source": "Economictimes Markets",
+      "published": "Sun, 08 Nov 2026 10:55:03 +0530",
+      "link": "https://economictimes.indiatimes.com/markets/stocks/live-blog/diwali-muhurat-trading-2026-live-date-time-sensex-nifty-50-stock-market-check-stocks-to-buy-nse-bse/liveblog/135652392.cms"
+    },
+    {
+      "title": "Muhurat Trading 2026 Highlights | Closing Bell: Sensex ends Muhurat Trading marginally lower, Nifty below 25,000; Divi's Labs surges 7%",
+      "source": "Economictimes Stocks",
+      "published": "Sun, 08 Nov 2026 10:55:03 +0530",
+      "link": "https://economictimes.indiatimes.com/markets/stocks/live-blog/diwali-muhurat-trading-2026-live-date-time-sensex-nifty-50-stock-market-check-stocks-to-buy-nse-bse/liveblog/135652392.cms"
+    },
+    {
+      "title": "Diwali Stock Picks 2026: Tata Steel, BEL, HDFC Bank - 25 brokerages reveal 187 shares to buy in Samvat 2083 | Full List",
+      "source": "Livemint Markets",
+      "published": "Sun, 08 Nov 2026 20:01:06 +0530",
+      "link": "https://www.livemint.com/market/stock-market-news/diwali-stock-picks-2026-tata-steel-bel-hdfc-bank-25-brokerages-reveal-187-shares-to-buy-in-samvat-2083-full-list-11794134434530.html"
+    },
+    {
+      "title": "Why did RR Kabel share rally 8% during Muhurat Trading despite weak market sentiment \u2014 what triggered the surge?",
+      "source": "Livemint Markets",
+      "published": "Sun, 08 Nov 2026 16:19:39 +0530",
+      "link": "https://www.livemint.com/market/stock-market-news/why-did-rr-kabel-share-rally-8-during-muhurat-trading-despite-weak-market-sentiment-what-triggered-the-surge-11794133913486.html"
+    },
+    {
+      "title": "Muhurat Trading 2026 Diwali Session Opening Bell: How Sensex, Nifty is performing on special day; check gainers, losers",
+      "source": "Livemint Markets",
+      "published": "Sun, 08 Nov 2026 14:37:08 +0530",
+      "link": "https://www.livemint.com/market/stock-market-news/muhurat-trading-2026-diwali-session-opening-bell-how-sensex-nifty-is-performing-on-special-day-check-gainers-losers-11794128484708.html"
+    },
+    {
+      "title": "Diwali Muhurat Trading 2026: PC Jeweller, Suzlon, Vedanta Power | 3 Samvat 2083 stock picks under  \u20b950 by Mahesh Ojha",
+      "source": "Livemint Markets",
+      "published": "Sun, 08 Nov 2026 13:19:24 +0530",
+      "link": "https://www.livemint.com/market/stock-market-news/diwali-muhurat-trading-2026-pc-jeweller-suzlon-vedanta-power-3-samvat-2083-stock-picks-under-rs-50-by-mahesh-ojha-11794123128165.html"
+    }
+  ],
+  "history": [
+    {
+      "date": "2025-11-06",
+      "close": 406.52
+    },
+    {
+      "date": "2025-11-07",
+      "close": 411.93
+    },
+    {
+      "date": "2025-11-10",
+      "close": 414.52
+    },
+    {
+      "date": "2025-11-11",
+      "close": 424.91
+    },
+    {
+      "date": "2025-11-12",
+      "close": 422.38
+    },
+    {
+      "date": "2025-11-13",
+      "close": 417.45
+    },
+    {
+      "date": "2025-11-14",
+      "close": 424.46
+    },
+    {
+      "date": "2025-11-17",
+      "close": 422.18
+    },
+    {
+      "date": "2025-11-18",
+      "close": 418.55
+    },
+    {
+      "date": "2025-11-19",
+      "close": 420.83
+    },
+    {
+      "date": "2025-11-20",
+      "close": 420.64
+    },
+    {
+      "date": "2025-11-21",
+      "close": 414.02
+    },
+    {
+      "date": "2025-11-24",
+      "close": 401.54
+    },
+    {
+      "date": "2025-11-25",
+      "close": 407.96
+    },
+    {
+      "date": "2025-11-26",
+      "close": 412.98
+    },
+    {
+      "date": "2025-11-27",
+      "close": 410.74
+    },
+    {
+      "date": "2025-11-28",
+      "close": 409.45
+    },
+    {
+      "date": "2025-12-01",
+      "close": 414.92
+    },
+    {
+      "date": "2025-12-02",
+      "close": 410.74
+    },
+    {
+      "date": "2025-12-03",
+      "close": 401.69
+    },
+    {
+      "date": "2025-12-04",
+      "close": 404.87
+    },
+    {
+      "date": "2025-12-05",
+      "close": 404.63
+    },
+    {
+      "date": "2025-12-08",
+      "close": 384.24
+    },
+    {
+      "date": "2025-12-09",
+      "close": 387.27
+    },
+    {
+      "date": "2025-12-10",
+      "close": 385.19
+    },
+    {
+      "date": "2025-12-11",
+      "close": 385.33
+    },
+    {
+      "date": "2025-12-12",
+      "close": 387.27
+    },
+    {
+      "date": "2025-12-15",
+      "close": 388.57
+    },
+    {
+      "date": "2025-12-16",
+      "close": 385.83
+    },
+    {
+      "date": "2025-12-17",
+      "close": 383.44
+    },
+    {
+      "date": "2025-12-18",
+      "close": 381.31
+    },
+    {
+      "date": "2025-12-19",
+      "close": 390.65
+    },
+    {
+      "date": "2025-12-22",
+      "close": 396.72
+    },
+    {
+      "date": "2025-12-23",
+      "close": 397.17
+    },
+    {
+      "date": "2025-12-24",
+      "close": 397.76
+    },
+    {
+      "date": "2025-12-26",
+      "close": 396.22
+    },
+    {
+      "date": "2025-12-29",
+      "close": 391.05
+    },
+    {
+      "date": "2025-12-30",
+      "close": 391.1
+    },
+    {
+      "date": "2025-12-31",
+      "close": 397.37
+    },
+    {
+      "date": "2026-01-01",
+      "close": 395.48
+    },
+    {
+      "date": "2026-01-02",
+      "close": 400.9
+    },
+    {
+      "date": "2026-01-05",
+      "close": 411.49
+    },
+    {
+      "date": "2026-01-06",
+      "close": 410.79
+    },
+    {
+      "date": "2026-01-07",
+      "close": 413.33
+    },
+    {
+      "date": "2026-01-08",
+      "close": 413.33
+    },
+    {
+      "date": "2026-01-09",
+      "close": 416.31
+    },
+    {
+      "date": "2026-01-12",
+      "close": 415.37
+    },
+    {
+      "date": "2026-01-13",
+      "close": 411.39
+    },
+    {
+      "date": "2026-01-14",
+      "close": 415.27
+    },
+    {
+      "date": "2026-01-15",
+      "close": 415.27
+    },
+    {
+      "date": "2026-01-16",
+      "close": 407.96
+    },
+    {
+      "date": "2026-01-19",
+      "close": 410.49
+    },
+    {
+      "date": "2026-01-20",
+      "close": 407.06
+    },
+    {
+      "date": "2026-01-21",
+      "close": 400.4
+    },
+    {
+      "date": "2026-01-22",
+      "close": 414.97
+    },
+    {
+      "date": "2026-01-23",
+      "close": 408.4
+    },
+    {
+      "date": "2026-01-27",
+      "close": 413.63
+    },
+    {
+      "date": "2026-01-28",
+      "close": 450.47
+    },
+    {
+      "date": "2026-01-29",
+      "close": 442.02
+    },
+    {
+      "date": "2026-01-30",
+      "close": 446.49
+    },
+    {
+      "date": "2026-02-02",
+      "close": 436.65
+    },
+    {
+      "date": "2026-02-03",
+      "close": 436.5
+    },
+    {
+      "date": "2026-02-04",
+      "close": 436.75
+    },
+    {
+      "date": "2026-02-05",
+      "close": 430.48
+    },
+    {
+      "date": "2026-02-06",
+      "close": 427.25
+    },
+    {
+      "date": "2026-02-09",
+      "close": 434.86
+    },
+    {
+      "date": "2026-02-10",
+      "close": 434.86
+    },
+    {
+      "date": "2026-02-11",
+      "close": 435.1
+    },
+    {
+      "date": "2026-02-12",
+      "close": 441.42
+    },
+    {
+      "date": "2026-02-13",
+      "close": 433.12
+    },
+    {
+      "date": "2026-02-16",
+      "close": 435.55
+    },
+    {
+      "date": "2026-02-17",
+      "close": 444.35
+    },
+    {
+      "date": "2026-02-18",
+      "close": 445.2
+    },
+    {
+      "date": "2026-02-19",
+      "close": 432.92
+    },
+    {
+      "date": "2026-02-20",
+      "close": 438.68
+    },
+    {
+      "date": "2026-02-23",
+      "close": 437.29
+    },
+    {
+      "date": "2026-02-24",
+      "close": 432.62
+    },
+    {
+      "date": "2026-02-25",
+      "close": 436.84
+    },
+    {
+      "date": "2026-02-26",
+      "close": 446.54
+    },
+    {
+      "date": "2026-02-27",
+      "close": 442.21
+    },
+    {
+      "date": "2026-03-02",
+      "close": 451.41
+    },
+    {
+      "date": "2026-03-04",
+      "close": 444.35
+    },
+    {
+      "date": "2026-03-05",
+      "close": 457.43
+    },
+    {
+      "date": "2026-03-06",
+      "close": 467.81
+    },
+    {
+      "date": "2026-03-09",
+      "close": 456.73
+    },
+    {
+      "date": "2026-03-10",
+      "close": 462.72
+    },
+    {
+      "date": "2026-03-11",
+      "close": 453.48
+    },
+    {
+      "date": "2026-03-12",
+      "close": 452.94
+    },
+    {
+      "date": "2026-03-13",
+      "close": 438.8
+    },
+    {
+      "date": "2026-03-16",
+      "close": 428.92
+    },
+    {
+      "date": "2026-03-17",
+      "close": 438.75
+    },
+    {
+      "date": "2026-03-18",
+      "close": 442.0
+    },
+    {
+      "date": "2026-03-19",
+      "close": 430.22
+    },
+    {
+      "date": "2026-03-20",
+      "close": 425.52
+    },
+    {
+      "date": "2026-03-23",
+      "close": 404.95
+    },
+    {
+      "date": "2026-03-24",
+      "close": 413.89
+    },
+    {
+      "date": "2026-03-25",
+      "close": 412.89
+    },
+    {
+      "date": "2026-03-27",
+      "close": 404.2
+    },
+    {
+      "date": "2026-03-30",
+      "close": 400.11
+    },
+    {
+      "date": "2026-04-01",
+      "close": 418.13
+    },
+    {
+      "date": "2026-04-02",
+      "close": 421.03
+    },
+    {
+      "date": "2026-04-06",
+      "close": 426.57
+    },
+    {
+      "date": "2026-04-07",
+      "close": 427.22
+    },
+    {
+      "date": "2026-04-08",
+      "close": 432.51
+    },
+    {
+      "date": "2026-04-09",
+      "close": 439.15
+    },
+    {
+      "date": "2026-04-10",
+      "close": 441.85
+    },
+    {
+      "date": "2026-04-13",
+      "close": 440.95
+    },
+    {
+      "date": "2026-04-15",
+      "close": 447.04
+    },
+    {
+      "date": "2026-04-16",
+      "close": 455.03
+    },
+    {
+      "date": "2026-04-17",
+      "close": 462.12
+    },
+    {
+      "date": "2026-04-20",
+      "close": 456.93
+    },
+    {
+      "date": "2026-04-21",
+      "close": 450.89
+    },
+    {
+      "date": "2026-04-22",
+      "close": 448.09
+    },
+    {
+      "date": "2026-04-23",
+      "close": 449.34
+    },
+    {
+      "date": "2026-04-24",
+      "close": 443.85
+    },
+    {
+      "date": "2026-04-27",
+      "close": 435.01
+    },
+    {
+      "date": "2026-04-28",
+      "close": 435.16
+    },
+    {
+      "date": "2026-04-29",
+      "close": 436.96
+    },
+    {
+      "date": "2026-04-30",
+      "close": 430.72
+    },
+    {
+      "date": "2026-05-04",
+      "close": 432.96
+    },
+    {
+      "date": "2026-05-05",
+      "close": 432.76
+    },
+    {
+      "date": "2026-05-06",
+      "close": 437.61
+    },
+    {
+      "date": "2026-05-07",
+      "close": 438.85
+    },
+    {
+      "date": "2026-05-08",
+      "close": 439.1
+    },
+    {
+      "date": "2026-05-11",
+      "close": 431.36
+    },
+    {
+      "date": "2026-05-12",
+      "close": 415.94
+    },
+    {
+      "date": "2026-05-13",
+      "close": 427.67
+    },
+    {
+      "date": "2026-05-14",
+      "close": 428.27
+    },
+    {
+      "date": "2026-05-15",
+      "close": 423.08
+    },
+    {
+      "date": "2026-05-18",
+      "close": 426.02
+    },
+    {
+      "date": "2026-05-19",
+      "close": 422.38
+    },
+    {
+      "date": "2026-05-20",
+      "close": 412.74
+    },
+    {
+      "date": "2026-05-21",
+      "close": 419.83
+    },
+    {
+      "date": "2026-05-22",
+      "close": 415.99
+    },
+    {
+      "date": "2026-05-25",
+      "close": 421.28
+    },
+    {
+      "date": "2026-05-26",
+      "close": 419.53
+    },
+    {
+      "date": "2026-05-27",
+      "close": 418.53
+    },
+    {
+      "date": "2026-05-29",
+      "close": 410.19
+    },
+    {
+      "date": "2026-06-01",
+      "close": 406.65
+    },
+    {
+      "date": "2026-06-02",
+      "close": 407.3
+    },
+    {
+      "date": "2026-06-03",
+      "close": 406.05
+    },
+    {
+      "date": "2026-06-04",
+      "close": 409.34
+    },
+    {
+      "date": "2026-06-05",
+      "close": 407.65
+    },
+    {
+      "date": "2026-06-08",
+      "close": 412.39
+    },
+    {
+      "date": "2026-06-09",
+      "close": 411.49
+    },
+    {
+      "date": "2026-06-10",
+      "close": 407.8
+    },
+    {
+      "date": "2026-06-11",
+      "close": 401.75
+    },
+    {
+      "date": "2026-06-12",
+      "close": 405.95
+    },
+    {
+      "date": "2026-06-15",
+      "close": 408.99
+    },
+    {
+      "date": "2026-06-16",
+      "close": 407.0
+    },
+    {
+      "date": "2026-06-17",
+      "close": 419.28
+    },
+    {
+      "date": "2026-06-18",
+      "close": 428.02
+    },
+    {
+      "date": "2026-06-19",
+      "close": 426.32
+    },
+    {
+      "date": "2026-06-22",
+      "close": 430.92
+    },
+    {
+      "date": "2026-06-23",
+      "close": 419.43
+    },
+    {
+      "date": "2026-06-24",
+      "close": 412.99
+    },
+    {
+      "date": "2026-06-25",
+      "close": 406.65
+    },
+    {
+      "date": "2026-06-29",
+      "close": 411.04
+    },
+    {
+      "date": "2026-06-30",
+      "close": 411.24
+    },
+    {
+      "date": "2026-07-01",
+      "close": 415.69
+    },
+    {
+      "date": "2026-07-02",
+      "close": 414.49
+    },
+    {
+      "date": "2026-07-03",
+      "close": 417.48
+    },
+    {
+      "date": "2026-07-06",
+      "close": 424.97
+    },
+    {
+      "date": "2026-07-07",
+      "close": 418.58
+    },
+    {
+      "date": "2026-07-08",
+      "close": 407.05
+    },
+    {
+      "date": "2026-07-09",
+      "close": 405.65
+    },
+    {
+      "date": "2026-07-10",
+      "close": 414.29
+    },
+    {
+      "date": "2026-07-13",
+      "close": 410.24
+    },
+    {
+      "date": "2026-07-14",
+      "close": 409.54
+    },
+    {
+      "date": "2026-07-15",
+      "close": 410.39
+    },
+    {
+      "date": "2026-07-16",
+      "close": 406.55
+    },
+    {
+      "date": "2026-07-17",
+      "close": 408.89
+    },
+    {
+      "date": "2026-07-20",
+      "close": 407.6
+    },
+    {
+      "date": "2026-07-21",
+      "close": 409.49
+    },
+    {
+      "date": "2026-07-22",
+      "close": 406.2
+    },
+    {
+      "date": "2026-07-23",
+      "close": 404.8
+    },
+    {
+      "date": "2026-07-24",
+      "close": 404.45
+    },
+    {
+      "date": "2026-07-27",
+      "close": 406.6
+    },
+    {
+      "date": "2026-07-28",
+      "close": 388.47
+    },
+    {
+      "date": "2026-07-29",
+      "close": 387.02
+    },
+    {
+      "date": "2026-07-30",
+      "close": 384.38
+    },
+    {
+      "date": "2026-07-31",
+      "close": 387.32
+    },
+    {
+      "date": "2026-08-03",
+      "close": 391.62
+    },
+    {
+      "date": "2026-08-04",
+      "close": 390.97
+    },
+    {
+      "date": "2026-08-05",
+      "close": 389.47
+    },
+    {
+      "date": "2026-08-06",
+      "close": 398.66
+    },
+    {
+      "date": "2026-08-07",
+      "close": 400.46
+    },
+    {
+      "date": "2026-08-10",
+      "close": 403.8
+    },
+    {
+      "date": "2026-08-11",
+      "close": 405.3
+    },
+    {
+      "date": "2026-08-12",
+      "close": 405.15
+    },
+    {
+      "date": "2026-08-13",
+      "close": 410.5
+    },
+    {
+      "date": "2026-08-14",
+      "close": 410.8
+    },
+    {
+      "date": "2026-08-17",
+      "close": 412.45
+    },
+    {
+      "date": "2026-08-18",
+      "close": 412.0
+    },
+    {
+      "date": "2026-08-19",
+      "close": 409.2
+    },
+    {
+      "date": "2026-08-20",
+      "close": 409.4
+    },
+    {
+      "date": "2026-08-21",
+      "close": 414.0
+    },
+    {
+      "date": "2026-08-24",
+      "close": 409.0
+    },
+    {
+      "date": "2026-08-25",
+      "close": 413.25
+    },
+    {
+      "date": "2026-08-26",
+      "close": 406.9
+    },
+    {
+      "date": "2026-08-27",
+      "close": 411.0
+    },
+    {
+      "date": "2026-08-28",
+      "close": 411.9
+    },
+    {
+      "date": "2026-08-31",
+      "close": 414.45
+    },
+    {
+      "date": "2026-09-01",
+      "close": 411.2
+    },
+    {
+      "date": "2026-09-02",
+      "close": 405.75
+    },
+    {
+      "date": "2026-09-03",
+      "close": 408.6
+    },
+    {
+      "date": "2026-09-04",
+      "close": 405.35
+    },
+    {
+      "date": "2026-09-07",
+      "close": 404.0
+    },
+    {
+      "date": "2026-09-08",
+      "close": 410.55
+    },
+    {
+      "date": "2026-09-09",
+      "close": 406.0
+    },
+    {
+      "date": "2026-09-10",
+      "close": 405.0
+    },
+    {
+      "date": "2026-09-11",
+      "close": 404.35
+    },
+    {
+      "date": "2026-09-15",
+      "close": 382.9
+    },
+    {
+      "date": "2026-09-16",
+      "close": 385.75
+    },
+    {
+      "date": "2026-09-17",
+      "close": 395.45
+    },
+    {
+      "date": "2026-09-18",
+      "close": 393.3
+    },
+    {
+      "date": "2026-09-21",
+      "close": 398.5
+    },
+    {
+      "date": "2026-09-22",
+      "close": 397.9
+    },
+    {
+      "date": "2026-09-23",
+      "close": 396.05
+    },
+    {
+      "date": "2026-09-24",
+      "close": 392.0
+    },
+    {
+      "date": "2026-09-25",
+      "close": 393.55
+    },
+    {
+      "date": "2026-09-28",
+      "close": 385.5
+    },
+    {
+      "date": "2026-09-29",
+      "close": 387.75
+    },
+    {
+      "date": "2026-09-30",
+      "close": 388.3
+    },
+    {
+      "date": "2026-10-01",
+      "close": 383.1
+    },
+    {
+      "date": "2026-10-05",
+      "close": 384.85
+    },
+    {
+      "date": "2026-10-06",
+      "close": 387.4
+    },
+    {
+      "date": "2026-10-07",
+      "close": 378.3
+    },
+    {
+      "date": "2026-10-08",
+      "close": 367.3
+    },
+    {
+      "date": "2026-10-09",
+      "close": 368.15
+    },
+    {
+      "date": "2026-10-12",
+      "close": 373.9
+    },
+    {
+      "date": "2026-10-13",
+      "close": 380.0
+    },
+    {
+      "date": "2026-10-14",
+      "close": 382.35
+    },
+    {
+      "date": "2026-10-15",
+      "close": 380.4
+    },
+    {
+      "date": "2026-10-16",
+      "close": 376.85
+    },
+    {
+      "date": "2026-10-19",
+      "close": 377.2
+    },
+    {
+      "date": "2026-10-21",
+      "close": 371.2
+    },
+    {
+      "date": "2026-10-22",
+      "close": 364.5
+    },
+    {
+      "date": "2026-10-23",
+      "close": 362.0
+    },
+    {
+      "date": "2026-10-26",
+      "close": 363.0
+    },
+    {
+      "date": "2026-10-27",
+      "close": 367.95
+    },
+    {
+      "date": "2026-10-28",
+      "close": 363.35
+    },
+    {
+      "date": "2026-10-29",
+      "close": 370.0
+    },
+    {
+      "date": "2026-10-30",
+      "close": 369.9
+    },
+    {
+      "date": "2026-11-02",
+      "close": 376.5
+    },
+    {
+      "date": "2026-11-03",
+      "close": 380.1
+    },
+    {
+      "date": "2026-11-04",
+      "close": 398.0
+    },
+    {
+      "date": "2026-11-05",
+      "close": 395.1
+    },
+    {
+      "date": "2026-11-06",
+      "close": 396.0
+    },
+    {
+      "date": "2026-11-08",
+      "close": 397.7
+    }
+  ]
+}

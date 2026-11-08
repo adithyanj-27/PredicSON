@@ -1,6 +1,6 @@
 """
 PredicSON Configuration Settings
-Centralized definitions for Stock Universe, Macro Indicators, News Feeds, and Storage Paths.
+Centralized definitions for Stock Universe, News Feeds, and Storage Paths.
 """
 
 from pathlib import Path
@@ -9,42 +9,21 @@ import os
 try:
     from dotenv import load_dotenv
     load_dotenv()
-except ImportError:  # python-dotenv is optional
+except ImportError:
     pass
-
-# ---------------------------------------------------------------------------
-# Reproducibility & pipeline versioning
-# ---------------------------------------------------------------------------
-RANDOM_SEED = 42
-
-# Bump this whenever the feature pipeline changes shape or semantics. Each built
-# feature matrix records the version it was produced with; a mismatch forces a
-# rebuild so a stale parquet file can never silently feed the model.
-FEATURE_SCHEMA_VERSION = 3
-
-# Minimum rows required to fit a per-stock model.
-MIN_TRAIN_ROWS = 400
 
 # Root Paths
 BASE_DIR = Path(__file__).resolve().parent.parent
 DATA_DIR = BASE_DIR / "data"
 RAW_DATA_DIR = DATA_DIR / "raw"
-FEATURES_DATA_DIR = DATA_DIR / "features"
 PREDICTIONS_DIR = DATA_DIR / "predictions"
-MODEL_CACHE_DIR = DATA_DIR / "model_cache"
-
-# Raw subdirectories
-OHLCV_DIR = RAW_DATA_DIR / "ohlcv"
 NEWS_DIR = RAW_DATA_DIR / "news"
-MACRO_DIR = RAW_DATA_DIR / "macro"
-EXPERTS_DIR = RAW_DATA_DIR / "experts"
 
-# Ensure all directories exist
-for p in [OHLCV_DIR, NEWS_DIR, MACRO_DIR, EXPERTS_DIR, FEATURES_DATA_DIR, PREDICTIONS_DIR, MODEL_CACHE_DIR]:
+# Ensure directories exist
+for p in [NEWS_DIR, PREDICTIONS_DIR]:
     p.mkdir(parents=True, exist_ok=True)
 
-# Tracked universe: 25 NSE large-caps across 8 sectors.
-# .NS indicates National Stock Exchange (NSE) on Yahoo Finance.
+# Tracked universe: Core NSE large-caps and market leaders across major sectors
 PILOT_UNIVERSE = {
     "RELIANCE.NS": {"name": "Reliance Industries", "sector": "Energy/Telecom/Retail", "bse_code": "500325"},
     "TCS.NS": {"name": "Tata Consultancy Services", "sector": "Information Technology", "bse_code": "532540"},
@@ -65,6 +44,8 @@ PILOT_UNIVERSE = {
     # Automobiles & Mobility
     "MARUTI.NS": {"name": "Maruti Suzuki India", "sector": "Automobile / Passenger Vehicles", "bse_code": "532500"},
     "M&M.NS": {"name": "Mahindra & Mahindra", "sector": "Automobile / Utility & Tractors", "bse_code": "500520"},
+    "TATAMOTORS.NS": {"name": "Tata Motors", "sector": "Automobile / EV & Commercial", "bse_code": "500570"},
+    "BAJAJ-AUTO.NS": {"name": "Bajaj Auto", "sector": "Automobile / Two-Wheelers", "bse_code": "532977"},
 
     # Healthcare & Pharmaceuticals
     "SUNPHARMA.NS": {"name": "Sun Pharmaceutical", "sector": "Healthcare / Specialty Pharma", "bse_code": "524715"},
@@ -79,25 +60,28 @@ PILOT_UNIVERSE = {
     "NTPC.NS": {"name": "NTPC Limited", "sector": "Power Generation / Green Energy", "bse_code": "532555"},
     "POWERGRID.NS": {"name": "Power Grid Corporation", "sector": "Power Transmission", "bse_code": "532898"},
     "ONGC.NS": {"name": "Oil & Natural Gas Corporation", "sector": "Upstream Oil & Gas", "bse_code": "500312"},
+    "TATAPOWER.NS": {"name": "Tata Power", "sector": "Power Generation & EV Infra", "bse_code": "500400"},
+    "COALINDIA.NS": {"name": "Coal India", "sector": "Energy & Mining", "bse_code": "533278"},
+    "SUZLON.NS": {"name": "Suzlon Energy", "sector": "Green Energy / Wind", "bse_code": "532667"},
 
-    # Consumer Discretionary
+    # Consumer Discretionary & Retail
     "TITAN.NS": {"name": "Titan Company", "sector": "Consumer Discretionary / Jewelry", "bse_code": "500114"},
-    "ASIANPAINT.NS": {"name": "Asian Paints", "sector": "Consumer / Decorative Paints", "bse_code": "500820"}
+    "ASIANPAINT.NS": {"name": "Asian Paints", "sector": "Consumer / Decorative Paints", "bse_code": "500820"},
+    "TRENT.NS": {"name": "Trent Ltd (Westside & Zudio)", "sector": "Consumer / Retail", "bse_code": "500251"},
+    "ZOMATO.NS": {"name": "Zomato", "sector": "Consumer / Tech Platform", "bse_code": "543320"},
+
+    # Defense & Infrastructure
+    "HAL.NS": {"name": "Hindustan Aeronautics Ltd", "sector": "Defense & Aerospace", "bse_code": "541154"},
+    "BEL.NS": {"name": "Bharat Electronics Ltd", "sector": "Defense Electronics", "bse_code": "500049"},
+    "IRFC.NS": {"name": "Indian Railway Finance Corp", "sector": "Railways & Infra Finance", "bse_code": "543257"},
+    "RVNL.NS": {"name": "Rail Vikas Nigam Ltd", "sector": "Railways Infrastructure", "bse_code": "542649"},
+    "ADANIENT.NS": {"name": "Adani Enterprises", "sector": "Diversified Conglomerate", "bse_code": "512599"},
+    "ADANIPORTS.NS": {"name": "Adani Ports & SEZ", "sector": "Infrastructure / Ports", "bse_code": "532921"},
+    "WIPRO.NS": {"name": "Wipro", "sector": "Information Technology", "bse_code": "507685"},
+    "BANKBARODA.NS": {"name": "Bank of Baroda", "sector": "Public Sector Banking", "bse_code": "532134"}
 }
 
-# Macro Tickers (Global & Domestic Drivers)
-MACRO_TICKERS = {
-    "^NSEI": "NIFTY_50",               # Benchmark index
-    "^BSESN": "SENSEX",                # BSE Benchmark index
-    "^INDIAVIX": "INDIA_VIX",          # Volatility index
-    "BZ=F": "BRENT_CRUDE",             # Crude oil (massive for India import bill)
-    "INR=X": "USD_INR",                # Currency exchange rate (USD to INR)
-    "^TNX": "US_10Y_YIELD",            # US 10-Year Treasury Yield (FII driver)
-    "GC=F": "GOLD_FUTURES",            # Safe haven asset
-    "^GSPC": "SP500"                   # Global risk benchmark
-}
-
-# Free Indian Financial News RSS Feeds
+# Free Indian Financial News RSS Feeds for Dalal Street Wire
 NEWS_RSS_FEEDS = {
     "moneycontrol_markets": "https://www.moneycontrol.com/rss/marketreports.xml",
     "moneycontrol_business": "https://www.moneycontrol.com/rss/business.xml",

@@ -1,0 +1,1189 @@
+{
+  "ticker": "TATASTEEL.NS",
+  "as_of_date": "2026-11-08",
+  "fetched_at": "2026-11-08T14:57:07.936084+00:00",
+  "current_price": 190.2,
+  "has_analyst_coverage": true,
+  "total_analysts": 35,
+  "price_targets": {
+    "current": 190.2,
+    "mean": 217.34,
+    "median": 220.0,
+    "high": 260.0,
+    "low": 175.0
+  },
+  "mean_upside_pct": 14.27,
+  "bull_upside_pct": 36.7,
+  "bear_downside_pct": -7.99,
+  "dispersion_pct": 44.69,
+  "recommendation_breakdown": {
+    "strongBuy": 4,
+    "buy": 16,
+    "hold": 8,
+    "sell": 4,
+    "strongSell": 3
+  },
+  "recommendation_trend": [
+    {
+      "period": "0m",
+      "strongBuy": 4,
+      "buy": 16,
+      "hold": 8,
+      "sell": 4,
+      "strongSell": 3,
+      "total": 35
+    },
+    {
+      "period": "-1m",
+      "strongBuy": 4,
+      "buy": 16,
+      "hold": 8,
+      "sell": 4,
+      "strongSell": 3,
+      "total": 35
+    },
+    {
+      "period": "-2m",
+      "strongBuy": 4,
+      "buy": 14,
+      "hold": 10,
+      "sell": 4,
+      "strongSell": 3,
+      "total": 35
+    },
+    {
+      "period": "-3m",
+      "strongBuy": 4,
+      "buy": 14,
+      "hold": 10,
+      "sell": 4,
+      "strongSell": 3,
+      "total": 35
+    }
+  ],
+  "buy_ratio_pct": 57.1,
+  "consensus_stance": "ACCUMULATE / BUY",
+  "stance_color": "#0EA5E9",
+  "fundamentals": {
+    "company_name": "Tata Steel Limited",
+    "market_cap": 2372144546377.155,
+    "market_cap_str": "\u20b92.37 Lakh Cr",
+    "pe_ratio": 21.5,
+    "forward_pe": 9.8,
+    "pb_ratio": 2.29,
+    "dividend_yield": 2.15,
+    "fifty_two_week_high": 224.4,
+    "fifty_two_week_low": 160.06,
+    "fifty_two_week_pct": 46.8,
+    "sector": "Basic Materials",
+    "industry": "Steel",
+    "business_summary": "Tata Steel Limited engages in the manufacture and distribution of steel products in India and internationally. It offers reinforcement bars (rebars) and wire rods, cut-and-bend reinforcement bars, welded wire mesh, prefabricated cages (pre-cages), steel couplers and carpet reinfo..."
+  },
+  "individual_institution_predictions": [
+    {
+      "institution": "SBI Securities",
+      "institution_type": "Domestic Institutional Desk",
+      "hq": "Mumbai",
+      "stance": "Research Call",
+      "stance_color": "#38BDF8",
+      "target_price": null,
+      "implied_upside": null,
+      "headline": "Diwali 2026: SBI Securities Picks Tata Steel, MCX and 9 Other Stocks For Muhurat Trading Session - Outlook Money",
+      "published_date": "Thu, 05 Nov 2026",
+      "source": "Outlook Money",
+      "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNaGJZVFdNX1BreVdNWVhIblVDdUUySlpqeEJZcUxSTzl4aVpxQTVDN3VYeXJGWFZkV3o4YjVmNWxGbVBtTW5JTVdlXzVNbFppLU5qUkdsTlFRSDJSRDVEWmRmZWtZakxQYklVWjhCdE1FcElrOVE1NHlxNHlxMXEwUEd4NUJ3SkhtLUI4bUplcFV3cWxPMWJFQVFNX1hLLXdsNEctYlBVSFRseXc1QUx6SU5kZ0wwZG1CT1JJWkViTHlyZ0xkOGNpd0Z30gHXAUFVX3lxTE5xSG4xbVhiTnRuZFJnS1NoTmFLM3ZBQVBOT2JRN1RqNXpwOTA2ZmlMd2ZYeGFZZTVzcExTbWQ5aW1keGZBcnNPMk1GUnhRZDlReWRRUlZuX0plQzNrSkxvQW9SLU1LN0lrWUo3X0t3ckNQSkpCSXRxLWRzSUlvM2p0c2drcGZVTnRhcmRibFVaTHdKdXB6RGIzU0lHMlI5RUc5amJ0bEI0T2FCNFdrZXJ4cTJqSkhfd19mNmpjQXlzaHBqcGJRTzBNUG9hckVpTVBWZmZoY0Fr?oc=5"
+    },
+    {
+      "institution": "Motilal Oswal",
+      "institution_type": "Domestic Institutional Desk",
+      "hq": "Mumbai",
+      "stance": "Buy",
+      "stance_color": "#10B981",
+      "target_price": 220.0,
+      "implied_upside": 15.7,
+      "headline": "Buy Tata Steel Ltd for the Target Rs.220 by Motilal Oswal Financial Services Ltd - Investment Guru India",
+      "published_date": "Wed, 23 Sep 2026",
+      "source": "Investment Guru India",
+      "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQR0NGRTA3aWhMYVljRU1tOGZfTGZXR09mTkVyX3RhTUJsZlktVnN0U2pKTFdSRHVOazBEZDNVclR4ZG1qTENQRDNWOE1tdkdGbnBaU1JUWTNzZ0tHWF8yMzUxMVNEZy1Xd2VLSHE1RWtxUDdHTjd4VmQxNnRYX0ZPeHpUZFhnU2hnNHJLVzI5NzN6X3FiMUFwWm8xXzBwRFdyQl9qRDFaYWdFN215dWlUcnRKQUhoenpFQXI4UzRpSHZZNm8xOWt3cA?oc=5"
+    },
+    {
+      "institution": "Anand Rathi",
+      "institution_type": "Domestic Institutional Desk",
+      "hq": "Mumbai",
+      "stance": "Buy",
+      "stance_color": "#10B981",
+      "target_price": 235.8,
+      "implied_upside": 24.0,
+      "headline": "Anand Rathi upgrades Tata Steel to 'Buy' on strong outlook; sees 24% upside - Business Standard",
+      "published_date": "Wed, 01 Apr 2026",
+      "source": "Business Standard",
+      "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNRWgwWHVDS1VHVDZZcmVwM2IxbEVkX3pSSmZ0b3g1ZVYyMkpUZEFYU0I4UVBBUXptUjNjaG04OGxqVTNmMndUWUQzd2hqbGhMREMtWUhGblFrRXFldmg3VTZRNlNad1Q1MkFIT3Nadm90RzZyMk5tNHV6TlA2RXNTak84SFZWX05vcGZZMXVXWlduSV9EbGVkSlI4Ri15NnZxMXowNXY3bk9NVUFrNUwxWG0tc1pnRjJDb0xWRmZfb1k5cXFVWENONDRQUE9STFNMNzZjRdIB2gFBVV95cUxOZkRLenZFRlZ1WVVZdGpGUkhKSC1kTUNhdDVMbTgtYmFJUWZhYTh3UmRaTUo0MXhBOUFHVUlPckJPN0hmdXpoRkp4MHg1Z0ZGT09BYUo0RDcyRElsVUNielZZRXRuS3hpQm1kM2xaeG9SbXFQMmZVaGdxVWhhX2lEU1hZZkQzeDdBU3BFbmtqUmswV1FyNkJ2MEUzYWZjbmRTNHBVTG96YXFRTk5nNklDREFxQUxCRVRfakRjaTNuVW90SWY1R0ZERV81U3AyX0FGdjVLNUVrMG9MZw?oc=5"
+    },
+    {
+      "institution": "Prabhudas Lilladher",
+      "institution_type": "Domestic Institutional Desk",
+      "hq": "Mumbai",
+      "stance": "Accumulate",
+      "stance_color": "#0EA5E9",
+      "target_price": 212.0,
+      "implied_upside": 11.5,
+      "headline": "Accumulate Tata Steel; target of Rs 212: Prabhudas Lilladher - Moneycontrol.com",
+      "published_date": "Mon, 03 Aug 2026",
+      "source": "Moneycontrol.com",
+      "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOODV5X0p5MldZUTQ4NjRZWVh0dWpSbGRJWGFUOVB4U08wWjYyV2Y3LWY1aUd4Q1hnVXBGVS1rUmt0QmFJNVdteFV1aGFJaVFYMjdTaW80WHBFUl9nZzJsMWtCN25pTU94MjRjemNyeUxoWDQ3MHlKcFZXWmVySktQUnIxdjA3QVBYOVptYnlzSjBQanBJckwtX1FWSy1tNGw0ejA4ZUVUX0pGSXlBdVExWFJlVEV6bmx4Y1V5VU5Vb9IBxAFBVV95cUxPS1gwLXFuclMwcE1oaWdKT0FmM2NDc185YldmTUJVR0xXZVM5aGlsT0dvejRUM1BkUnRXTm8zaUZLUHVZcXVyRVNqelZMa0lLeDlOOWtSbWxwRVJ5eWhUZy1DR25PMWcxN19aSmVOcEpJUUgybHVfTFVQSmYyaE1Wc1VZa1FLYVRZa0R1Wk1ZNnc5LVpMbHdjblJERjU2V3JlaWNYeFRqWlBvOTJRN0IzNFZXS2xIenN1cldyckVRdFVQZFV6?oc=5"
+    },
+    {
+      "institution": "Nomura",
+      "institution_type": "Global Investment Bank",
+      "hq": "Tokyo / Mumbai",
+      "stance": "Buy",
+      "stance_color": "#10B981",
+      "target_price": null,
+      "implied_upside": null,
+      "headline": "Tata Steel, JSW Steel, Jindal Steel remain 'Buy': Nomura as steel prices hit new highs - Moneycontrol.com",
+      "published_date": "Mon, 21 Sep 2026",
+      "source": "Moneycontrol.com",
+      "link": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxQT0h5LW8wb3RWT0NreXpIRkpTQ19IN2ZiNzhPMFk3c3JoSTBrZUFhYmxlbE5VeU1uYURUVi1makstbzJTckl2OGdoMGFQejNfNHhRMm9Vb3hGQlFkZDVXTlVTcEI4Q2VxZ0dNemE0MjdoRDNYNkYyUlNZazB1N2d1c0tfdk5HRDFnak1obHY4VzhfUV9pNERncUswZmM0WENFWTVRNjVSaWYxT25nUGw1T1EzVDNUT2dIRlBlWWZZMUlCMjc4cUtYaHpHQS1IeWk4S3BWbm56Um1JYVFLQXfSAeMBQVVfeXFMT2lwSUduRUNtUEM5VXFxNGFxeGNvWndSa0V4cUhkVlA4VXlsU1YtOS1pWW9iVVFHLUwzVnk0Y1d1Nms4Qk5wOG16clJBMUFMb3NsVkpnVHF1ZVNCQXlwcFU5eFlybjhubWlCNzJLUFI1UUFraHFQVThXTWFwWjhodjFSU3Z6RW5BT2RpanpVNWVYSWZMcW1pUGRRUGFnQnhyeUpULU5Bb3ZNWHdJZ1U3RlV4d3Zwb213MWFaQnNUU2liNXhRdU1hMGhFb25ZUDNaLTljYWZjSWl6MUtyVEpqd2o3TzA?oc=5"
+    }
+  ],
+  "expert_news": [
+    {
+      "title": "Muhurat trading: Sensex up 320 pts, Nifty crosses 25,100; Tata Steel, Sun Pharma among top gainers",
+      "source": "Economictimes Markets",
+      "published": "Sun, 08 Nov 2026 15:05:11 +0530",
+      "link": "https://economictimes.indiatimes.com/markets/stocks/news/muhurat-trading-sensex-up-320-pts-nifty-crosses-25100-tata-steel-sun-pharma-among-top-gainers/videoshow/135656015.cms"
+    },
+    {
+      "title": "Tata Steel Share Price Highlights: Tata Steel Stock Price History",
+      "source": "Economictimes Markets",
+      "published": "Sun, 08 Nov 2026 10:01:25 +0530",
+      "link": "https://economictimes.indiatimes.com/markets/stocks/stock-liveblog/tata-steel-stock-price-today-live-08-nov-2026/liveblog/135651372.cms"
+    },
+    {
+      "title": "Muhurat trading: Sensex up 320 pts, Nifty crosses 25,100; Tata Steel, Sun Pharma among top gainers",
+      "source": "Economictimes Stocks",
+      "published": "Sun, 08 Nov 2026 15:05:11 +0530",
+      "link": "https://economictimes.indiatimes.com/markets/stocks/news/muhurat-trading-sensex-up-320-pts-nifty-crosses-25100-tata-steel-sun-pharma-among-top-gainers/videoshow/135656015.cms"
+    },
+    {
+      "title": "Tata Steel Share Price Highlights: Tata Steel Stock Price History",
+      "source": "Economictimes Stocks",
+      "published": "Sun, 08 Nov 2026 10:01:25 +0530",
+      "link": "https://economictimes.indiatimes.com/markets/stocks/stock-liveblog/tata-steel-stock-price-today-live-08-nov-2026/liveblog/135651372.cms"
+    },
+    {
+      "title": "Diwali Stock Picks 2026: Tata Steel, BEL, HDFC Bank - 25 brokerages reveal 187 shares to buy in Samvat 2083 | Full List",
+      "source": "Livemint Markets",
+      "published": "Sun, 08 Nov 2026 20:01:06 +0530",
+      "link": "https://www.livemint.com/market/stock-market-news/diwali-stock-picks-2026-tata-steel-bel-hdfc-bank-25-brokerages-reveal-187-shares-to-buy-in-samvat-2083-full-list-11794134434530.html"
+    },
+    {
+      "title": "Muhurat Trading 2026: Tata Steel, Sun Pharma, BSE among top gainers as Nifty 50, Sensex swing between gains and losses",
+      "source": "Livemint Markets",
+      "published": "Sun, 08 Nov 2026 14:50:02 +0530",
+      "link": "https://www.livemint.com/market/stock-market-news/muhurat-trading-2026-tata-steel-sun-pharma-bse-among-top-gainers-as-nifty-50-sensex-swing-between-gains-and-losses-11794128799050.html"
+    }
+  ],
+  "history": [
+    {
+      "date": "2025-11-06",
+      "close": 173.69
+    },
+    {
+      "date": "2025-11-07",
+      "close": 177.71
+    },
+    {
+      "date": "2025-11-10",
+      "close": 177.81
+    },
+    {
+      "date": "2025-11-11",
+      "close": 177.38
+    },
+    {
+      "date": "2025-11-12",
+      "close": 175.0
+    },
+    {
+      "date": "2025-11-13",
+      "close": 173.08
+    },
+    {
+      "date": "2025-11-14",
+      "close": 170.74
+    },
+    {
+      "date": "2025-11-17",
+      "close": 169.67
+    },
+    {
+      "date": "2025-11-18",
+      "close": 168.97
+    },
+    {
+      "date": "2025-11-19",
+      "close": 169.71
+    },
+    {
+      "date": "2025-11-20",
+      "close": 168.98
+    },
+    {
+      "date": "2025-11-21",
+      "close": 164.61
+    },
+    {
+      "date": "2025-11-24",
+      "close": 162.02
+    },
+    {
+      "date": "2025-11-25",
+      "close": 162.97
+    },
+    {
+      "date": "2025-11-26",
+      "close": 166.24
+    },
+    {
+      "date": "2025-11-27",
+      "close": 164.73
+    },
+    {
+      "date": "2025-11-28",
+      "close": 164.57
+    },
+    {
+      "date": "2025-12-01",
+      "close": 165.22
+    },
+    {
+      "date": "2025-12-02",
+      "close": 164.39
+    },
+    {
+      "date": "2025-12-03",
+      "close": 163.55
+    },
+    {
+      "date": "2025-12-04",
+      "close": 163.4
+    },
+    {
+      "date": "2025-12-05",
+      "close": 163.73
+    },
+    {
+      "date": "2025-12-08",
+      "close": 160.17
+    },
+    {
+      "date": "2025-12-09",
+      "close": 157.42
+    },
+    {
+      "date": "2025-12-10",
+      "close": 158.95
+    },
+    {
+      "date": "2025-12-11",
+      "close": 163.02
+    },
+    {
+      "date": "2025-12-12",
+      "close": 168.42
+    },
+    {
+      "date": "2025-12-15",
+      "close": 169.38
+    },
+    {
+      "date": "2025-12-16",
+      "close": 166.4
+    },
+    {
+      "date": "2025-12-17",
+      "close": 166.9
+    },
+    {
+      "date": "2025-12-18",
+      "close": 164.72
+    },
+    {
+      "date": "2025-12-19",
+      "close": 165.28
+    },
+    {
+      "date": "2025-12-22",
+      "close": 165.8
+    },
+    {
+      "date": "2025-12-23",
+      "close": 167.45
+    },
+    {
+      "date": "2025-12-24",
+      "close": 166.63
+    },
+    {
+      "date": "2025-12-26",
+      "close": 165.7
+    },
+    {
+      "date": "2025-12-29",
+      "close": 168.82
+    },
+    {
+      "date": "2025-12-30",
+      "close": 172.25
+    },
+    {
+      "date": "2025-12-31",
+      "close": 176.44
+    },
+    {
+      "date": "2026-01-01",
+      "close": 178.21
+    },
+    {
+      "date": "2026-01-02",
+      "close": 179.18
+    },
+    {
+      "date": "2026-01-05",
+      "close": 181.97
+    },
+    {
+      "date": "2026-01-06",
+      "close": 182.44
+    },
+    {
+      "date": "2026-01-07",
+      "close": 180.09
+    },
+    {
+      "date": "2026-01-08",
+      "close": 176.48
+    },
+    {
+      "date": "2026-01-09",
+      "close": 174.8
+    },
+    {
+      "date": "2026-01-12",
+      "close": 179.54
+    },
+    {
+      "date": "2026-01-13",
+      "close": 178.88
+    },
+    {
+      "date": "2026-01-14",
+      "close": 185.43
+    },
+    {
+      "date": "2026-01-15",
+      "close": 185.43
+    },
+    {
+      "date": "2026-01-16",
+      "close": 184.41
+    },
+    {
+      "date": "2026-01-19",
+      "close": 184.47
+    },
+    {
+      "date": "2026-01-20",
+      "close": 179.85
+    },
+    {
+      "date": "2026-01-21",
+      "close": 180.68
+    },
+    {
+      "date": "2026-01-22",
+      "close": 185.28
+    },
+    {
+      "date": "2026-01-23",
+      "close": 183.82
+    },
+    {
+      "date": "2026-01-27",
+      "close": 188.39
+    },
+    {
+      "date": "2026-01-28",
+      "close": 189.93
+    },
+    {
+      "date": "2026-01-29",
+      "close": 198.23
+    },
+    {
+      "date": "2026-01-30",
+      "close": 189.23
+    },
+    {
+      "date": "2026-02-02",
+      "close": 184.7
+    },
+    {
+      "date": "2026-02-03",
+      "close": 189.03
+    },
+    {
+      "date": "2026-02-04",
+      "close": 191.45
+    },
+    {
+      "date": "2026-02-05",
+      "close": 193.76
+    },
+    {
+      "date": "2026-02-06",
+      "close": 193.08
+    },
+    {
+      "date": "2026-02-09",
+      "close": 197.92
+    },
+    {
+      "date": "2026-02-10",
+      "close": 203.81
+    },
+    {
+      "date": "2026-02-11",
+      "close": 203.4
+    },
+    {
+      "date": "2026-02-12",
+      "close": 203.9
+    },
+    {
+      "date": "2026-02-13",
+      "close": 199.07
+    },
+    {
+      "date": "2026-02-16",
+      "close": 201.65
+    },
+    {
+      "date": "2026-02-17",
+      "close": 198.98
+    },
+    {
+      "date": "2026-02-18",
+      "close": 204.81
+    },
+    {
+      "date": "2026-02-19",
+      "close": 201.26
+    },
+    {
+      "date": "2026-02-20",
+      "close": 204.15
+    },
+    {
+      "date": "2026-02-23",
+      "close": 203.93
+    },
+    {
+      "date": "2026-02-24",
+      "close": 204.9
+    },
+    {
+      "date": "2026-02-25",
+      "close": 210.3
+    },
+    {
+      "date": "2026-02-26",
+      "close": 211.17
+    },
+    {
+      "date": "2026-02-27",
+      "close": 208.04
+    },
+    {
+      "date": "2026-03-02",
+      "close": 206.75
+    },
+    {
+      "date": "2026-03-04",
+      "close": 192.75
+    },
+    {
+      "date": "2026-03-05",
+      "close": 196.52
+    },
+    {
+      "date": "2026-03-06",
+      "close": 194.45
+    },
+    {
+      "date": "2026-03-09",
+      "close": 187.15
+    },
+    {
+      "date": "2026-03-10",
+      "close": 191.06
+    },
+    {
+      "date": "2026-03-11",
+      "close": 190.81
+    },
+    {
+      "date": "2026-03-12",
+      "close": 189.56
+    },
+    {
+      "date": "2026-03-13",
+      "close": 179.8
+    },
+    {
+      "date": "2026-03-16",
+      "close": 183.16
+    },
+    {
+      "date": "2026-03-17",
+      "close": 191.48
+    },
+    {
+      "date": "2026-03-18",
+      "close": 191.46
+    },
+    {
+      "date": "2026-03-19",
+      "close": 186.66
+    },
+    {
+      "date": "2026-03-20",
+      "close": 192.79
+    },
+    {
+      "date": "2026-03-23",
+      "close": 183.39
+    },
+    {
+      "date": "2026-03-24",
+      "close": 186.93
+    },
+    {
+      "date": "2026-03-25",
+      "close": 192.68
+    },
+    {
+      "date": "2026-03-27",
+      "close": 189.32
+    },
+    {
+      "date": "2026-03-30",
+      "close": 187.98
+    },
+    {
+      "date": "2026-04-01",
+      "close": 190.67
+    },
+    {
+      "date": "2026-04-02",
+      "close": 190.22
+    },
+    {
+      "date": "2026-04-06",
+      "close": 192.14
+    },
+    {
+      "date": "2026-04-07",
+      "close": 194.13
+    },
+    {
+      "date": "2026-04-08",
+      "close": 200.05
+    },
+    {
+      "date": "2026-04-09",
+      "close": 201.05
+    },
+    {
+      "date": "2026-04-10",
+      "close": 202.44
+    },
+    {
+      "date": "2026-04-13",
+      "close": 202.22
+    },
+    {
+      "date": "2026-04-15",
+      "close": 204.5
+    },
+    {
+      "date": "2026-04-16",
+      "close": 206.43
+    },
+    {
+      "date": "2026-04-17",
+      "close": 207.83
+    },
+    {
+      "date": "2026-04-20",
+      "close": 207.44
+    },
+    {
+      "date": "2026-04-21",
+      "close": 207.73
+    },
+    {
+      "date": "2026-04-22",
+      "close": 208.73
+    },
+    {
+      "date": "2026-04-23",
+      "close": 206.65
+    },
+    {
+      "date": "2026-04-24",
+      "close": 205.83
+    },
+    {
+      "date": "2026-04-27",
+      "close": 208.96
+    },
+    {
+      "date": "2026-04-28",
+      "close": 210.7
+    },
+    {
+      "date": "2026-04-29",
+      "close": 211.52
+    },
+    {
+      "date": "2026-04-30",
+      "close": 207.09
+    },
+    {
+      "date": "2026-05-04",
+      "close": 207.95
+    },
+    {
+      "date": "2026-05-05",
+      "close": 207.05
+    },
+    {
+      "date": "2026-05-06",
+      "close": 211.12
+    },
+    {
+      "date": "2026-05-07",
+      "close": 212.7
+    },
+    {
+      "date": "2026-05-08",
+      "close": 210.16
+    },
+    {
+      "date": "2026-05-11",
+      "close": 207.79
+    },
+    {
+      "date": "2026-05-12",
+      "close": 207.72
+    },
+    {
+      "date": "2026-05-13",
+      "close": 215.18
+    },
+    {
+      "date": "2026-05-14",
+      "close": 216.66
+    },
+    {
+      "date": "2026-05-15",
+      "close": 212.46
+    },
+    {
+      "date": "2026-05-18",
+      "close": 205.47
+    },
+    {
+      "date": "2026-05-19",
+      "close": 205.06
+    },
+    {
+      "date": "2026-05-20",
+      "close": 202.83
+    },
+    {
+      "date": "2026-05-21",
+      "close": 204.37
+    },
+    {
+      "date": "2026-05-22",
+      "close": 204.96
+    },
+    {
+      "date": "2026-05-25",
+      "close": 205.97
+    },
+    {
+      "date": "2026-05-26",
+      "close": 206.22
+    },
+    {
+      "date": "2026-05-27",
+      "close": 210.36
+    },
+    {
+      "date": "2026-05-29",
+      "close": 203.82
+    },
+    {
+      "date": "2026-06-01",
+      "close": 206.32
+    },
+    {
+      "date": "2026-06-02",
+      "close": 206.34
+    },
+    {
+      "date": "2026-06-03",
+      "close": 207.61
+    },
+    {
+      "date": "2026-06-04",
+      "close": 206.32
+    },
+    {
+      "date": "2026-06-05",
+      "close": 202.59
+    },
+    {
+      "date": "2026-06-08",
+      "close": 198.62
+    },
+    {
+      "date": "2026-06-09",
+      "close": 199.07
+    },
+    {
+      "date": "2026-06-10",
+      "close": 195.28
+    },
+    {
+      "date": "2026-06-11",
+      "close": 193.96
+    },
+    {
+      "date": "2026-06-12",
+      "close": 197.86
+    },
+    {
+      "date": "2026-06-15",
+      "close": 197.28
+    },
+    {
+      "date": "2026-06-16",
+      "close": 196.0
+    },
+    {
+      "date": "2026-06-17",
+      "close": 199.01
+    },
+    {
+      "date": "2026-06-18",
+      "close": 200.52
+    },
+    {
+      "date": "2026-06-19",
+      "close": 198.96
+    },
+    {
+      "date": "2026-06-22",
+      "close": 198.97
+    },
+    {
+      "date": "2026-06-23",
+      "close": 193.56
+    },
+    {
+      "date": "2026-06-24",
+      "close": 190.16
+    },
+    {
+      "date": "2026-06-25",
+      "close": 188.71
+    },
+    {
+      "date": "2026-06-29",
+      "close": 189.57
+    },
+    {
+      "date": "2026-06-30",
+      "close": 188.06
+    },
+    {
+      "date": "2026-07-01",
+      "close": 185.17
+    },
+    {
+      "date": "2026-07-02",
+      "close": 187.67
+    },
+    {
+      "date": "2026-07-03",
+      "close": 189.8
+    },
+    {
+      "date": "2026-07-06",
+      "close": 190.87
+    },
+    {
+      "date": "2026-07-07",
+      "close": 189.79
+    },
+    {
+      "date": "2026-07-08",
+      "close": 188.2
+    },
+    {
+      "date": "2026-07-09",
+      "close": 187.91
+    },
+    {
+      "date": "2026-07-10",
+      "close": 191.19
+    },
+    {
+      "date": "2026-07-13",
+      "close": 187.11
+    },
+    {
+      "date": "2026-07-14",
+      "close": 188.27
+    },
+    {
+      "date": "2026-07-15",
+      "close": 185.26
+    },
+    {
+      "date": "2026-07-16",
+      "close": 185.49
+    },
+    {
+      "date": "2026-07-17",
+      "close": 185.89
+    },
+    {
+      "date": "2026-07-20",
+      "close": 186.41
+    },
+    {
+      "date": "2026-07-21",
+      "close": 187.24
+    },
+    {
+      "date": "2026-07-22",
+      "close": 186.53
+    },
+    {
+      "date": "2026-07-23",
+      "close": 184.23
+    },
+    {
+      "date": "2026-07-24",
+      "close": 182.67
+    },
+    {
+      "date": "2026-07-27",
+      "close": 184.25
+    },
+    {
+      "date": "2026-07-28",
+      "close": 182.63
+    },
+    {
+      "date": "2026-07-29",
+      "close": 187.27
+    },
+    {
+      "date": "2026-07-30",
+      "close": 186.92
+    },
+    {
+      "date": "2026-07-31",
+      "close": 189.69
+    },
+    {
+      "date": "2026-08-03",
+      "close": 191.0
+    },
+    {
+      "date": "2026-08-04",
+      "close": 190.95
+    },
+    {
+      "date": "2026-08-05",
+      "close": 192.99
+    },
+    {
+      "date": "2026-08-06",
+      "close": 189.3
+    },
+    {
+      "date": "2026-08-07",
+      "close": 187.55
+    },
+    {
+      "date": "2026-08-10",
+      "close": 190.24
+    },
+    {
+      "date": "2026-08-11",
+      "close": 188.25
+    },
+    {
+      "date": "2026-08-12",
+      "close": 186.2
+    },
+    {
+      "date": "2026-08-13",
+      "close": 184.85
+    },
+    {
+      "date": "2026-08-14",
+      "close": 183.5
+    },
+    {
+      "date": "2026-08-17",
+      "close": 186.0
+    },
+    {
+      "date": "2026-08-18",
+      "close": 185.5
+    },
+    {
+      "date": "2026-08-19",
+      "close": 184.0
+    },
+    {
+      "date": "2026-08-20",
+      "close": 183.5
+    },
+    {
+      "date": "2026-08-21",
+      "close": 183.0
+    },
+    {
+      "date": "2026-08-24",
+      "close": 186.3
+    },
+    {
+      "date": "2026-08-25",
+      "close": 186.94
+    },
+    {
+      "date": "2026-08-26",
+      "close": 188.01
+    },
+    {
+      "date": "2026-08-27",
+      "close": 186.8
+    },
+    {
+      "date": "2026-08-28",
+      "close": 186.5
+    },
+    {
+      "date": "2026-08-31",
+      "close": 184.35
+    },
+    {
+      "date": "2026-09-01",
+      "close": 184.07
+    },
+    {
+      "date": "2026-09-02",
+      "close": 183.85
+    },
+    {
+      "date": "2026-09-03",
+      "close": 184.2
+    },
+    {
+      "date": "2026-09-04",
+      "close": 188.79
+    },
+    {
+      "date": "2026-09-07",
+      "close": 185.61
+    },
+    {
+      "date": "2026-09-08",
+      "close": 184.15
+    },
+    {
+      "date": "2026-09-09",
+      "close": 188.75
+    },
+    {
+      "date": "2026-09-10",
+      "close": 186.78
+    },
+    {
+      "date": "2026-09-11",
+      "close": 183.0
+    },
+    {
+      "date": "2026-09-15",
+      "close": 183.65
+    },
+    {
+      "date": "2026-09-16",
+      "close": 183.0
+    },
+    {
+      "date": "2026-09-17",
+      "close": 187.29
+    },
+    {
+      "date": "2026-09-18",
+      "close": 185.54
+    },
+    {
+      "date": "2026-09-21",
+      "close": 183.4
+    },
+    {
+      "date": "2026-09-22",
+      "close": 184.97
+    },
+    {
+      "date": "2026-09-23",
+      "close": 190.82
+    },
+    {
+      "date": "2026-09-24",
+      "close": 188.02
+    },
+    {
+      "date": "2026-09-25",
+      "close": 187.97
+    },
+    {
+      "date": "2026-09-28",
+      "close": 186.3
+    },
+    {
+      "date": "2026-09-29",
+      "close": 188.0
+    },
+    {
+      "date": "2026-09-30",
+      "close": 184.3
+    },
+    {
+      "date": "2026-10-01",
+      "close": 178.0
+    },
+    {
+      "date": "2026-10-05",
+      "close": 178.14
+    },
+    {
+      "date": "2026-10-06",
+      "close": 178.69
+    },
+    {
+      "date": "2026-10-07",
+      "close": 175.64
+    },
+    {
+      "date": "2026-10-08",
+      "close": 171.96
+    },
+    {
+      "date": "2026-10-09",
+      "close": 173.8
+    },
+    {
+      "date": "2026-10-12",
+      "close": 172.24
+    },
+    {
+      "date": "2026-10-13",
+      "close": 175.0
+    },
+    {
+      "date": "2026-10-14",
+      "close": 174.49
+    },
+    {
+      "date": "2026-10-15",
+      "close": 176.4
+    },
+    {
+      "date": "2026-10-16",
+      "close": 175.5
+    },
+    {
+      "date": "2026-10-19",
+      "close": 174.04
+    },
+    {
+      "date": "2026-10-21",
+      "close": 172.45
+    },
+    {
+      "date": "2026-10-22",
+      "close": 172.33
+    },
+    {
+      "date": "2026-10-23",
+      "close": 167.67
+    },
+    {
+      "date": "2026-10-26",
+      "close": 169.94
+    },
+    {
+      "date": "2026-10-27",
+      "close": 171.42
+    },
+    {
+      "date": "2026-10-28",
+      "close": 169.27
+    },
+    {
+      "date": "2026-10-29",
+      "close": 169.46
+    },
+    {
+      "date": "2026-10-30",
+      "close": 167.6
+    },
+    {
+      "date": "2026-11-02",
+      "close": 177.37
+    },
+    {
+      "date": "2026-11-03",
+      "close": 176.5
+    },
+    {
+      "date": "2026-11-04",
+      "close": 179.93
+    },
+    {
+      "date": "2026-11-05",
+      "close": 182.0
+    },
+    {
+      "date": "2026-11-06",
+      "close": 186.3
+    },
+    {
+      "date": "2026-11-08",
+      "close": 190.2
+    }
+  ]
+}

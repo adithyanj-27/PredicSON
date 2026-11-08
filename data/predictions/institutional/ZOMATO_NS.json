@@ -1,0 +1,62 @@
+{
+  "ticker": "ZOMATO.NS",
+  "as_of_date": "2026-11-08",
+  "fetched_at": "2026-11-08T14:57:31.775560+00:00",
+  "current_price": 0.0,
+  "has_analyst_coverage": false,
+  "total_analysts": 0,
+  "price_targets": {
+    "current": 0.0,
+    "mean": null,
+    "median": null,
+    "high": null,
+    "low": null
+  },
+  "mean_upside_pct": 0.0,
+  "bull_upside_pct": 0.0,
+  "bear_downside_pct": 0.0,
+  "dispersion_pct": 0.0,
+  "recommendation_breakdown": {
+    "strongBuy": 0,
+    "buy": 0,
+    "hold": 0,
+    "sell": 0,
+    "strongSell": 0
+  },
+  "recommendation_trend": [],
+  "buy_ratio_pct": 0.0,
+  "consensus_stance": "UNCOVERED / NEUTRAL",
+  "stance_color": "#64748B",
+  "fundamentals": {
+    "company_name": "ZOMATO",
+    "market_cap": 0.0,
+    "market_cap_str": "N/A",
+    "pe_ratio": null,
+    "forward_pe": null,
+    "pb_ratio": null,
+    "dividend_yield": null,
+    "fifty_two_week_high": NaN,
+    "fifty_two_week_low": NaN,
+    "fifty_two_week_pct": 50.0,
+    "sector": "Equities",
+    "industry": "General",
+    "business_summary": ""
+  },
+  "individual_institution_predictions": [
+    {
+      "institution": "Jefferies",
+      "institution_type": "Global Investment Bank",
+      "hq": "New York / Mumbai",
+      "stance": "Sell / Reduce",
+      "stance_color": "#F43F5E",
+      "target_price": null,
+      "implied_upside": null,
+      "headline": "Zomato stock plunges 5% after Jefferies downgrade to 'hold' as quick commerce competition heats up - Moneycontrol.com",
+      "published_date": "Tue, 07 Jan 2025",
+      "source": "Moneycontrol.com",
+      "link": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxNRC1xMFJzdjlTY3d5UHJzMV9WaG1MS0d1dE9PQzEyT21rRmQ4eEpnYXdEZDE1ZlR5eGlPeDdiVXlNWENEYVhEMmtUVjJKWFI3ZWxDLXlCNkdOVkhXdXF4NW5tSUR1dmFqQ3VoM1FLTERVMV8yTUtnQnJLR1dTRkk0bXZ5MEgzR3pqTzJIREVnRUlTTDJtVXM3ZVVGMG9XMkdQeG8zNEN5WjYxaE5KWW1ocExQVWhIWDBvczNibWVEOS1XRTFfakFCM1dKZVJLYTQteHU1U2dhMkdHT0NVNkpOdkpWbHZFX3plYjcwNVlGeG1qNl9JVVHSAfsBQVVfeXFMT3NGcFRnckhqRWJBSzhfUUlWMEF2UTkzM2FSWVlKYVNkblYtYnJ5SHhpcDllenZEWG5mMlhvSF9PMFdVdV9xQUdpM0ZXckY3Vm9KWDVkRzlUQ0c0NVlFZGx5NlFMREs0Vjc5dEQ4cEpZdlZsYThDU2RQSURja1BHVGFaZVZPT3VlZmhDYjBjQWdtTVhQQzlnN1pqWVVkVTUtVE5lR3VITlRCNEk0cnU1MG51aUh1X19nTGVOeEFnb0FMNjZqb3BSa2xqaGlvcWhfUW4xM1VEOGIzQ1RCbk5IYjdhU1BGOERHSExxcWlPRHU3NzZtY3ZhanBDTzg?oc=5"
+    }
+  ],
+  "expert_news": [],
+  "history": []
+}

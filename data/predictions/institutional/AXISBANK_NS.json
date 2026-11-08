@@ -1,0 +1,1247 @@
+{
+  "ticker": "AXISBANK.NS",
+  "as_of_date": "2026-11-08",
+  "fetched_at": "2026-11-08T14:56:57.083040+00:00",
+  "current_price": 1314.7,
+  "has_analyst_coverage": true,
+  "total_analysts": 41,
+  "price_targets": {
+    "current": 1314.7,
+    "mean": 1584.66,
+    "median": 1590.0,
+    "high": 1870.0,
+    "low": 1450.0
+  },
+  "mean_upside_pct": 20.53,
+  "bull_upside_pct": 42.24,
+  "bear_downside_pct": 10.29,
+  "dispersion_pct": 31.95,
+  "recommendation_breakdown": {
+    "strongBuy": 7,
+    "buy": 33,
+    "hold": 1,
+    "sell": 0,
+    "strongSell": 0
+  },
+  "recommendation_trend": [
+    {
+      "period": "0m",
+      "strongBuy": 7,
+      "buy": 33,
+      "hold": 1,
+      "sell": 0,
+      "strongSell": 0,
+      "total": 41
+    },
+    {
+      "period": "-1m",
+      "strongBuy": 8,
+      "buy": 32,
+      "hold": 1,
+      "sell": 0,
+      "strongSell": 0,
+      "total": 41
+    },
+    {
+      "period": "-2m",
+      "strongBuy": 8,
+      "buy": 31,
+      "hold": 2,
+      "sell": 0,
+      "strongSell": 0,
+      "total": 41
+    }
+  ],
+  "buy_ratio_pct": 97.6,
+  "consensus_stance": "STRONG BUY",
+  "stance_color": "#10B981",
+  "fundamentals": {
+    "company_name": "Axis Bank Limited",
+    "market_cap": 4094310512544.382,
+    "market_cap_str": "\u20b94.09 Lakh Cr",
+    "pe_ratio": 13.7,
+    "forward_pe": 11.2,
+    "pb_ratio": 1.77,
+    "dividend_yield": 8.0,
+    "fifty_two_week_high": 1418.3,
+    "fifty_two_week_low": 1150.3,
+    "fifty_two_week_pct": 61.3,
+    "sector": "Financial Services",
+    "industry": "Banks - Regional",
+    "business_summary": "Axis Bank Limited provides various financial products and services in India and internationally. The company operates through four segments: Treasury, Retail Banking, Corporate/Wholesale Banking, and Other Banking Business. It provides fixed, recurring, and safe deposits; and sav..."
+  },
+  "individual_institution_predictions": [
+    {
+      "institution": "Nirmal Bang",
+      "institution_type": "Domestic Institutional Desk",
+      "hq": "Mumbai",
+      "stance": "Research Call",
+      "stance_color": "#38BDF8",
+      "target_price": 1985.2,
+      "implied_upside": 51.0,
+      "headline": "Diwali Stock Picks 2026 With 51% Upside: Nirmal Bang Picks Axis Bank, Paytm, Tata Consumer, UltraTech & More - Goodreturns",
+      "published_date": "Fri, 06 Nov 2026",
+      "source": "Goodreturns",
+      "link": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxOVjUwWFFDQWJnNXRSUnNuV0w2MHdUZXVXM3lSUFpXdXFpaV92ZFBmTVVkWEhrRzdBbjZlcVY0ZjY1el9fZDF0NVNCc0M5THFZTTV6YXVQNzBKX1RkWHpZLUlQM1UxR3dUN1k0QXFhcGM2RzFVelNUckR1aEtpY2ZHNXduNVZ4WlhrT09ZQ3IzS2FZcjJzbTNFOWRSR0FPQjJfeGhuQUhTTjUta3p1VmZrM0c1ck1mWjdJYmhPbXhYck5wZEV5LW9Fc2hLamd5Q0V3OFZCR2VJRUk3UEhVUDkzSXpvOFljaFRM?oc=5"
+    },
+    {
+      "institution": "Kotak",
+      "institution_type": "Domestic Institutional Desk",
+      "hq": "Mumbai",
+      "stance": "Research Call",
+      "stance_color": "#38BDF8",
+      "target_price": null,
+      "implied_upside": null,
+      "headline": "HDFC Bank, SBI, ICICI Bank, Kotak Bank, Axis Bank, BoB: Check fresh price targets for banking stocks - Business Today",
+      "published_date": "Fri, 06 Nov 2026",
+      "source": "Business Today",
+      "link": "https://news.google.com/rss/articles/CBMigAJBVV95cUxPWFQ5elNhYmVwTmlLUVRSRVVIWXQ0Y3I5LVZHaXBKSHotRDFMRFVsTWR4MEd2b3Uxb2JnYVdDVFBNazQtMS1QaWNoN0VLeENJOW90QW85Rlc3VVhVYXBTZDNRZHBLMXZPdEFvNllFSWEtcF9yOF80eW1Ub0FCVk1KQkxaTURhdmZpUWczRThkTm8yM2h4Yk15aE9rUkQ3NWxXdmY3TEMzOGNkWGZBdGFmLXNWdlRXRE5rRG5qNjFDVG1yTlR4ZjJMUHVrWlQ5UlpIS2NHWUVGQUNKa1JMWExyVWROQzZwVUpqeHZXYWhpdk1fSEU2cU1sTjVRb0REWjhw0gGGAkFVX3lxTE9sRldKNVpaMXVvUHAtNzBfX1ppNVFYSUx5U3hOQmxrYks0em1weVdMT2xtbWc2aWhEcFgwRnpnVFpfdW1fck9VLXh6VHVxZG1IekRlbDJYWHNPbF8wOHVNdmhkczlRNnA3OFhDVU9YRTYtczJ5U29vVUdXNVdXMDltdTE1XzlpYVVEYTFqY21Fdi1GdXY2bWNnYmhRcU4zNnVTdjI2aTl4MnZ4V1NENnpjRmVlbzd5XzJaRC0xWGZPbktzLWxFOWlXeE5icVN6b1FHSm9QRHgtN3hlNS02S2l1YnJRRTM2OWdXV1cwQ210SXJhQXBPZzFLbU1aZWVaYThRS2Y3Wnc?oc=5"
+    },
+    {
+      "institution": "Nomura",
+      "institution_type": "Global Investment Bank",
+      "hq": "Tokyo / Mumbai",
+      "stance": "Research Call",
+      "stance_color": "#38BDF8",
+      "target_price": 1525.0,
+      "implied_upside": 16.0,
+      "headline": "Nomura Adjusts Axis Bank's Price Target to 1,525 Indian Rupees - marketscreener.com",
+      "published_date": "Sun, 18 Oct 2026",
+      "source": "marketscreener.com",
+      "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQM2phMUs0SExtdW5ld1UzSW9Ja0k4Nzl5MGFzRS03dHp5REtjTDNjLVRDNUxMa3JXS3RyclZpTy1iNmR3T2VUdDhONjJaOElBLTNDX1M5b1VzVVFQbXljSnFJeFRheXU1dzlfWXpkX3prUjNFeG5uSFlvXzgyRlA1QlNQalduYTRMYWxsOG93WlJWVTZWRFFuMmtWSVZfb2xmQTBTbTZ0ekZvanZsMFBoQWZsTHVEdw?oc=5"
+    },
+    {
+      "institution": "Kotak Securities",
+      "institution_type": "Domestic Research House",
+      "hq": "Mumbai",
+      "stance": "Research Call",
+      "stance_color": "#38BDF8",
+      "target_price": null,
+      "implied_upside": null,
+      "headline": "LIC, Axis Bank: Kotak Securities explains why they prefer these 2 stocks - Business Standard",
+      "published_date": "Tue, 22 Sep 2026",
+      "source": "Business Standard",
+      "link": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxOM3NTUTBYT21LbE1PRDB0Ui1RRkt4ZVFoaEhpU1BZam1idnhjLTRfSXBLc01GOHVQa2h3N1l3R1JtM1FWLVR0RE5hd2hfaUVzN19PbVJpMVdZVG0wVFdjT1ZIbHpEQzJCd2ZIQW92b2hwaFF2TzFXLWVnZjRCaHI0UkhsTzZzaS1qRTU3VlZUZkp5eE5KS1VjQm9Ob2lKQmh0X3ZzV1hmTV9McHJhS3VNemJ5MzNFZDg5X0FVNWp2TXBuUVJXX1dtOG9Xa2FHUjVuSmxMc3BfVWVVRTZkS1dxb2RuMmdPdmtRYkUxMzZB0gHzAUFVX3lxTE42Y0lOV3FoQkRScWg5QzdlQVUtQWtUa0pxNzYwNnhOdUd6ZjJlcFpvQ0QyWWk1N0dWc09BZFpGRUVNSUJZeTc5UEg3VVFrRERpNGtVTlNHVDR0aWhXR2FLZTZGaUNNTjFYdGMwNzBPRHp0cEZHMjg4U3JMN0RpTzlwTC14NHFxQmxpcTF2OEtwRFRKRDFYNFVRdDZ2YzloTURna093LVFCcnBIT2JfelBhWjBiaUxUbTY1MmpqU29jcU44X21lbWxwckxCa3RyazQ3QVo5dWU4VGpxb2NSTkF3UVFKYkllUkE5WTZCTzY4S3Y2WQ?oc=5"
+    },
+    {
+      "institution": "Emkay",
+      "institution_type": "Domestic Institutional Desk",
+      "hq": "Mumbai",
+      "stance": "Buy",
+      "stance_color": "#10B981",
+      "target_price": 1600.0,
+      "implied_upside": 21.7,
+      "headline": "Buy Axis Bank; target of Rs 1600: Emkay Global Financial - Moneycontrol.com",
+      "published_date": "Mon, 19 Oct 2026",
+      "source": "Moneycontrol.com",
+      "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPZEZzZ2NHZVJwTUNVRVd1dWIyS0pfWS1DMzYzWTl0cFFwc0JhUUFyX3lOWkktRDhZVGVaUnluZ21DbjRwaGpJQ2RNbVp5RlRPLXdtSmRYTEljbkRQR2RRbEh3alhMU0VRVndUb1JBYUpIazNyV3duSzR4WW9oZzQ1YlM2WWVfYllCMEh5OUpFZFhaSTh1ajh0eU81MmJhVjVUYk9VRy1od2xpNlE5UzdseS1yOTNRb2RHUXl4MdIBwgFBVV95cUxNRnk1LU1PUGJSaEYxdTgtNm1vcENIaTBDRWl3a2QxeHFWTDNSZzlWVzh0aFNxVGpDTDFoeXJvZmxVVF9WcVRGM2dROTE4cTlPMnAzM3BCeUVEaXBZNEp4X1ZMS0N2SnBoRmFHSVFPV0xSUEZSbnhOeVdBdWpmbW9YYk5wTWFpUDlnU3dyM21XZno2SGIta3lraERRVldtZkwtRXNnTGFoTkpfd3A3WVFma2J6dnBDTkRxMlVvdTg0MGZydw?oc=5"
+    },
+    {
+      "institution": "Centrum",
+      "institution_type": "Domestic Institutional Desk",
+      "hq": "Mumbai",
+      "stance": "Research Call",
+      "stance_color": "#38BDF8",
+      "target_price": 1460.0,
+      "implied_upside": 11.1,
+      "headline": "Axis Bank preferred pick by Centrum within banking space; target \u20b91,460 - Business Standard",
+      "published_date": "Wed, 18 Feb 2026",
+      "source": "Business Standard",
+      "link": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxNTTkxclYtdjc4Yjh5ZHE0REVTQXE4c0I2SkZzOTRBNkMxMWpZNGJITldhaWV2azBQQmNNbTFvQzl3ZXQzcVAwVjVGMTEtbzJTeElDanN1Ymctenl1MkRWWkttVU9WOTlPTGNJMmFjNFMzNF9KTG9ZYWY3b3IxVnplYXRBRE9JaEhZSERiUi1JQ1BmVVZLejBUd01QVWN4a0Yyb3dQaVZ6RXYyRWk3ZlhmS0U4U3BoN29TVFBIY3BaLXBYbzJqRkVlZ1ZXa3ZTaE1SQTN6WFpTcEwxY1l5RkxiQ1R1dUJSNXcwdkHSAe8BQVVfeXFMT0tqejB3a3RTdnNGamlFR182bnlsWmdINFNTNlpYY3htT2ZVVXZLbVVzbllBWDNlRkVSZjdLbjVaYXdqZWxJeC16ODlJRWcwbWZkNUYyUldxWTNJUnJXazNPeE1saGNodmx0ZVQ0NXJpek1CWWY1OGQ4WkZFTjhlU3R6UjJLVDBySzBKZEpJd0pyUXJkeERMWEtISkdBaDBXRjJBTHdadG15WnBYR1NTX2FaaXZoVVNaeWlvUnpseWtyOVFLY1B0Nm4ycF94ZHpzRVBFTmpSVEd4S1UxSVpJTldTYXdzckVqcG01dDItNHc?oc=5"
+    },
+    {
+      "institution": "Prabhudas Lilladher",
+      "institution_type": "Domestic Institutional Desk",
+      "hq": "Mumbai",
+      "stance": "Buy",
+      "stance_color": "#10B981",
+      "target_price": 1600.0,
+      "implied_upside": 21.7,
+      "headline": "Buy Axis Bank; target of Rs 1600: Prabhudas Lilladher - Moneycontrol.com",
+      "published_date": "Mon, 19 Oct 2026",
+      "source": "Moneycontrol.com",
+      "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQNjBmQU9PTFVEU2g0anNXN2Y2U1R1TVJ5cmpLeUxXUFAwS3RhdXdJY2lLUmsyY1pWZXFpSDR4eUZuWER1OXhMcFNiWEhubkFleExhSWxEamtkUWRzelJXbk1uSlNyX2VfRE1FU0tyMmRBS3FHV0xZZUhtZi1PcHJtOWxJRERjNVhTTG9LdlZpeDV5SEpvZzM2MVJCSEltVml1MmUwcllDR1RfNnppM21HWkJNblE4TEhF0gG-AUFVX3lxTFA1OG5YN1JGa1VFOGJ1eFRMdThESTBkalBZeXZrWXVrSFZaUXpQaFBnMGNCTWl2Ql9INFJMQVcxalUxeC15MU9FejlrS3JhNG9xd2hhM05OclhzRXF3eTZXaVQ1bGtyNVVMNVBoOFRZSm1mOGd0bmlxSjExYXdsWFI3MGRJUEFGaldGOGxlOTdFU2dnaDB1cS1IZjZjNzBCLXFSUXNIVTR0YmM1RjlCRHV5S3VYSXlrSjFoR3RQcVE?oc=5"
+    },
+    {
+      "institution": "Motilal Oswal",
+      "institution_type": "Domestic Institutional Desk",
+      "hq": "Mumbai",
+      "stance": "Hold",
+      "stance_color": "#F59E0B",
+      "target_price": 1475.0,
+      "implied_upside": 12.2,
+      "headline": "Neutral Axis Bank; target of Rs 1475: Motilal Oswal - Moneycontrol.com",
+      "published_date": "Mon, 19 Oct 2026",
+      "source": "Moneycontrol.com",
+      "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPaGNrUUNPTmNDazRtV1BDVG1LOFB2Z1dMTGtuQWNDNUJ5TG5SUkNKMFNscVhOM1lBenhhdzZWM2otU0VNVFgtU3RCeVZ1aFVqMVVfenpaYU5aN2dBR05SdTdvaVB5b2VsRkk3SUlNMEhraWdMLWNXaEoyVkw4QnEyZnBvMzJlQVg0akVWdDBsRkNld1ZwaWRlN0RNT1J2S2ZoQTdZSW9lZjlZdTNH0gGyAUFVX3lxTE5seWdFUnY2YTM1R2FwbU5laDJaQ1dHQ0JsZlJQaU5CTnV4UGpiaklFWEJsMzdkWVN3NG14cWR2Uko0RGdlcU5oVEpJazZoZ0dHai1lbDlFVHA2SUpva1VYQVRYQ3cya3NXZ2Q2RnV3SlNNX29rclFweUduc2dIVm84cmlwZmRNOFRpb1BmcUhWN0hlU1UxYjRJZG0yczh2cTkybHZJZ1JNTE0zcE1uUUtaQ0E?oc=5"
+    },
+    {
+      "institution": "ICICI Securities",
+      "institution_type": "Domestic Institutional Desk",
+      "hq": "Mumbai",
+      "stance": "Buy",
+      "stance_color": "#10B981",
+      "target_price": 1620.0,
+      "implied_upside": 23.2,
+      "headline": "Buy Axis Bank; target of Rs 1620: ICICI Securities - Moneycontrol.com",
+      "published_date": "Mon, 19 Oct 2026",
+      "source": "Moneycontrol.com",
+      "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPSDBZcFMwWkhxeV9DQ1JkbXByT3pYS29NZFNnUEwwcFZ1VUVqLVQzdm80RFhlRzdzWGxEakpxeEdmQkltMW0yTHh2OTRURkY4Y0ExRFdVNDNLd3JRWEZsQUNUUFRkc0VGZm9adkNRcEFwdkRVQ25OOVd1NnJuNHJhQnhKWTFacy1talNGaUMwei1yeEdZVGxFVTE4VGlucXNyV2xqREdPWGREb3Fxd1lJWGE1dHZQMTjSAbwBQVVfeXFMT3Bjb3FrcDdYWW53dWxTU2RRM0E0Y0hBZER0RVJNbXdXZXNjbnFQaHl1dlRselByRkZXSXVjc0VYZ2Nxel9mTDJ6YmlzNlAwVW10dGZXaTVrdXFRQnh1V3Jta1ZweUJSOHFvSlhzazVsUE5JNFBOM25QWUc2N2VULThNOXp5NVpEMW0ybkFkMWoxNkQzaXVnVW5fN2w1NmpYS3NadlpBY0tPSDhzNXhGelFOaEZNNlN3RHFVUjA?oc=5"
+    },
+    {
+      "institution": "Anand Rathi",
+      "institution_type": "Domestic Institutional Desk",
+      "hq": "Mumbai",
+      "stance": "Buy",
+      "stance_color": "#10B981",
+      "target_price": 1622.0,
+      "implied_upside": 23.4,
+      "headline": "Buy Axis Bank; target of Rs 1622: Anand Rathi - Moneycontrol.com",
+      "published_date": "Mon, 20 Jul 2026",
+      "source": "Moneycontrol.com",
+      "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNQ1lzazZrY0RnZ0s2U3VGVjZhUTVlZW5jeTFGbVY1QnFlODE5Q0hvZTNjVnFZa3J2eUo2MnBnZEY4cU1Gb0t6dmlhbDNZVVh4WGNMdjJtZVJZWnFaaGhvUjRVM1Z3d1d0aTZlajRfcFphZFBBcTNIaVBnYWNOUjJXYTlBWUtJZHBpY29WSEJOd19TaVlWc3p6R3d1UnpXdlc1TjRwWnR1TmZvWFXSAbABQVVfeXFMT0FOUHlROXFpeUQtVVNRQS0tWDVCUGFsNHFRNWN4TXZZQzZQbUt5WGhIOUVGUXVFamdqX2hMdFFFdkx2WmVVVXBGZ1FDSTFjWGZpS0x3Y05NdlNWSklqc0VUelZzNUdHM3JHaXZoQmhKcndVdS1XTm5DNjVCVmQwVU9sZzBrQVFCb0VDRHBfWG15M25uTlVZYWJralRDY18xS1RjNHJva0pNSG9ocFpldms?oc=5"
+    },
+    {
+      "institution": "CLSA",
+      "institution_type": "Asian Institutional Brokerage",
+      "hq": "Hong Kong / Mumbai",
+      "stance": "Accumulate",
+      "stance_color": "#0EA5E9",
+      "target_price": 1550.0,
+      "implied_upside": 17.9,
+      "headline": "Axis Bank Share Price Target: CLSA Outperform, TP Rs 1,550 - Univest",
+      "published_date": "Mon, 13 Jul 2026",
+      "source": "Univest",
+      "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQWHFtTVRLVUltcDR1aGlyR21tY1ZjNHlYcml3bDFJUldFeXJiY2ZTS3FtNUp2bjRZdmJFczkteWxNMzJZWXFja0ozb2g3dDBaRHJmbFpZcVZRdTdfbnUxRXNNaDRpbmZ3S2JOajFzMEhmQkhzSFhrNlRpUzhWb05ZNDNkSQ?oc=5"
+    },
+    {
+      "institution": "Citi",
+      "institution_type": "Global Investment Bank",
+      "hq": "New York / Mumbai",
+      "stance": "Sell / Reduce",
+      "stance_color": "#F43F5E",
+      "target_price": null,
+      "implied_upside": null,
+      "headline": "Citi agrees to sell its India retail footprint to Axis Bank for $1.6B - Banking Dive",
+      "published_date": "Wed, 30 Mar 2022",
+      "source": "Banking Dive",
+      "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNdHJLNE1CVmdLUFhrOWRkWE5uaENGcmRUVnoxVFVaQ3llREVXMUEzbkZsb1NIMlNNOVl6RFh3Rm9oanRwVXZOckR0aUl0blRiMS1kYVVIUU1jQzhMdFQwaWZkbUdUemx5TlM5aWRlNDR1MWZEekJYX0dNRm1hRWZMNV95SExoRUgybVctNjB4N29KZHQ4c0VqRlNmckF1VllIXzZNV0pEd2txVTZs?oc=5"
+    }
+  ],
+  "expert_news": [
+    {
+      "title": "Axis Bank Share Price Highlights: Axis Bank Stock Price History",
+      "source": "Economictimes Markets",
+      "published": "Sun, 08 Nov 2026 08:01:23 +0530",
+      "link": "https://economictimes.indiatimes.com/markets/stocks/stock-liveblog/axis-bank-share-price-live-08-nov-2026/liveblog/135649766.cms"
+    },
+    {
+      "title": "Axis Bank Share Price Highlights: Axis Bank Stock Price History",
+      "source": "Economictimes Stocks",
+      "published": "Sun, 08 Nov 2026 08:01:23 +0530",
+      "link": "https://economictimes.indiatimes.com/markets/stocks/stock-liveblog/axis-bank-share-price-live-08-nov-2026/liveblog/135649766.cms"
+    }
+  ],
+  "history": [
+    {
+      "date": "2025-11-06",
+      "close": 1227.55
+    },
+    {
+      "date": "2025-11-07",
+      "close": 1221.86
+    },
+    {
+      "date": "2025-11-10",
+      "close": 1216.06
+    },
+    {
+      "date": "2025-11-11",
+      "close": 1221.56
+    },
+    {
+      "date": "2025-11-12",
+      "close": 1220.66
+    },
+    {
+      "date": "2025-11-13",
+      "close": 1224.26
+    },
+    {
+      "date": "2025-11-14",
+      "close": 1240.64
+    },
+    {
+      "date": "2025-11-17",
+      "close": 1248.64
+    },
+    {
+      "date": "2025-11-18",
+      "close": 1264.42
+    },
+    {
+      "date": "2025-11-19",
+      "close": 1269.42
+    },
+    {
+      "date": "2025-11-20",
+      "close": 1284.21
+    },
+    {
+      "date": "2025-11-21",
+      "close": 1274.82
+    },
+    {
+      "date": "2025-11-24",
+      "close": 1268.02
+    },
+    {
+      "date": "2025-11-25",
+      "close": 1265.32
+    },
+    {
+      "date": "2025-11-26",
+      "close": 1289.21
+    },
+    {
+      "date": "2025-11-27",
+      "close": 1286.31
+    },
+    {
+      "date": "2025-11-28",
+      "close": 1278.71
+    },
+    {
+      "date": "2025-12-01",
+      "close": 1274.72
+    },
+    {
+      "date": "2025-12-02",
+      "close": 1257.03
+    },
+    {
+      "date": "2025-12-03",
+      "close": 1269.72
+    },
+    {
+      "date": "2025-12-04",
+      "close": 1279.01
+    },
+    {
+      "date": "2025-12-05",
+      "close": 1281.51
+    },
+    {
+      "date": "2025-12-08",
+      "close": 1272.82
+    },
+    {
+      "date": "2025-12-09",
+      "close": 1274.92
+    },
+    {
+      "date": "2025-12-10",
+      "close": 1277.61
+    },
+    {
+      "date": "2025-12-11",
+      "close": 1271.72
+    },
+    {
+      "date": "2025-12-12",
+      "close": 1285.11
+    },
+    {
+      "date": "2025-12-15",
+      "close": 1283.81
+    },
+    {
+      "date": "2025-12-16",
+      "close": 1218.66
+    },
+    {
+      "date": "2025-12-17",
+      "close": 1223.76
+    },
+    {
+      "date": "2025-12-18",
+      "close": 1228.85
+    },
+    {
+      "date": "2025-12-19",
+      "close": 1229.65
+    },
+    {
+      "date": "2025-12-22",
+      "close": 1232.25
+    },
+    {
+      "date": "2025-12-23",
+      "close": 1224.06
+    },
+    {
+      "date": "2025-12-24",
+      "close": 1225.35
+    },
+    {
+      "date": "2025-12-26",
+      "close": 1227.25
+    },
+    {
+      "date": "2025-12-29",
+      "close": 1231.05
+    },
+    {
+      "date": "2025-12-30",
+      "close": 1245.04
+    },
+    {
+      "date": "2025-12-31",
+      "close": 1268.42
+    },
+    {
+      "date": "2026-01-01",
+      "close": 1273.42
+    },
+    {
+      "date": "2026-01-02",
+      "close": 1265.92
+    },
+    {
+      "date": "2026-01-05",
+      "close": 1284.81
+    },
+    {
+      "date": "2026-01-06",
+      "close": 1292.8
+    },
+    {
+      "date": "2026-01-07",
+      "close": 1294.5
+    },
+    {
+      "date": "2026-01-08",
+      "close": 1285.81
+    },
+    {
+      "date": "2026-01-09",
+      "close": 1271.02
+    },
+    {
+      "date": "2026-01-12",
+      "close": 1273.22
+    },
+    {
+      "date": "2026-01-13",
+      "close": 1261.03
+    },
+    {
+      "date": "2026-01-14",
+      "close": 1297.8
+    },
+    {
+      "date": "2026-01-15",
+      "close": 1297.8
+    },
+    {
+      "date": "2026-01-16",
+      "close": 1293.2
+    },
+    {
+      "date": "2026-01-19",
+      "close": 1306.49
+    },
+    {
+      "date": "2026-01-20",
+      "close": 1292.5
+    },
+    {
+      "date": "2026-01-21",
+      "close": 1283.91
+    },
+    {
+      "date": "2026-01-22",
+      "close": 1293.8
+    },
+    {
+      "date": "2026-01-23",
+      "close": 1257.03
+    },
+    {
+      "date": "2026-01-27",
+      "close": 1314.79
+    },
+    {
+      "date": "2026-01-28",
+      "close": 1318.78
+    },
+    {
+      "date": "2026-01-29",
+      "close": 1362.65
+    },
+    {
+      "date": "2026-01-30",
+      "close": 1369.34
+    },
+    {
+      "date": "2026-02-02",
+      "close": 1310.49
+    },
+    {
+      "date": "2026-02-03",
+      "close": 1355.15
+    },
+    {
+      "date": "2026-02-04",
+      "close": 1337.67
+    },
+    {
+      "date": "2026-02-05",
+      "close": 1329.57
+    },
+    {
+      "date": "2026-02-06",
+      "close": 1340.57
+    },
+    {
+      "date": "2026-02-09",
+      "close": 1340.37
+    },
+    {
+      "date": "2026-02-10",
+      "close": 1355.65
+    },
+    {
+      "date": "2026-02-11",
+      "close": 1346.26
+    },
+    {
+      "date": "2026-02-12",
+      "close": 1338.97
+    },
+    {
+      "date": "2026-02-13",
+      "close": 1331.27
+    },
+    {
+      "date": "2026-02-16",
+      "close": 1357.25
+    },
+    {
+      "date": "2026-02-17",
+      "close": 1356.15
+    },
+    {
+      "date": "2026-02-18",
+      "close": 1375.94
+    },
+    {
+      "date": "2026-02-19",
+      "close": 1355.55
+    },
+    {
+      "date": "2026-02-20",
+      "close": 1367.25
+    },
+    {
+      "date": "2026-02-23",
+      "close": 1385.63
+    },
+    {
+      "date": "2026-02-24",
+      "close": 1386.53
+    },
+    {
+      "date": "2026-02-25",
+      "close": 1401.92
+    },
+    {
+      "date": "2026-02-26",
+      "close": 1394.42
+    },
+    {
+      "date": "2026-02-27",
+      "close": 1382.83
+    },
+    {
+      "date": "2026-03-02",
+      "close": 1371.24
+    },
+    {
+      "date": "2026-03-04",
+      "close": 1350.26
+    },
+    {
+      "date": "2026-03-05",
+      "close": 1348.06
+    },
+    {
+      "date": "2026-03-06",
+      "close": 1314.79
+    },
+    {
+      "date": "2026-03-09",
+      "close": 1287.31
+    },
+    {
+      "date": "2026-03-10",
+      "close": 1313.69
+    },
+    {
+      "date": "2026-03-11",
+      "close": 1254.83
+    },
+    {
+      "date": "2026-03-12",
+      "close": 1233.55
+    },
+    {
+      "date": "2026-03-13",
+      "close": 1196.38
+    },
+    {
+      "date": "2026-03-16",
+      "close": 1213.76
+    },
+    {
+      "date": "2026-03-17",
+      "close": 1227.15
+    },
+    {
+      "date": "2026-03-18",
+      "close": 1252.23
+    },
+    {
+      "date": "2026-03-19",
+      "close": 1206.07
+    },
+    {
+      "date": "2026-03-20",
+      "close": 1202.97
+    },
+    {
+      "date": "2026-03-23",
+      "close": 1169.7
+    },
+    {
+      "date": "2026-03-24",
+      "close": 1191.78
+    },
+    {
+      "date": "2026-03-25",
+      "close": 1221.16
+    },
+    {
+      "date": "2026-03-27",
+      "close": 1204.27
+    },
+    {
+      "date": "2026-03-30",
+      "close": 1160.41
+    },
+    {
+      "date": "2026-04-01",
+      "close": 1192.18
+    },
+    {
+      "date": "2026-04-02",
+      "close": 1196.98
+    },
+    {
+      "date": "2026-04-06",
+      "close": 1244.34
+    },
+    {
+      "date": "2026-04-07",
+      "close": 1249.14
+    },
+    {
+      "date": "2026-04-08",
+      "close": 1331.97
+    },
+    {
+      "date": "2026-04-09",
+      "close": 1317.48
+    },
+    {
+      "date": "2026-04-10",
+      "close": 1349.76
+    },
+    {
+      "date": "2026-04-13",
+      "close": 1352.56
+    },
+    {
+      "date": "2026-04-15",
+      "close": 1354.46
+    },
+    {
+      "date": "2026-04-16",
+      "close": 1348.56
+    },
+    {
+      "date": "2026-04-17",
+      "close": 1358.05
+    },
+    {
+      "date": "2026-04-20",
+      "close": 1353.66
+    },
+    {
+      "date": "2026-04-21",
+      "close": 1376.64
+    },
+    {
+      "date": "2026-04-22",
+      "close": 1378.54
+    },
+    {
+      "date": "2026-04-23",
+      "close": 1368.54
+    },
+    {
+      "date": "2026-04-24",
+      "close": 1364.85
+    },
+    {
+      "date": "2026-04-27",
+      "close": 1323.18
+    },
+    {
+      "date": "2026-04-28",
+      "close": 1288.01
+    },
+    {
+      "date": "2026-04-29",
+      "close": 1295.4
+    },
+    {
+      "date": "2026-04-30",
+      "close": 1267.32
+    },
+    {
+      "date": "2026-05-04",
+      "close": 1274.12
+    },
+    {
+      "date": "2026-05-05",
+      "close": 1258.73
+    },
+    {
+      "date": "2026-05-06",
+      "close": 1293.2
+    },
+    {
+      "date": "2026-05-07",
+      "close": 1291.7
+    },
+    {
+      "date": "2026-05-08",
+      "close": 1267.32
+    },
+    {
+      "date": "2026-05-11",
+      "close": 1271.32
+    },
+    {
+      "date": "2026-05-12",
+      "close": 1259.13
+    },
+    {
+      "date": "2026-05-13",
+      "close": 1254.73
+    },
+    {
+      "date": "2026-05-14",
+      "close": 1253.63
+    },
+    {
+      "date": "2026-05-15",
+      "close": 1243.84
+    },
+    {
+      "date": "2026-05-18",
+      "close": 1236.95
+    },
+    {
+      "date": "2026-05-19",
+      "close": 1237.35
+    },
+    {
+      "date": "2026-05-20",
+      "close": 1248.84
+    },
+    {
+      "date": "2026-05-21",
+      "close": 1252.33
+    },
+    {
+      "date": "2026-05-22",
+      "close": 1284.41
+    },
+    {
+      "date": "2026-05-25",
+      "close": 1310.19
+    },
+    {
+      "date": "2026-05-26",
+      "close": 1298.3
+    },
+    {
+      "date": "2026-05-27",
+      "close": 1303.09
+    },
+    {
+      "date": "2026-05-29",
+      "close": 1285.61
+    },
+    {
+      "date": "2026-06-01",
+      "close": 1274.92
+    },
+    {
+      "date": "2026-06-02",
+      "close": 1250.14
+    },
+    {
+      "date": "2026-06-03",
+      "close": 1254.23
+    },
+    {
+      "date": "2026-06-04",
+      "close": 1252.33
+    },
+    {
+      "date": "2026-06-05",
+      "close": 1271.32
+    },
+    {
+      "date": "2026-06-08",
+      "close": 1267.12
+    },
+    {
+      "date": "2026-06-09",
+      "close": 1291.4
+    },
+    {
+      "date": "2026-06-10",
+      "close": 1313.49
+    },
+    {
+      "date": "2026-06-11",
+      "close": 1316.28
+    },
+    {
+      "date": "2026-06-12",
+      "close": 1355.25
+    },
+    {
+      "date": "2026-06-15",
+      "close": 1367.25
+    },
+    {
+      "date": "2026-06-16",
+      "close": 1364.65
+    },
+    {
+      "date": "2026-06-17",
+      "close": 1349.86
+    },
+    {
+      "date": "2026-06-18",
+      "close": 1359.05
+    },
+    {
+      "date": "2026-06-19",
+      "close": 1356.85
+    },
+    {
+      "date": "2026-06-22",
+      "close": 1357.55
+    },
+    {
+      "date": "2026-06-23",
+      "close": 1362.45
+    },
+    {
+      "date": "2026-06-24",
+      "close": 1383.43
+    },
+    {
+      "date": "2026-06-25",
+      "close": 1376.14
+    },
+    {
+      "date": "2026-06-29",
+      "close": 1355.75
+    },
+    {
+      "date": "2026-06-30",
+      "close": 1344.66
+    },
+    {
+      "date": "2026-07-01",
+      "close": 1367.65
+    },
+    {
+      "date": "2026-07-02",
+      "close": 1361.55
+    },
+    {
+      "date": "2026-07-03",
+      "close": 1341.07
+    },
+    {
+      "date": "2026-07-06",
+      "close": 1338.57
+    },
+    {
+      "date": "2026-07-07",
+      "close": 1339.97
+    },
+    {
+      "date": "2026-07-08",
+      "close": 1308.49
+    },
+    {
+      "date": "2026-07-09",
+      "close": 1296.6
+    },
+    {
+      "date": "2026-07-10",
+      "close": 1323.7
+    },
+    {
+      "date": "2026-07-13",
+      "close": 1319.4
+    },
+    {
+      "date": "2026-07-14",
+      "close": 1317.6
+    },
+    {
+      "date": "2026-07-15",
+      "close": 1312.3
+    },
+    {
+      "date": "2026-07-16",
+      "close": 1307.6
+    },
+    {
+      "date": "2026-07-17",
+      "close": 1328.5
+    },
+    {
+      "date": "2026-07-20",
+      "close": 1256.0
+    },
+    {
+      "date": "2026-07-21",
+      "close": 1258.2
+    },
+    {
+      "date": "2026-07-22",
+      "close": 1238.4
+    },
+    {
+      "date": "2026-07-23",
+      "close": 1223.0
+    },
+    {
+      "date": "2026-07-24",
+      "close": 1227.3
+    },
+    {
+      "date": "2026-07-27",
+      "close": 1227.5
+    },
+    {
+      "date": "2026-07-28",
+      "close": 1223.5
+    },
+    {
+      "date": "2026-07-29",
+      "close": 1235.4
+    },
+    {
+      "date": "2026-07-30",
+      "close": 1228.9
+    },
+    {
+      "date": "2026-07-31",
+      "close": 1229.5
+    },
+    {
+      "date": "2026-08-03",
+      "close": 1272.0
+    },
+    {
+      "date": "2026-08-04",
+      "close": 1261.8
+    },
+    {
+      "date": "2026-08-05",
+      "close": 1253.9
+    },
+    {
+      "date": "2026-08-06",
+      "close": 1256.0
+    },
+    {
+      "date": "2026-08-07",
+      "close": 1238.0
+    },
+    {
+      "date": "2026-08-10",
+      "close": 1247.3
+    },
+    {
+      "date": "2026-08-11",
+      "close": 1229.8
+    },
+    {
+      "date": "2026-08-12",
+      "close": 1230.0
+    },
+    {
+      "date": "2026-08-13",
+      "close": 1221.8
+    },
+    {
+      "date": "2026-08-14",
+      "close": 1217.4
+    },
+    {
+      "date": "2026-08-17",
+      "close": 1227.3
+    },
+    {
+      "date": "2026-08-18",
+      "close": 1243.0
+    },
+    {
+      "date": "2026-08-19",
+      "close": 1235.0
+    },
+    {
+      "date": "2026-08-20",
+      "close": 1251.0
+    },
+    {
+      "date": "2026-08-21",
+      "close": 1245.8
+    },
+    {
+      "date": "2026-08-24",
+      "close": 1236.0
+    },
+    {
+      "date": "2026-08-25",
+      "close": 1235.0
+    },
+    {
+      "date": "2026-08-26",
+      "close": 1255.0
+    },
+    {
+      "date": "2026-08-27",
+      "close": 1256.0
+    },
+    {
+      "date": "2026-08-28",
+      "close": 1265.0
+    },
+    {
+      "date": "2026-08-31",
+      "close": 1300.0
+    },
+    {
+      "date": "2026-09-01",
+      "close": 1258.0
+    },
+    {
+      "date": "2026-09-02",
+      "close": 1253.9
+    },
+    {
+      "date": "2026-09-03",
+      "close": 1267.0
+    },
+    {
+      "date": "2026-09-04",
+      "close": 1273.0
+    },
+    {
+      "date": "2026-09-07",
+      "close": 1266.0
+    },
+    {
+      "date": "2026-09-08",
+      "close": 1244.9
+    },
+    {
+      "date": "2026-09-09",
+      "close": 1238.5
+    },
+    {
+      "date": "2026-09-10",
+      "close": 1246.0
+    },
+    {
+      "date": "2026-09-11",
+      "close": 1246.0
+    },
+    {
+      "date": "2026-09-15",
+      "close": 1222.9
+    },
+    {
+      "date": "2026-09-16",
+      "close": 1241.0
+    },
+    {
+      "date": "2026-09-17",
+      "close": 1240.0
+    },
+    {
+      "date": "2026-09-18",
+      "close": 1257.0
+    },
+    {
+      "date": "2026-09-21",
+      "close": 1250.0
+    },
+    {
+      "date": "2026-09-22",
+      "close": 1242.7
+    },
+    {
+      "date": "2026-09-23",
+      "close": 1243.2
+    },
+    {
+      "date": "2026-09-24",
+      "close": 1186.5
+    },
+    {
+      "date": "2026-09-25",
+      "close": 1222.4
+    },
+    {
+      "date": "2026-09-28",
+      "close": 1209.9
+    },
+    {
+      "date": "2026-09-29",
+      "close": 1212.1
+    },
+    {
+      "date": "2026-09-30",
+      "close": 1226.0
+    },
+    {
+      "date": "2026-10-01",
+      "close": 1217.1
+    },
+    {
+      "date": "2026-10-05",
+      "close": 1222.2
+    },
+    {
+      "date": "2026-10-06",
+      "close": 1248.0
+    },
+    {
+      "date": "2026-10-07",
+      "close": 1242.5
+    },
+    {
+      "date": "2026-10-08",
+      "close": 1245.0
+    },
+    {
+      "date": "2026-10-09",
+      "close": 1259.1
+    },
+    {
+      "date": "2026-10-12",
+      "close": 1253.0
+    },
+    {
+      "date": "2026-10-13",
+      "close": 1268.4
+    },
+    {
+      "date": "2026-10-14",
+      "close": 1264.6
+    },
+    {
+      "date": "2026-10-15",
+      "close": 1288.0
+    },
+    {
+      "date": "2026-10-16",
+      "close": 1290.0
+    },
+    {
+      "date": "2026-10-19",
+      "close": 1236.0
+    },
+    {
+      "date": "2026-10-21",
+      "close": 1210.0
+    },
+    {
+      "date": "2026-10-22",
+      "close": 1212.0
+    },
+    {
+      "date": "2026-10-23",
+      "close": 1217.5
+    },
+    {
+      "date": "2026-10-26",
+      "close": 1220.0
+    },
+    {
+      "date": "2026-10-27",
+      "close": 1205.7
+    },
+    {
+      "date": "2026-10-28",
+      "close": 1220.0
+    },
+    {
+      "date": "2026-10-29",
+      "close": 1225.0
+    },
+    {
+      "date": "2026-10-30",
+      "close": 1217.0
+    },
+    {
+      "date": "2026-11-02",
+      "close": 1209.0
+    },
+    {
+      "date": "2026-11-03",
+      "close": 1232.7
+    },
+    {
+      "date": "2026-11-04",
+      "close": 1232.0
+    },
+    {
+      "date": "2026-11-05",
+      "close": 1280.0
+    },
+    {
+      "date": "2026-11-06",
+      "close": 1322.9
+    },
+    {
+      "date": "2026-11-08",
+      "close": 1314.7
+    }
+  ]
+}

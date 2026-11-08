@@ -1,0 +1,1169 @@
+{
+  "ticker": "SUZLON.NS",
+  "as_of_date": "2026-11-08",
+  "fetched_at": "2026-11-08T14:57:43.671656+00:00",
+  "current_price": 39.0,
+  "has_analyst_coverage": true,
+  "total_analysts": 12,
+  "price_targets": {
+    "current": 39.0,
+    "mean": 55.0,
+    "median": 56.0,
+    "high": 68.0,
+    "low": 40.0
+  },
+  "mean_upside_pct": 41.03,
+  "bull_upside_pct": 74.36,
+  "bear_downside_pct": 2.56,
+  "dispersion_pct": 71.79,
+  "recommendation_breakdown": {
+    "strongBuy": 3,
+    "buy": 8,
+    "hold": 1,
+    "sell": 0,
+    "strongSell": 0
+  },
+  "recommendation_trend": [
+    {
+      "period": "0m",
+      "strongBuy": 3,
+      "buy": 8,
+      "hold": 1,
+      "sell": 0,
+      "strongSell": 0,
+      "total": 12
+    },
+    {
+      "period": "-1m",
+      "strongBuy": 1,
+      "buy": 10,
+      "hold": 2,
+      "sell": 0,
+      "strongSell": 0,
+      "total": 13
+    },
+    {
+      "period": "-2m",
+      "strongBuy": 1,
+      "buy": 10,
+      "hold": 2,
+      "sell": 0,
+      "strongSell": 0,
+      "total": 13
+    }
+  ],
+  "buy_ratio_pct": 91.7,
+  "consensus_stance": "STRONG BUY",
+  "stance_color": "#10B981",
+  "fundamentals": {
+    "company_name": "Suzlon Energy Limited",
+    "market_cap": 536118311118.0,
+    "market_cap_str": "\u20b953,612 Cr",
+    "pe_ratio": 23.8,
+    "forward_pe": 19.1,
+    "pb_ratio": 5.16,
+    "dividend_yield": null,
+    "fifty_two_week_high": 60.45,
+    "fifty_two_week_low": 33.15,
+    "fifty_two_week_pct": 21.4,
+    "sector": "Industrials",
+    "industry": "Specialty Industrial Machinery",
+    "business_summary": "Suzlon Energy Limited, together with its subsidiaries, manufactures and sells wind turbine generators and related components in India and internationally. The company operates through the WTG, Foundry & Forging, O&M services, and Others segments. It offers onshore wind turbine ge..."
+  },
+  "individual_institution_predictions": [
+    {
+      "institution": "JM Financial",
+      "institution_type": "Domestic Institutional Desk",
+      "hq": "Mumbai",
+      "stance": "Accumulate",
+      "stance_color": "#0EA5E9",
+      "target_price": null,
+      "implied_upside": null,
+      "headline": "Suzlon Energy shares crash 10% after Q2 results; JM Financial downgrades stock to add, revises target... - Moneycontrol.com",
+      "published_date": "Fri, 30 Oct 2026",
+      "source": "Moneycontrol.com",
+      "link": "https://news.google.com/rss/articles/CBMi_gFBVV95cUxNTTJTbjkxV3J5em5tQjdNaGRJNmFrNkxRQzVMSkswQkJrZ29KOWlGbk1ITlN6OVdTZE01WGdPbGNQaGJmeGM2WFE3UVFzRExlX2w2djdGQjhYdTRVRDI1Sm15Xzk2djNBbnNzYVM2U2ZVV3FRcGdDVlotSlhQS0ZlVy04XzRIbHFYMzVUazdUSGJtMEJFd3dQWE5DTnp0Zm5Ma1Y5V19hbXpIUFpSTHNoVFJ4WWU4ZmNMXzNBRjZld2tEc244M0lUZEI5aVQxTmg5VVdBZG9IaEJ1VXVCRmFPYS1mY0RDaENXdkI3Rmp3OXVsUlk2M042MWo3eEZ5Z9IBgwJBVV95cUxNU2ZHMEpqaGlaUFFRak1aQTVESzgtNFNiRjViWnZJMllGQ3M4dWJSSm5BcGxHNVVaUE9jWE9DZnhVazU4TGZ4TXVmdjhZdjNXLWJPejQ0Mmtmb0xsMzZKY0Vta2xDd25jdmVYaFdMb0NCYnJPaGlYbFZzSjlqcGtFY3d5a05zUGtySXdUejVGdlZCRjM2UEtRWlpkSlBuVk1YRWJWQWhtb0ZFR0k4SzdsYWM2SlR1bHVCXzNuX3dDRzdadlhMc3JoNnRWSkNXNTNSMzNsRmhyTnZ3Nm0xSDZROTZyU2lkUllrTzRhUXByR2dSQXNqZzlkMnlwb2UtN1ZrUHZZ?oc=5"
+    },
+    {
+      "institution": "ICICI Securities",
+      "institution_type": "Domestic Institutional Desk",
+      "hq": "Mumbai",
+      "stance": "Buy",
+      "stance_color": "#10B981",
+      "target_price": 65.0,
+      "implied_upside": 66.7,
+      "headline": "Buy Suzlon Energy; target of Rs 65: ICICI Securities - TradingView",
+      "published_date": "Sun, 14 Jun 2026",
+      "source": "TradingView",
+      "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOa3poLUpmQUdmbVhwLXRna1JUR2t1ZnpIWDNRMXJpWVNtX012QjVoLXJCNUVfeVBzN1BUb0pWbG95MGxSTVJ4Q0I3OWxhdFZrdDVFLXBONzFYQ0NiWXlCZjJJeHkyUDFVaENBNEFsbUROUVg2aDBMemxUbkRfV3d2VnB6eVg2WXpQLXJoR2Y0Nk83YWx6aTQ1WDQwM2FwYjJpV0Nac0lGemN2cDZaWGt5dlhmZw?oc=5"
+    },
+    {
+      "institution": "Motilal Oswal",
+      "institution_type": "Domestic Institutional Desk",
+      "hq": "Mumbai",
+      "stance": "Buy",
+      "stance_color": "#10B981",
+      "target_price": 65.0,
+      "implied_upside": 66.7,
+      "headline": "Buy Suzlon Energy; target of Rs 65: Motilal Oswal - Moneycontrol.com",
+      "published_date": "Mon, 12 Oct 2026",
+      "source": "Moneycontrol.com",
+      "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPYkRZX20wT1VCU3dlUy16bTV2YVp0b2xLV0xhSnR0Q095cHk0SExTeF9DZ3VjSkhUNlBHR3ZkWGd1RkhFU29ZSDhUblhHM0c4U3lCS0FDUTlRbkY0eHZBc3hGeWtFcEk0RUx3d0trNDJVaUI0U3JlRG9pMnZGYmlHR19uM2QtV19vd3k3T1VNZmQ3YXJtMlJtb21nci1zX0p2bnhPRWpRY25ZeTNTc0ctYlQ1UdIBuAFBVV95cUxPemNjNExrWl9Ld3pMS3NBRmRnWmstSHRXeUd2M09kZzY2a0FudFYybkxFS0FzaEtqQUEyaDlkWUJnUTJTbDFjWlNtMHhmZkxDSmFGcFltU2FwRE45WGJMUmF4MGlwQWd3TnZRN1VzQUJFRGZCdXl5YXZWOU81c2ZJS3FPdFdIZTB2M2NCTEhlTlJvMzBwX1BCMHhOZmdXbnV2c0ZUUUlPa2NZbDIzT1g5UktWSkwxUzVj?oc=5"
+    },
+    {
+      "institution": "Prabhudas Lilladher",
+      "institution_type": "Domestic Institutional Desk",
+      "hq": "Mumbai",
+      "stance": "Buy",
+      "stance_color": "#10B981",
+      "target_price": 56.0,
+      "implied_upside": 43.6,
+      "headline": "Buy Suzlon Energy; target of Rs 56: Prabhudas Lilladher - Moneycontrol.com",
+      "published_date": "Wed, 29 Jul 2026",
+      "source": "Moneycontrol.com",
+      "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOWjJQR0NMVkJ5LTFUeXRyM21ESW5ZeWlSRHhHNTRlMjNhNU9ZT0F1NDI2dWs0eHUyZHVCTFBIV1RSOGVDTFBxbGRSTm1ReElSUktHMm9qREh0ZlIwRE1JWHl3Wm5qLVRKQ21qNzVUTU44cDF6RG1hbU90T1FSalBUVHdjS0FKQjY5YjZLV1dKZ0RiazdMbkxUWnNDUXBDSk1tNjFGSGIyeUpDVkt0bV90MkxDOERQQ0tr0gG-AUFVX3lxTE1rQTIweHRsRXpRckJiSGg3YnEwcHllS0dmeU9fcHN2UXFtS2VZX3pYRE5VWXU5dDlra0cyY3hoaU95RW1ZdlowdFprckZjT0Q3ZWlRU241TGUwc0EtR18tZG5lSFI0Q0JvblRfdm5XN2E4U2xYS0FhQTFqM24tTlM1QkNBSzZOazF5QzBCXzBVVTh2ZGpORFNSN3kxZTVnZ0VsUjVNbndvSzBCZjdhV1lKUFZDTUpfWk9YRmZKdnc?oc=5"
+    },
+    {
+      "institution": "ICICI Direct",
+      "institution_type": "Domestic Research House",
+      "hq": "Mumbai",
+      "stance": "Buy",
+      "stance_color": "#10B981",
+      "target_price": 65.0,
+      "implied_upside": 66.7,
+      "headline": "Buy Suzlon Energy; target of Rs 65: ICICI Direct - Moneycontrol.com",
+      "published_date": "Fri, 27 Feb 2026",
+      "source": "Moneycontrol.com",
+      "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPYjdvRm1rZEJqcndkcktVOE1hY09nZE5FSnZtdkgwU0pUY253dFhCN1VmZUJsRlFsV25EaFg5MkV4cXdZcXAtcy1PSTJmS0YxeV9MbUUxcm9BQVk5TXg0QVFEbjh5OW0wd3RHSmFKQ044M3F1WmlGQW8yLVc3bDI2QWlmYWRkaEV5LXkyN21STW1lNGFMbFhtcDlMMDBWVEpjUUpVeDk0Mk9uQ08yTzdB0gG0AUFVX3lxTE9kMkpjVUFsemhGUHVJUnBobHdKRUR0UUN5Yzd0Z1NJRGE4b1FqbWlJX1o1cDkwZkxmLXRLLVE5QVk3MVVVNzB5bUQxc3JEQlVrcXIzTWVrQ3hxRDd3Z1hfaW4zQTRsUzRBN280dzRDbUtJMnpnV2hFVVVka0JEM1l3Y3phcjF2Y0xCeHlNdXRVcl8yeDNIb3pSN2pLN3NLT0xrY3EzVTBscm9jZDRTdUtZVVU4aw?oc=5"
+    },
+    {
+      "institution": "Anand Rathi",
+      "institution_type": "Domestic Institutional Desk",
+      "hq": "Mumbai",
+      "stance": "Buy",
+      "stance_color": "#10B981",
+      "target_price": 82.0,
+      "implied_upside": 110.3,
+      "headline": "Buy Suzlon Energy; target of Rs 82: Anand Rathi - Moneycontrol.com",
+      "published_date": "Tue, 09 Dec 2025",
+      "source": "Moneycontrol.com",
+      "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOanJmUHE4dHI2NUhyUUF4UTV5OWVzSzBsb0NKS1hncmVuTjhrWXVmY3ctT0JvTTJmQUdTekJ0Yzh0enJzQ3NicHZHSGlnNWhMcnN1STVPQ1RYZG1JYnJlTkVkYkE4QktLT3dTeUttbTlEVWNHSnVPMHVqb1preGtjbC02aUJlc0pDbnVIS052b1ZDTzR5amxUNUlCYjJ0LU9QenZ0SVJYSmhBS093OGfSAbMBQVVfeXFMTjBfMTJva0Z3YTZXVUFiN1FBdl9kUzBQbWlrZmM1X3V0dWl4TWp6Y3Q5VlYybzdlRHZMajJmUkduLVR6RlEwWEFiUUJMUDJCdTV2eUdzTFo3VHJTSDFrbVM3Snc4QjNjOWJxUHZxTUZVWDJacWc2SUJWSFFHWHV6d2g3Yk5zZF91RkttVVlzUUZJbVBqRTA0YkxLQ1JhUUcyNlBjdVJFdXEteTZmTFVsc1hMWTA?oc=5"
+    }
+  ],
+  "expert_news": [
+    {
+      "title": "Diwali Muhurat Trading 2026: PC Jeweller, Suzlon, Vedanta Power | 3 Samvat 2083 stock picks under  \u20b950 by Mahesh Ojha",
+      "source": "Livemint Markets",
+      "published": "Sun, 08 Nov 2026 13:19:24 +0530",
+      "link": "https://www.livemint.com/market/stock-market-news/diwali-muhurat-trading-2026-pc-jeweller-suzlon-vedanta-power-3-samvat-2083-stock-picks-under-rs-50-by-mahesh-ojha-11794123128165.html"
+    },
+    {
+      "title": "Diwali Muhurat trading 2026: Top 3 Samvat 2083 stock picks under  \u20b9100 \u2014 Suzlon, NHPC, South Bank by Sumeet Bagadia",
+      "source": "Livemint Markets",
+      "published": "Sun, 08 Nov 2026 09:36:45 +0530",
+      "link": "https://www.livemint.com/market/stock-market-news/diwali-muhurat-trading-2026-top-3-samvat-2083-stock-picks-under-rs-100-suzlon-nhpc-south-bank-by-sumeet-bagadia-11794109482297.html"
+    }
+  ],
+  "history": [
+    {
+      "date": "2025-11-06",
+      "close": 59.61
+    },
+    {
+      "date": "2025-11-07",
+      "close": 57.38
+    },
+    {
+      "date": "2025-11-10",
+      "close": 57.43
+    },
+    {
+      "date": "2025-11-11",
+      "close": 57.82
+    },
+    {
+      "date": "2025-11-12",
+      "close": 58.48
+    },
+    {
+      "date": "2025-11-13",
+      "close": 57.58
+    },
+    {
+      "date": "2025-11-14",
+      "close": 57.68
+    },
+    {
+      "date": "2025-11-17",
+      "close": 57.7
+    },
+    {
+      "date": "2025-11-18",
+      "close": 56.9
+    },
+    {
+      "date": "2025-11-19",
+      "close": 56.53
+    },
+    {
+      "date": "2025-11-20",
+      "close": 56.7
+    },
+    {
+      "date": "2025-11-21",
+      "close": 55.1
+    },
+    {
+      "date": "2025-11-24",
+      "close": 54.61
+    },
+    {
+      "date": "2025-11-25",
+      "close": 54.19
+    },
+    {
+      "date": "2025-11-26",
+      "close": 55.58
+    },
+    {
+      "date": "2025-11-27",
+      "close": 54.93
+    },
+    {
+      "date": "2025-11-28",
+      "close": 54.01
+    },
+    {
+      "date": "2025-12-01",
+      "close": 53.72
+    },
+    {
+      "date": "2025-12-02",
+      "close": 53.42
+    },
+    {
+      "date": "2025-12-03",
+      "close": 52.59
+    },
+    {
+      "date": "2025-12-04",
+      "close": 50.85
+    },
+    {
+      "date": "2025-12-05",
+      "close": 51.74
+    },
+    {
+      "date": "2025-12-08",
+      "close": 51.78
+    },
+    {
+      "date": "2025-12-09",
+      "close": 52.55
+    },
+    {
+      "date": "2025-12-10",
+      "close": 51.54
+    },
+    {
+      "date": "2025-12-11",
+      "close": 52.04
+    },
+    {
+      "date": "2025-12-12",
+      "close": 53.02
+    },
+    {
+      "date": "2025-12-15",
+      "close": 53.14
+    },
+    {
+      "date": "2025-12-16",
+      "close": 52.67
+    },
+    {
+      "date": "2025-12-17",
+      "close": 51.94
+    },
+    {
+      "date": "2025-12-18",
+      "close": 51.78
+    },
+    {
+      "date": "2025-12-19",
+      "close": 52.59
+    },
+    {
+      "date": "2025-12-22",
+      "close": 53.51
+    },
+    {
+      "date": "2025-12-23",
+      "close": 53.62
+    },
+    {
+      "date": "2025-12-24",
+      "close": 53.3
+    },
+    {
+      "date": "2025-12-26",
+      "close": 53.2
+    },
+    {
+      "date": "2025-12-29",
+      "close": 52.73
+    },
+    {
+      "date": "2025-12-30",
+      "close": 52.0
+    },
+    {
+      "date": "2025-12-31",
+      "close": 52.67
+    },
+    {
+      "date": "2026-01-01",
+      "close": 52.47
+    },
+    {
+      "date": "2026-01-02",
+      "close": 54.28
+    },
+    {
+      "date": "2026-01-05",
+      "close": 53.67
+    },
+    {
+      "date": "2026-01-06",
+      "close": 53.45
+    },
+    {
+      "date": "2026-01-07",
+      "close": 52.9
+    },
+    {
+      "date": "2026-01-08",
+      "close": 50.93
+    },
+    {
+      "date": "2026-01-09",
+      "close": 49.2
+    },
+    {
+      "date": "2026-01-12",
+      "close": 49.2
+    },
+    {
+      "date": "2026-01-13",
+      "close": 48.69
+    },
+    {
+      "date": "2026-01-14",
+      "close": 49.01
+    },
+    {
+      "date": "2026-01-15",
+      "close": 49.01
+    },
+    {
+      "date": "2026-01-16",
+      "close": 48.45
+    },
+    {
+      "date": "2026-01-19",
+      "close": 47.98
+    },
+    {
+      "date": "2026-01-20",
+      "close": 46.34
+    },
+    {
+      "date": "2026-01-21",
+      "close": 45.53
+    },
+    {
+      "date": "2026-01-22",
+      "close": 46.99
+    },
+    {
+      "date": "2026-01-23",
+      "close": 45.7
+    },
+    {
+      "date": "2026-01-27",
+      "close": 45.79
+    },
+    {
+      "date": "2026-01-28",
+      "close": 47.8
+    },
+    {
+      "date": "2026-01-29",
+      "close": 47.44
+    },
+    {
+      "date": "2026-01-30",
+      "close": 47.67
+    },
+    {
+      "date": "2026-02-02",
+      "close": 46.99
+    },
+    {
+      "date": "2026-02-03",
+      "close": 49.16
+    },
+    {
+      "date": "2026-02-04",
+      "close": 49.77
+    },
+    {
+      "date": "2026-02-05",
+      "close": 47.85
+    },
+    {
+      "date": "2026-02-06",
+      "close": 48.04
+    },
+    {
+      "date": "2026-02-09",
+      "close": 48.19
+    },
+    {
+      "date": "2026-02-10",
+      "close": 47.69
+    },
+    {
+      "date": "2026-02-11",
+      "close": 47.38
+    },
+    {
+      "date": "2026-02-12",
+      "close": 46.81
+    },
+    {
+      "date": "2026-02-13",
+      "close": 45.67
+    },
+    {
+      "date": "2026-02-16",
+      "close": 46.21
+    },
+    {
+      "date": "2026-02-17",
+      "close": 45.94
+    },
+    {
+      "date": "2026-02-18",
+      "close": 46.09
+    },
+    {
+      "date": "2026-02-19",
+      "close": 45.25
+    },
+    {
+      "date": "2026-02-20",
+      "close": 44.46
+    },
+    {
+      "date": "2026-02-23",
+      "close": 44.25
+    },
+    {
+      "date": "2026-02-24",
+      "close": 44.13
+    },
+    {
+      "date": "2026-02-25",
+      "close": 43.18
+    },
+    {
+      "date": "2026-02-26",
+      "close": 43.27
+    },
+    {
+      "date": "2026-02-27",
+      "close": 42.67
+    },
+    {
+      "date": "2026-03-02",
+      "close": 40.95
+    },
+    {
+      "date": "2026-03-04",
+      "close": 39.93
+    },
+    {
+      "date": "2026-03-05",
+      "close": 40.25
+    },
+    {
+      "date": "2026-03-06",
+      "close": 39.99
+    },
+    {
+      "date": "2026-03-09",
+      "close": 39.62
+    },
+    {
+      "date": "2026-03-10",
+      "close": 41.45
+    },
+    {
+      "date": "2026-03-11",
+      "close": 41.62
+    },
+    {
+      "date": "2026-03-12",
+      "close": 42.43
+    },
+    {
+      "date": "2026-03-13",
+      "close": 41.41
+    },
+    {
+      "date": "2026-03-16",
+      "close": 41.01
+    },
+    {
+      "date": "2026-03-17",
+      "close": 41.27
+    },
+    {
+      "date": "2026-03-18",
+      "close": 42.06
+    },
+    {
+      "date": "2026-03-19",
+      "close": 41.09
+    },
+    {
+      "date": "2026-03-20",
+      "close": 41.95
+    },
+    {
+      "date": "2026-03-23",
+      "close": 39.94
+    },
+    {
+      "date": "2026-03-24",
+      "close": 41.04
+    },
+    {
+      "date": "2026-03-25",
+      "close": 42.27
+    },
+    {
+      "date": "2026-03-27",
+      "close": 40.82
+    },
+    {
+      "date": "2026-03-30",
+      "close": 39.56
+    },
+    {
+      "date": "2026-04-01",
+      "close": 41.12
+    },
+    {
+      "date": "2026-04-02",
+      "close": 40.78
+    },
+    {
+      "date": "2026-04-06",
+      "close": 41.59
+    },
+    {
+      "date": "2026-04-07",
+      "close": 41.55
+    },
+    {
+      "date": "2026-04-08",
+      "close": 44.23
+    },
+    {
+      "date": "2026-04-09",
+      "close": 44.23
+    },
+    {
+      "date": "2026-04-10",
+      "close": 45.32
+    },
+    {
+      "date": "2026-04-13",
+      "close": 45.86
+    },
+    {
+      "date": "2026-04-15",
+      "close": 49.13
+    },
+    {
+      "date": "2026-04-16",
+      "close": 50.25
+    },
+    {
+      "date": "2026-04-17",
+      "close": 52.93
+    },
+    {
+      "date": "2026-04-20",
+      "close": 52.5
+    },
+    {
+      "date": "2026-04-21",
+      "close": 53.1
+    },
+    {
+      "date": "2026-04-22",
+      "close": 54.57
+    },
+    {
+      "date": "2026-04-23",
+      "close": 53.73
+    },
+    {
+      "date": "2026-04-24",
+      "close": 53.91
+    },
+    {
+      "date": "2026-04-27",
+      "close": 56.93
+    },
+    {
+      "date": "2026-04-28",
+      "close": 57.32
+    },
+    {
+      "date": "2026-04-29",
+      "close": 56.81
+    },
+    {
+      "date": "2026-04-30",
+      "close": 55.58
+    },
+    {
+      "date": "2026-05-04",
+      "close": 54.96
+    },
+    {
+      "date": "2026-05-05",
+      "close": 54.85
+    },
+    {
+      "date": "2026-05-06",
+      "close": 54.32
+    },
+    {
+      "date": "2026-05-07",
+      "close": 55.65
+    },
+    {
+      "date": "2026-05-08",
+      "close": 54.97
+    },
+    {
+      "date": "2026-05-11",
+      "close": 53.3
+    },
+    {
+      "date": "2026-05-12",
+      "close": 51.52
+    },
+    {
+      "date": "2026-05-13",
+      "close": 53.1
+    },
+    {
+      "date": "2026-05-14",
+      "close": 53.47
+    },
+    {
+      "date": "2026-05-15",
+      "close": 53.84
+    },
+    {
+      "date": "2026-05-18",
+      "close": 53.25
+    },
+    {
+      "date": "2026-05-19",
+      "close": 52.91
+    },
+    {
+      "date": "2026-05-20",
+      "close": 52.57
+    },
+    {
+      "date": "2026-05-21",
+      "close": 52.87
+    },
+    {
+      "date": "2026-05-22",
+      "close": 53.75
+    },
+    {
+      "date": "2026-05-25",
+      "close": 53.99
+    },
+    {
+      "date": "2026-05-26",
+      "close": 54.58
+    },
+    {
+      "date": "2026-05-27",
+      "close": 57.53
+    },
+    {
+      "date": "2026-05-29",
+      "close": 56.99
+    },
+    {
+      "date": "2026-06-01",
+      "close": 53.93
+    },
+    {
+      "date": "2026-06-02",
+      "close": 54.52
+    },
+    {
+      "date": "2026-06-03",
+      "close": 54.4
+    },
+    {
+      "date": "2026-06-04",
+      "close": 55.62
+    },
+    {
+      "date": "2026-06-05",
+      "close": 55.31
+    },
+    {
+      "date": "2026-06-08",
+      "close": 54.43
+    },
+    {
+      "date": "2026-06-09",
+      "close": 55.23
+    },
+    {
+      "date": "2026-06-10",
+      "close": 54.08
+    },
+    {
+      "date": "2026-06-11",
+      "close": 53.29
+    },
+    {
+      "date": "2026-06-12",
+      "close": 55.08
+    },
+    {
+      "date": "2026-06-15",
+      "close": 55.57
+    },
+    {
+      "date": "2026-06-16",
+      "close": 57.92
+    },
+    {
+      "date": "2026-06-17",
+      "close": 59.27
+    },
+    {
+      "date": "2026-06-18",
+      "close": 58.44
+    },
+    {
+      "date": "2026-06-19",
+      "close": 59.2
+    },
+    {
+      "date": "2026-06-22",
+      "close": 59.31
+    },
+    {
+      "date": "2026-06-23",
+      "close": 58.29
+    },
+    {
+      "date": "2026-06-24",
+      "close": 57.91
+    },
+    {
+      "date": "2026-06-25",
+      "close": 57.14
+    },
+    {
+      "date": "2026-06-29",
+      "close": 57.21
+    },
+    {
+      "date": "2026-06-30",
+      "close": 58.9
+    },
+    {
+      "date": "2026-07-01",
+      "close": 58.35
+    },
+    {
+      "date": "2026-07-02",
+      "close": 57.67
+    },
+    {
+      "date": "2026-07-03",
+      "close": 56.87
+    },
+    {
+      "date": "2026-07-06",
+      "close": 55.47
+    },
+    {
+      "date": "2026-07-07",
+      "close": 54.38
+    },
+    {
+      "date": "2026-07-08",
+      "close": 53.13
+    },
+    {
+      "date": "2026-07-09",
+      "close": 53.7
+    },
+    {
+      "date": "2026-07-10",
+      "close": 53.92
+    },
+    {
+      "date": "2026-07-13",
+      "close": 53.17
+    },
+    {
+      "date": "2026-07-14",
+      "close": 52.47
+    },
+    {
+      "date": "2026-07-15",
+      "close": 52.42
+    },
+    {
+      "date": "2026-07-16",
+      "close": 51.97
+    },
+    {
+      "date": "2026-07-17",
+      "close": 51.99
+    },
+    {
+      "date": "2026-07-20",
+      "close": 53.09
+    },
+    {
+      "date": "2026-07-21",
+      "close": 53.17
+    },
+    {
+      "date": "2026-07-22",
+      "close": 53.01
+    },
+    {
+      "date": "2026-07-23",
+      "close": 52.39
+    },
+    {
+      "date": "2026-07-24",
+      "close": 52.28
+    },
+    {
+      "date": "2026-07-27",
+      "close": 53.15
+    },
+    {
+      "date": "2026-07-28",
+      "close": 48.02
+    },
+    {
+      "date": "2026-07-29",
+      "close": 47.45
+    },
+    {
+      "date": "2026-07-30",
+      "close": 47.4
+    },
+    {
+      "date": "2026-07-31",
+      "close": 48.01
+    },
+    {
+      "date": "2026-08-03",
+      "close": 48.1
+    },
+    {
+      "date": "2026-08-04",
+      "close": 48.01
+    },
+    {
+      "date": "2026-08-05",
+      "close": 48.15
+    },
+    {
+      "date": "2026-08-06",
+      "close": 48.1
+    },
+    {
+      "date": "2026-08-07",
+      "close": 48.15
+    },
+    {
+      "date": "2026-08-10",
+      "close": 47.5
+    },
+    {
+      "date": "2026-08-11",
+      "close": 47.5
+    },
+    {
+      "date": "2026-08-12",
+      "close": 47.35
+    },
+    {
+      "date": "2026-08-13",
+      "close": 47.61
+    },
+    {
+      "date": "2026-08-14",
+      "close": 47.1
+    },
+    {
+      "date": "2026-08-17",
+      "close": 49.0
+    },
+    {
+      "date": "2026-08-18",
+      "close": 47.78
+    },
+    {
+      "date": "2026-08-19",
+      "close": 46.77
+    },
+    {
+      "date": "2026-08-20",
+      "close": 47.0
+    },
+    {
+      "date": "2026-08-21",
+      "close": 46.71
+    },
+    {
+      "date": "2026-08-24",
+      "close": 47.05
+    },
+    {
+      "date": "2026-08-25",
+      "close": 46.75
+    },
+    {
+      "date": "2026-08-26",
+      "close": 46.94
+    },
+    {
+      "date": "2026-08-27",
+      "close": 46.81
+    },
+    {
+      "date": "2026-08-28",
+      "close": 46.79
+    },
+    {
+      "date": "2026-08-31",
+      "close": 47.52
+    },
+    {
+      "date": "2026-09-01",
+      "close": 46.5
+    },
+    {
+      "date": "2026-09-02",
+      "close": 45.46
+    },
+    {
+      "date": "2026-09-03",
+      "close": 46.03
+    },
+    {
+      "date": "2026-09-04",
+      "close": 45.35
+    },
+    {
+      "date": "2026-09-07",
+      "close": 45.55
+    },
+    {
+      "date": "2026-09-08",
+      "close": 45.5
+    },
+    {
+      "date": "2026-09-09",
+      "close": 45.45
+    },
+    {
+      "date": "2026-09-10",
+      "close": 44.22
+    },
+    {
+      "date": "2026-09-11",
+      "close": 44.12
+    },
+    {
+      "date": "2026-09-15",
+      "close": 42.9
+    },
+    {
+      "date": "2026-09-16",
+      "close": 42.15
+    },
+    {
+      "date": "2026-09-17",
+      "close": 42.54
+    },
+    {
+      "date": "2026-09-18",
+      "close": 43.14
+    },
+    {
+      "date": "2026-09-21",
+      "close": 43.34
+    },
+    {
+      "date": "2026-09-22",
+      "close": 43.0
+    },
+    {
+      "date": "2026-09-23",
+      "close": 42.39
+    },
+    {
+      "date": "2026-09-24",
+      "close": 40.74
+    },
+    {
+      "date": "2026-09-25",
+      "close": 40.8
+    },
+    {
+      "date": "2026-09-28",
+      "close": 39.66
+    },
+    {
+      "date": "2026-09-29",
+      "close": 39.5
+    },
+    {
+      "date": "2026-09-30",
+      "close": 39.49
+    },
+    {
+      "date": "2026-10-01",
+      "close": 38.91
+    },
+    {
+      "date": "2026-10-05",
+      "close": 38.92
+    },
+    {
+      "date": "2026-10-06",
+      "close": 39.16
+    },
+    {
+      "date": "2026-10-07",
+      "close": 38.34
+    },
+    {
+      "date": "2026-10-08",
+      "close": 36.43
+    },
+    {
+      "date": "2026-10-09",
+      "close": 37.6
+    },
+    {
+      "date": "2026-10-12",
+      "close": 39.57
+    },
+    {
+      "date": "2026-10-13",
+      "close": 40.19
+    },
+    {
+      "date": "2026-10-14",
+      "close": 40.8
+    },
+    {
+      "date": "2026-10-15",
+      "close": 40.95
+    },
+    {
+      "date": "2026-10-16",
+      "close": 42.0
+    },
+    {
+      "date": "2026-10-19",
+      "close": 40.38
+    },
+    {
+      "date": "2026-10-21",
+      "close": 39.4
+    },
+    {
+      "date": "2026-10-22",
+      "close": 38.57
+    },
+    {
+      "date": "2026-10-23",
+      "close": 37.4
+    },
+    {
+      "date": "2026-10-26",
+      "close": 37.12
+    },
+    {
+      "date": "2026-10-27",
+      "close": 36.92
+    },
+    {
+      "date": "2026-10-28",
+      "close": 37.3
+    },
+    {
+      "date": "2026-10-29",
+      "close": 36.79
+    },
+    {
+      "date": "2026-10-30",
+      "close": 33.9
+    },
+    {
+      "date": "2026-11-02",
+      "close": 35.25
+    },
+    {
+      "date": "2026-11-03",
+      "close": 35.75
+    },
+    {
+      "date": "2026-11-04",
+      "close": 37.45
+    },
+    {
+      "date": "2026-11-05",
+      "close": 38.59
+    },
+    {
+      "date": "2026-11-06",
+      "close": 38.8
+    },
+    {
+      "date": "2026-11-08",
+      "close": 39.0
+    }
+  ]
+}

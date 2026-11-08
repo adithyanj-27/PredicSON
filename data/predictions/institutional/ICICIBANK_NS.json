@@ -1,0 +1,1209 @@
+{
+  "ticker": "ICICIBANK.NS",
+  "as_of_date": "2026-11-08",
+  "fetched_at": "2026-11-08T14:56:39.569626+00:00",
+  "current_price": 1565.0,
+  "has_analyst_coverage": true,
+  "total_analysts": 42,
+  "price_targets": {
+    "current": 1565.0,
+    "mean": 1768.79,
+    "median": 1751.0,
+    "high": 2040.0,
+    "low": 1645.0
+  },
+  "mean_upside_pct": 13.02,
+  "bull_upside_pct": 30.35,
+  "bear_downside_pct": 5.11,
+  "dispersion_pct": 25.24,
+  "recommendation_breakdown": {
+    "strongBuy": 5,
+    "buy": 37,
+    "hold": 0,
+    "sell": 0,
+    "strongSell": 0
+  },
+  "recommendation_trend": [
+    {
+      "period": "0m",
+      "strongBuy": 5,
+      "buy": 37,
+      "hold": 0,
+      "sell": 0,
+      "strongSell": 0,
+      "total": 42
+    },
+    {
+      "period": "-1m",
+      "strongBuy": 5,
+      "buy": 37,
+      "hold": 0,
+      "sell": 0,
+      "strongSell": 0,
+      "total": 42
+    },
+    {
+      "period": "-2m",
+      "strongBuy": 5,
+      "buy": 37,
+      "hold": 0,
+      "sell": 0,
+      "strongSell": 0,
+      "total": 42
+    },
+    {
+      "period": "-3m",
+      "strongBuy": 5,
+      "buy": 37,
+      "hold": 0,
+      "sell": 0,
+      "strongSell": 0,
+      "total": 42
+    }
+  ],
+  "buy_ratio_pct": 100.0,
+  "consensus_stance": "STRONG BUY",
+  "stance_color": "#10B981",
+  "fundamentals": {
+    "company_name": "ICICI Bank Limited",
+    "market_cap": 11238033276710.0,
+    "market_cap_str": "\u20b911.24 Lakh Cr",
+    "pe_ratio": 19.2,
+    "forward_pe": 16.0,
+    "pb_ratio": 2.88,
+    "dividend_yield": 76.0,
+    "fifty_two_week_high": 1571.2,
+    "fifty_two_week_low": 1187.6,
+    "fifty_two_week_pct": 98.4,
+    "sector": "Financial Services",
+    "industry": "Banks - Regional",
+    "business_summary": "ICICI Bank Limited, together with its subsidiaries, engages in the provision of various banking and financial services to corporate and retail customers in India and internationally. The company operates through Retail Banking, Wholesale Banking, Treasury, Other Banking, Life Ins..."
+  },
+  "individual_institution_predictions": [
+    {
+      "institution": "Geojit",
+      "institution_type": "Domestic Research House",
+      "hq": "Kochi",
+      "stance": "Buy",
+      "stance_color": "#10B981",
+      "target_price": 1650.0,
+      "implied_upside": 5.4,
+      "headline": "Buy ICICI Bank; target of Rs 1650: Geojit Financial Services - Moneycontrol.com",
+      "published_date": "Fri, 24 Jul 2026",
+      "source": "Moneycontrol.com",
+      "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOR3BmRGp0anRqcUhHSVVETWllNTVTNFU3R0NVajkyaWRwOHdWcEJMRnF5NHlQVDdRd3Z6ZkZvVXh2LTBDQlFSRzhOYVk3U1dpVk52WXJTdURFN3MxbUxTUURoanptMkJnX0NkWWs4RFZYaVFhbnN5aVN0QmlGbktNSXlVQkdUcGRMOXFhbGZtWnJ1ZzlocEpIbGZ3MHFmcDU3QUtjNVVHLW45RjJuWDl2UHJES2xlZm45LUxrV0h3UdIBxAFBVV95cUxOWi1UMmdjWlQxMExJQkJycVFNLU0tczFKajRPTnZTVmZhTjZUVFpnUnVfVUlyUFp6U0ZUcHhQaGQxY1hGbTl3TENONEY3TmtuV1o0V0UzaUdwaUZnaUM1SGw3QXZWM00wNlVySEJDeF9LQlFYN1Y0UmxJN0lFcEo5aXl5ZjRNRm4yT3laYllBVm11Nkc2dXl6aW5kbUhrU2QzLXFSNEdCbzBpS2NSMTY4VHdiY3FVYUR6SkQtN1ROamNFVUJY?oc=5"
+    },
+    {
+      "institution": "Kotak",
+      "institution_type": "Domestic Institutional Desk",
+      "hq": "Mumbai",
+      "stance": "Research Call",
+      "stance_color": "#38BDF8",
+      "target_price": null,
+      "implied_upside": null,
+      "headline": "Muhurat Trading 2026: HDFC Bank, Kotak Mahindra Bank, ICICI Bank, Ujjivan SFB among top banking picks - bfsi.economictimes.indiatimes.com",
+      "published_date": "Fri, 06 Nov 2026",
+      "source": "bfsi.economictimes.indiatimes.com",
+      "link": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxPZkJYU1dxaUgzWEZjQWZIOTdnRk5vamZ2MzZxOVNmRlIwVnVCZ1R3SFc1bE5KR1lKaEhPZnlqNVdGODd4bmdBNzl3NV9yUEZxWXVlbGNCMXZTZFQ0aGJMRGd4QmdveUhNM05vOEZrVVZEU3dWcWZmV1Ixb0oxalktTU5DckZfZWVMd0prQTNTcEQtYWs0aXR5RWJFQkFFV0QxX243bDdUTmluaFY3T2tMU2Q4UDNNUk9rZ0NZQ215djBPUUVnR0NXcFE3R2p3MkUyRGVGTlhtT2k5dHRuUmxnNjhnZWNIRjY2YS1WQS1qUdIB9AFBVV95cUxOeWh6UUM0NkFJNkFyazJTdS03TGRzLTBuSFI1eU9GNDdBNXpHVk5NUXA3VjRxOHJ4dnQwNTh3UUZZQzA5MXpFQ3lFQWxaTGNXVXB4OWNsaVZrNC1DdnlGUjJNbmdJcVoxU01HcmFPUWhwQzRYb25qY2tXQXhsMzNvc29vMzJhTVhRV1dmX0ppOVRFQTU2NWRubDFyWjlHVU4taXJ3S25mVWxZRVlwbVRIVUItUmVFdFNRVkJQU0RwbEMxeHdkTkNCZVFWY01KOEZzSXBrejFpWFZ5VzdHbzVyQk9ueVg1M3pVUmxMRjN3ckdrYXBJ?oc=5"
+    },
+    {
+      "institution": "JPMorgan",
+      "institution_type": "Global Investment Bank",
+      "hq": "New York / Mumbai",
+      "stance": "Research Call",
+      "stance_color": "#38BDF8",
+      "target_price": null,
+      "implied_upside": null,
+      "headline": "JPMorgan raises ICICI Bank stock price target on strong earnings - Investing.com",
+      "published_date": "Sun, 18 Oct 2026",
+      "source": "Investing.com",
+      "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPbFI3ZE5FcEtoNVR6MFVycHFPOUtvTklNYk1KVUlSZk9EeWxDdE54OVYtZ1dmMDJGUjFadzhaNGc1Q2lRZExub1hWX2VxaFp3MXl1VWhTeTFyREJ0VFI1TVFLRXJwR1o1bjhmY1ZIdDFHam1SbFAyX2g2U01kaGI4QzI4T1hfV1BxdUtNcEg1TlJPdFNMaE4yY3Azd1B2WkkxUlBXS1I1TkREVmFaWnV3NWQ4RV82UGQwV2oxYUpOcThRZw?oc=5"
+    },
+    {
+      "institution": "Emkay",
+      "institution_type": "Domestic Institutional Desk",
+      "hq": "Mumbai",
+      "stance": "Buy",
+      "stance_color": "#10B981",
+      "target_price": 1785.0,
+      "implied_upside": 14.1,
+      "headline": "Buy ICICI Bank; target of Rs 1785: Emkay Global Financial - Moneycontrol.com",
+      "published_date": "Mon, 19 Oct 2026",
+      "source": "Moneycontrol.com",
+      "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPSGowQ0R4cjN3aW1hdnhSY1VjeFJpMGVfQzNxTVlhSG45dFJXS2dNUXAwSzVpbEtfSWZQQWYzUU90eUFpTzRZbTdSREg3S2pPVnhiSlhfaGNCcmhqcjMyOHVJOXdnbFg0bWltSE5PdTlRMm9keUtxV1JxZ3dRa29XekNvRHJFNUlIMkd0RDdPdlh6ZE1GYU9YOFZBUEkySHFVTXhsZzBBNjFWSU9wajc0WDh3QjRrbHZVTEJBWWhB0gHDAUFVX3lxTFB1NHh1bWx2ZWphVlFYWGRic1loUWlIMWZnN1dZaWRRSXdEcW1KNGpVeGVsU0VDb2c2cHBJcWZJMHk5N0t1WnBRbW13LVJ3WlRqVTI4aG9XdjloTTZHX3lSUTZ5OUpxdXVKRmtETFZGRGEzT0Zobll1dldzYzZFNGY0Rl80NGx1SDRGZVRFMWN1WC1xZ0g0MFIteTdSaXJwc3piTjZTQzc3aTRod2Y0S0xUUmhDeFhrMmR1UnRkWmtZemRsZw?oc=5"
+    },
+    {
+      "institution": "Prabhudas Lilladher",
+      "institution_type": "Domestic Institutional Desk",
+      "hq": "Mumbai",
+      "stance": "Buy",
+      "stance_color": "#10B981",
+      "target_price": 1900.0,
+      "implied_upside": 21.4,
+      "headline": "Buy ICICI Bank; target of Rs 1900: Prabhudas Lilladher - Moneycontrol.com",
+      "published_date": "Mon, 19 Oct 2026",
+      "source": "Moneycontrol.com",
+      "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQSkFnMG1ZS1h5S3FDOEJva2x0OGhfOG1SSndKTUt0N2FZVVpJTmxyREdPazAxMUxwbHhnVy14OVJzcnliN2tjMWVyWU1PeWdHc0JUS1ZDMlk0QmpJR0c1S1ZmQ0dHYlhlZ0NpQVZGOThBcDhyR09Ua3RqQ05pNmVtNThxblZsVVppazNzS1BOS25WV2UyNkxXanRNcFhMWjFsUW9nbDhHc2tPNmhRNG1oMUJpYzhyRTZxLWfSAb8BQVVfeXFMTkJhaXZySk1xcXBRTjZuenlvSmNPemJDODBkM0tNc0FoZjB1cnBJNi1XajlvS2N0WnJGX21GVThzOUN2MUFGWjNHMl9VVWIxUDhNdDBrY21oTUcwRGFjSXJ0ZnBiU1F4SWk0aTZuQ2k5RkNKX3IyelpRcUlJald4R1FWMzBRU21wUGhjdmN5REZxcE4tbi12WGZ2UC1ZOVhQQmVKdVNqcFhuaE9LUkU2T1JhV0xwS241MEd4cmJnQTA?oc=5"
+    },
+    {
+      "institution": "Motilal Oswal",
+      "institution_type": "Domestic Institutional Desk",
+      "hq": "Mumbai",
+      "stance": "Buy",
+      "stance_color": "#10B981",
+      "target_price": 1750.0,
+      "implied_upside": 11.8,
+      "headline": "Buy ICICI Bank; target of Rs 1750: Motilal Oswal - Moneycontrol.com",
+      "published_date": "Mon, 19 Oct 2026",
+      "source": "Moneycontrol.com",
+      "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQLWZoczlNNVVDQ1RIa09Mc0JxYmhvVmo4bkYteW84ZmNDSFl4WldyMENIZFhGdzJYS2xxSmVMTTJHckRpa19MOW42b3VwY3o2dlQybWxQaWEwbzgweVJwRmhEdU44NjBVVi0zWmdIbkJ4RzhUR0M0dGI2TVpNbVppZlBoU3ZTT0Yya1BySGhVa3lIUFNZLW94TGxNQ3lyclNzNDJkZjNvdnRmUlJPMW0zXzJn0gG3AUFVX3lxTE1WcUo0Z0ZqTEhqLU8tbENSaUtWVkpQVGhhMGdJZDFObkNkOTVDM1hRd1ZPRC1vd2dfSUp4ZGlUMGxiZ0d1RkxpVG1tZi1sODhsRlR3TU4yR1R4bzhvMVpWa0pwQ3pTZHAxNmsyOG5TLTFMM2I4Q2ZFZUduMi04LXRRSjE4S09qN3lCT3RTRDIxRjFDaUhqZWhOb1ptZlY0ckZ4LU1OaDVJMFlMd3pZNUltUF9vRFdoTQ?oc=5"
+    },
+    {
+      "institution": "ICICI Securities",
+      "institution_type": "Domestic Institutional Desk",
+      "hq": "Mumbai",
+      "stance": "Buy",
+      "stance_color": "#10B981",
+      "target_price": null,
+      "implied_upside": null,
+      "headline": "Buy Ujjivan Small Finance Bank; target of Rs 90: ICICI Securities - Moneycontrol.com",
+      "published_date": "Wed, 02 Sep 2026",
+      "source": "Moneycontrol.com",
+      "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQc1VOdWtia28xdW5EQkd4V3YtM0dLcTVwdVRiZVlGUkRLeHlaSlJXcFBtQWFGUURpSkExcXlNc3lRLTNaSTlOVmhrYXh4ODRVcW8yM240bHlMSW5LNHpFRHVOcmJNRXVfam85LU5XSUF4TXFKd084bERPMzVjOU5UT0RFU3I0UjdxR3JIcjdzTGdnU0tSU1JBeThDdXh0ZGJzV2tkZkpPWkNOaExjN1dLam5KbWRuS1JmM3VDbVJwLW5UR3lLazMxR9IBzgFBVV95cUxNdzVqbEpoT05ya1VIWG55S3ptQWVnZkNmN0FWdnhyRWtJQkZZUVFTcUNmOTlQTGJNcXZQTjdVb29NRjVWaFNubDBmTWRYWWJreEZRc0ZuTFprNWpKMXBkNmpfUWs4Nzl0N25UVjJzNzFaV29wLUI3X1NFakJLcnB3SzBMLVU1SmxMSklaUzU2ZWJpUGpWYUczazk0SEVJRTZmZHVKWVBseE0wenJEQUE5VGpvRVBROHNIaFB4X3RPWFN4Zno0WU5xclZPSjBUQQ?oc=5"
+    }
+  ],
+  "expert_news": [
+    {
+      "title": "\u200bMarket Trading Guide: ITC, ICICI Bank among 5 stock recommendations for Muhurat trading session",
+      "source": "Economictimes Markets",
+      "published": "Sun, 08 Nov 2026 09:39:18 +0530",
+      "link": "https://economictimes.indiatimes.com/markets/stocks/news/market-trading-guide-itc-icici-bank-among-5-stock-recommendations-for-muhurat-trading-session/slideshow/135651235.cms"
+    },
+    {
+      "title": "ICICI Bank Share Price Highlights: ICICI Bank Stock Price History",
+      "source": "Economictimes Markets",
+      "published": "Sun, 08 Nov 2026 08:16:34 +0530",
+      "link": "https://economictimes.indiatimes.com/markets/stocks/stock-liveblog/icici-bank-share-price-live-08-nov-2026/liveblog/135649900.cms"
+    },
+    {
+      "title": "\u200bMarket Trading Guide: ITC, ICICI Bank among 5 stock recommendations for Muhurat trading session",
+      "source": "Economictimes Stocks",
+      "published": "Sun, 08 Nov 2026 09:39:18 +0530",
+      "link": "https://economictimes.indiatimes.com/markets/stocks/news/market-trading-guide-itc-icici-bank-among-5-stock-recommendations-for-muhurat-trading-session/slideshow/135651235.cms"
+    },
+    {
+      "title": "ICICI Bank Share Price Highlights: ICICI Bank Stock Price History",
+      "source": "Economictimes Stocks",
+      "published": "Sun, 08 Nov 2026 08:16:34 +0530",
+      "link": "https://economictimes.indiatimes.com/markets/stocks/stock-liveblog/icici-bank-share-price-live-08-nov-2026/liveblog/135649900.cms"
+    },
+    {
+      "title": "Diwali Muhurat Trading stock picks 2026: ICICI Bank, PVR Inox, Eternal among Geojit's 10 shares | Samvat 2083",
+      "source": "Livemint Markets",
+      "published": "Sun, 08 Nov 2026 12:54:17 +0530",
+      "link": "https://www.livemint.com/market/stock-market-news/diwali-muhurat-trading-stock-picks-2026-icici-bank-pvr-inox-eternal-among-geojits-10-shares-samvat-2083-11794118050114.html"
+    }
+  ],
+  "history": [
+    {
+      "date": "2025-11-06",
+      "close": 1309.36
+    },
+    {
+      "date": "2025-11-07",
+      "close": 1331.77
+    },
+    {
+      "date": "2025-11-10",
+      "close": 1336.73
+    },
+    {
+      "date": "2025-11-11",
+      "close": 1346.94
+    },
+    {
+      "date": "2025-11-12",
+      "close": 1347.54
+    },
+    {
+      "date": "2025-11-13",
+      "close": 1374.31
+    },
+    {
+      "date": "2025-11-14",
+      "close": 1361.52
+    },
+    {
+      "date": "2025-11-17",
+      "close": 1367.47
+    },
+    {
+      "date": "2025-11-18",
+      "close": 1361.92
+    },
+    {
+      "date": "2025-11-19",
+      "close": 1371.54
+    },
+    {
+      "date": "2025-11-20",
+      "close": 1371.44
+    },
+    {
+      "date": "2025-11-21",
+      "close": 1358.05
+    },
+    {
+      "date": "2025-11-24",
+      "close": 1356.96
+    },
+    {
+      "date": "2025-11-25",
+      "close": 1346.45
+    },
+    {
+      "date": "2025-11-26",
+      "close": 1363.51
+    },
+    {
+      "date": "2025-11-27",
+      "close": 1380.56
+    },
+    {
+      "date": "2025-11-28",
+      "close": 1377.19
+    },
+    {
+      "date": "2025-12-01",
+      "close": 1378.48
+    },
+    {
+      "date": "2025-12-02",
+      "close": 1361.52
+    },
+    {
+      "date": "2025-12-03",
+      "close": 1379.87
+    },
+    {
+      "date": "2025-12-04",
+      "close": 1375.11
+    },
+    {
+      "date": "2025-12-05",
+      "close": 1380.86
+    },
+    {
+      "date": "2025-12-08",
+      "close": 1377.98
+    },
+    {
+      "date": "2025-12-09",
+      "close": 1363.7
+    },
+    {
+      "date": "2025-12-10",
+      "close": 1352.2
+    },
+    {
+      "date": "2025-12-11",
+      "close": 1348.63
+    },
+    {
+      "date": "2025-12-12",
+      "close": 1354.58
+    },
+    {
+      "date": "2025-12-15",
+      "close": 1353.79
+    },
+    {
+      "date": "2025-12-16",
+      "close": 1354.58
+    },
+    {
+      "date": "2025-12-17",
+      "close": 1341.09
+    },
+    {
+      "date": "2025-12-18",
+      "close": 1345.46
+    },
+    {
+      "date": "2025-12-19",
+      "close": 1342.78
+    },
+    {
+      "date": "2025-12-22",
+      "close": 1357.06
+    },
+    {
+      "date": "2025-12-23",
+      "close": 1351.61
+    },
+    {
+      "date": "2025-12-24",
+      "close": 1348.43
+    },
+    {
+      "date": "2025-12-26",
+      "close": 1339.11
+    },
+    {
+      "date": "2025-12-29",
+      "close": 1332.07
+    },
+    {
+      "date": "2025-12-30",
+      "close": 1331.28
+    },
+    {
+      "date": "2025-12-31",
+      "close": 1331.67
+    },
+    {
+      "date": "2026-01-01",
+      "close": 1326.81
+    },
+    {
+      "date": "2026-01-02",
+      "close": 1344.07
+    },
+    {
+      "date": "2026-01-05",
+      "close": 1360.03
+    },
+    {
+      "date": "2026-01-06",
+      "close": 1399.4
+    },
+    {
+      "date": "2026-01-07",
+      "close": 1415.76
+    },
+    {
+      "date": "2026-01-08",
+      "close": 1423.0
+    },
+    {
+      "date": "2026-01-09",
+      "close": 1392.56
+    },
+    {
+      "date": "2026-01-12",
+      "close": 1401.29
+    },
+    {
+      "date": "2026-01-13",
+      "close": 1424.99
+    },
+    {
+      "date": "2026-01-14",
+      "close": 1406.54
+    },
+    {
+      "date": "2026-01-15",
+      "close": 1406.54
+    },
+    {
+      "date": "2026-01-16",
+      "close": 1399.01
+    },
+    {
+      "date": "2026-01-19",
+      "close": 1369.06
+    },
+    {
+      "date": "2026-01-20",
+      "close": 1364.3
+    },
+    {
+      "date": "2026-01-21",
+      "close": 1337.72
+    },
+    {
+      "date": "2026-01-22",
+      "close": 1334.25
+    },
+    {
+      "date": "2026-01-23",
+      "close": 1332.17
+    },
+    {
+      "date": "2026-01-27",
+      "close": 1350.02
+    },
+    {
+      "date": "2026-01-28",
+      "close": 1356.27
+    },
+    {
+      "date": "2026-01-29",
+      "close": 1372.03
+    },
+    {
+      "date": "2026-01-30",
+      "close": 1343.67
+    },
+    {
+      "date": "2026-02-02",
+      "close": 1341.49
+    },
+    {
+      "date": "2026-02-03",
+      "close": 1378.08
+    },
+    {
+      "date": "2026-02-04",
+      "close": 1396.63
+    },
+    {
+      "date": "2026-02-05",
+      "close": 1384.83
+    },
+    {
+      "date": "2026-02-06",
+      "close": 1394.34
+    },
+    {
+      "date": "2026-02-09",
+      "close": 1384.63
+    },
+    {
+      "date": "2026-02-10",
+      "close": 1394.74
+    },
+    {
+      "date": "2026-02-11",
+      "close": 1394.34
+    },
+    {
+      "date": "2026-02-12",
+      "close": 1418.05
+    },
+    {
+      "date": "2026-02-13",
+      "close": 1402.77
+    },
+    {
+      "date": "2026-02-16",
+      "close": 1399.8
+    },
+    {
+      "date": "2026-02-17",
+      "close": 1395.73
+    },
+    {
+      "date": "2026-02-18",
+      "close": 1396.43
+    },
+    {
+      "date": "2026-02-19",
+      "close": 1377.19
+    },
+    {
+      "date": "2026-02-20",
+      "close": 1382.84
+    },
+    {
+      "date": "2026-02-23",
+      "close": 1387.7
+    },
+    {
+      "date": "2026-02-24",
+      "close": 1373.22
+    },
+    {
+      "date": "2026-02-25",
+      "close": 1388.79
+    },
+    {
+      "date": "2026-02-26",
+      "close": 1393.16
+    },
+    {
+      "date": "2026-02-27",
+      "close": 1367.37
+    },
+    {
+      "date": "2026-03-02",
+      "close": 1362.51
+    },
+    {
+      "date": "2026-03-04",
+      "close": 1353.99
+    },
+    {
+      "date": "2026-03-05",
+      "close": 1346.25
+    },
+    {
+      "date": "2026-03-06",
+      "close": 1302.42
+    },
+    {
+      "date": "2026-03-09",
+      "close": 1267.71
+    },
+    {
+      "date": "2026-03-10",
+      "close": 1300.93
+    },
+    {
+      "date": "2026-03-11",
+      "close": 1283.78
+    },
+    {
+      "date": "2026-03-12",
+      "close": 1255.91
+    },
+    {
+      "date": "2026-03-13",
+      "close": 1244.31
+    },
+    {
+      "date": "2026-03-16",
+      "close": 1262.26
+    },
+    {
+      "date": "2026-03-17",
+      "close": 1277.93
+    },
+    {
+      "date": "2026-03-18",
+      "close": 1278.52
+    },
+    {
+      "date": "2026-03-19",
+      "close": 1239.65
+    },
+    {
+      "date": "2026-03-20",
+      "close": 1234.99
+    },
+    {
+      "date": "2026-03-23",
+      "close": 1212.48
+    },
+    {
+      "date": "2026-03-24",
+      "close": 1240.74
+    },
+    {
+      "date": "2026-03-25",
+      "close": 1249.17
+    },
+    {
+      "date": "2026-03-27",
+      "close": 1223.49
+    },
+    {
+      "date": "2026-03-30",
+      "close": 1195.82
+    },
+    {
+      "date": "2026-04-01",
+      "close": 1202.56
+    },
+    {
+      "date": "2026-04-02",
+      "close": 1205.64
+    },
+    {
+      "date": "2026-04-06",
+      "close": 1221.11
+    },
+    {
+      "date": "2026-04-07",
+      "close": 1235.09
+    },
+    {
+      "date": "2026-04-08",
+      "close": 1298.26
+    },
+    {
+      "date": "2026-04-09",
+      "close": 1270.59
+    },
+    {
+      "date": "2026-04-10",
+      "close": 1310.85
+    },
+    {
+      "date": "2026-04-13",
+      "close": 1339.8
+    },
+    {
+      "date": "2026-04-15",
+      "close": 1336.83
+    },
+    {
+      "date": "2026-04-16",
+      "close": 1334.25
+    },
+    {
+      "date": "2026-04-17",
+      "close": 1335.54
+    },
+    {
+      "date": "2026-04-20",
+      "close": 1344.86
+    },
+    {
+      "date": "2026-04-21",
+      "close": 1376.79
+    },
+    {
+      "date": "2026-04-22",
+      "close": 1356.17
+    },
+    {
+      "date": "2026-04-23",
+      "close": 1336.73
+    },
+    {
+      "date": "2026-04-24",
+      "close": 1315.11
+    },
+    {
+      "date": "2026-04-27",
+      "close": 1303.11
+    },
+    {
+      "date": "2026-04-28",
+      "close": 1281.2
+    },
+    {
+      "date": "2026-04-29",
+      "close": 1270.29
+    },
+    {
+      "date": "2026-04-30",
+      "close": 1252.84
+    },
+    {
+      "date": "2026-05-04",
+      "close": 1260.18
+    },
+    {
+      "date": "2026-05-05",
+      "close": 1240.84
+    },
+    {
+      "date": "2026-05-06",
+      "close": 1268.8
+    },
+    {
+      "date": "2026-05-07",
+      "close": 1268.31
+    },
+    {
+      "date": "2026-05-08",
+      "close": 1254.23
+    },
+    {
+      "date": "2026-05-11",
+      "close": 1255.81
+    },
+    {
+      "date": "2026-05-12",
+      "close": 1229.93
+    },
+    {
+      "date": "2026-05-13",
+      "close": 1225.27
+    },
+    {
+      "date": "2026-05-14",
+      "close": 1235.58
+    },
+    {
+      "date": "2026-05-15",
+      "close": 1234.1
+    },
+    {
+      "date": "2026-05-18",
+      "close": 1240.64
+    },
+    {
+      "date": "2026-05-19",
+      "close": 1230.43
+    },
+    {
+      "date": "2026-05-20",
+      "close": 1226.96
+    },
+    {
+      "date": "2026-05-21",
+      "close": 1232.41
+    },
+    {
+      "date": "2026-05-22",
+      "close": 1253.73
+    },
+    {
+      "date": "2026-05-25",
+      "close": 1281.0
+    },
+    {
+      "date": "2026-05-26",
+      "close": 1268.41
+    },
+    {
+      "date": "2026-05-27",
+      "close": 1262.06
+    },
+    {
+      "date": "2026-05-29",
+      "close": 1245.9
+    },
+    {
+      "date": "2026-06-01",
+      "close": 1229.34
+    },
+    {
+      "date": "2026-06-02",
+      "close": 1216.35
+    },
+    {
+      "date": "2026-06-03",
+      "close": 1231.62
+    },
+    {
+      "date": "2026-06-04",
+      "close": 1241.24
+    },
+    {
+      "date": "2026-06-05",
+      "close": 1251.55
+    },
+    {
+      "date": "2026-06-08",
+      "close": 1239.75
+    },
+    {
+      "date": "2026-06-09",
+      "close": 1264.34
+    },
+    {
+      "date": "2026-06-10",
+      "close": 1282.49
+    },
+    {
+      "date": "2026-06-11",
+      "close": 1305.99
+    },
+    {
+      "date": "2026-06-12",
+      "close": 1329.59
+    },
+    {
+      "date": "2026-06-15",
+      "close": 1316.5
+    },
+    {
+      "date": "2026-06-16",
+      "close": 1323.15
+    },
+    {
+      "date": "2026-06-17",
+      "close": 1325.62
+    },
+    {
+      "date": "2026-06-18",
+      "close": 1331.08
+    },
+    {
+      "date": "2026-06-19",
+      "close": 1335.24
+    },
+    {
+      "date": "2026-06-22",
+      "close": 1341.09
+    },
+    {
+      "date": "2026-06-23",
+      "close": 1327.11
+    },
+    {
+      "date": "2026-06-24",
+      "close": 1362.12
+    },
+    {
+      "date": "2026-06-25",
+      "close": 1375.9
+    },
+    {
+      "date": "2026-06-29",
+      "close": 1376.0
+    },
+    {
+      "date": "2026-06-30",
+      "close": 1363.7
+    },
+    {
+      "date": "2026-07-01",
+      "close": 1368.26
+    },
+    {
+      "date": "2026-07-02",
+      "close": 1388.3
+    },
+    {
+      "date": "2026-07-03",
+      "close": 1399.6
+    },
+    {
+      "date": "2026-07-06",
+      "close": 1414.97
+    },
+    {
+      "date": "2026-07-07",
+      "close": 1402.87
+    },
+    {
+      "date": "2026-07-08",
+      "close": 1369.06
+    },
+    {
+      "date": "2026-07-09",
+      "close": 1369.16
+    },
+    {
+      "date": "2026-07-10",
+      "close": 1389.49
+    },
+    {
+      "date": "2026-07-13",
+      "close": 1397.72
+    },
+    {
+      "date": "2026-07-14",
+      "close": 1395.93
+    },
+    {
+      "date": "2026-07-15",
+      "close": 1404.36
+    },
+    {
+      "date": "2026-07-16",
+      "close": 1406.34
+    },
+    {
+      "date": "2026-07-17",
+      "close": 1432.23
+    },
+    {
+      "date": "2026-07-20",
+      "close": 1447.99
+    },
+    {
+      "date": "2026-07-21",
+      "close": 1450.87
+    },
+    {
+      "date": "2026-07-22",
+      "close": 1428.66
+    },
+    {
+      "date": "2026-07-23",
+      "close": 1422.61
+    },
+    {
+      "date": "2026-07-24",
+      "close": 1420.92
+    },
+    {
+      "date": "2026-07-27",
+      "close": 1433.61
+    },
+    {
+      "date": "2026-07-28",
+      "close": 1418.84
+    },
+    {
+      "date": "2026-07-29",
+      "close": 1425.88
+    },
+    {
+      "date": "2026-07-30",
+      "close": 1421.91
+    },
+    {
+      "date": "2026-07-31",
+      "close": 1423.4
+    },
+    {
+      "date": "2026-08-03",
+      "close": 1460.0
+    },
+    {
+      "date": "2026-08-04",
+      "close": 1454.6
+    },
+    {
+      "date": "2026-08-05",
+      "close": 1450.1
+    },
+    {
+      "date": "2026-08-06",
+      "close": 1457.5
+    },
+    {
+      "date": "2026-08-07",
+      "close": 1421.0
+    },
+    {
+      "date": "2026-08-10",
+      "close": 1431.8
+    },
+    {
+      "date": "2026-08-11",
+      "close": 1429.6
+    },
+    {
+      "date": "2026-08-12",
+      "close": 1431.7
+    },
+    {
+      "date": "2026-08-13",
+      "close": 1406.8
+    },
+    {
+      "date": "2026-08-14",
+      "close": 1417.0
+    },
+    {
+      "date": "2026-08-17",
+      "close": 1415.3
+    },
+    {
+      "date": "2026-08-18",
+      "close": 1412.0
+    },
+    {
+      "date": "2026-08-19",
+      "close": 1402.0
+    },
+    {
+      "date": "2026-08-20",
+      "close": 1411.9
+    },
+    {
+      "date": "2026-08-21",
+      "close": 1420.0
+    },
+    {
+      "date": "2026-08-24",
+      "close": 1415.0
+    },
+    {
+      "date": "2026-08-25",
+      "close": 1422.7
+    },
+    {
+      "date": "2026-08-26",
+      "close": 1430.0
+    },
+    {
+      "date": "2026-08-27",
+      "close": 1443.0
+    },
+    {
+      "date": "2026-08-28",
+      "close": 1422.8
+    },
+    {
+      "date": "2026-08-31",
+      "close": 1454.0
+    },
+    {
+      "date": "2026-09-01",
+      "close": 1438.0
+    },
+    {
+      "date": "2026-09-02",
+      "close": 1426.5
+    },
+    {
+      "date": "2026-09-03",
+      "close": 1430.0
+    },
+    {
+      "date": "2026-09-04",
+      "close": 1423.2
+    },
+    {
+      "date": "2026-09-07",
+      "close": 1427.5
+    },
+    {
+      "date": "2026-09-08",
+      "close": 1399.4
+    },
+    {
+      "date": "2026-09-09",
+      "close": 1389.1
+    },
+    {
+      "date": "2026-09-10",
+      "close": 1384.5
+    },
+    {
+      "date": "2026-09-11",
+      "close": 1379.3
+    },
+    {
+      "date": "2026-09-15",
+      "close": 1350.4
+    },
+    {
+      "date": "2026-09-16",
+      "close": 1358.8
+    },
+    {
+      "date": "2026-09-17",
+      "close": 1347.6
+    },
+    {
+      "date": "2026-09-18",
+      "close": 1338.9
+    },
+    {
+      "date": "2026-09-21",
+      "close": 1345.0
+    },
+    {
+      "date": "2026-09-22",
+      "close": 1339.6
+    },
+    {
+      "date": "2026-09-23",
+      "close": 1340.0
+    },
+    {
+      "date": "2026-09-24",
+      "close": 1334.5
+    },
+    {
+      "date": "2026-09-25",
+      "close": 1326.8
+    },
+    {
+      "date": "2026-09-28",
+      "close": 1302.0
+    },
+    {
+      "date": "2026-09-29",
+      "close": 1292.2
+    },
+    {
+      "date": "2026-09-30",
+      "close": 1321.7
+    },
+    {
+      "date": "2026-10-01",
+      "close": 1310.6
+    },
+    {
+      "date": "2026-10-05",
+      "close": 1332.0
+    },
+    {
+      "date": "2026-10-06",
+      "close": 1342.8
+    },
+    {
+      "date": "2026-10-07",
+      "close": 1357.5
+    },
+    {
+      "date": "2026-10-08",
+      "close": 1349.0
+    },
+    {
+      "date": "2026-10-09",
+      "close": 1355.0
+    },
+    {
+      "date": "2026-10-12",
+      "close": 1340.0
+    },
+    {
+      "date": "2026-10-13",
+      "close": 1360.2
+    },
+    {
+      "date": "2026-10-14",
+      "close": 1338.6
+    },
+    {
+      "date": "2026-10-15",
+      "close": 1389.4
+    },
+    {
+      "date": "2026-10-16",
+      "close": 1397.0
+    },
+    {
+      "date": "2026-10-19",
+      "close": 1381.0
+    },
+    {
+      "date": "2026-10-21",
+      "close": 1385.0
+    },
+    {
+      "date": "2026-10-22",
+      "close": 1398.5
+    },
+    {
+      "date": "2026-10-23",
+      "close": 1394.2
+    },
+    {
+      "date": "2026-10-26",
+      "close": 1403.0
+    },
+    {
+      "date": "2026-10-27",
+      "close": 1386.9
+    },
+    {
+      "date": "2026-10-28",
+      "close": 1377.6
+    },
+    {
+      "date": "2026-10-29",
+      "close": 1386.6
+    },
+    {
+      "date": "2026-10-30",
+      "close": 1398.0
+    },
+    {
+      "date": "2026-11-02",
+      "close": 1387.4
+    },
+    {
+      "date": "2026-11-03",
+      "close": 1424.5
+    },
+    {
+      "date": "2026-11-04",
+      "close": 1424.1
+    },
+    {
+      "date": "2026-11-05",
+      "close": 1500.0
+    },
+    {
+      "date": "2026-11-06",
+      "close": 1571.2
+    },
+    {
+      "date": "2026-11-08",
+      "close": 1565.0
+    }
+  ]
+}

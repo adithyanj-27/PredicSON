@@ -37,6 +37,7 @@ data/model_cache/
 # Logs & temp
 *.log
 .DS_Store
+scratch/
 
 # Streamlit credentials
 .streamlit/credentials.toml
