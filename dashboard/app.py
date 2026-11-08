@@ -267,18 +267,42 @@ html, body, [class*="css"] {
     box-shadow: 0 0 14px rgba(14, 165, 233, 0.25) !important;
 }
 
+/* Hide all Streamlit form / input helper clutter */
+div[data-testid="InputInstructions"], small[data-testid="InputInstructions"] {
+    display: none !important;
+}
+
 /* Input Fields */
 .stTextInput > div > div > input {
-    background: rgba(13, 19, 31, 0.9) !important;
-    border: 1px solid rgba(255, 255, 255, 0.14) !important;
+    background: rgba(13, 19, 31, 0.92) !important;
+    border: 1px solid rgba(14, 165, 233, 0.3) !important;
     border-radius: 10px !important;
     color: #F8FAFC !important;
     font-family: 'Sora', sans-serif !important;
-    font-size: 0.92rem !important;
+    font-size: 0.95rem !important;
+    padding: 10px 16px !important;
+    transition: all 0.2s ease !important;
 }
 .stTextInput > div > div > input:focus {
     border-color: #0EA5E9 !important;
-    box-shadow: 0 0 16px rgba(14, 165, 233, 0.3) !important;
+    box-shadow: 0 0 20px rgba(14, 165, 233, 0.35) !important;
+}
+
+/* Stoxify Search Dropdown Row */
+.search-result-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 16px;
+    border-radius: 8px;
+    background: rgba(15, 23, 42, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    margin-bottom: 5px;
+    transition: all 0.15s ease;
+}
+.search-result-row:hover {
+    background: rgba(14, 165, 233, 0.12);
+    border-color: rgba(14, 165, 233, 0.4);
 }
 
 /* Tab Headers */
@@ -324,7 +348,7 @@ def render_all_stocks_tab():
     st.markdown(
         "<div style='margin-top:12px; margin-bottom:14px;'>"
         "<div style='font-size:1.15rem; font-weight:800; color:#FFFFFF;'>National & Bombay Stock Exchange Directory</div>"
-        "<div style='font-size:0.82rem; color:#94A3B8;'>Filter through all 10,680+ listed equities across NSE and BSE. Click <b>⚡ Inspect</b> on any company to pull real-time sell-side consensus, analyst targets, and institutional research calls on demand.</div>"
+        "<div style='font-size:0.82rem; color:#94A3B8;'>Filter through all 10,680+ listed equities across NSE and BSE. Click <b>View →</b> on any company to pull real-time sell-side consensus, analyst targets, and institutional research calls on demand.</div>"
         "</div>",
         unsafe_allow_html=True
     )
@@ -429,7 +453,7 @@ def render_all_stocks_tab():
         with c_exch:
             st.markdown(f"<div style='padding-top:8px; text-align:center;'><span class='ticker-pill' style='font-size:0.68rem; padding:2px 6px;'>{exch}</span></div>", unsafe_allow_html=True)
         with c_action:
-            if st.button("Inspect", key=f"dir_btn_{item['symbol']}_{start_idx + idx}", use_container_width=True):
+            if st.button("View →", key=f"dir_btn_{item['symbol']}_{start_idx + idx}", use_container_width=True):
                 st.session_state.active_ticker = item["symbol"]
                 st.rerun()
 
@@ -480,52 +504,58 @@ def render_homepage():
     # 1. Universal Search (Covers all 10,680+ stocks + live exchange fallback)
     c_left, c_mid, c_right = st.columns([0.8, 4.4, 0.8])
     with c_mid:
-        with st.form("universal_search_form", clear_on_submit=False, border=False):
-            col_inp, col_btn = st.columns([4.2, 1.2])
-            with col_inp:
-                search_query = st.text_input(
-                    "Universal Search",
-                    placeholder="Search company, brand, or symbol (e.g. Reliance, Zudio, Blinkit, Tata Motors, HDFC Bank)...",
-                    label_visibility="collapsed"
-                ).strip()
-            with col_btn:
-                search_submitted = st.form_submit_button("Inspect ↵", use_container_width=True, type="primary")
+        col_inp, col_btn = st.columns([4.4, 1.1])
+        with col_inp:
+            search_query = st.text_input(
+                "Universal Search",
+                placeholder="Search company, brand, or ticker (e.g. Reliance, Zudio, Blinkit, Tata Motors, HDFC Bank)...",
+                label_visibility="collapsed"
+            ).strip()
+        with col_btn:
+            search_btn = st.button("Search", use_container_width=True, type="primary")
 
         matched_stocks = search_stock_directory(search_query, limit=6) if search_query else []
 
-        # If user pressed Enter or clicked Inspect:
-        if search_submitted and search_query:
+        # If user explicitly clicked the Search button:
+        if search_btn and search_query:
             if matched_stocks:
-                st.session_state.active_ticker = matched_stocks[0]["symbol"]
-                st.rerun()
+                clean_q = search_query.upper().replace(".NS", "").replace(".BO", "")
+                exact = next((m for m in matched_stocks if m["symbol"].replace(".NS", "").replace(".BO", "") == clean_q), None)
+                if exact:
+                    st.session_state.active_ticker = exact["symbol"]
+                    st.rerun()
+                elif len(matched_stocks) == 1:
+                    st.session_state.active_ticker = matched_stocks[0]["symbol"]
+                    st.rerun()
             else:
                 st.error(f"No Indian equity found matching '{search_query}'. Please check the symbol or name.")
 
+        # Stoxify-style Suggestions Dropdown Card Container
         if search_query and matched_stocks:
             st.markdown(
-                f"<div style='font-size:0.80rem; font-weight:700; color:#38BDF8; margin-top:8px; margin-bottom:6px;'>"
-                f"Matching Equities on NSE & BSE (Press Enter for #1, or select below):"
+                f"<div style='font-size:0.75rem; font-weight:700; color:#38BDF8; text-transform:uppercase; letter-spacing:0.8px; margin-top:12px; margin-bottom:8px;'>"
+                f"Suggestions on NSE & BSE ({len(matched_stocks)}):"
                 f"</div>",
                 unsafe_allow_html=True
             )
             for idx, m in enumerate(matched_stocks):
-                c_sym, c_action = st.columns([4.2, 1.2])
+                c_info, c_action = st.columns([4.4, 1.1])
                 clean_sym = m["symbol"].replace(".NS", "").replace(".BO", "")
                 is_nse = m["symbol"].endswith(".NS")
                 exch_badge = "NSE" if is_nse else "BSE"
                 exch_style = "background:rgba(16,185,129,0.15); color:#10B981; border:1px solid rgba(16,185,129,0.3);" if is_nse else "background:rgba(14,165,233,0.15); color:#38BDF8; border:1px solid rgba(14,165,233,0.3);"
-                with c_sym:
+                with c_info:
                     st.markdown(
-                        f"<div style='padding:9px 14px; background:rgba(15,23,42,0.85); border:1px solid rgba(255,255,255,0.08); border-radius:8px; margin-bottom:4px; font-size:0.90rem; display:flex; justify-content:space-between; align-items:center;'>"
+                        f"<div class='search-result-row'>"
                         f"<div><b style='color:#38BDF8; font-family:JetBrains Mono, monospace; font-size:0.95rem;'>{html.escape(clean_sym)}</b> "
-                        f"<span style='color:#F8FAFC; margin-left:10px; font-weight:500;'>{html.escape(m['name'])}</span></div>"
-                        f"<div><span style='font-size:0.70rem; font-weight:700; border-radius:4px; padding:2px 7px; margin-right:8px; {exch_style}'>{exch_badge}</span>"
-                        f"<span style='font-size:0.75rem; color:#94A3B8;'>[{html.escape(m.get('sector', 'Equities'))}]</span></div>"
+                        f"<span style='color:#F8FAFC; margin-left:12px; font-weight:500;'>{html.escape(m['name'])}</span></div>"
+                        f"<div><span style='font-size:0.70rem; font-weight:700; border-radius:4px; padding:3px 8px; margin-right:8px; {exch_style}'>{exch_badge}</span>"
+                        f"<span style='font-size:0.76rem; color:#94A3B8;'>[{html.escape(m.get('sector', 'Equities'))}]</span></div>"
                         f"</div>",
                         unsafe_allow_html=True
                     )
                 with c_action:
-                    if st.button("Inspect →", key=f"srch_res_{m['symbol']}_{idx}", use_container_width=True):
+                    if st.button("View →", key=f"srch_pick_{m['symbol']}_{idx}", use_container_width=True):
                         st.session_state.active_ticker = m["symbol"]
                         st.rerun()
 
@@ -646,7 +676,7 @@ def render_homepage():
                 with c_mcap:
                     st.markdown(f"<div style='padding-top:8px; font-size:0.78rem; color:#94A3B8;'>{row.get('market_cap_str', 'N/A')}</div>", unsafe_allow_html=True)
                 with c_btn:
-                    if st.button("Inspect", key=f"tbl_btn_{row['ticker']}", use_container_width=True):
+                    if st.button("View →", key=f"tbl_btn_{row['ticker']}", use_container_width=True):
                         st.session_state.active_ticker = row["ticker"]
                         st.rerun()
 
@@ -672,17 +702,16 @@ def render_prediction_canvas(current_ticker: str):
         )
 
     with col_nav_switch:
-        with st.form("nav_switch_form", border=False):
-            col_sw_inp, col_sw_btn = st.columns([3.8, 1.2])
-            with col_sw_inp:
-                sw_text = st.text_input(
-                    "Switch Stock",
-                    placeholder=f"Active: {current_ticker.replace('.NS', '').replace('.BO', '')} — Type stock & press Enter...",
-                    label_visibility="collapsed"
-                ).strip()
-            with col_sw_btn:
-                sw_btn = st.form_submit_button("Go ↵", use_container_width=True)
-        if sw_btn and sw_text:
+        col_sw_inp, col_sw_btn = st.columns([3.8, 1.2])
+        with col_sw_inp:
+            sw_text = st.text_input(
+                "Switch Stock",
+                placeholder=f"Active: {current_ticker.replace('.NS', '').replace('.BO', '')} — Search another stock...",
+                label_visibility="collapsed"
+            ).strip()
+        with col_sw_btn:
+            sw_btn = st.button("Search", use_container_width=True)
+        if (sw_btn or sw_text) and sw_text:
             sw_matches = search_stock_directory(sw_text, limit=1)
             if sw_matches and sw_matches[0]["symbol"] != current_ticker:
                 st.session_state.active_ticker = sw_matches[0]["symbol"]
